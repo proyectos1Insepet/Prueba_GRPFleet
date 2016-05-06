@@ -1,0 +1,6 @@
+C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\BBB.cyprj|d2d2a389-7ae4-4186-ac3a-2e9b5d8a1f7b
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0accf689-6baf-4c56-971c-9179b1f0f44a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|dd37698d-f5f0-480b-902a-7a96f159881f
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c976cbe1-6375-46fd-ab9d-86491fa9b2e2
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|18012a93-c2c6-4686-95ff-211573894801
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4dc65b68-b64f-4408-a73b-b2e8e62bb984
