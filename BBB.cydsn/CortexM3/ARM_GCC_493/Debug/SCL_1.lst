@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
   29:.\Generated_Source\PSoC5/SCL_1.c **** * Summary:
   30:.\Generated_Source\PSoC5/SCL_1.c **** *  Assign a new value to the digital port's data output register.  
   31:.\Generated_Source\PSoC5/SCL_1.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/SCL_1.c **** * Parameters:  
@@ -89,15 +89,15 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
   42 000a 0B4B     		ldr	r3, .L2
   43 000c 1B78     		ldrb	r3, [r3]
   44 000e DBB2     		uxtb	r3, r3
-  45 0010 23F00803 		bic	r3, r3, #8
+  45 0010 23F02003 		bic	r3, r3, #32
   46 0014 FB73     		strb	r3, [r7, #15]
   42:.\Generated_Source\PSoC5/SCL_1.c ****     SCL_1_DR = staticBits | ((uint8)(value << SCL_1_SHIFT) & SCL_1_MASK);
   47              		.loc 1 42 0
   48 0016 0849     		ldr	r1, .L2
   49 0018 FB79     		ldrb	r3, [r7, #7]
-  50 001a DB00     		lsls	r3, r3, #3
+  50 001a 5B01     		lsls	r3, r3, #5
   51 001c DBB2     		uxtb	r3, r3
-  52 001e 03F00803 		and	r3, r3, #8
+  52 001e 03F02003 		and	r3, r3, #32
   53 0022 DAB2     		uxtb	r2, r3
   54 0024 FB7B     		ldrb	r3, [r7, #15]
   55 0026 1343     		orrs	r3, r3, r2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
   69 0036 00BF     		.align	2
   70              	.L2:
   71 0038 50510040 		.word	1073762640
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 3
 
 
   72              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
   98 000a 0A4B     		ldr	r3, .L5
   99 000c 094A     		ldr	r2, .L5
  100 000e 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 4
 
 
  101 0010 D2B2     		uxtb	r2, r2
@@ -206,7 +206,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  122              	.L6:
  123              		.align	2
  124              	.L5:
- 125 0034 2B500040 		.word	1073762347
+ 125 0034 2D500040 		.word	1073762349
  126              		.cfi_endproc
  127              	.LFE1:
  128              		.size	SCL_1_SetDriveMode, .-SCL_1_SetDriveMode
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
   90:.\Generated_Source\PSoC5/SCL_1.c **** *  Macro SCL_1_ReadPS calls this function. 
   91:.\Generated_Source\PSoC5/SCL_1.c **** *  
   92:.\Generated_Source\PSoC5/SCL_1.c **** *******************************************************************************/
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 5
 
 
   93:.\Generated_Source\PSoC5/SCL_1.c **** uint8 SCL_1_Read(void) 
@@ -258,8 +258,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  148 0004 054B     		ldr	r3, .L9
  149 0006 1B78     		ldrb	r3, [r3]
  150 0008 DBB2     		uxtb	r3, r3
- 151 000a 03F00803 		and	r3, r3, #8
- 152 000e DB08     		lsrs	r3, r3, #3
+ 151 000a 03F02003 		and	r3, r3, #32
+ 152 000e 5B09     		lsrs	r3, r3, #5
  153 0010 DBB2     		uxtb	r3, r3
   96:.\Generated_Source\PSoC5/SCL_1.c **** }
  154              		.loc 1 96 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  106:.\Generated_Source\PSoC5/SCL_1.c **** * Parameters:  
  107:.\Generated_Source\PSoC5/SCL_1.c **** *  None 
  108:.\Generated_Source\PSoC5/SCL_1.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 6
 
 
  109:.\Generated_Source\PSoC5/SCL_1.c **** * Return: 
@@ -322,8 +322,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  189 0004 054B     		ldr	r3, .L13
  190 0006 1B78     		ldrb	r3, [r3]
  191 0008 DBB2     		uxtb	r3, r3
- 192 000a 03F00803 		and	r3, r3, #8
- 193 000e DB08     		lsrs	r3, r3, #3
+ 192 000a 03F02003 		and	r3, r3, #32
+ 193 000e 5B09     		lsrs	r3, r3, #5
  194 0010 DBB2     		uxtb	r3, r3
  116:.\Generated_Source\PSoC5/SCL_1.c **** }
  195              		.loc 1 116 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  224 0015 20010000 		.4byte	.LASF22
  225 0019 00000000 		.4byte	.Ldebug_ranges0+0
  226 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 7
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 7
 
 
  227 0021 00000000 		.4byte	.Ldebug_line0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  281 0084 02       		.uleb128 0x2
  282 0085 01       		.byte	0x1
  283 0086 08       		.byte	0x8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 8
 
 
  284 0087 8C010000 		.4byte	.LASF11
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  338 00f7 01       		.byte	0x1
  339 00f8 5D       		.byte	0x5d
  340 00f9 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 9
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 9
 
 
  341 00fd 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  395 0026 08       		.uleb128 0x8
  396 0027 00       		.byte	0
  397 0028 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 10
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 10
 
 
  398 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  452 0060 01       		.uleb128 0x1
  453 0061 13       		.uleb128 0x13
  454 0062 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 11
 
 
  455 0063 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  509 009a 00       		.byte	0
  510 009b 00       		.byte	0
  511 009c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 12
 
 
  512              		.section	.debug_aranges,"",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  553 004f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  553      20726576 
  553      6973696F 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 13
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 13
 
 
  553      6E203232 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 1
  574      6F6E5C44 
  575 014e 2E637964 		.ascii	".cydsn\000"
  575      736E00
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccFdtTXa.s 			page 14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc7wGntk.s 			page 14
 
 
  576              	.LASF8:

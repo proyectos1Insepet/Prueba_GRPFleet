@@ -30,11 +30,6 @@
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LCD_1_PM.c" value="ARM_C_FILE;LCD_1" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LCD_1_INT.c" value="ARM_C_FILE;LCD_1" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LCD_1_BOOT.c" value="ARM_C_FILE;LCD_1" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\Impresora.c" value="ARM_C_FILE;Impresora" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\Impresora.h" value="NONE;Impresora" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\Impresora_PM.c" value="ARM_C_FILE;Impresora" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\Impresora_INT.c" value="ARM_C_FILE;Impresora" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\Impresora_BOOT.c" value="ARM_C_FILE;Impresora" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\PC.c" value="ARM_C_FILE;PC" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\PC.h" value="NONE;PC" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\PC_PM.c" value="ARM_C_FILE;PC" />
@@ -94,11 +89,6 @@
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\Timer_Animacion2_PM.c" value="ARM_C_FILE;Timer_Animacion2" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\EEPROM.c" value="ARM_C_FILE;EEPROM" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\EEPROM.h" value="NONE;EEPROM" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LP.c" value="ARM_C_FILE;LP" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LP.h" value="NONE;LP" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LP_PM.c" value="ARM_C_FILE;LP" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LP_INT.c" value="ARM_C_FILE;LP" />
-  <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LP_BOOT.c" value="ARM_C_FILE;LP" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LCD_1_IntClock.c" value="ARM_C_FILE;LCD_1_IntClock" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\LCD_1_IntClock.h" value="NONE;LCD_1_IntClock" />
   <file name="C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\codegentemp\PC_IntClock.c" value="ARM_C_FILE;PC_IntClock" />
