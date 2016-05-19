@@ -726,6 +726,7 @@ void polling_LCD1(void){
                       set_imagen(1,29);
                       tipo_venta = 1;
                       flujo_LCD1 = 11;
+                      id_teclado1 = 0;
                     break;	
 
                     case 0x7E:						    //ir a menu
@@ -913,17 +914,18 @@ void polling_LCD1(void){
 				    if(y>9){
 					    rf_mod[x+4] = y+55;
 				    }
-			}
+			    }
             }else{
                 for(x=0;x<=15;x++){						//Serial efectivo				
 				    y=(rventa1.id_ef[x])&0x0F;
+                    rf_mod[x+4] = y+48;
 				    if((x%2)==0){
 					    y=rventa1.id_ef[x]&0x0F;
-				    }
-				    rf_mod[x+4] = y+48;
+				    }				    
 				    if(y>9){
 					    rf_mod[x+4] = y+55;
-				    }                
+				    }
+                }
             }
 			rf_mod[20]=(lado1.grado[rventa1.manguera-1][0])+48;			//Id Producto					
 			rf_mod[21]= id_estacion[4];								    //Id Estación
@@ -1004,41 +1006,47 @@ void polling_LCD1(void){
             }	    
 		break;
             
-        case 11:
-         if(touch_present(1)==1){
-             if(touch_write(1,0x33)){
-	             for(x=0;x<=7;x++){
-	                 rventa1.id[x]=touch_read_byte(1);
-	             }
-				 crc_total=0;
-				 for(x=0;x<7;x++){
-				 	crc_total=crc_check(crc_total,rventa1.id[x]);
-				 }					
-				 if(crc_total==rventa1.id[7]){
-		             set_imagen(1,19);
-		             CyDelay(500);					 				 
-					 count_teclas1=0;							//Inicia el contador de teclas	
-					 id_teclado1=2;
-					 teclas1=10;
-					 posx1=2;
-					 posy1=3;
-					 sizeletra1=1;	
-                     set_imagen(1,14);
-					 flujo_LCD1=12;	
-				 }
-             }
-         }
-         if(LCD_1_GetRxBufferSize()==8){
-            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
-                switch(LCD_1_rxBuffer[3]){
-                    case 0x3B:
-                     flujo_LCD1=0; 
-                    break; 
+        case 11:         
+            if(touch_present(1)==1){
+                if(touch_write(1,0x33)){
+	                for(x=0;x<=7;x++){
+	                    rventa1.id[x]=touch_read_byte(1);
+	                }
+				    crc_total=0;
+				    for(x=0;x<7;x++){
+				 	    crc_total=crc_check(crc_total,rventa1.id[x]);
+				    }					
+				    if(crc_total==rventa1.id[7]){
+		                set_imagen(1,19);
+		                CyDelay(500);					 				 
+					    count_teclas1=0;							//Inicia el contador de teclas						    
+					    teclas1=10;
+					    posx1=2;
+					    posy1=3;
+					    sizeletra1=1;	                        
+                        if(id_teclado1 ==10){
+                            set_imagen(1,19);
+                            flujo_LCD1 = 19;
+                        }else{
+                            id_teclado1=2;
+                            set_imagen(1,14);
+                            flujo_LCD1=12;
+                        }
+					    	
+				    }
                 }
-            }
-            CyDelay(100);            
-            LCD_1_ClearRxBuffer();
-         }		
+            }        
+            if(LCD_1_GetRxBufferSize()==8){
+                if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
+                    switch(LCD_1_rxBuffer[3]){
+                        case 0x3B:
+                            flujo_LCD1=0; 
+                        break; 
+                    }
+                }
+                CyDelay(100);            
+                LCD_1_ClearRxBuffer();            
+        }		
 		break;
         
         
@@ -1180,7 +1188,7 @@ void polling_LCD1(void){
                             if(clave_local[0]==rventa1.password_local[4] && clave_local[1]==rventa1.password_local[3] && clave_local[2]==rventa1.password_local[2] && clave_local[3]==rventa1.password_local[1]){                        	    	
                         	    set_imagen(1,38); 
                                 CyDelay(200);
-							    set_imagen(1,95);  
+							    set_imagen(1,70);  
                                 flujo_LCD1 = 16;
                             }else{
                         	    flujo_LCD1=0;	
@@ -1199,7 +1207,7 @@ void polling_LCD1(void){
                         break;   
                         case 7:
                             flujo_LCD1=18;
-                            set_imagen(1,115);
+                            set_imagen(1,88);
                             switch(Producto){
                                 case 1:// 1=diesel, siempre para Autogas, 
                                     Productos[0]=Buffer_LCD1[1]+48;//para la estacion seria el digitado por ellos
@@ -1270,9 +1278,9 @@ void polling_LCD1(void){
                                     }                                      
                                 break;                                    
                             }
-                            write_LCD(1,Productos[0], 11, 44, 1);
-                            write_LCD(1,Productos[1], 16, 44, 1); 
-                            write_LCD(1,Productos[2], 20, 44, 1);
+                            write_LCD(1,Productos[0], 7, 44, 1);
+                            write_LCD(1,Productos[1], 14, 44, 1); 
+                            write_LCD(1,Productos[2], 19, 44, 1);
                             write_LCD(1,Productos[3], 25, 44, 1); 
 							lado1.estado=libre;                                 
                             CyDelay(200);                             
@@ -1491,7 +1499,7 @@ void polling_LCD1(void){
 	        if(LCD_1_GetRxBufferSize()==8){
 	            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
 	                switch(LCD_1_rxBuffer[3]){
-                        case 0xb9: //Reimpresion
+                        case 0xB9: //Reimpresion
                         	rf_mod[0]='M';
 			                rf_mod[1]='U';
 			                rf_mod[2]='X';
@@ -1533,7 +1541,7 @@ void polling_LCD1(void){
 	            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
 	                switch(LCD_1_rxBuffer[3]){
                         case 0x7F:      //configurar productos                            
-                            set_imagen(1,115); 
+                            set_imagen(1,88);                            
                             flujo_LCD1 = 18;
                         break;
                         case 0x80:      //configurar version de digitos                             
@@ -1545,22 +1553,19 @@ void polling_LCD1(void){
 					        posx1=4;
 					        posy1=3;
 					        sizeletra1=1;  
-                            flujo_LCD1 = 12;
+                            flujo_LCD1 = 11;
                         break;
                         case 0x81:      //configurar ppux10,ppux1
                             flujo_LCD1 = 17;
                             set_imagen(1,109);                        
                         break;
-                        case 0xC2:      //id estacion                            
-                            set_imagen(1,132);    
-                            id_teclado1=8;
-					        count_teclas1=0;							    //Inicia el contador de teclas	
-					        id_coma1=',';	
-                            teclas1=4;              						//cantidad de teclas q puede digitar                      comas1=0;									
+                        case 0xC2:      //id estacion   ahora datos ibutton                         
+                            set_imagen(1,110);                                
 					        posx1=4;
 					        posy1=3;
 					        sizeletra1=1;            
-                            flujo_LCD1 = 12;
+                            flujo_LCD1 = 11;
+                            id_teclado1 = 10;
                         break;                             
 	                    case 0x7E:		//ir a menu
 						  set_imagen(1,0);	
@@ -1568,6 +1573,8 @@ void polling_LCD1(void){
 	                    break;                                   
                     }
                 }
+                CyDelay(100);            
+	            LCD_1_ClearRxBuffer();
             }            
         break;    
             
@@ -1604,7 +1611,7 @@ void polling_LCD1(void){
 	        if(LCD_1_GetRxBufferSize()==8){
 	            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
 	                switch(LCD_1_rxBuffer[3]){
-                        case 0xBB:  //Producto 1
+                        case 0x80:  //Producto 1
                             Producto=1;                                                    
                             set_imagen(1,132);  
                             id_teclado1=7;
@@ -1616,7 +1623,7 @@ void polling_LCD1(void){
 					        sizeletra1=1;  
                             flujo_LCD1 = 12;
                         break;
-                        case 0xBC:  //Producto 2
+                        case 0x81:  //Producto 2
                             Producto=2;                                                    
                             set_imagen(1,132);  
                             id_teclado1=7;
@@ -1628,7 +1635,7 @@ void polling_LCD1(void){
 					        sizeletra1=1;  
                             flujo_LCD1 = 12;
                         break;                            
-                        case 0xBD:  //Producto 3
+                        case 0x7F:  //Producto 3
                             Producto=3;                                                    
                             set_imagen(1,132);  
                             id_teclado1=7;
@@ -1640,7 +1647,7 @@ void polling_LCD1(void){
 					        sizeletra1=1;                      
                             flujo_LCD1 = 12;
                         break;                            
-                        case 0xBE:  //Producto 4
+                        case 0x82:  //Producto 4
                             Producto=4;                                                   
                             set_imagen(1,132);  
                             id_teclado1=7;
@@ -1741,6 +1748,33 @@ void polling_LCD1(void){
             }         
         break;
             
+        case 19:
+			rf_mod[0]='M';
+			rf_mod[1]='U';
+			rf_mod[2]='X';
+			rf_mod[3]='5';            
+			    for(x=0;x<=15;x++){						//Serial				
+				    y=(rventa1.id[x/2]>>4)&0x0F;
+				    if((x%2)==0){
+					    y=rventa1.id[x/2]&0x0F;
+				    }
+				    rf_mod[x+4] = y+48;
+				    if(y>9){
+					    rf_mod[x+4] = y+55;
+				    }
+			}            
+			rf_mod[20]='*';					
+			PC_ClearRxBuffer();
+            for(x=0;x<=20;x++){
+			    PC_PutChar(rf_mod[x]);
+			}
+            set_imagen(1,0);	
+	        flujo_LCD1 = 0;    
+			lado1.estado=libre;
+			 
+		break;    
+        
+            
         case 102:
             
             
@@ -1759,7 +1793,7 @@ void polling_LCD1(void){
             
     }
     }
-}
+
 
 
 /*
