@@ -523,19 +523,14 @@ void polling_rf(void){
 					break;
 					
 					case cimprimir:
-						set_imagen(1,55);					
-						if(lado1.dir==(lado1.dir & 0x0F)){
-							lado1.estado=libre;
-							flujo_LCD1=0;
-						}
-						else if(lado2.dir==(PC_rxBuffer[4] & 0x0F)){
-							lado2.estado=libre;
-							flujo_LCD1=0;
-						}						
+						set_imagen(1,55);
+                        if(PC_rxBuffer[5] =='2'){
+                            lado1.estado=libre;
+    						error_op(1,12);	
+                        }											
 					break;
 					
-					case creset:           
-                        if(estado_tanqueando==0){
+					case creset:                                   
     						switch(PC_rxBuffer[5]){
     							case '1':														
     								lado1.estado=libre;
@@ -549,7 +544,7 @@ void polling_rf(void){
     								
     							case '3':
     								lado1.estado=libre;
-    								error_op(1,85);					//Error de Operacion
+    								error_op(1,12);					//Error de Operacion //85
     							break;
     								
     							case '4':
@@ -557,8 +552,7 @@ void polling_rf(void){
 //    								error_op(1,12);		//			//Fin Corte
     							break;								
     								
-    						}
-                        }
+    						}                        
 					break;
 				}
 				if(ok_datosRF==1){
@@ -723,7 +717,7 @@ void polling_LCD1(void){
                     break;
                     
                     case 0x5E:  						//Con ID                                         
-                      set_imagen(1,29);
+                      set_imagen(1,18);
                       tipo_venta = 1;
                       flujo_LCD1 = 11;
                       id_teclado1 = 0;
@@ -819,8 +813,7 @@ void polling_LCD1(void){
                 if(LCD_1_rxBuffer[3]==0x7E){					//Cancel
 					flujo_LCD1=0;
                 }												
-			}
-            //CyDelay(100);            
+			}                       
             LCD_1_ClearRxBuffer();
 			break;
 		 }
@@ -849,17 +842,16 @@ void polling_LCD1(void){
 		 rventa1.manguera=estado_ex(lado1.dir);
 		 if(rventa1.manguera!=0){			 
             CyDelay(20);            
-		    if(get_estado(lado1.dir)==7){     
-			    flujo_LCD1 = 9;
+		    if(get_estado(lado1.dir)==7){     			    
                 timeout_autorizacion=0;
 			    lado1.estado=listo;
-                set_imagen(1,57);
+                set_imagen(1,57);                                
+                flujo_LCD1 = 9;
 		    }
 		 }
 		break;
         
-        case 8:
-        // estado_tanqueando=1;
+        case 8:        
 		 CyDelay(50);
 		 switch(get_estado(lado1.dir)){
 	         case 0x0B:                     //Termino venta
@@ -915,7 +907,8 @@ void polling_LCD1(void){
 					    rf_mod[x+4] = y+55;
 				    }
 			    }
-            }else{
+            }
+            if(tipo_venta == 0){
                 for(x=0;x<=15;x++){						//Serial efectivo				
 				    y=(rventa1.id_ef[x])&0x0F;
                     rf_mod[x+4] = y+48;
@@ -983,28 +976,12 @@ void polling_LCD1(void){
 			PC_ClearRxBuffer();				
 		    for(x=0;x<=46;x++){
 			   PC_PutChar(rf_mod[x]);
-		    }				
-			CyDelay(250);
-			if(PC_GetRxBufferSize()==2){
-				if((PC_rxBuffer[0]=='O') && (PC_rxBuffer[1]=='K')){
-                    timeout_autorizacion=2;
-					lado1.estado=espera;
-					flujo_LCD1=10;
-					PC_ClearRxBuffer();
-				}	
-			} 
+		    }	            
+			CyDelay(350);			
+            PC_ClearTxBuffer();
 		break;
             
-        case 10:   
-		    if(timeout_autorizacion>=2){
-                timeout_autorizacion++;
-                CyDelay(1);
-                if(timeout_autorizacion>=20000){
-                    timeout_autorizacion=0;
-                    flujo_LCD1=9;
-                }
-            }	    
-		break;
+        
             
         case 11:         
             if(touch_present(1)==1){
@@ -1151,14 +1128,14 @@ void polling_LCD1(void){
 							}
 						break;
 						case 2:	
+                            set_imagen(1,5);
                             for(x=0;x<=10;x++){
                               rventa1.km[x]=0;
                             }
 							for(x=count_teclas1;x>=1;x--){
 								rventa1.km[x]=Buffer_LCD1[(count_teclas1-x)+1];
 							}
-	                        flujo_LCD1=4;	
-	                        set_imagen(1,5);
+	                        flujo_LCD1=4;		                        
 						break;
 						case 3:
 							for(x=count_teclas1;x>=1;x--){
@@ -1423,9 +1400,10 @@ void polling_LCD1(void){
 			PC_ClearRxBuffer();				
 		    for(x=0;x<=59;x++){
 			   PC_PutChar(rf_mod[x]);
-		    }
+		    }            
             PC_ClearRxBuffer();
-			CyDelay(150);
+			CyDelay(300);
+            PC_ClearTxBuffer();
 //			if(PC_GetRxBufferSize()>=2){
 //				if((PC_rxBuffer[0]=='B') && (PC_rxBuffer[1]=='B')){
 //					lado1.estado=espera;				
@@ -1770,8 +1748,8 @@ void polling_LCD1(void){
 			}
             set_imagen(1,0);	
 	        flujo_LCD1 = 0;    
-			lado1.estado=libre;
-			 
+			lado1.estado=libre;            
+            
 		break;    
         
             

@@ -73,7 +73,7 @@ var vol_vendido;
 var dinero_vendido;
 
 /********************Arreglos**************************************/            
-var serial          = new Buffer(16); /*global serial*/
+var serial      = Buffer(16); /*global serial*/
 precio          = new Buffer(5);  /*global precio*/
 preset          = new Buffer(7);  /*global preset*/
 km              = new Buffer(7);  /*global km*/
@@ -287,7 +287,6 @@ function rx_data_mux(data){
                     km[58-i] = data.charCodeAt(i); 
                 }  
                 console.log('Km: '+km); 
-                //muxport.write('BB');
                 guardar_venta();                
             break;
             
@@ -388,49 +387,42 @@ function rx_data_mux(data){
 */
 
 function consulta_dato(){
-    if(serial == '1111111111111111'){
-        serial = 'EFECTIVO';
-        autorizaMux();
-    }else{
-        pg.connect(conString, function(err, client, done){
-            if(err){
-                return console.error('Error de conexion', err);
-            }else{
-                console.log("Serial AUTO:" + serial);
-                client.query(sprintf("select estado_bloqueo from vehiculo where serial = '%1$s'",serial), function(err,result){        //consulto maximo id de venta
-                    done();
-                    
-                    if(err){
-                        return console.error('error de conexion', err);
+    pg.connect(conString, function(err, client, done){
+        if(err){
+            return console.error('Error de conexion', err);
+        }else{
+            console.log("Serial AUTO:" + serial);
+            client.query(sprintf("select v.estado_bloqueo,v.id_cliente, c.estado_cuenta, c.id_cliente from vehiculo v inner join cuenta c on v.id_cliente = c.id_cliente where serial = '%1$s'",serial), function(err,result){        //consulto maximo id de venta
+                done();
+                if(err){
+                    return console.error('error de conexion', err);
+                }else{
+                    var estado;
+                    var estado_cliente;
+                    if(result.rows[0] == null){
+                        estado = false;   
                     }else{
-                        
-                        if(result.rows[0] == null){
-                            var estado = false;   
-                        }else{
-                            estado = result.rows[0].estado_bloqueo;
-                        }
-                        console.log("Estado bloqueo: " +estado);
-                        if (estado == false || estado == null){
-                            muxport.write('BBB');           //En caso de venta incompleta
-                            muxport.write('E');             // No permite autorizar
-                            muxport.write(String(cara));
-                            muxport.write('1');             //Limpia estado del mux e inicia pantalla
-                            muxport.write('*');
-                            printport.write('Vehiculo Bloqueado \n');
-                            printport.write('O vehiculo no existe \n');
-                            printport.write('Serial:' +serial +'\n\n\n\n\n\n\n');
-                        }else{
-                            autorizaMux();
-                        }
-                    
+                        estado = result.rows[0].estado_bloqueo;
+                        estado_cliente = result.rows[0].estado_cuenta;
+                        console.log("Estado bloqueo: " +estado_cliente);
                     }
+                    console.log("Estado bloqueo: " +estado);
+                    if (estado == false || estado == null || estado_cliente == false || estado_cliente == null){
+                        muxport.write('BBB');           //En caso de venta incompleta
+                        muxport.write('E');             // No permite autorizar
+                        muxport.write(String(cara));
+                        muxport.write('1');             //Limpia estado del mux e inicia pantalla
+                        muxport.write('*');
+                        printport.write('Vehiculo Bloqueado \n');
+                        printport.write('O vehiculo no existe \n');
+                        printport.write('Serial:' +serial +'\n\n\n\n\n\n\n');
+                    }else{
+                        autorizaMux();
+                    }
+                }
                 });
             }
         });
-        
-    }
-    
-    
 }
 
 /*
@@ -466,7 +458,7 @@ function guardar_venta(){
                              return console.error('error de conexion', err);
                         }else{
                             var id_cliente = result.rows[0].id_cliente;
-                            var placa = result.rows[0].placa;
+                            placa = result.rows[0].placa;
                             console.log('MAX:'+last_id);
                             client.query(sprintf("SELECT tipo_transaccion from cuenta WHERE id_cliente = '%1$s'",id_cliente), function(err, result) {
 		                        done();
@@ -474,7 +466,7 @@ function guardar_venta(){
 			                        return console.error('Error de conexion', err);
 		                        }else{
 		                            var transaccion = result.rows[0].tipo_transaccion;
-			                        client.query(sprintf("INSERT INTO venta VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s')", (last_id+1),id_cliente,fecha, idproducto,dinero_vendido,vol_vendido ),function(err,result){
+			                        client.query(sprintf("INSERT INTO venta VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s')", (last_id+1),id_cliente,fecha, transaccion,dinero_vendido,vol_vendido ),function(err,result){
 				                        done();
 				                        if(err){
 				                            return console.error('Error de conexion', err);
@@ -529,46 +521,45 @@ function imprimir_venta(){
         if(err){
             return console.error('Error de conexion', err);
         }else{
-            client.query(sprintf("SELECT descripcion FROM producto where id_producto ='%1$s' ",idproducto), function(err,result){        //consulto maximo id de venta
+            client.query(sprintf("SELECT descripcion FROM producto where id_producto ='%1$s' ",parseInt(idproducto)), function(err,result){        //consulto maximo id de venta
                 done();
                 if(err){
                     return console.error('error de conexion', err);
                 }else{
-                    nombre_producto = result.rows[0];
+                    nombre_producto = result.rows[0].descripcion;
+                    console.log(">>"+nombre_producto);
                 }
-             });
+          
+            console.log("IMPRIMIENDO");
+            printport.write('   '+linea1 +'\n');
+            printport.write('      '+linea2 +'\n');
+            printport.write('       '+id_tax+'\n');
+            printport.write('       Tel: '+tel+'\n');
+            printport.write('     '+dir+ '\n\n');
+            var f = new Date();
+	        printport.write('Fecha:' + String(f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes()) + '\n\n');                                                      
+            printport.write('Serial:\n');
+            printport.write(serial + '\n');
+            printport.write('Placa: ' + placa +'\n');
+            printport.write('Km   : ' + parseInt(km) +'\n');
+            printport.write('Posicion: ' + cara + '\n');
+            printport.write('Producto: ' +nombre_producto+ '\n');
+            var precio1 = parseFloat(precio);
+            printport.write('PPU     : $' + String(precio1) + '\n');
+            volumen[3]=46;
+            var volumen1 = parseFloat(volumen);
+            printport.write('Volumen : G' + volumen1 + '\n');
+            var dinero1 = parseFloat(dinero);
+            printport.write('Dinero  : $' + String(dinero1) + '\n\n\n');
+            printport.write('Firma :'+ '\n\n');
+            printport.write('       --------------------'+ '\n\n');
+            printport.write('Cedula:' + '\n');
+            printport.write('       --------------------'+ '\n\n');
+            printport.write(footer+ '\n');
+            printport.write('\n\n\n\n\n');  
+            });
         }
-     });
-    console.log("IMPRIMIENDO");
-    console.log("RECIBO");
-    printport.write('    '+linea1 +'\n');
-    printport.write('      '+linea2 +'\n');
-    printport.write('      '+id_tax+'\n');
-    printport.write('      Tel: '+tel+'\n');
-    printport.write('    '+dir+ '\n\n');
-    var f = new Date();
-	printport.write('Fecha:' + String(f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes()) + '\n\n');                                                      
-    /*printport.write('Fecha : '+fecha+'\n\n');*/
-    printport.write('Serial:\n\n');
-    printport.write(serial + '\n\n');
-    printport.write('Placa: ' + placa +'\n');
-    printport.write('Km   : ' + km +'\n');
-    printport.write('Posicion: ' + cara + '\n');
-    printport.write('Producto: ' +nombre_producto);
-    var precio1 = parseFloat(precio);
-    printport.write('PPU     : $' + String(precio1) + '\n');
-    volumen[3]=46;
-    var volumen1 = parseFloat(volumen);
-    printport.write('Volumen : G' + volumen1 + '\n');
-    var dinero1 = parseFloat(dinero);
-    printport.write('Dinero  : $' + String(dinero1) + '\n\n\n');
-    printport.write('Firma :'+ '\n\n');
-    printport.write('       --------------------'+ '\n\n');
-    printport.write('Cedula:' + '\n');
-    printport.write('       --------------------'+ '\n\n');
-    printport.write(footer+ '\n');
-    printport.write('\n\n\n\n\n\n\n');  
-
+    });
 }
 
 /*
@@ -596,8 +587,13 @@ function autorizaMux(){
     }
     muxport.write('F'); 
     console.log('F');
-    muxport.write('990000');
-    console.log('Cantidad Autorizada: 9900000');
+    if (tipopreset == 1 || tipopreset ==2){
+        muxport.write(preset);
+        console.log('>>'+preset);
+    }else{
+        muxport.write('990000');    
+        console.log('Cantidad Autorizada: 990000');
+    }
     muxport.write(String(tipopreset));
     console.log('Tipo de Preset: '+tipopreset);
     muxport.write('*');
