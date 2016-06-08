@@ -333,6 +333,7 @@
 <v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\IB2.lst</v>
 <v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\ibuton.lst</v>
 <v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_1.lst</v>
+<v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_3.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -394,6 +395,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\BBB.cydsn\main.c" />
+<name v=".\BBB.cydsn\Generated_Source\PSoC5\LCD_2_INT.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

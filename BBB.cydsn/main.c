@@ -425,18 +425,18 @@ void polling_rf(void){
                         else{
 							totales(lado1.dir, lado1.mangueras);
                             if(ppux10==1){
-    							precio[0]=PC_rxBuffer[9];	
-    							precio[1]=PC_rxBuffer[8];
+    							precio[4]=PC_rxBuffer[9];	
+    							precio[3]=PC_rxBuffer[8];
     							precio[2]=PC_rxBuffer[7];
-    							precio[3]=PC_rxBuffer[6];
-    							precio[4]=0;			
+    							precio[1]=PC_rxBuffer[6];
+    							precio[0]=0;			
                             }
                             if(ppux10==0){
-    							precio[0]=PC_rxBuffer[10];	
-    							precio[1]=PC_rxBuffer[9];
+    							precio[4]=PC_rxBuffer[10];	
+    							precio[3]=PC_rxBuffer[9];
     							precio[2]=PC_rxBuffer[8];
-    							precio[3]=PC_rxBuffer[7];
-    							precio[4]=PC_rxBuffer[6];                            
+    							precio[1]=PC_rxBuffer[7];
+    							precio[0]=PC_rxBuffer[6];                            
                             }
 							if(cambiar_precio((lado1.dir & 0x0F),precio,rventa1.manguera)==0){
 								rf_mod[0]='M';
@@ -489,18 +489,18 @@ void polling_rf(void){
 						}
 						if(programar((lado1.dir & 0x0F),rventa1.manguera,preset,t_preset)==1){		//Programar
                             if(ppuinicial==0){                          
-                                for(x=0;x<=4;x++){
-                            	    precio[x]=lado1.ppu[0][x];	    
-                                }
-                                cambiar_precio(lado1.dir,precio,1);    
-                                for(x=0;x<=4;x++){
-                            	    precio[x]=lado1.ppu[1][x];	    
-                                }    
-                                cambiar_precio(lado1.dir,precio,2);
-                                for(x=0;x<=4;x++){
-                            	    precio[x]=lado1.ppu[2][x];	    
-                                }
-                                cambiar_precio(lado1.dir,precio,3);       
+//                                for(x=0;x<=4;x++){
+//                            	    precio[x]=lado1.ppu[0][x];	    
+//                                }
+//                                cambiar_precio(lado1.dir,precio,1);    
+//                                for(x=0;x<=4;x++){
+//                            	    precio[x]=lado1.ppu[1][x];	    
+//                                }    
+//                                cambiar_precio(lado1.dir,precio,2);
+//                                for(x=0;x<=4;x++){
+//                            	    precio[x]=lado1.ppu[2][x];	    
+//                                }
+//                                cambiar_precio(lado1.dir,precio,3);       
                             }
                             CyDelay(10);
 							Surtidor_PutChar(0x10|(lado1.dir & 0x0F));							
@@ -686,17 +686,17 @@ void polling_LCD1(void){
 						    }                                 
 							CyDelay(250);                
 							if(PC_GetRxBufferSize()>=2){
-//								if((PC_rxBuffer[0]=='O') && (PC_rxBuffer[1]=='K')){
- 							        set_imagen(1,0);
+
+ 							        set_imagen(1,74);
 							        flujo_LCD1=0;
 							        lado1.estado=libre;     //Fin de reimpresion                                         
-//								}                             
+                     
 							}    
 							PC_ClearRxBuffer();                                                                              
 	                    break;					
 						
 	                    case 0x7E:									//ir a menu
-						  set_imagen(1,0);	
+						  set_imagen(1,74);	
 	                      flujo_LCD1=0;     
 	                    break;					
 	                }
@@ -724,7 +724,7 @@ void polling_LCD1(void){
                     break;	
 
                     case 0x7E:						    //ir a menu
-					  set_imagen(1,20);	
+					  set_imagen(1,74);	
                       flujo_LCD1 = 0;     
                     break;	
                     
@@ -796,8 +796,9 @@ void polling_LCD1(void){
                       flujo_LCD1=0;
                     break;     
                     
-                    case 0x7E:                                //Símbolo de inicio                  
-                      flujo_LCD1=0;
+                    case 0x7E:                                //Símbolo de inicio                                        
+                        set_imagen(1,74);	
+                        flujo_LCD1=0;
                     break;
                 }
             }
@@ -1494,7 +1495,7 @@ void polling_LCD1(void){
                         break;
                             
                         case 0xBA:                                       //Configuracion inicial                             
-                            set_imagen(1,37);
+                            set_imagen(1,47);
                             id_teclado1=5;
 					        count_teclas1=0;							 //Inicia el contador de teclas	
 					        id_coma1=',';	
@@ -1506,7 +1507,7 @@ void polling_LCD1(void){
                         break;    
                             
 	                    case 0x7E:					//ir a menu
-						  set_imagen(1,0);	
+						  set_imagen(1,74);	
 	                      flujo_LCD1=0;     
 	                    break;		                            
                     }
@@ -1531,7 +1532,7 @@ void polling_LCD1(void){
 					        posx1=4;
 					        posy1=3;
 					        sizeletra1=1;  
-                            flujo_LCD1 = 11;
+                            flujo_LCD1 = 12;
                         break;
                         case 0x81:      //configurar ppux10,ppux1
                             flujo_LCD1 = 17;
@@ -1546,7 +1547,7 @@ void polling_LCD1(void){
                             id_teclado1 = 10;
                         break;                             
 	                    case 0x7E:		//ir a menu
-						  set_imagen(1,0);	
+						  set_imagen(1,74);	
 	                      flujo_LCD1=0;     
 	                    break;                                   
                     }
@@ -1575,7 +1576,7 @@ void polling_LCD1(void){
 							lado1.estado=libre;                           
                         break;
 	                    case 0x7E:	//ir a menu
-						  set_imagen(1,0);	
+						  set_imagen(1,74);	
 	                      flujo_LCD1=0;     
 	                    break;                         
                     }
@@ -1591,7 +1592,7 @@ void polling_LCD1(void){
 	                switch(LCD_1_rxBuffer[3]){
                         case 0x80:  //Producto 1
                             Producto=1;                                                    
-                            set_imagen(1,132);  
+                            set_imagen(1,6);  
                             id_teclado1=7;
 					        count_teclas1=0;							    //Inicia el contador de teclas	
 					        id_coma1=',';	
@@ -1603,7 +1604,7 @@ void polling_LCD1(void){
                         break;
                         case 0x81:  //Producto 2
                             Producto=2;                                                    
-                            set_imagen(1,132);  
+                            set_imagen(1,6);  
                             id_teclado1=7;
 					        count_teclas1=0;							    	
 					        id_coma1=',';	
@@ -1615,7 +1616,7 @@ void polling_LCD1(void){
                         break;                            
                         case 0x7F:  //Producto 3
                             Producto=3;                                                    
-                            set_imagen(1,132);  
+                            set_imagen(1,6);  
                             id_teclado1=7;
 					        count_teclas1=0;							    
 					        id_coma1=',';	
@@ -1627,7 +1628,7 @@ void polling_LCD1(void){
                         break;                            
                         case 0x82:  //Producto 4
                             Producto=4;                                                   
-                            set_imagen(1,132);  
+                            set_imagen(1,6);  
                             id_teclado1=7;
 					        count_teclas1=0;							    	
 					        id_coma1=',';	
@@ -1715,7 +1716,7 @@ void polling_LCD1(void){
                             EEPROM_WriteByte(lado1.grado[0][0],16);
                             EEPROM_WriteByte(lado1.grado[1][0],17);
                             EEPROM_WriteByte(lado1.grado[2][0],18);
-						    set_imagen(1,0);	
+						    set_imagen(1,74);	
 	                        flujo_LCD1 = 0;    
 							lado1.estado=libre;  
 	                    break;                         
