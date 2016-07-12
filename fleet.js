@@ -30,7 +30,7 @@ var config_port_mux   = {baudrate: 9600, parser: sp.parsers.readline("*")};
 var muxport           = new sp.SerialPort(port_mux,config_port_mux,abrir);
 
 var port_print        = '/dev/ttyO1';
-var config_port_print = {baudrate: 115200, parser: sp2.parsers.readline("*")};// 115200
+var config_port_print = {baudrate: 9600, parser: sp2.parsers.readline("*")};// 115200
 var printport           = new sp2.SerialPort(port_print,config_port_print, printer);
      
 var conString         = "postgrest://db_admin:12345@localhost:5432/grpfleet";
@@ -296,7 +296,7 @@ function rx_data_mux(data){
                     km[58-i] = data.charCodeAt(i); 
                 }  
                 console.log('Km: '+km); 
-                cambio_precio1 = 1;
+                cambio_precio1 = 0;
                 guardar_venta();                
             break;
             
@@ -454,7 +454,8 @@ function consulta_dato(){
                         printport.write('O vehiculo no existe \n');
                         printport.write('Serial:' +serial +'\n\n\n\n\n\n\n');
                     }else{
-                        autorizaMux();
+                        restricciones();
+                        //autorizaMux();
                     }
                 }
                 });
@@ -564,11 +565,30 @@ function imprimir_venta(){
                 if(err){
                     return console.error('error de conexion', err);
                 }else{
+                    
                     nombre_producto = result.rows[0].descripcion;
                     console.log(">>"+nombre_producto);
-                }
-          
+                    var ncuenta;
+                    client.query(sprintf("SELECT c.nombre FROM cuenta c INNER JOIN vehiculo v ON v.id_cliente = c.id_cliente WHERE v.serial = '%1$s';",serial), function(err,result){ 
+                        done();
+                        if(err){
+                            return console.error('Error cuenta', err);
+                        }else{
+                            ncuenta = result.rows[0].nombre;
+                            console.log("Cuenta"+ncuenta);
+                        }
+                    
             console.log("IMPRIMIENDO");
+            var logo = new Buffer(5);
+            logo [0]  = 0x1c;
+            logo [1]  = 0x70;
+            logo [2]  = 0x01;
+            logo [3]  = 0x00;
+            logo [4]  = 0x10;
+            printport.write(logo);
+            printport.write('\n');
+            printport.write('\n');
+            printport.write('\n');
             printport.write('   '+linea1 +'\n');
             printport.write('      '+linea2 +'\n');
             printport.write('       '+id_tax+'\n');
@@ -576,6 +596,8 @@ function imprimir_venta(){
             printport.write('     '+dir+ '\n\n');
             var f = new Date();
 	        printport.write('Fecha:' + String(f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes()) + '\n\n');                                                      
+            printport.write('Cuenta:\n');
+            printport.write(ncuenta+'\n');
             printport.write('Serial:\n');
             printport.write(serial + '\n');
             printport.write('Placa: ' + placa +'\n');
@@ -594,8 +616,16 @@ function imprimir_venta(){
             printport.write('Cedula:' + '\n');
             printport.write('       --------------------'+ '\n\n');
             printport.write(footer+ '\n');
-            printport.write('\n\n\n\n\n');  
-            });
+            printport.write('\n\n\n\n\n\n');  
+            var corte = new Buffer(3);
+            corte [0] =0x1D;
+            corte [1] =0x56;
+            corte [2] =0x31;
+            printport.write(corte);
+            
+                    });
+                }
+                    });
         }
     });
 }
@@ -620,7 +650,7 @@ function autorizaMux(){
     console.log("Id Producto: "+idproducto);
     console.log("Precio: ");                                   //Precio
     console.log(">>Cambio:"+ cambio_precio1);
-    if(cambio_precio1 == 0){
+    if(cambio_precio1 == 0 && serial != '1111111111111111'){
         precio_cambio();
         for(var i=0; i<=4; i++){
             muxport.write(revprecio[i]);
@@ -650,6 +680,55 @@ function autorizaMux(){
 
 /*
 *********************************************************************************************************
+*                                function restricciones()
+*
+* Description : Revisa los estados del Beagle para realizar reintentos o peticiones al MUX
+*               
+*********************************************************************************************************
+*/
+function restricciones(){
+    pg.connect(conString, function(err, client, done){
+        if(err){
+		    return console.error('error de conexion 1', err);                                
+        }else{
+			client.query(sprintf("SELECT r.id_producto FROM restricciones r INNER JOIN vehiculo v ON v.id_vehiculo = r.id_vehiculo WHERE serial= '%1$s'",serial), function(err,result){
+                done();
+                if(err){
+                    return console.error('error de conexion 2', err);                            
+                }else{
+                    var producto_seleccionado = result.rows[0].id_producto;
+                    console.log('>>'+producto_seleccionado );
+                    if(result.rows[0].id_producto==null){
+                                printport.write("Vehiculo no actualizado\n");
+                                printport.write("Actualice restricciones\n\n");
+                    }
+                    if(producto_seleccionado != idproducto ){
+                        if(producto_seleccionado != 0){
+                            console.log(">>"+producto_seleccionado);
+                            console.log(">>"+idproducto);
+                            muxport.write('BBB');                                       //Encabezado
+                            muxport.write('0');
+                            muxport.write(String(cara));
+                            muxport.write('N');                                        // No permite autorizar
+                            muxport.write('*');
+                            printport.write("Producto no permitido\n\n");
+                        }else{
+                            autorizaMux();
+                        }
+                    }else{
+                        autorizaMux();
+                    }
+                    //muxport.write('1');             //Limpia estado del mux e inicia pantalla
+				}
+			});
+		}
+    });
+             
+}
+
+
+/*
+*********************************************************************************************************
 *                                function precio()
 *
 * Description : Revisa los estados del Beagle para realizar reintentos o peticiones al MUX
@@ -661,12 +740,12 @@ function precio_cambio(){
         if(err){
 		    return console.error('error de conexion 1', err);                                
         }else{
-			client.query(sprintf("SELECT precio FROM precios WHERE fk_id_producto ='%1$s'",idproducto), function(err,result){
+			client.query(sprintf("SELECT r.ppu FROM restricciones r INNER JOIN vehiculo v on v.id_vehiculo = r.id_vehiculo WHERE v.serial ='%1$s'",serial), function(err,result){
                 done();
                 if(err){
                     return console.error('error de conexion 2', err);                            
                 }else{
-                    var precio_db = result.rows[0].precio;
+                    var precio_db = result.rows[0].ppu;
 					var splitprecio = precio_db.split("");
                     revprecio   = splitprecio.reverse();
                     console.log("Precios: "+ precio_db+" "+ revprecio);
