@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
   55              		.comm	nit,15,4
   56              		.comm	telefono,20,4
   57              		.comm	direccion,33,4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 2
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 2
 
 
   58              		.comm	lema1,32,4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  112 0020 00       		.byte	0
  113 0021 00       		.byte	0
  114 0022 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 3
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 3
 
 
  115 0023 00       		.byte	0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  169 0059 3F       		.byte	63
  170 005a 3F       		.byte	63
  171 005b 3F       		.byte	63
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 4
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 4
 
 
  172 005c 3F       		.byte	63
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  226 0092 00       		.byte	0
  227 0093 00       		.byte	0
  228 0094 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 5
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 5
 
 
  229 0095 00       		.byte	0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  283 00cb 00       		.byte	0
  284 00cc 00       		.byte	0
  285 00cd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 6
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 6
 
 
  286 00ce FF       		.byte	-1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  340 0104 00       		.byte	0
  341 0105 00       		.byte	0
  342 0106 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 7
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 7
 
 
  343 0107 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  397 013d 0E       		.byte	14
  398 013e 0E       		.byte	14
  399 013f 0E       		.byte	14
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 8
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 8
 
 
  400 0140 1E       		.byte	30
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  454 0176 00       		.byte	0
  455 0177 00       		.byte	0
  456 0178 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 9
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 9
 
 
  457 0179 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  511 01af 38       		.byte	56
  512 01b0 38       		.byte	56
  513 01b1 38       		.byte	56
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 10
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 10
 
 
  514 01b2 38       		.byte	56
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  568 01e8 00       		.byte	0
  569 01e9 00       		.byte	0
  570 01ea 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 11
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 11
 
 
  571 01eb 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  625 0221 07       		.byte	7
  626 0222 03       		.byte	3
  627 0223 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 12
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 12
 
 
  628 0224 03       		.byte	3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  682 025a 00       		.byte	0
  683 025b 00       		.byte	0
  684 025c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 13
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 13
 
 
  685 025d 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  739 0293 00       		.byte	0
  740 0294 00       		.byte	0
  741 0295 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 14
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 14
 
 
  742 0296 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  796 02cc 68       		.byte	104
  797 02cd 00       		.byte	0
  798 02ce 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 15
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 15
 
 
  799 02cf 00       		.byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  853 0305 0F       		.byte	15
  854 0306 0F       		.byte	15
  855 0307 0E       		.byte	14
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 16
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 16
 
 
  856 0308 0C       		.byte	12
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  910 033e 51       		.byte	81
  911 033f 0E       		.byte	14
  912 0340 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 17
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 17
 
 
  913 0341 4B       		.byte	75
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  967 0377 00       		.byte	0
  968 0378 00       		.byte	0
  969 0379 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 18
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 18
 
 
  970 037a 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1024              		.global	brio
  1025              		.align	2
  1026              		.type	brio, %object
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 19
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 19
 
 
  1027              		.size	brio, 944
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1081 03e4 00       		.byte	0
  1082 03e5 00       		.byte	0
  1083 03e6 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 20
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 20
 
 
  1084 03e7 00       		.byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1138 041d 00       		.byte	0
  1139 041e 00       		.byte	0
  1140 041f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 21
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 21
 
 
  1141 0420 00       		.byte	0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1195 0456 0F       		.byte	15
  1196 0457 1F       		.byte	31
  1197 0458 1F       		.byte	31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 22
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 22
 
 
  1198 0459 3E       		.byte	62
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1252 048f 01       		.byte	1
  1253 0490 01       		.byte	1
  1254 0491 01       		.byte	1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 23
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 23
 
 
  1255 0492 01       		.byte	1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1309 04c8 FF       		.byte	-1
  1310 04c9 FF       		.byte	-1
  1311 04ca FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 24
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 24
 
 
  1312 04cb FF       		.byte	-1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1366 0501 00       		.byte	0
  1367 0502 00       		.byte	0
  1368 0503 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 25
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 25
 
 
  1369 0504 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1423 053a FF       		.byte	-1
  1424 053b FF       		.byte	-1
  1425 053c FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 26
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 26
 
 
  1426 053d FF       		.byte	-1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1480 0573 00       		.byte	0
  1481 0574 00       		.byte	0
  1482 0575 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 27
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 27
 
 
  1483 0576 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1537 05ac FC       		.byte	-4
  1538 05ad F8       		.byte	-8
  1539 05ae F0       		.byte	-16
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 28
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 28
 
 
  1540 05af E0       		.byte	-32
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1594 05e5 1E       		.byte	30
  1595 05e6 1E       		.byte	30
  1596 05e7 1C       		.byte	28
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 29
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 29
 
 
  1597 05e8 1C       		.byte	28
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1651 061e C0       		.byte	-64
  1652 061f 80       		.byte	-128
  1653 0620 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 30
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 30
 
 
  1654 0621 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1708 0657 FF       		.byte	-1
  1709 0658 F0       		.byte	-16
  1710 0659 80       		.byte	-128
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 31
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 31
 
 
  1711 065a 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1765 0690 00       		.byte	0
  1766 0691 00       		.byte	0
  1767 0692 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 32
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 32
 
 
  1768 0693 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1822 06c9 00       		.byte	0
  1823 06ca 01       		.byte	1
  1824 06cb FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 33
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 33
 
 
  1825 06cc FF       		.byte	-1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1879 0702 00       		.byte	0
  1880 0703 00       		.byte	0
  1881 0704 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 34
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 34
 
 
  1882 0705 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1936 073b 80       		.byte	-128
  1937 073c 80       		.byte	-128
  1938 073d 80       		.byte	-128
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 35
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 35
 
 
  1939 073e 80       		.byte	-128
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  1993 076f 00       		.byte	0
  1994 0770 00       		.byte	0
  1995 0771 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 36
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 36
 
 
  1996 0772 00       		.byte	0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2050 07a8 00       		.byte	0
  2051 07a9 00       		.byte	0
  2052 07aa 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 37
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 37
 
 
  2053 07ab 00       		.byte	0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2107 07e1 00       		.byte	0
  2108 07e2 00       		.byte	0
  2109 07e3 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 38
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 38
 
 
  2110 07e4 00       		.byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2164 081a E0       		.byte	-32
  2165 081b E0       		.byte	-32
  2166 081c F0       		.byte	-16
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 39
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 39
 
 
  2167 081d F0       		.byte	-16
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2221 0853 4B       		.byte	75
  2222 0854 68       		.byte	104
  2223 0855 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 40
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 40
 
 
  2224 0856 00       		.byte	0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2278 088c 00       		.byte	0
  2279 088d 00       		.byte	0
  2280 088e 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 41
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 41
 
 
  2281 088f 00       		.byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2335 08c5 1B       		.byte	27
  2336 08c6 51       		.byte	81
  2337 08c7 0E       		.byte	14
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 42
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 42
 
 
  2338 08c8 1B       		.byte	27
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2392 08fe 07       		.byte	7
  2393 08ff 00       		.byte	0
  2394 0900 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 43
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 43
 
 
  2395 0901 07       		.byte	7
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2449 0937 0A       		.byte	10
  2450 0938 1B       		.byte	27
  2451 0939 6C       		.byte	108
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 44
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 44
 
 
  2452 093a 0E       		.byte	14
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2506 0970 0F       		.byte	15
  2507 0971 0F       		.byte	15
  2508 0972 1F       		.byte	31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 45
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 45
 
 
  2509 0973 9F       		.byte	-97
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2563 09a9 FC       		.byte	-4
  2564 09aa 1B       		.byte	27
  2565 09ab 31       		.byte	49
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 46
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 46
 
 
  2566 09ac 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2620 09e2 00       		.byte	0
  2621 09e3 00       		.byte	0
  2622 09e4 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 47
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 47
 
 
  2623 09e5 00       		.byte	0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2677 0a1b 00       		.byte	0
  2678 0a1c 00       		.byte	0
  2679 0a1d 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 48
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 48
 
 
  2680 0a1e 00       		.byte	0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2734 0a54 0F       		.byte	15
  2735 0a55 07       		.byte	7
  2736 0a56 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 49
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 49
 
 
  2737 0a57 03       		.byte	3
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2791 0a8d 00       		.byte	0
  2792 0a8e 00       		.byte	0
  2793 0a8f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 50
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 50
 
 
  2794 0a90 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2848 0ac6 00       		.byte	0
  2849 0ac7 00       		.byte	0
  2850 0ac8 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 51
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 51
 
 
  2851 0ac9 80       		.byte	-128
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2905 0aff 00       		.byte	0
  2906 0b00 00       		.byte	0
  2907 0b01 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 52
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 52
 
 
  2908 0b02 00       		.byte	0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  2962 0b33 00       		.byte	0
  2963 0b34 00       		.byte	0
  2964 0b35 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 53
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 53
 
 
  2965 0b36 00       		.byte	0
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3019 0b6c 00       		.byte	0
  3020 0b6d 00       		.byte	0
  3021 0b6e 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 54
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 54
 
 
  3022 0b6f 00       		.byte	0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3076 0ba5 00       		.byte	0
  3077 0ba6 00       		.byte	0
  3078 0ba7 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 55
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 55
 
 
  3079 0ba8 00       		.byte	0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3133 0bde 00       		.byte	0
  3134 0bdf 00       		.byte	0
  3135 0be0 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 56
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 56
 
 
  3136 0be1 00       		.byte	0
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3190 0c17 00       		.byte	0
  3191 0c18 00       		.byte	0
  3192 0c19 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 57
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 57
 
 
  3193 0c1a 00       		.byte	0
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3247 0c50 1F       		.byte	31
  3248 0c51 0F       		.byte	15
  3249 0c52 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 58
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 58
 
 
  3250 0c53 00       		.byte	0
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3304 0c89 00       		.byte	0
  3305 0c8a 00       		.byte	0
  3306 0c8b 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 59
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 59
 
 
  3307 0c8c 00       		.byte	0
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3361 0cc2 FF       		.byte	-1
  3362 0cc3 FF       		.byte	-1
  3363 0cc4 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 60
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 60
 
 
  3364 0cc5 FF       		.byte	-1
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3418 0cfb 00       		.byte	0
  3419 0cfc 00       		.byte	0
  3420 0cfd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 61
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 61
 
 
  3421 0cfe 00       		.byte	0
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3475 0d34 00       		.byte	0
  3476 0d35 00       		.byte	0
  3477 0d36 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 62
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 62
 
 
  3478 0d37 00       		.byte	0
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3532 0d6d 00       		.byte	0
  3533 0d6e 00       		.byte	0
  3534 0d6f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 63
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 63
 
 
  3535 0d70 00       		.byte	0
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3589 0da6 00       		.byte	0
  3590 0da7 00       		.byte	0
  3591 0da8 01       		.byte	1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 64
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 64
 
 
  3592 0da9 01       		.byte	1
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3646 0ddf 00       		.byte	0
  3647 0de0 00       		.byte	0
  3648 0de1 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 65
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 65
 
 
  3649 0de2 00       		.byte	0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3703 0e18 3F       		.byte	63
  3704 0e19 3F       		.byte	63
  3705 0e1a 7F       		.byte	127
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 66
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 66
 
 
  3706 0e1b 7F       		.byte	127
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3760 0e51 4B       		.byte	75
  3761 0e52 68       		.byte	104
  3762 0e53 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 67
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 67
 
 
  3763 0e54 00       		.byte	0
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3817 0e8a FE       		.byte	-2
  3818 0e8b FE       		.byte	-2
  3819 0e8c FE       		.byte	-2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 68
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 68
 
 
  3820 0e8d FE       		.byte	-2
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3874              		.size	esso, 944
  3875              	esso:
  3876 0ec0 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 69
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 69
 
 
  3877 0ec1 6C       		.byte	108
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3931 0ef7 7F       		.byte	127
  3932 0ef8 7F       		.byte	127
  3933 0ef9 7F       		.byte	127
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 70
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 70
 
 
  3934 0efa 7F       		.byte	127
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  3988 0f30 00       		.byte	0
  3989 0f31 00       		.byte	0
  3990 0f32 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 71
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 71
 
 
  3991 0f33 31       		.byte	49
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4045 0f69 80       		.byte	-128
  4046 0f6a 80       		.byte	-128
  4047 0f6b 80       		.byte	-128
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 72
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 72
 
 
  4048 0f6c 80       		.byte	-128
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4102 0fa2 00       		.byte	0
  4103 0fa3 00       		.byte	0
  4104 0fa4 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 73
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 73
 
 
  4105 0fa5 00       		.byte	0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4159 0fdb 00       		.byte	0
  4160 0fdc 00       		.byte	0
  4161 0fdd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 74
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 74
 
 
  4162 0fde 00       		.byte	0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4216 1014 03       		.byte	3
  4217 1015 00       		.byte	0
  4218 1016 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 75
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 75
 
 
  4219 1017 00       		.byte	0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4273 104d 0F       		.byte	15
  4274 104e 0F       		.byte	15
  4275 104f 0F       		.byte	15
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 76
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 76
 
 
  4276 1050 00       		.byte	0
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4330 1086 FF       		.byte	-1
  4331 1087 FF       		.byte	-1
  4332 1088 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 77
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 77
 
 
  4333 1089 FF       		.byte	-1
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4387 10bf CF       		.byte	-49
  4388 10c0 87       		.byte	-121
  4389 10c1 87       		.byte	-121
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 78
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 78
 
 
  4390 10c2 87       		.byte	-121
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4444 10f8 00       		.byte	0
  4445 10f9 03       		.byte	3
  4446 10fa 1F       		.byte	31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 79
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 79
 
 
  4447 10fb FF       		.byte	-1
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4501 1131 C0       		.byte	-64
  4502 1132 C0       		.byte	-64
  4503 1133 C0       		.byte	-64
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 80
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 80
 
 
  4504 1134 E0       		.byte	-32
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4558 116a 07       		.byte	7
  4559 116b 0F       		.byte	15
  4560 116c 1F       		.byte	31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 81
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 81
 
 
  4561 116d 3F       		.byte	63
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4615 11a3 FF       		.byte	-1
  4616 11a4 FF       		.byte	-1
  4617 11a5 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 82
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 82
 
 
  4618 11a6 FF       		.byte	-1
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4672 11dc 7F       		.byte	127
  4673 11dd FF       		.byte	-1
  4674 11de FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 83
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 83
 
 
  4675 11df FF       		.byte	-1
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4729 1215 00       		.byte	0
  4730 1216 00       		.byte	0
  4731 1217 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 84
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 84
 
 
  4732 1218 00       		.byte	0
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4786 124e F0       		.byte	-16
  4787 124f E0       		.byte	-32
  4788 1250 E0       		.byte	-32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 85
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 85
 
 
  4789 1251 C0       		.byte	-64
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4843 1282 00       		.byte	0
  4844 1283 00       		.byte	0
  4845 1284 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 86
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 86
 
 
  4846 1285 00       		.byte	0
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4900 12bb 00       		.byte	0
  4901 12bc 00       		.byte	0
  4902 12bd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 87
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 87
 
 
  4903 12be 00       		.byte	0
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  4957 12f4 00       		.byte	0
  4958 12f5 00       		.byte	0
  4959 12f6 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 88
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 88
 
 
  4960 12f7 00       		.byte	0
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5014 132d 00       		.byte	0
  5015 132e 00       		.byte	0
  5016 132f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 89
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 89
 
 
  5017 1330 00       		.byte	0
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5071 1366 00       		.byte	0
  5072 1367 00       		.byte	0
  5073 1368 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 90
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 90
 
 
  5074 1369 00       		.byte	0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5128 139f 01       		.byte	1
  5129 13a0 01       		.byte	1
  5130 13a1 01       		.byte	1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 91
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 91
 
 
  5131 13a2 01       		.byte	1
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5185 13d8 1B       		.byte	27
  5186 13d9 4B       		.byte	75
  5187 13da 68       		.byte	104
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 92
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 92
 
 
  5188 13db 00       		.byte	0
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5242 1411 FF       		.byte	-1
  5243 1412 FF       		.byte	-1
  5244 1413 FE       		.byte	-2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 93
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 93
 
 
  5245 1414 FC       		.byte	-4
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5299 144a 0E       		.byte	14
  5300 144b 1B       		.byte	27
  5301 144c 51       		.byte	81
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 94
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 94
 
 
  5302 144d 0E       		.byte	14
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5356 1483 FF       		.byte	-1
  5357 1484 FE       		.byte	-2
  5358 1485 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 95
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 95
 
 
  5359 1486 FF       		.byte	-1
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5413 14bc 00       		.byte	0
  5414 14bd 0A       		.byte	10
  5415 14be 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 96
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 96
 
 
  5416 14bf 6C       		.byte	108
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5470 14f5 E0       		.byte	-32
  5471 14f6 E0       		.byte	-32
  5472 14f7 E0       		.byte	-32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 97
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 97
 
 
  5473 14f8 C0       		.byte	-64
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5527 152e 00       		.byte	0
  5528 152f 00       		.byte	0
  5529 1530 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 98
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 98
 
 
  5530 1531 31       		.byte	49
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5584 1567 00       		.byte	0
  5585 1568 00       		.byte	0
  5586 1569 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 99
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 99
 
 
  5587 156a 00       		.byte	0
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5641 15a0 00       		.byte	0
  5642 15a1 00       		.byte	0
  5643 15a2 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 100
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 100
 
 
  5644 15a3 00       		.byte	0
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5698 15d9 00       		.byte	0
  5699 15da 00       		.byte	0
  5700 15db 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 101
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 101
 
 
  5701 15dc 00       		.byte	0
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5755 1612 00       		.byte	0
  5756 1613 00       		.byte	0
  5757 1614 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 102
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 102
 
 
  5758 1615 00       		.byte	0
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5812 1646 00       		.byte	0
  5813 1647 00       		.byte	0
  5814 1648 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 103
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 103
 
 
  5815 1649 00       		.byte	0
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5869 167f 00       		.byte	0
  5870 1680 00       		.byte	0
  5871 1681 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 104
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 104
 
 
  5872 1682 00       		.byte	0
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5926 16b8 00       		.byte	0
  5927 16b9 01       		.byte	1
  5928 16ba 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 105
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 105
 
 
  5929 16bb 0F       		.byte	15
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  5983 16f1 00       		.byte	0
  5984 16f2 00       		.byte	0
  5985 16f3 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 106
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 106
 
 
  5986 16f4 00       		.byte	0
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6040 172a 03       		.byte	3
  6041 172b 06       		.byte	6
  6042 172c 06       		.byte	6
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 107
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 107
 
 
  6043 172d 1E       		.byte	30
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6097 1763 F8       		.byte	-8
  6098 1764 F0       		.byte	-16
  6099 1765 78       		.byte	120
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 108
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 108
 
 
  6100 1766 1C       		.byte	28
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6154 179c 00       		.byte	0
  6155 179d 00       		.byte	0
  6156 179e 01       		.byte	1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 109
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 109
 
 
  6157 179f FF       		.byte	-1
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6211 17d5 01       		.byte	1
  6212 17d6 7F       		.byte	127
  6213 17d7 7F       		.byte	127
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 110
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 110
 
 
  6214 17d8 7F       		.byte	127
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6268 180e 00       		.byte	0
  6269 180f 00       		.byte	0
  6270 1810 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 111
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 111
 
 
  6271 1811 00       		.byte	0
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6325 1847 00       		.byte	0
  6326 1848 00       		.byte	0
  6327 1849 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 112
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 112
 
 
  6328 184a E0       		.byte	-32
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6382 1880 00       		.byte	0
  6383 1881 00       		.byte	0
  6384 1882 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 113
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 113
 
 
  6385 1883 00       		.byte	0
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6439 18b9 8F       		.byte	-113
  6440 18ba 8F       		.byte	-113
  6441 18bb 8F       		.byte	-113
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 114
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 114
 
 
  6442 18bc 0F       		.byte	15
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6496 18f2 00       		.byte	0
  6497 18f3 00       		.byte	0
  6498 18f4 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 115
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 115
 
 
  6499 18f5 00       		.byte	0
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6553 192b FF       		.byte	-1
  6554 192c FF       		.byte	-1
  6555 192d FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 116
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 116
 
 
  6556 192e FF       		.byte	-1
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6610 1964 00       		.byte	0
  6611 1965 00       		.byte	0
  6612 1966 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 117
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 117
 
 
  6613 1967 00       		.byte	0
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6667 199d FE       		.byte	-2
  6668 199e FE       		.byte	-2
  6669 199f FE       		.byte	-2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 118
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 118
 
 
  6670 19a0 F6       		.byte	-10
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6724 19d1 6C       		.byte	108
  6725 19d2 0E       		.byte	14
  6726 19d3 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 119
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 119
 
 
  6727 19d4 51       		.byte	81
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6781 1a0a 00       		.byte	0
  6782 1a0b 00       		.byte	0
  6783 1a0c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 120
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 120
 
 
  6784 1a0d 00       		.byte	0
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6838 1a43 31       		.byte	49
  6839 1a44 00       		.byte	0
  6840 1a45 0A       		.byte	10
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 121
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 121
 
 
  6841 1a46 1B       		.byte	27
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6895 1a7c 00       		.byte	0
  6896 1a7d 00       		.byte	0
  6897 1a7e 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 122
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 122
 
 
  6898 1a7f 00       		.byte	0
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  6952 1ab5 00       		.byte	0
  6953 1ab6 00       		.byte	0
  6954 1ab7 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 123
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 123
 
 
  6955 1ab8 1B       		.byte	27
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7009 1aee 01       		.byte	1
  7010 1aef 03       		.byte	3
  7011 1af0 07       		.byte	7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 124
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 124
 
 
  7012 1af1 0F       		.byte	15
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7066 1b27 00       		.byte	0
  7067 1b28 00       		.byte	0
  7068 1b29 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 125
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 125
 
 
  7069 1b2a 00       		.byte	0
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7123 1b60 00       		.byte	0
  7124 1b61 00       		.byte	0
  7125 1b62 1E       		.byte	30
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 126
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 126
 
 
  7126 1b63 7C       		.byte	124
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7180 1b99 03       		.byte	3
  7181 1b9a 07       		.byte	7
  7182 1b9b 07       		.byte	7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 127
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 127
 
 
  7183 1b9c 07       		.byte	7
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7237 1bd2 FF       		.byte	-1
  7238 1bd3 0F       		.byte	15
  7239 1bd4 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 128
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 128
 
 
  7240 1bd5 FF       		.byte	-1
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7294 1c0b 03       		.byte	3
  7295 1c0c 3F       		.byte	63
  7296 1c0d FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 129
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 129
 
 
  7297 1c0e FF       		.byte	-1
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7351 1c44 F8       		.byte	-8
  7352 1c45 F8       		.byte	-8
  7353 1c46 F0       		.byte	-16
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 130
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 130
 
 
  7354 1c47 E0       		.byte	-32
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7408 1c7d F0       		.byte	-16
  7409 1c7e F0       		.byte	-16
  7410 1c7f E0       		.byte	-32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 131
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 131
 
 
  7411 1c80 9C       		.byte	-100
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7465 1cb6 00       		.byte	0
  7466 1cb7 00       		.byte	0
  7467 1cb8 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 132
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 132
 
 
  7468 1cb9 00       		.byte	0
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7522 1cef 00       		.byte	0
  7523 1cf0 00       		.byte	0
  7524 1cf1 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 133
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 133
 
 
  7525 1cf2 00       		.byte	0
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7579 1d28 00       		.byte	0
  7580 1d29 00       		.byte	0
  7581 1d2a 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 134
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 134
 
 
  7582 1d2b 00       		.byte	0
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7636 1d61 00       		.byte	0
  7637 1d62 00       		.byte	0
  7638 1d63 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 135
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 135
 
 
  7639 1d64 00       		.byte	0
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7693 1d95 00       		.byte	0
  7694 1d96 00       		.byte	0
  7695 1d97 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 136
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 136
 
 
  7696 1d98 00       		.byte	0
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7750 1dce 00       		.byte	0
  7751 1dcf 00       		.byte	0
  7752 1dd0 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 137
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 137
 
 
  7753 1dd1 00       		.byte	0
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7807 1e07 03       		.byte	3
  7808 1e08 03       		.byte	3
  7809 1e09 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 138
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 138
 
 
  7810 1e0a 03       		.byte	3
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7864 1e40 03       		.byte	3
  7865 1e41 03       		.byte	3
  7866 1e42 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 139
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 139
 
 
  7867 1e43 00       		.byte	0
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7921 1e79 FF       		.byte	-1
  7922 1e7a FF       		.byte	-1
  7923 1e7b FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 140
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 140
 
 
  7924 1e7c FF       		.byte	-1
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  7978 1eb2 FF       		.byte	-1
  7979 1eb3 FF       		.byte	-1
  7980 1eb4 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 141
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 141
 
 
  7981 1eb5 FF       		.byte	-1
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8035 1eeb 00       		.byte	0
  8036 1eec 00       		.byte	0
  8037 1eed FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 142
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 142
 
 
  8038 1eee FF       		.byte	-1
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8092 1f24 0F       		.byte	15
  8093 1f25 03       		.byte	3
  8094 1f26 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 143
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 143
 
 
  8095 1f27 00       		.byte	0
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8149 1f5d 0E       		.byte	14
  8150 1f5e 1B       		.byte	27
  8151 1f5f 4B       		.byte	75
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 144
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 144
 
 
  8152 1f60 68       		.byte	104
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8206 1f96 FF       		.byte	-1
  8207 1f97 FF       		.byte	-1
  8208 1f98 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 145
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 145
 
 
  8209 1f99 FF       		.byte	-1
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8263 1fcf 6C       		.byte	108
  8264 1fd0 0E       		.byte	14
  8265 1fd1 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 146
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 146
 
 
  8266 1fd2 51       		.byte	81
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8320 2008 FC       		.byte	-4
  8321 2009 F8       		.byte	-8
  8322 200a F8       		.byte	-8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 147
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 147
 
 
  8323 200b F8       		.byte	-8
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8377 2041 31       		.byte	49
  8378 2042 00       		.byte	0
  8379 2043 0A       		.byte	10
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 148
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 148
 
 
  8380 2044 1B       		.byte	27
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8434 207a 00       		.byte	0
  8435 207b 00       		.byte	0
  8436 207c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 149
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 149
 
 
  8437 207d 00       		.byte	0
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8491 20b3 00       		.byte	0
  8492 20b4 00       		.byte	0
  8493 20b5 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 150
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 150
 
 
  8494 20b6 1B       		.byte	27
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8548 20ec 00       		.byte	0
  8549 20ed 00       		.byte	0
  8550 20ee 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 151
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 151
 
 
  8551 20ef 00       		.byte	0
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8605 2125 00       		.byte	0
  8606 2126 00       		.byte	0
  8607 2127 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 152
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 152
 
 
  8608 2128 00       		.byte	0
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8662 2159 7F       		.byte	127
  8663 215a 7F       		.byte	127
  8664 215b 7F       		.byte	127
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 153
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 153
 
 
  8665 215c 7F       		.byte	127
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8719 2192 00       		.byte	0
  8720 2193 00       		.byte	0
  8721 2194 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 154
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 154
 
 
  8722 2195 00       		.byte	0
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8776 21cb 00       		.byte	0
  8777 21cc 00       		.byte	0
  8778 21cd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 155
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 155
 
 
  8779 21ce 00       		.byte	0
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8833 2204 00       		.byte	0
  8834 2205 00       		.byte	0
  8835 2206 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 156
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 156
 
 
  8836 2207 00       		.byte	0
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8890 223d 00       		.byte	0
  8891 223e 00       		.byte	0
  8892 223f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 157
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 157
 
 
  8893 2240 00       		.byte	0
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  8947 2276 00       		.byte	0
  8948 2277 00       		.byte	0
  8949 2278 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 158
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 158
 
 
  8950 2279 00       		.byte	0
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9004 22af 00       		.byte	0
  9005 22b0 00       		.byte	0
  9006 22b1 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 159
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 159
 
 
  9007 22b2 00       		.byte	0
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9061 22e8 00       		.byte	0
  9062 22e9 00       		.byte	0
  9063 22ea 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 160
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 160
 
 
  9064 22eb 00       		.byte	0
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9118 2321 00       		.byte	0
  9119 2322 00       		.byte	0
  9120 2323 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 161
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 161
 
 
  9121 2324 00       		.byte	0
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9175 235a FF       		.byte	-1
  9176 235b 00       		.byte	0
  9177 235c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 162
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 162
 
 
  9178 235d 00       		.byte	0
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9232 2393 00       		.byte	0
  9233 2394 00       		.byte	0
  9234 2395 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 163
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 163
 
 
  9235 2396 00       		.byte	0
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9289 23cc E0       		.byte	-32
  9290 23cd E0       		.byte	-32
  9291 23ce E0       		.byte	-32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 164
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 164
 
 
  9292 23cf E0       		.byte	-32
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9346 2405 07       		.byte	7
  9347 2406 07       		.byte	7
  9348 2407 07       		.byte	7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 165
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 165
 
 
  9349 2408 07       		.byte	7
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9403 243e 07       		.byte	7
  9404 243f 07       		.byte	7
  9405 2440 07       		.byte	7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 166
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 166
 
 
  9406 2441 07       		.byte	7
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9460 2477 FE       		.byte	-2
  9461 2478 FC       		.byte	-4
  9462 2479 F8       		.byte	-8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 167
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 167
 
 
  9463 247a 70       		.byte	112
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9517 24b0 FE       		.byte	-2
  9518 24b1 FE       		.byte	-2
  9519 24b2 FE       		.byte	-2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 168
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 168
 
 
  9520 24b3 EE       		.byte	-18
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9574 24e4 51       		.byte	81
  9575 24e5 0E       		.byte	14
  9576 24e6 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 169
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 169
 
 
  9577 24e7 4B       		.byte	75
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9631 251d 00       		.byte	0
  9632 251e 00       		.byte	0
  9633 251f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 170
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 170
 
 
  9634 2520 00       		.byte	0
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9688 2556 1B       		.byte	27
  9689 2557 6C       		.byte	108
  9690 2558 0E       		.byte	14
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 171
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 171
 
 
  9691 2559 1B       		.byte	27
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9745 258f 00       		.byte	0
  9746 2590 00       		.byte	0
  9747 2591 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 172
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 172
 
 
  9748 2592 00       		.byte	0
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9802 25c8 1B       		.byte	27
  9803 25c9 31       		.byte	49
  9804 25ca 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 173
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 173
 
 
  9805 25cb 0A       		.byte	10
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9859 2601 00       		.byte	0
  9860 2602 00       		.byte	0
  9861 2603 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 174
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 174
 
 
  9862 2604 01       		.byte	1
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9916 263a 00       		.byte	0
  9917 263b 00       		.byte	0
  9918 263c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 175
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 175
 
 
  9919 263d 00       		.byte	0
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  9973 2673 00       		.byte	0
  9974 2674 00       		.byte	0
  9975 2675 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 176
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 176
 
 
  9976 2676 00       		.byte	0
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10030 26ac 07       		.byte	7
  10031 26ad 07       		.byte	7
  10032 26ae 07       		.byte	7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 177
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 177
 
 
  10033 26af 07       		.byte	7
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10087 26e5 3F       		.byte	63
  10088 26e6 1F       		.byte	31
  10089 26e7 0F       		.byte	15
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 178
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 178
 
 
  10090 26e8 0F       		.byte	15
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10144 271e F0       		.byte	-16
  10145 271f F0       		.byte	-16
  10146 2720 F0       		.byte	-16
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 179
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 179
 
 
  10147 2721 F0       		.byte	-16
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10201 2757 00       		.byte	0
  10202 2758 00       		.byte	0
  10203 2759 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 180
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 180
 
 
  10204 275a 80       		.byte	-128
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10258 2790 FF       		.byte	-1
  10259 2791 FF       		.byte	-1
  10260 2792 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 181
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 181
 
 
  10261 2793 FF       		.byte	-1
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10315 27c9 00       		.byte	0
  10316 27ca 00       		.byte	0
  10317 27cb 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 182
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 182
 
 
  10318 27cc 00       		.byte	0
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10372 2802 00       		.byte	0
  10373 2803 00       		.byte	0
  10374 2804 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 183
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 183
 
 
  10375 2805 00       		.byte	0
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10429 283b 00       		.byte	0
  10430 283c 00       		.byte	0
  10431 283d 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 184
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 184
 
 
  10432 283e 00       		.byte	0
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10486 2874 00       		.byte	0
  10487 2875 00       		.byte	0
  10488 2876 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 185
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 185
 
 
  10489 2877 00       		.byte	0
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10543 28a8 00       		.byte	0
  10544 28a9 00       		.byte	0
  10545 28aa 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 186
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 186
 
 
  10546 28ab 00       		.byte	0
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10600 28e1 00       		.byte	0
  10601 28e2 00       		.byte	0
  10602 28e3 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 187
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 187
 
 
  10603 28e4 00       		.byte	0
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10657 291a 00       		.byte	0
  10658 291b 00       		.byte	0
  10659 291c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 188
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 188
 
 
  10660 291d 00       		.byte	0
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10714 2953 03       		.byte	3
  10715 2954 00       		.byte	0
  10716 2955 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 189
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 189
 
 
  10717 2956 00       		.byte	0
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10771 298c 00       		.byte	0
  10772 298d 00       		.byte	0
  10773 298e 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 190
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 190
 
 
  10774 298f 00       		.byte	0
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10828 29c5 E0       		.byte	-32
  10829 29c6 FF       		.byte	-1
  10830 29c7 1F       		.byte	31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 191
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 191
 
 
  10831 29c8 83       		.byte	-125
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10885 29fe 00       		.byte	0
  10886 29ff 00       		.byte	0
  10887 2a00 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 192
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 192
 
 
  10888 2a01 00       		.byte	0
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10942 2a37 F8       		.byte	-8
  10943 2a38 E1       		.byte	-31
  10944 2a39 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 193
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 193
 
 
  10945 2a3a 0F       		.byte	15
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  10999 2a70 68       		.byte	104
  11000 2a71 00       		.byte	0
  11001 2a72 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 194
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 194
 
 
  11002 2a73 00       		.byte	0
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11056 2aa9 7F       		.byte	127
  11057 2aaa 3F       		.byte	63
  11058 2aab 3F       		.byte	63
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 195
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 195
 
 
  11059 2aac 7F       		.byte	127
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11113 2ae2 51       		.byte	81
  11114 2ae3 0E       		.byte	14
  11115 2ae4 1B       		.byte	27
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 196
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 196
 
 
  11116 2ae5 4B       		.byte	75
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11170 2b1b 81       		.byte	-127
  11171 2b1c 81       		.byte	-127
  11172 2b1d 81       		.byte	-127
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 197
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 197
 
 
  11173 2b1e 83       		.byte	-125
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11227 2b54 1B       		.byte	27
  11228 2b55 6C       		.byte	108
  11229 2b56 0E       		.byte	14
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 198
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 198
 
 
  11230 2b57 1B       		.byte	27
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11284 2b8d C0       		.byte	-64
  11285 2b8e C0       		.byte	-64
  11286 2b8f 80       		.byte	-128
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 199
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 199
 
 
  11287 2b90 00       		.byte	0
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11341 2bc6 1B       		.byte	27
  11342 2bc7 31       		.byte	49
  11343 2bc8 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 200
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 200
 
 
  11344 2bc9 0A       		.byte	10
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11398 2bff C0       		.byte	-64
  11399 2c00 C0       		.byte	-64
  11400 2c01 C0       		.byte	-64
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 201
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 201
 
 
  11401 2c02 00       		.byte	0
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11455 2c38 00       		.byte	0
  11456 2c39 00       		.byte	0
  11457 2c3a 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 202
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 202
 
 
  11458 2c3b 00       		.byte	0
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11512 2c6c 00       		.byte	0
  11513 2c6d 01       		.byte	1
  11514 2c6e 03       		.byte	3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 203
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 203
 
 
  11515 2c6f 03       		.byte	3
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11569 2ca5 00       		.byte	0
  11570 2ca6 00       		.byte	0
  11571 2ca7 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 204
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 204
 
 
  11572 2ca8 00       		.byte	0
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11626 2cde 07       		.byte	7
  11627 2cdf 0F       		.byte	15
  11628 2ce0 3F       		.byte	63
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 205
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 205
 
 
  11629 2ce1 7F       		.byte	127
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11683 2d17 00       		.byte	0
  11684 2d18 00       		.byte	0
  11685 2d19 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 206
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 206
 
 
  11686 2d1a 00       		.byte	0
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11740 2d50 00       		.byte	0
  11741 2d51 0F       		.byte	15
  11742 2d52 7F       		.byte	127
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 207
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 207
 
 
  11743 2d53 FF       		.byte	-1
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11797 2d89 00       		.byte	0
  11798 2d8a 00       		.byte	0
  11799 2d8b 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 208
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 208
 
 
  11800 2d8c 00       		.byte	0
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11854 2dc2 00       		.byte	0
  11855 2dc3 00       		.byte	0
  11856 2dc4 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 209
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 209
 
 
  11857 2dc5 00       		.byte	0
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11911 2dfb 00       		.byte	0
  11912 2dfc 00       		.byte	0
  11913 2dfd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 210
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 210
 
 
  11914 2dfe 00       		.byte	0
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  11968 2e34 00       		.byte	0
  11969 2e35 00       		.byte	0
  11970 2e36 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 211
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 211
 
 
  11971 2e37 00       		.byte	0
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12025 2e6d FC       		.byte	-4
  12026 2e6e F0       		.byte	-16
  12027 2e6f 80       		.byte	-128
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 212
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 212
 
 
  12028 2e70 00       		.byte	0
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12082 2ea6 00       		.byte	0
  12083 2ea7 00       		.byte	0
  12084 2ea8 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 213
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 213
 
 
  12085 2ea9 00       		.byte	0
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12139 2edf E0       		.byte	-32
  12140 2ee0 C0       		.byte	-64
  12141 2ee1 80       		.byte	-128
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 214
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 214
 
 
  12142 2ee2 00       		.byte	0
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12196 2f18 00       		.byte	0
  12197 2f19 00       		.byte	0
  12198 2f1a 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 215
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 215
 
 
  12199 2f1b 00       		.byte	0
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12253 2f51 01       		.byte	1
  12254 2f52 01       		.byte	1
  12255 2f53 01       		.byte	1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 216
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 216
 
 
  12256 2f54 00       		.byte	0
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12310 2f8a 00       		.byte	0
  12311 2f8b 00       		.byte	0
  12312 2f8c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 217
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 217
 
 
  12313 2f8d 00       		.byte	0
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12367 2fc3 FC       		.byte	-4
  12368 2fc4 FE       		.byte	-2
  12369 2fc5 86       		.byte	-122
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 218
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 218
 
 
  12370 2fc6 86       		.byte	-122
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12424 2ff7 4B       		.byte	75
  12425 2ff8 68       		.byte	104
  12426 2ff9 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 219
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 219
 
 
  12427 2ffa 00       		.byte	0
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12481 3030 00       		.byte	0
  12482 3031 00       		.byte	0
  12483 3032 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 220
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 220
 
 
  12484 3033 00       		.byte	0
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12538 3069 1B       		.byte	27
  12539 306a 51       		.byte	81
  12540 306b 0E       		.byte	14
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 221
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 221
 
 
  12541 306c 1B       		.byte	27
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12595 30a2 00       		.byte	0
  12596 30a3 00       		.byte	0
  12597 30a4 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 222
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 222
 
 
  12598 30a5 00       		.byte	0
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12652 30db 0A       		.byte	10
  12653 30dc 1B       		.byte	27
  12654 30dd 6C       		.byte	108
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 223
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 223
 
 
  12655 30de 0E       		.byte	14
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12709 3114 00       		.byte	0
  12710 3115 00       		.byte	0
  12711 3116 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 224
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 224
 
 
  12712 3117 00       		.byte	0
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12766 314d 00       		.byte	0
  12767 314e 1B       		.byte	27
  12768 314f 31       		.byte	49
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 225
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 225
 
 
  12769 3150 00       		.byte	0
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12823 3186 0F       		.byte	15
  12824 3187 0F       		.byte	15
  12825 3188 0F       		.byte	15
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 226
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 226
 
 
  12826 3189 0F       		.byte	15
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12880 31bf 0F       		.byte	15
  12881 31c0 0F       		.byte	15
  12882 31c1 07       		.byte	7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 227
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 227
 
 
  12883 31c2 02       		.byte	2
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12937 31f8 0F       		.byte	15
  12938 31f9 1F       		.byte	31
  12939 31fa 7F       		.byte	127
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 228
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 228
 
 
  12940 31fb FF       		.byte	-1
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  12994 3231 F9       		.byte	-7
  12995 3232 F9       		.byte	-7
  12996 3233 7C       		.byte	124
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 229
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 229
 
 
  12997 3234 7F       		.byte	127
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13051 326a 00       		.byte	0
  13052 326b 20       		.byte	32
  13053 326c E0       		.byte	-32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 230
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 230
 
 
  13054 326d E0       		.byte	-32
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13108 32a3 00       		.byte	0
  13109 32a4 E0       		.byte	-32
  13110 32a5 E0       		.byte	-32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 231
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 231
 
 
  13111 32a6 F0       		.byte	-16
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13165 32dc 00       		.byte	0
  13166 32dd 00       		.byte	0
  13167 32de 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 232
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 232
 
 
  13168 32df 00       		.byte	0
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13222 3315 00       		.byte	0
  13223 3316 00       		.byte	0
  13224 3317 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 233
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 233
 
 
  13225 3318 00       		.byte	0
@@ -13978,7 +13978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13279 334e 00       		.byte	0
  13280 334f 00       		.byte	0
  13281 3350 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 234
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 234
 
 
  13282 3351 00       		.byte	0
@@ -14038,7 +14038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13336 3387 00       		.byte	0
  13337 3388 00       		.byte	0
  13338 3389 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 235
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 235
 
 
  13339 338a 00       		.byte	0
@@ -14098,7 +14098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13393 33bb 00       		.byte	0
  13394 33bc 00       		.byte	0
  13395 33bd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 236
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 236
 
 
  13396 33be 00       		.byte	0
@@ -14158,7 +14158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13450 33f4 01       		.byte	1
  13451 33f5 01       		.byte	1
  13452 33f6 01       		.byte	1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 237
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 237
 
 
  13453 33f7 01       		.byte	1
@@ -14218,7 +14218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13507 342d 00       		.byte	0
  13508 342e 00       		.byte	0
  13509 342f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 238
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 238
 
 
  13510 3430 00       		.byte	0
@@ -14278,7 +14278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13564 3466 C0       		.byte	-64
  13565 3467 C0       		.byte	-64
  13566 3468 C0       		.byte	-64
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 239
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 239
 
 
  13567 3469 C0       		.byte	-64
@@ -14338,7 +14338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13621 349f 00       		.byte	0
  13622 34a0 00       		.byte	0
  13623 34a1 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 240
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 240
 
 
  13624 34a2 00       		.byte	0
@@ -14398,7 +14398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13678 34d8 3F       		.byte	63
  13679 34d9 00       		.byte	0
  13680 34da 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 241
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 241
 
 
  13681 34db 00       		.byte	0
@@ -14458,7 +14458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13735 3511 00       		.byte	0
  13736 3512 00       		.byte	0
  13737 3513 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 242
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 242
 
 
  13738 3514 00       		.byte	0
@@ -14518,7 +14518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13792 354a FF       		.byte	-1
  13793 354b FF       		.byte	-1
  13794 354c FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 243
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 243
 
 
  13795 354d FF       		.byte	-1
@@ -14578,7 +14578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13849 3583 00       		.byte	0
  13850 3584 00       		.byte	0
  13851 3585 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 244
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 244
 
 
  13852 3586 00       		.byte	0
@@ -14638,7 +14638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13906 35bc F0       		.byte	-16
  13907 35bd E0       		.byte	-32
  13908 35be E0       		.byte	-32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 245
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 245
 
 
  13909 35bf E0       		.byte	-32
@@ -14698,7 +14698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  13963 35f5 4B       		.byte	75
  13964 35f6 68       		.byte	104
  13965 35f7 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 246
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 246
 
 
  13966 35f8 00       		.byte	0
@@ -14758,7 +14758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14020 362e 00       		.byte	0
  14021 362f 00       		.byte	0
  14022 3630 01       		.byte	1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 247
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 247
 
 
  14023 3631 03       		.byte	3
@@ -14818,7 +14818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14077 3667 1B       		.byte	27
  14078 3668 51       		.byte	81
  14079 3669 0E       		.byte	14
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 248
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 248
 
 
  14080 366a 1B       		.byte	27
@@ -14878,7 +14878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14134 36a0 FD       		.byte	-3
  14135 36a1 FC       		.byte	-4
  14136 36a2 FF       		.byte	-1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 249
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 249
 
 
  14137 36a3 3F       		.byte	63
@@ -14938,7 +14938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14191 36d9 0A       		.byte	10
  14192 36da 1B       		.byte	27
  14193 36db 6C       		.byte	108
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 250
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 250
 
 
  14194 36dc 0E       		.byte	14
@@ -14998,7 +14998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14248 3712 E0       		.byte	-32
  14249 3713 F8       		.byte	-8
  14250 3714 F8       		.byte	-8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 251
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 251
 
 
  14251 3715 F8       		.byte	-8
@@ -15058,7 +15058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14305 374b 70       		.byte	112
  14306 374c 1B       		.byte	27
  14307 374d 31       		.byte	49
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 252
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 252
 
 
  14308 374e 00       		.byte	0
@@ -15118,7 +15118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14352      20202024 
  14352      2F4720
  14353              		.global	msn_vol
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 253
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 253
 
 
  14354 0047 00       		.align	2
@@ -15178,7 +15178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14394 0098 434F5049 		.ascii	"COPIA "
  14394      4120
  14395              		.global	msn_corriente
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 254
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 254
 
 
  14396 009e 0000     		.align	2
@@ -15238,7 +15238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14436      6C20756C 
  14436      74696D6F 
  14436      20436F72 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 255
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 255
 
 
  14437              		.global	msn_uhcorte
@@ -15298,7 +15298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
   16:.\Print.c     **** *
   17:.\Print.c     **** *                                               GRP500 CODE
   18:.\Print.c     **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 256
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 256
 
 
   19:.\Print.c     **** *                                             CYPRESS PSoC5LP
@@ -15358,7 +15358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
   73:.\Print.c     **** ***************************************************************************************************
   74:.\Print.c     **** *                                         void imprimir(uint8 val)
   75:.\Print.c     **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 257
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 257
 
 
   76:.\Print.c     **** * Description : 
@@ -15418,7 +15418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14499 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  14500 002c 052B     		cmp	r3, #5
  14501 002e F4D9     		bls	.L3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 258
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 258
 
 
   93:.\Print.c     **** 	}	
@@ -15478,7 +15478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14545 0072 FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
  14546 0074 794B     		ldr	r3, .L89+4
  14547 0076 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 259
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 259
 
 
  14548 0078 DBB2     		uxtb	r3, r3
@@ -15538,7 +15538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14593 00c6 0023     		movs	r3, #0
  14594 00c8 FB73     		strb	r3, [r7, #15]
  14595 00ca 07E0     		b	.L11
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 260
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 260
 
 
  14596              	.L12:
@@ -15598,7 +15598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14640              		.loc 1 112 0 is_stmt 1
  14641 0114 0123     		movs	r3, #1
  14642 0116 FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 261
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 261
 
 
  14643 0118 0BE0     		b	.L15
@@ -15658,7 +15658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  118:.\Print.c     **** 		for(x=0;x<=((31-(telefono[0]+4))/2);x++){	//TELEFONO
  14688              		.loc 1 118 0 discriminator 3
  14689 0162 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 262
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 262
 
 
  14690 0164 0133     		adds	r3, r3, #1
@@ -15718,7 +15718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14735 01ac DBB2     		uxtb	r3, r3
  14736 01ae BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
  14737 01b0 1046     		mov	r0, r2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 263
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 263
 
 
  14738 01b2 1946     		mov	r1, r3
@@ -15778,7 +15778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14782 01fa DBB2     		uxtb	r3, r3
  14783 01fc C3F11F03 		rsb	r3, r3, #31
  14784 0200 D90F     		lsrs	r1, r3, #31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 264
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 264
 
 
  14785 0202 0B44     		add	r3, r3, r1
@@ -15838,7 +15838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  139:.\Print.c     **** 	for(x=0;x<=6;x++){										//FECHA								
  14830              		.loc 1 139 0
  14831 0252 0023     		movs	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 265
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 265
 
 
  14832 0254 FB73     		strb	r3, [r7, #15]
@@ -15898,7 +15898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14879              		.loc 1 144 0
  14880 02b4 9A4B     		ldr	r3, .L91+4
  14881 02b6 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 266
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 266
 
 
  14882 02b8 03F00F03 		and	r3, r3, #15
@@ -15958,7 +15958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14931 0320 1046     		mov	r0, r2
  14932 0322 1946     		mov	r1, r3
  14933 0324 FFF7FEFF 		bl	write_psoc1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 267
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 267
 
 
  150:.\Print.c     **** 		write_psoc1(print,((fecha[2]&0x0F)+48));			
@@ -16018,7 +16018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  14978              		.loc 1 157 0
  14979 0376 6C4B     		ldr	r3, .L91+12
  14980 0378 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 268
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 268
 
 
  14981 037a 03F01003 		and	r3, r3, #16
@@ -16078,7 +16078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15030 03e2 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
  15031 03e4 03F02003 		and	r3, r3, #32
  15032 03e8 002B     		cmp	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 269
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 269
 
 
  15033 03ea 05D0     		beq	.L34
@@ -16138,7 +16138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  172:.\Print.c     **** 	for(x=0;x<=10;x++){										//POSICION								
  15076              		.loc 1 172 0 discriminator 3
  15077 0436 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 270
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 270
 
 
  15078 0438 0133     		adds	r3, r3, #1
@@ -16198,7 +16198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15125 0490 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  15126 0492 284A     		ldr	r2, .L91+24
  15127 0494 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 271
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 271
 
 
  15128 0496 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
@@ -16258,7 +16258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  185:.\Print.c     **** 	}
  186:.\Print.c     **** 	else if(prod==2){
  15173              		.loc 1 186 0 is_stmt 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 272
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 272
 
 
  15174 04de 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
@@ -16318,7 +16318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15220 052c 00000000 		.word	msn_pos
  15221 0530 CDCCCCCC 		.word	-858993459
  15222 0534 00000000 		.word	msn_producto
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 273
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 273
 
 
  15223 0538 00000000 		.word	nombre_pro1
@@ -16378,7 +16378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15268 0586 0133     		adds	r3, r3, #1
  15269 0588 FB73     		strb	r3, [r7, #15]
  15270              	.L49:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 274
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 274
 
 
  197:.\Print.c     **** 	for(x=0;x<=14;x++){											//PPU								
@@ -16438,7 +16438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15313 05c8 BB73     		strb	r3, [r7, #14]
  210:.\Print.c     ****             write_psoc1(print,ppu[x]+48);
  15314              		.loc 1 210 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 275
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 275
 
 
  15315 05ca FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -16498,7 +16498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15360 0618 FFF7FEFF 		bl	write_psoc1
  218:.\Print.c     **** 	for(x=0;x<=12;x++){											//VOLUMEN							
  15361              		.loc 1 218 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 276
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 276
 
 
  15362 061c 0023     		movs	r3, #0
@@ -16558,7 +16558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15407 0660 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  15408 0662 1846     		mov	r0, r3
  15409 0664 3021     		movs	r1, #48
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 277
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 277
 
 
  15410 0666 FFF7FEFF 		bl	write_psoc1
@@ -16618,7 +16618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  222:.\Print.c     ****         if((volumen[x]==0)&&(digito==0)){
  15453              		.loc 1 222 0 is_stmt 0 discriminator 1
  15454 06aa FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 278
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 278
 
 
  15455 06ac 002B     		cmp	r3, #0
@@ -16678,7 +16678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15498 06f4 FB73     		strb	r3, [r7, #15]
  15499 06f6 25E0     		b	.L67
  15500              	.L71:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 279
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 279
 
 
  244:.\Print.c     ****         if((dinero[x]==0)&&(digito==0)){
@@ -16738,7 +16738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15545 073e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  15546 0740 013B     		subs	r3, r3, #1
  15547 0742 FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 280
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 280
 
 
  15548              	.L67:
@@ -16798,7 +16798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15591 078a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  15592 078c 1F4A     		ldr	r2, .L93+24
  15593 078e D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 281
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 281
 
 
  15594 0790 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
@@ -16858,7 +16858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  269:.\Print.c     ****     write_psoc1(print,10);
  15638              		.loc 1 269 0
  15639 07d8 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 282
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 282
 
 
  15640 07da 1846     		mov	r0, r3
@@ -16918,7 +16918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15686 0834 0923     		movs	r3, #9
  15687 0836 FB73     		strb	r3, [r7, #15]
  15688 0838 19E0     		b	.L81
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 283
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 283
 
 
  15689              	.L84:
@@ -16978,7 +16978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15731 0876 1846     		mov	r0, r3
  15732 0878 0A21     		movs	r1, #10
  15733 087a FFF7FEFF 		bl	write_psoc1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 284
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 284
 
 
  286:.\Print.c     ****     write_psoc1(print,10);
@@ -17038,7 +17038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15778 08c6 164A     		ldr	r2, .L95+8
  15779 08c8 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
  15780 08ca BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 285
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 285
 
 
  15781 08cc 1046     		mov	r0, r2
@@ -17098,7 +17098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15825              	.L96:
  15826              		.align	2
  15827              	.L95:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 286
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 286
 
 
  15828 0918 00000000 		.word	msn_km
@@ -17158,7 +17158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15864 0018 7B80     		strh	r3, [r7, #2]	@ movhi
  15865 001a 1346     		mov	r3, r2
  15866 001c BB71     		strb	r3, [r7, #6]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 287
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 287
 
 
  320:.\Print.c     **** 	uint16 i;
@@ -17218,7 +17218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15919 00dc 07020000 		.word	.L112+1
  15920 00e0 37030000 		.word	.L97+1
  15921 00e4 37030000 		.word	.L97+1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 288
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 288
 
 
  15922 00e8 79020000 		.word	.L113+1
@@ -17278,7 +17278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  15965 0130 1046     		mov	r0, r2
  15966 0132 1946     		mov	r1, r3
  15967 0134 FFF7FEFF 		bl	write_psoc1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 289
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 289
 
 
  329:.\Print.c     ****         		write_psoc1(puerto,brio[i]);			
@@ -17338,7 +17338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16007              		.loc 1 341 0
  16008 016e BB88     		ldrh	r3, [r7, #4]	@ movhi
  16009 0170 FB81     		strh	r3, [r7, #14]	@ movhi
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 290
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 290
 
 
  16010 0172 0AE0     		b	.L121
@@ -17398,7 +17398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16053 01b2 7B88     		ldrh	r3, [r7, #2]
  16054 01b4 9A42     		cmp	r2, r3
  16055 01b6 F0D9     		bls	.L124
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 291
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 291
 
 
  349:.\Print.c     **** 			}
@@ -17458,7 +17458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16096 01f0 1946     		mov	r1, r3
  16097 01f2 FFF7FEFF 		bl	write_psoc1
  359:.\Print.c     ****         		write_psoc1(puerto,gulf[i]);			
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 292
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 292
 
 
  16098              		.loc 1 359 0 discriminator 3
@@ -17518,7 +17518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16138 022c BB88     		ldrh	r3, [r7, #4]	@ movhi
  16139 022e FB81     		strh	r3, [r7, #14]	@ movhi
  16140 0230 0AE0     		b	.L131
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 293
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 293
 
 
  16141              	.L132:
@@ -17578,7 +17578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16184 0272 9A42     		cmp	r2, r3
  16185 0274 F0D9     		bls	.L134
  379:.\Print.c     **** 			}
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 294
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 294
 
 
  380:.\Print.c     **** 		break;
@@ -17638,7 +17638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16227 02b0 FFF7FEFF 		bl	write_psoc1
  389:.\Print.c     ****         		write_psoc1(puerto,terpel[i]);			
  16228              		.loc 1 389 0 discriminator 3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 295
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 295
 
 
  16229 02b4 FB89     		ldrh	r3, [r7, #14]
@@ -17698,7 +17698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16269 02ec FB81     		strh	r3, [r7, #14]	@ movhi
  16270 02ee 0AE0     		b	.L141
  16271              	.L142:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 296
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 296
 
 
  402:.\Print.c     ****         		write_psoc1(puerto,texaco[i]);			
@@ -17758,7 +17758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16315 0332 F0D9     		bls	.L144
  409:.\Print.c     **** 			}
  410:.\Print.c     **** 		break;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 297
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 297
 
 
  16316              		.loc 1 410 0 is_stmt 1
@@ -17811,32 +17811,32 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16359 0006 00000000 		.4byte	.Ldebug_abbrev0
  16360 000a 04       		.byte	0x4
  16361 000b 01       		.uleb128 0x1
- 16362 000c C0020000 		.4byte	.LASF138
+ 16362 000c FA020000 		.4byte	.LASF138
  16363 0010 01       		.byte	0x1
  16364 0011 93010000 		.4byte	.LASF139
- 16365 0015 79040000 		.4byte	.LASF140
+ 16365 0015 F4010000 		.4byte	.LASF140
  16366 0019 00000000 		.4byte	.Ldebug_ranges0+0
  16367 001d 00000000 		.4byte	0
  16368 0021 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 298
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 298
 
 
  16369 0025 02       		.uleb128 0x2
  16370 0026 01       		.byte	0x1
  16371 0027 06       		.byte	0x6
- 16372 0028 24050000 		.4byte	.LASF0
+ 16372 0028 29050000 		.4byte	.LASF0
  16373 002c 02       		.uleb128 0x2
  16374 002d 01       		.byte	0x1
  16375 002e 08       		.byte	0x8
- 16376 002f D0040000 		.4byte	.LASF1
+ 16376 002f D5040000 		.4byte	.LASF1
  16377 0033 02       		.uleb128 0x2
  16378 0034 02       		.byte	0x2
  16379 0035 05       		.byte	0x5
- 16380 0036 C7030000 		.4byte	.LASF2
+ 16380 0036 01040000 		.4byte	.LASF2
  16381 003a 02       		.uleb128 0x2
  16382 003b 02       		.byte	0x2
  16383 003c 07       		.byte	0x7
- 16384 003d 40050000 		.4byte	.LASF3
+ 16384 003d 45050000 		.4byte	.LASF3
  16385 0041 03       		.uleb128 0x3
  16386 0042 8A000000 		.4byte	.LASF9
  16387 0046 02       		.byte	0x2
@@ -17845,15 +17845,15 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16390 004c 02       		.uleb128 0x2
  16391 004d 04       		.byte	0x4
  16392 004e 05       		.byte	0x5
- 16393 004f D1030000 		.4byte	.LASF4
+ 16393 004f 0B040000 		.4byte	.LASF4
  16394 0053 02       		.uleb128 0x2
  16395 0054 04       		.byte	0x4
  16396 0055 07       		.byte	0x7
- 16397 0056 67040000 		.4byte	.LASF5
+ 16397 0056 A1040000 		.4byte	.LASF5
  16398 005a 02       		.uleb128 0x2
  16399 005b 08       		.byte	0x8
  16400 005c 05       		.byte	0x5
- 16401 005d 90020000 		.4byte	.LASF6
+ 16401 005d CA020000 		.4byte	.LASF6
  16402 0061 02       		.uleb128 0x2
  16403 0062 08       		.byte	0x8
  16404 0063 07       		.byte	0x7
@@ -17867,18 +17867,18 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16412 0071 07       		.byte	0x7
  16413 0072 6D000000 		.4byte	.LASF8
  16414 0076 03       		.uleb128 0x3
- 16415 0077 AE040000 		.4byte	.LASF10
+ 16415 0077 B3040000 		.4byte	.LASF10
  16416 007b 03       		.byte	0x3
  16417 007c 2C       		.byte	0x2c
  16418 007d 41000000 		.4byte	0x41
  16419 0081 03       		.uleb128 0x3
- 16420 0082 53050000 		.4byte	.LASF11
+ 16420 0082 58050000 		.4byte	.LASF11
  16421 0086 04       		.byte	0x4
  16422 0087 B4       		.byte	0xb4
  16423 0088 2C000000 		.4byte	0x2c
  16424 008c 03       		.uleb128 0x3
- 16425 008d 27020000 		.4byte	.LASF12
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 299
+ 16425 008d 61020000 		.4byte	.LASF12
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 299
 
 
  16426 0091 04       		.byte	0x4
@@ -17891,11 +17891,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16433 009e 02       		.uleb128 0x2
  16434 009f 08       		.byte	0x8
  16435 00a0 04       		.byte	0x4
- 16436 00a1 59050000 		.4byte	.LASF14
+ 16436 00a1 5E050000 		.4byte	.LASF14
  16437 00a5 02       		.uleb128 0x2
  16438 00a6 01       		.byte	0x1
  16439 00a7 08       		.byte	0x8
- 16440 00a8 00020000 		.4byte	.LASF15
+ 16440 00a8 3A020000 		.4byte	.LASF15
  16441 00ac 05       		.uleb128 0x5
  16442 00ad 81000000 		.4byte	0x81
  16443 00b1 05       		.uleb128 0x5
@@ -17903,7 +17903,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16445 00b6 02       		.uleb128 0x2
  16446 00b7 04       		.byte	0x4
  16447 00b8 07       		.byte	0x7
- 16448 00b9 5E040000 		.4byte	.LASF16
+ 16448 00b9 98040000 		.4byte	.LASF16
  16449 00bd 06       		.uleb128 0x6
  16450 00be 81000000 		.4byte	0x81
  16451 00c2 CD000000 		.4byte	0xcd
@@ -17912,7 +17912,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16454 00cb 03       		.byte	0x3
  16455 00cc 00       		.byte	0
  16456 00cd 08       		.uleb128 0x8
- 16457 00ce FF030000 		.4byte	.LASF21
+ 16457 00ce 39040000 		.4byte	.LASF21
  16458 00d2 5D       		.byte	0x5d
  16459 00d3 05       		.byte	0x5
  16460 00d4 57       		.byte	0x57
@@ -17924,13 +17924,13 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16466 00e0 AC000000 		.4byte	0xac
  16467 00e4 00       		.byte	0
  16468 00e5 0A       		.uleb128 0xa
- 16469 00e6 8B030000 		.4byte	.LASF17
+ 16469 00e6 C5030000 		.4byte	.LASF17
  16470 00ea 05       		.byte	0x5
  16471 00eb 59       		.byte	0x59
  16472 00ec AC000000 		.4byte	0xac
  16473 00f0 01       		.byte	0x1
  16474 00f1 0A       		.uleb128 0xa
- 16475 00f2 53020000 		.4byte	.LASF18
+ 16475 00f2 8D020000 		.4byte	.LASF18
  16476 00f6 05       		.byte	0x5
  16477 00f7 5A       		.byte	0x5a
  16478 00f8 38010000 		.4byte	0x138
@@ -17938,20 +17938,20 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16480 00fd 09       		.uleb128 0x9
  16481 00fe 70707500 		.ascii	"ppu\000"
  16482 0102 05       		.byte	0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 300
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 300
 
 
  16483 0103 5B       		.byte	0x5b
  16484 0104 53010000 		.4byte	0x153
  16485 0108 4A       		.byte	0x4a
  16486 0109 0A       		.uleb128 0xa
- 16487 010a 95050000 		.4byte	.LASF19
+ 16487 010a 9A050000 		.4byte	.LASF19
  16488 010e 05       		.byte	0x5
  16489 010f 5C       		.byte	0x5c
  16490 0110 6E010000 		.4byte	0x16e
  16491 0114 59       		.byte	0x59
  16492 0115 0A       		.uleb128 0xa
- 16493 0116 1D020000 		.4byte	.LASF20
+ 16493 0116 57020000 		.4byte	.LASF20
  16494 011a 05       		.byte	0x5
  16495 011b 5D       		.byte	0x5d
  16496 011c AC000000 		.4byte	0xac
@@ -17994,11 +17994,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16533 016e 05       		.uleb128 0x5
  16534 016f 58010000 		.4byte	0x158
  16535 0173 08       		.uleb128 0x8
- 16536 0174 71030000 		.4byte	.LASF22
+ 16536 0174 AB030000 		.4byte	.LASF22
  16537 0178 76       		.byte	0x76
  16538 0179 05       		.byte	0x5
  16539 017a 6E       		.byte	0x6e
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 301
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 301
 
 
  16540 017b 62020000 		.4byte	0x262
@@ -18009,7 +18009,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16545 0186 81000000 		.4byte	0x81
  16546 018a 00       		.byte	0
  16547 018b 0A       		.uleb128 0xa
- 16548 018c 95050000 		.4byte	.LASF19
+ 16548 018c 9A050000 		.4byte	.LASF19
  16549 0190 05       		.byte	0x5
  16550 0191 70       		.byte	0x70
  16551 0192 81000000 		.4byte	0x81
@@ -18021,7 +18021,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16557 019e 62020000 		.4byte	0x262
  16558 01a2 02       		.byte	0x2
  16559 01a3 0A       		.uleb128 0xa
- 16560 01a4 78030000 		.4byte	.LASF24
+ 16560 01a4 B2030000 		.4byte	.LASF24
  16561 01a8 05       		.byte	0x5
  16562 01a9 72       		.byte	0x72
  16563 01aa 72020000 		.4byte	0x272
@@ -18033,13 +18033,13 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16569 01b6 72020000 		.4byte	0x272
  16570 01ba 10       		.byte	0x10
  16571 01bb 0A       		.uleb128 0xa
- 16572 01bc 9E020000 		.4byte	.LASF26
+ 16572 01bc D8020000 		.4byte	.LASF26
  16573 01c0 05       		.byte	0x5
  16574 01c1 74       		.byte	0x74
  16575 01c2 81000000 		.4byte	0x81
  16576 01c6 19       		.byte	0x19
  16577 01c7 0A       		.uleb128 0xa
- 16578 01c8 80050000 		.4byte	.LASF27
+ 16578 01c8 85050000 		.4byte	.LASF27
  16579 01cc 05       		.byte	0x5
  16580 01cd 75       		.byte	0x75
  16581 01ce 81000000 		.4byte	0x81
@@ -18057,8 +18057,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16593 01e5 92020000 		.4byte	0x292
  16594 01e9 23       		.byte	0x23
  16595 01ea 0A       		.uleb128 0xa
- 16596 01eb 47020000 		.4byte	.LASF29
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 302
+ 16596 01eb 81020000 		.4byte	.LASF29
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 302
 
 
  16597 01ef 05       		.byte	0x5
@@ -18084,13 +18084,13 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16617 0214 81000000 		.4byte	0x81
  16618 0218 57       		.byte	0x57
  16619 0219 0A       		.uleb128 0xa
- 16620 021a 3C020000 		.4byte	.LASF32
+ 16620 021a 76020000 		.4byte	.LASF32
  16621 021e 05       		.byte	0x5
  16622 021f 7C       		.byte	0x7c
  16623 0220 81000000 		.4byte	0x81
  16624 0224 58       		.byte	0x58
  16625 0225 0A       		.uleb128 0xa
- 16626 0226 B1020000 		.4byte	.LASF33
+ 16626 0226 EB020000 		.4byte	.LASF33
  16627 022a 05       		.byte	0x5
  16628 022b 7D       		.byte	0x7d
  16629 022c A2020000 		.4byte	0x2a2
@@ -18102,23 +18102,23 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16635 0238 A2020000 		.4byte	0x2a2
  16636 023c 64       		.byte	0x64
  16637 023d 0A       		.uleb128 0xa
- 16638 023e 4D020000 		.4byte	.LASF35
+ 16638 023e 87020000 		.4byte	.LASF35
  16639 0242 05       		.byte	0x5
  16640 0243 7F       		.byte	0x7f
  16641 0244 81000000 		.4byte	0x81
  16642 0248 6F       		.byte	0x6f
  16643 0249 0A       		.uleb128 0xa
- 16644 024a C5040000 		.4byte	.LASF36
+ 16644 024a CA040000 		.4byte	.LASF36
  16645 024e 05       		.byte	0x5
  16646 024f 80       		.byte	0x80
  16647 0250 81000000 		.4byte	0x81
  16648 0254 70       		.byte	0x70
  16649 0255 0A       		.uleb128 0xa
- 16650 0256 92030000 		.4byte	.LASF37
+ 16650 0256 CC030000 		.4byte	.LASF37
  16651 025a 05       		.byte	0x5
  16652 025b 81       		.byte	0x81
  16653 025c 62020000 		.4byte	0x262
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 303
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 303
 
 
  16654 0260 71       		.byte	0x71
@@ -18176,9 +18176,9 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16706 02d3 91       		.byte	0x91
  16707 02d4 6F       		.sleb128 -17
  16708 02d5 0D       		.uleb128 0xd
- 16709 02d6 C1030000 		.4byte	.LASF38
+ 16709 02d6 FB030000 		.4byte	.LASF38
  16710 02da 01       		.byte	0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 304
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 304
 
 
  16711 02db 59       		.byte	0x59
@@ -18187,7 +18187,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16714 02e1 91       		.byte	0x91
  16715 02e2 6E       		.sleb128 -18
  16716 02e3 0D       		.uleb128 0xd
- 16717 02e4 59040000 		.4byte	.LASF39
+ 16717 02e4 93040000 		.4byte	.LASF39
  16718 02e8 01       		.byte	0x1
  16719 02e9 59       		.byte	0x59
  16720 02ea 81000000 		.4byte	0x81
@@ -18211,7 +18211,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16738 030b 91       		.byte	0x91
  16739 030c 00       		.sleb128 0
  16740 030d 0D       		.uleb128 0xd
- 16741 030e 78030000 		.4byte	.LASF24
+ 16741 030e B2030000 		.4byte	.LASF24
  16742 0312 01       		.byte	0x1
  16743 0313 59       		.byte	0x59
  16744 0314 52030000 		.4byte	0x352
@@ -18227,7 +18227,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16754 0327 91       		.byte	0x91
  16755 0328 08       		.sleb128 8
  16756 0329 0D       		.uleb128 0xd
- 16757 032a 01050000 		.4byte	.LASF40
+ 16757 032a 06050000 		.4byte	.LASF40
  16758 032e 01       		.byte	0x1
  16759 032f 59       		.byte	0x59
  16760 0330 52030000 		.4byte	0x352
@@ -18238,7 +18238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16765 0338 7800     		.ascii	"x\000"
  16766 033a 01       		.byte	0x1
  16767 033b 5A       		.byte	0x5a
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 305
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 305
 
 
  16768 033c 81000000 		.4byte	0x81
@@ -18267,7 +18267,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16791 0369 9C       		.byte	0x9c
  16792 036a B8030000 		.4byte	0x3b8
  16793 036e 12       		.uleb128 0x12
- 16794 036f 49040000 		.4byte	.LASF43
+ 16794 036f 83040000 		.4byte	.LASF43
  16795 0373 01       		.byte	0x1
  16796 0374 3F01     		.2byte	0x13f
  16797 0376 81000000 		.4byte	0x81
@@ -18291,14 +18291,14 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16815 0399 91       		.byte	0x91
  16816 039a 62       		.sleb128 -30
  16817 039b 12       		.uleb128 0x12
- 16818 039c 37040000 		.4byte	.LASF44
+ 16818 039c 71040000 		.4byte	.LASF44
  16819 03a0 01       		.byte	0x1
  16820 03a1 3F01     		.2byte	0x13f
  16821 03a3 81000000 		.4byte	0x81
  16822 03a7 02       		.uleb128 0x2
  16823 03a8 91       		.byte	0x91
  16824 03a9 66       		.sleb128 -26
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 306
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 306
 
 
  16825 03aa 14       		.uleb128 0x14
@@ -18311,14 +18311,14 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16832 03b6 6E       		.sleb128 -18
  16833 03b7 00       		.byte	0
  16834 03b8 15       		.uleb128 0x15
- 16835 03b9 E6030000 		.4byte	.LASF45
+ 16835 03b9 20040000 		.4byte	.LASF45
  16836 03bd 06       		.byte	0x6
  16837 03be 2A06     		.2byte	0x62a
  16838 03c0 C4030000 		.4byte	0x3c4
  16839 03c4 05       		.uleb128 0x5
  16840 03c5 76000000 		.4byte	0x76
  16841 03c9 16       		.uleb128 0x16
- 16842 03ca 68020000 		.4byte	.LASF46
+ 16842 03ca A2020000 		.4byte	.LASF46
  16843 03ce 05       		.byte	0x5
  16844 03cf 42       		.byte	0x42
  16845 03d0 AC000000 		.4byte	0xac
@@ -18326,7 +18326,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16847 03d5 03       		.byte	0x3
  16848 03d6 00000000 		.4byte	count_teclas1
  16849 03da 16       		.uleb128 0x16
- 16850 03db 08040000 		.4byte	.LASF47
+ 16850 03db 42040000 		.4byte	.LASF47
  16851 03df 05       		.byte	0x5
  16852 03e0 42       		.byte	0x42
  16853 03e1 AC000000 		.4byte	0xac
@@ -18334,7 +18334,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16855 03e6 03       		.byte	0x3
  16856 03e7 00000000 		.4byte	comas1
  16857 03eb 16       		.uleb128 0x16
- 16858 03ec 0F040000 		.4byte	.LASF48
+ 16858 03ec 49040000 		.4byte	.LASF48
  16859 03f0 05       		.byte	0x5
  16860 03f1 42       		.byte	0x42
  16861 03f2 AC000000 		.4byte	0xac
@@ -18358,10 +18358,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16879 0419 03       		.byte	0x3
  16880 041a 00000000 		.4byte	id_teclado1
  16881 041e 16       		.uleb128 0x16
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 307
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 307
 
 
- 16882 041f 76020000 		.4byte	.LASF51
+ 16882 041f B0020000 		.4byte	.LASF51
  16883 0423 05       		.byte	0x5
  16884 0424 42       		.byte	0x42
  16885 0425 AC000000 		.4byte	0xac
@@ -18377,7 +18377,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16895 043b 03       		.byte	0x3
  16896 043c 00000000 		.4byte	id_coma2
  16897 0440 16       		.uleb128 0x16
- 16898 0441 11020000 		.4byte	.LASF53
+ 16898 0441 4B020000 		.4byte	.LASF53
  16899 0445 05       		.byte	0x5
  16900 0446 42       		.byte	0x42
  16901 0447 AC000000 		.4byte	0xac
@@ -18385,7 +18385,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16903 044c 03       		.byte	0x3
  16904 044d 00000000 		.4byte	id_teclado2
  16905 0451 16       		.uleb128 0x16
- 16906 0452 84020000 		.4byte	.LASF54
+ 16906 0452 BE020000 		.4byte	.LASF54
  16907 0456 05       		.byte	0x5
  16908 0457 43       		.byte	0x43
  16909 0458 B1000000 		.4byte	0xb1
@@ -18393,7 +18393,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16911 045d 03       		.byte	0x3
  16912 045e 00000000 		.4byte	posx1
  16913 0462 16       		.uleb128 0x16
- 16914 0463 55030000 		.4byte	.LASF55
+ 16914 0463 8F030000 		.4byte	.LASF55
  16915 0467 05       		.byte	0x5
  16916 0468 43       		.byte	0x43
  16917 0469 B1000000 		.4byte	0xb1
@@ -18401,7 +18401,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16919 046e 03       		.byte	0x3
  16920 046f 00000000 		.4byte	posy1
  16921 0473 16       		.uleb128 0x16
- 16922 0474 A3050000 		.4byte	.LASF56
+ 16922 0474 A8050000 		.4byte	.LASF56
  16923 0478 05       		.byte	0x5
  16924 0479 43       		.byte	0x43
  16925 047a B1000000 		.4byte	0xb1
@@ -18409,7 +18409,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16927 047f 03       		.byte	0x3
  16928 0480 00000000 		.4byte	sizeletra1
  16929 0484 16       		.uleb128 0x16
- 16930 0485 8A020000 		.4byte	.LASF57
+ 16930 0485 C4020000 		.4byte	.LASF57
  16931 0489 05       		.byte	0x5
  16932 048a 43       		.byte	0x43
  16933 048b B1000000 		.4byte	0xb1
@@ -18417,8 +18417,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16935 0490 03       		.byte	0x3
  16936 0491 00000000 		.4byte	posx2
  16937 0495 16       		.uleb128 0x16
- 16938 0496 5B030000 		.4byte	.LASF58
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 308
+ 16938 0496 95030000 		.4byte	.LASF58
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 308
 
 
  16939 049a 05       		.byte	0x5
@@ -18428,7 +18428,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16943 04a1 03       		.byte	0x3
  16944 04a2 00000000 		.4byte	posy2
  16945 04a6 16       		.uleb128 0x16
- 16946 04a7 AE050000 		.4byte	.LASF59
+ 16946 04a7 B3050000 		.4byte	.LASF59
  16947 04ab 05       		.byte	0x5
  16948 04ac 43       		.byte	0x43
  16949 04ad B1000000 		.4byte	0xb1
@@ -18475,10 +18475,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  16990 0509 1D       		.byte	0x1d
  16991 050a 00       		.byte	0
  16992 050b 16       		.uleb128 0x16
- 16993 050c 7F030000 		.4byte	.LASF64
+ 16993 050c B9030000 		.4byte	.LASF64
  16994 0510 05       		.byte	0x5
  16995 0511 46       		.byte	0x46
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 309
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 309
 
 
  16996 0512 1C050000 		.4byte	0x51c
@@ -18488,7 +18488,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17000 051c 05       		.uleb128 0x5
  17001 051d FB040000 		.4byte	0x4fb
  17002 0521 16       		.uleb128 0x16
- 17003 0522 F4010000 		.4byte	.LASF65
+ 17003 0522 2E020000 		.4byte	.LASF65
  17004 0526 05       		.byte	0x5
  17005 0527 47       		.byte	0x47
  17006 0528 32050000 		.4byte	0x532
@@ -18498,7 +18498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17010 0532 05       		.uleb128 0x5
  17011 0533 FB040000 		.4byte	0x4fb
  17012 0537 16       		.uleb128 0x16
- 17013 0538 30050000 		.4byte	.LASF66
+ 17013 0538 35050000 		.4byte	.LASF66
  17014 053c 05       		.byte	0x5
  17015 053d 48       		.byte	0x48
  17016 053e AC000000 		.4byte	0xac
@@ -18514,7 +18514,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17026 0554 03       		.byte	0x3
  17027 0555 00000000 		.4byte	count_protector2
  17028 0559 16       		.uleb128 0x16
- 17029 055a 5B020000 		.4byte	.LASF68
+ 17029 055a 95020000 		.4byte	.LASF68
  17030 055e 05       		.byte	0x5
  17031 055f 49       		.byte	0x49
  17032 0560 6A050000 		.4byte	0x56a
@@ -18538,7 +18538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17050 058a B6000000 		.4byte	0xb6
  17051 058e 01       		.byte	0x1
  17052 058f 07       		.uleb128 0x7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 310
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 310
 
 
  17053 0590 B6000000 		.4byte	0xb6
@@ -18562,7 +18562,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17071 05ba 02       		.byte	0x2
  17072 05bb 00       		.byte	0
  17073 05bc 16       		.uleb128 0x16
- 17074 05bd 05020000 		.4byte	.LASF71
+ 17074 05bd 3F020000 		.4byte	.LASF71
  17075 05c1 05       		.byte	0x5
  17076 05c2 4C       		.byte	0x4c
  17077 05c3 CD050000 		.4byte	0x5cd
@@ -18572,7 +18572,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17081 05cd 05       		.uleb128 0x5
  17082 05ce AC050000 		.4byte	0x5ac
  17083 05d2 16       		.uleb128 0x16
- 17084 05d3 74050000 		.4byte	.LASF72
+ 17084 05d3 79050000 		.4byte	.LASF72
  17085 05d7 05       		.byte	0x5
  17086 05d8 4D       		.byte	0x4d
  17087 05d9 E3050000 		.4byte	0x5e3
@@ -18598,7 +18598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17107 0608 B6000000 		.4byte	0xb6
  17108 060c C7       		.byte	0xc7
  17109 060d 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 311
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 311
 
 
  17110 060e 16       		.uleb128 0x16
@@ -18612,7 +18612,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17118 061f 05       		.uleb128 0x5
  17119 0620 FE050000 		.4byte	0x5fe
  17120 0624 16       		.uleb128 0x16
- 17121 0625 A1030000 		.4byte	.LASF75
+ 17121 0625 DB030000 		.4byte	.LASF75
  17122 0629 05       		.byte	0x5
  17123 062a 53       		.byte	0x53
  17124 062b AC000000 		.4byte	0xac
@@ -18627,7 +18627,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17133 0643 10       		.byte	0x10
  17134 0644 00       		.byte	0
  17135 0645 16       		.uleb128 0x16
- 17136 0646 1F040000 		.4byte	.LASF76
+ 17136 0646 59040000 		.4byte	.LASF76
  17137 064a 05       		.byte	0x5
  17138 064b 54       		.byte	0x54
  17139 064c 56060000 		.4byte	0x656
@@ -18637,7 +18637,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17143 0656 05       		.uleb128 0x5
  17144 0657 35060000 		.4byte	0x635
  17145 065b 16       		.uleb128 0x16
- 17146 065c 18050000 		.4byte	.LASF77
+ 17146 065c 1D050000 		.4byte	.LASF77
  17147 0660 05       		.byte	0x5
  17148 0661 54       		.byte	0x54
  17149 0662 6C060000 		.4byte	0x66c
@@ -18647,7 +18647,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17153 066c 05       		.uleb128 0x5
  17154 066d 35060000 		.4byte	0x635
  17155 0671 16       		.uleb128 0x16
- 17156 0672 2B040000 		.4byte	.LASF78
+ 17156 0672 65040000 		.4byte	.LASF78
  17157 0676 05       		.byte	0x5
  17158 0677 54       		.byte	0x54
  17159 0678 82060000 		.4byte	0x682
@@ -18658,7 +18658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17164 0683 35060000 		.4byte	0x635
  17165 0687 16       		.uleb128 0x16
  17166 0688 7A000000 		.4byte	.LASF79
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 312
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 312
 
 
  17167 068c 05       		.byte	0x5
@@ -18678,7 +18678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17181 06a9 03       		.byte	0x3
  17182 06aa 00000000 		.4byte	lado1
  17183 06ae 16       		.uleb128 0x16
- 17184 06af FB040000 		.4byte	.LASF81
+ 17184 06af 00050000 		.4byte	.LASF81
  17185 06b3 05       		.byte	0x5
  17186 06b4 60       		.byte	0x60
  17187 06b5 CD000000 		.4byte	0xcd
@@ -18693,7 +18693,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17196 06cd 20       		.byte	0x20
  17197 06ce 00       		.byte	0
  17198 06cf 16       		.uleb128 0x16
- 17199 06d0 A8030000 		.4byte	.LASF82
+ 17199 06d0 E2030000 		.4byte	.LASF82
  17200 06d4 05       		.byte	0x5
  17201 06d5 64       		.byte	0x64
  17202 06d6 E0060000 		.4byte	0x6e0
@@ -18718,7 +18718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17221 0701 03       		.byte	0x3
  17222 0702 00000000 		.4byte	nit
  17223 0706 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 313
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 313
 
 
  17224 0707 E5060000 		.4byte	0x6e5
@@ -18778,7 +18778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17278 077f 47070000 		.4byte	0x747
  17279 0783 06       		.uleb128 0x6
  17280 0784 81000000 		.4byte	0x81
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 314
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 314
 
 
  17281 0788 93070000 		.4byte	0x793
@@ -18787,7 +18787,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17284 0791 01       		.byte	0x1
  17285 0792 00       		.byte	0
  17286 0793 16       		.uleb128 0x16
- 17287 0794 B9030000 		.4byte	.LASF87
+ 17287 0794 F3030000 		.4byte	.LASF87
  17288 0798 05       		.byte	0x5
  17289 0799 6A       		.byte	0x6a
  17290 079a A4070000 		.4byte	0x7a4
@@ -18807,7 +18807,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17304 07b9 05       		.uleb128 0x5
  17305 07ba 83070000 		.4byte	0x783
  17306 07be 16       		.uleb128 0x16
- 17307 07bf E8040000 		.4byte	.LASF88
+ 17307 07bf ED040000 		.4byte	.LASF88
  17308 07c3 05       		.byte	0x5
  17309 07c4 6C       		.byte	0x6c
  17310 07c5 AC050000 		.4byte	0x5ac
@@ -18838,7 +18838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17335 07fc 05       		.uleb128 0x5
  17336 07fd 03       		.byte	0x3
  17337 07fe 00000000 		.4byte	rventa2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 315
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 315
 
 
  17338 0802 16       		.uleb128 0x16
@@ -18850,7 +18850,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17344 080e 03       		.byte	0x3
  17345 080f 00000000 		.4byte	ok_RF
  17346 0813 16       		.uleb128 0x16
- 17347 0814 06050000 		.4byte	.LASF93
+ 17347 0814 0B050000 		.4byte	.LASF93
  17348 0818 05       		.byte	0x5
  17349 0819 8A       		.byte	0x8a
  17350 081a 81000000 		.4byte	0x81
@@ -18881,7 +18881,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17375 0851 03       		.byte	0x3
  17376 0852 00000000 		.4byte	buffer_i2c
  17377 0856 16       		.uleb128 0x16
- 17378 0857 AF030000 		.4byte	.LASF96
+ 17378 0857 E9030000 		.4byte	.LASF96
  17379 085b 05       		.byte	0x5
  17380 085c 95       		.byte	0x95
  17381 085d 81000000 		.4byte	0x81
@@ -18889,7 +18889,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17383 0862 03       		.byte	0x3
  17384 0863 00000000 		.4byte	crc_total
  17385 0867 16       		.uleb128 0x16
- 17386 0868 2E020000 		.4byte	.LASF97
+ 17386 0868 68020000 		.4byte	.LASF97
  17387 086c 05       		.byte	0x5
  17388 086d 99       		.byte	0x99
  17389 086e 83070000 		.4byte	0x783
@@ -18897,8 +18897,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17391 0873 03       		.byte	0x3
  17392 0874 00000000 		.4byte	print1
  17393 0878 16       		.uleb128 0x16
- 17394 0879 35020000 		.4byte	.LASF98
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 316
+ 17394 0879 6F020000 		.4byte	.LASF98
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 316
 
 
  17395 087d 05       		.byte	0x5
@@ -18908,7 +18908,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17399 0884 03       		.byte	0x3
  17400 0885 00000000 		.4byte	print2
  17401 0889 16       		.uleb128 0x16
- 17402 088a 3C020000 		.4byte	.LASF32
+ 17402 088a 76020000 		.4byte	.LASF32
  17403 088e 05       		.byte	0x5
  17404 088f 9F       		.byte	0x9f
  17405 0890 81000000 		.4byte	0x81
@@ -18923,7 +18923,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17414 08a8 AF03     		.2byte	0x3af
  17415 08aa 00       		.byte	0
  17416 08ab 16       		.uleb128 0x16
- 17417 08ac 6D050000 		.4byte	.LASF99
+ 17417 08ac 72050000 		.4byte	.LASF99
  17418 08b0 07       		.byte	0x7
  17419 08b1 10       		.byte	0x10
  17420 08b2 BC080000 		.4byte	0x8bc
@@ -18953,12 +18953,12 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17444 08e8 19       		.uleb128 0x19
  17445 08e9 9A080000 		.4byte	0x89a
  17446 08ed 16       		.uleb128 0x16
- 17447 08ee 4E040000 		.4byte	.LASF102
+ 17447 08ee 88040000 		.4byte	.LASF102
  17448 08f2 07       		.byte	0x7
  17449 08f3 13       		.byte	0x13
  17450 08f4 FE080000 		.4byte	0x8fe
  17451 08f8 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 317
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 317
 
 
  17452 08f9 03       		.byte	0x3
@@ -18986,7 +18986,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17474 092a 19       		.uleb128 0x19
  17475 092b 9A080000 		.4byte	0x89a
  17476 092f 16       		.uleb128 0x16
- 17477 0930 61030000 		.4byte	.LASF105
+ 17477 0930 9B030000 		.4byte	.LASF105
  17478 0934 07       		.byte	0x7
  17479 0935 16       		.byte	0x16
  17480 0936 40090000 		.4byte	0x940
@@ -18996,7 +18996,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17484 0940 19       		.uleb128 0x19
  17485 0941 9A080000 		.4byte	0x89a
  17486 0945 16       		.uleb128 0x16
- 17487 0946 16040000 		.4byte	.LASF106
+ 17487 0946 50040000 		.4byte	.LASF106
  17488 094a 07       		.byte	0x7
  17489 094b 17       		.byte	0x17
  17490 094c 56090000 		.4byte	0x956
@@ -19006,7 +19006,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17494 0956 19       		.uleb128 0x19
  17495 0957 9A080000 		.4byte	0x89a
  17496 095b 16       		.uleb128 0x16
- 17497 095c EE040000 		.4byte	.LASF107
+ 17497 095c F3040000 		.4byte	.LASF107
  17498 0960 07       		.byte	0x7
  17499 0961 18       		.byte	0x18
  17500 0962 6C090000 		.4byte	0x96c
@@ -19018,7 +19018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17506 0971 16       		.uleb128 0x16
  17507 0972 49000000 		.4byte	.LASF108
  17508 0976 07       		.byte	0x7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 318
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 318
 
 
  17509 0977 19       		.byte	0x19
@@ -19029,7 +19029,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17514 0982 19       		.uleb128 0x19
  17515 0983 9A080000 		.4byte	0x89a
  17516 0987 16       		.uleb128 0x16
- 17517 0988 C0040000 		.4byte	.LASF109
+ 17517 0988 C5040000 		.4byte	.LASF109
  17518 098c 07       		.byte	0x7
  17519 098d 1A       		.byte	0x1a
  17520 098e 98090000 		.4byte	0x998
@@ -19039,7 +19039,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17524 0998 19       		.uleb128 0x19
  17525 0999 9A080000 		.4byte	0x89a
  17526 099d 16       		.uleb128 0x16
- 17527 099e 11050000 		.4byte	.LASF110
+ 17527 099e 16050000 		.4byte	.LASF110
  17528 09a2 07       		.byte	0x7
  17529 09a3 1B       		.byte	0x1b
  17530 09a4 AE090000 		.4byte	0x9ae
@@ -19049,7 +19049,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17534 09ae 19       		.uleb128 0x19
  17535 09af 9A080000 		.4byte	0x89a
  17536 09b3 16       		.uleb128 0x16
- 17537 09b4 F4040000 		.4byte	.LASF111
+ 17537 09b4 F9040000 		.4byte	.LASF111
  17538 09b8 07       		.byte	0x7
  17539 09b9 1C       		.byte	0x1c
  17540 09ba C4090000 		.4byte	0x9c4
@@ -19059,7 +19059,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17544 09c4 19       		.uleb128 0x19
  17545 09c5 9A080000 		.4byte	0x89a
  17546 09c9 16       		.uleb128 0x16
- 17547 09ca FA030000 		.4byte	.LASF112
+ 17547 09ca 34040000 		.4byte	.LASF112
  17548 09ce 07       		.byte	0x7
  17549 09cf 1D       		.byte	0x1d
  17550 09d0 DA090000 		.4byte	0x9da
@@ -19078,7 +19078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17563 09ec 00000000 		.4byte	petromil
  17564 09f0 19       		.uleb128 0x19
  17565 09f1 9A080000 		.4byte	0x89a
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 319
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 319
 
 
  17566 09f5 16       		.uleb128 0x16
@@ -19090,7 +19090,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17572 0a01 03       		.byte	0x3
  17573 0a02 00000000 		.4byte	msn_eds
  17574 0a06 16       		.uleb128 0x16
- 17575 0a07 9B050000 		.4byte	.LASF115
+ 17575 0a07 A0050000 		.4byte	.LASF115
  17576 0a0b 01       		.byte	0x1
  17577 0a0c 30       		.byte	0x30
  17578 0a0d BD000000 		.4byte	0xbd
@@ -19113,7 +19113,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17595 0a36 06       		.byte	0x6
  17596 0a37 00       		.byte	0
  17597 0a38 16       		.uleb128 0x16
- 17598 0a39 B6040000 		.4byte	.LASF117
+ 17598 0a39 BB040000 		.4byte	.LASF117
  17599 0a3d 01       		.byte	0x1
  17600 0a3e 32       		.byte	0x32
  17601 0a3f 280A0000 		.4byte	0xa28
@@ -19138,7 +19138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17620 0a67 00000000 		.4byte	msn_pos
  17621 0a6b 16       		.uleb128 0x16
  17622 0a6c 29010000 		.4byte	.LASF120
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 320
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 320
 
 
  17623 0a70 01       		.byte	0x1
@@ -19155,7 +19155,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17634 0a8a 0C       		.byte	0xc
  17635 0a8b 00       		.byte	0
  17636 0a8c 16       		.uleb128 0x16
- 17637 0a8d B8020000 		.4byte	.LASF121
+ 17637 0a8d F2020000 		.4byte	.LASF121
  17638 0a91 01       		.byte	0x1
  17639 0a92 36       		.byte	0x36
  17640 0a93 7C0A0000 		.4byte	0xa7c
@@ -19163,7 +19163,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17642 0a98 03       		.byte	0x3
  17643 0a99 00000000 		.4byte	msn_vol
  17644 0a9d 16       		.uleb128 0x16
- 17645 0a9e B9050000 		.4byte	.LASF122
+ 17645 0a9e BE050000 		.4byte	.LASF122
  17646 0aa2 01       		.byte	0x1
  17647 0aa3 37       		.byte	0x37
  17648 0aa4 7C0A0000 		.4byte	0xa7c
@@ -19179,7 +19179,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17658 0aba 03       		.byte	0x3
  17659 0abb 00000000 		.4byte	msn_placa
  17660 0abf 16       		.uleb128 0x16
- 17661 0ac0 3E040000 		.4byte	.LASF124
+ 17661 0ac0 78040000 		.4byte	.LASF124
  17662 0ac4 01       		.byte	0x1
  17663 0ac5 39       		.byte	0x39
  17664 0ac6 A2020000 		.4byte	0x2a2
@@ -19187,7 +19187,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17666 0acb 03       		.byte	0x3
  17667 0acc 00000000 		.4byte	msn_cuenta
  17668 0ad0 16       		.uleb128 0x16
- 17669 0ad1 F3030000 		.4byte	.LASF125
+ 17669 0ad1 2D040000 		.4byte	.LASF125
  17670 0ad5 01       		.byte	0x1
  17671 0ad6 3A       		.byte	0x3a
  17672 0ad7 A2020000 		.4byte	0x2a2
@@ -19195,10 +19195,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17674 0adc 03       		.byte	0x3
  17675 0add 00000000 		.4byte	msn_km
  17676 0ae1 16       		.uleb128 0x16
- 17677 0ae2 4E030000 		.4byte	.LASF126
+ 17677 0ae2 88030000 		.4byte	.LASF126
  17678 0ae6 01       		.byte	0x1
  17679 0ae7 3B       		.byte	0x3b
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 321
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 321
 
 
  17680 0ae8 A2020000 		.4byte	0x2a2
@@ -19213,7 +19213,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17689 0b00 05       		.byte	0x5
  17690 0b01 00       		.byte	0
  17691 0b02 16       		.uleb128 0x16
- 17692 0b03 DE040000 		.4byte	.LASF127
+ 17692 0b03 E3040000 		.4byte	.LASF127
  17693 0b07 01       		.byte	0x1
  17694 0b08 3C       		.byte	0x3c
  17695 0b09 F20A0000 		.4byte	0xaf2
@@ -19229,7 +19229,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17705 0b1f 03       		.byte	0x3
  17706 0b20 00000000 		.4byte	msn_corriente
  17707 0b24 16       		.uleb128 0x16
- 17708 0b25 66030000 		.4byte	.LASF129
+ 17708 0b25 A0030000 		.4byte	.LASF129
  17709 0b29 01       		.byte	0x1
  17710 0b2a 3E       		.byte	0x3e
  17711 0b2b 280A0000 		.4byte	0xa28
@@ -19237,7 +19237,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17713 0b30 03       		.byte	0x3
  17714 0b31 00000000 		.4byte	msn_diesel
  17715 0b35 16       		.uleb128 0x16
- 17716 0b36 A7020000 		.4byte	.LASF130
+ 17716 0b36 E1020000 		.4byte	.LASF130
  17717 0b3a 01       		.byte	0x1
  17718 0b3b 3F       		.byte	0x3f
  17719 0b3c 62020000 		.4byte	0x262
@@ -19245,7 +19245,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17721 0b41 03       		.byte	0x3
  17722 0b42 00000000 		.4byte	msn_extra
  17723 0b46 16       		.uleb128 0x16
- 17724 0b47 60050000 		.4byte	.LASF131
+ 17724 0b47 65050000 		.4byte	.LASF131
  17725 0b4b 01       		.byte	0x1
  17726 0b4c 40       		.byte	0x40
  17727 0b4d A2020000 		.4byte	0x2a2
@@ -19258,7 +19258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17734 0b5d 41       		.byte	0x41
  17735 0b5e 92020000 		.4byte	0x292
  17736 0b62 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 322
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 322
 
 
  17737 0b63 03       		.byte	0x3
@@ -19279,7 +19279,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17752 0b87 17       		.byte	0x17
  17753 0b88 00       		.byte	0
  17754 0b89 16       		.uleb128 0x16
- 17755 0b8a DA030000 		.4byte	.LASF134
+ 17755 0b8a 14040000 		.4byte	.LASF134
  17756 0b8e 01       		.byte	0x1
  17757 0b8f 43       		.byte	0x43
  17758 0b90 790B0000 		.4byte	0xb79
@@ -19287,7 +19287,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17760 0b95 03       		.byte	0x3
  17761 0b96 00000000 		.4byte	msn_ufcorte
  17762 0b9a 16       		.uleb128 0x16
- 17763 0b9b 89050000 		.4byte	.LASF135
+ 17763 0b9b 8E050000 		.4byte	.LASF135
  17764 0b9f 01       		.byte	0x1
  17765 0ba0 44       		.byte	0x44
  17766 0ba1 790B0000 		.4byte	0xb79
@@ -19318,7 +19318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17791 0bd8 03       		.byte	0x3
  17792 0bd9 00000000 		.4byte	msn_lema2
  17793 0bdd 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 323
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 323
 
 
  17794              		.section	.debug_abbrev,"",%progbits
@@ -19378,7 +19378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17848 0034 00       		.byte	0
  17849 0035 00       		.byte	0
  17850 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 324
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 324
 
 
  17851 0037 35       		.uleb128 0x35
@@ -19438,7 +19438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17905 006d 0A       		.uleb128 0xa
  17906 006e 0D       		.uleb128 0xd
  17907 006f 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 325
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 325
 
 
  17908 0070 03       		.uleb128 0x3
@@ -19498,7 +19498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  17962 00a7 00       		.byte	0
  17963 00a8 03       		.uleb128 0x3
  17964 00a9 0E       		.uleb128 0xe
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 326
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 326
 
 
  17965 00aa 3A       		.uleb128 0x3a
@@ -19558,7 +19558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18019 00e0 03       		.uleb128 0x3
  18020 00e1 0E       		.uleb128 0xe
  18021 00e2 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 327
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 327
 
 
  18022 00e3 0B       		.uleb128 0xb
@@ -19618,7 +19618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18076 011a 3B       		.uleb128 0x3b
  18077 011b 05       		.uleb128 0x5
  18078 011c 49       		.uleb128 0x49
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 328
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 328
 
 
  18079 011d 13       		.uleb128 0x13
@@ -19678,7 +19678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18133 0153 00       		.byte	0
  18134 0154 00       		.byte	0
  18135 0155 18       		.uleb128 0x18
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 329
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 329
 
 
  18136 0156 21       		.uleb128 0x21
@@ -19738,7 +19738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18182 0014 666C756A 		.ascii	"flujo_LCD2\000"
  18182      6F5F4C43 
  18182      443200
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 330
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 330
 
 
  18183              	.LASF133:
@@ -19798,7 +19798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18210      3100
  18211              	.LASF137:
  18212 00a9 6D736E5F 		.ascii	"msn_lema2\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 331
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 331
 
 
  18212      6C656D61 
@@ -19858,7 +19858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18244 0131 6C656D61 		.ascii	"lema1\000"
  18244      3100
  18245              	.LASF86:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 332
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 332
 
 
  18246 0137 6C656D61 		.ascii	"lema2\000"
@@ -19918,7 +19918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18274      65636C61 
  18274      646F3100 
  18275              	.LASF42:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 333
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 333
 
 
  18276 01c5 7072696E 		.ascii	"print_logo\000"
@@ -19939,356 +19939,357 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 1
  18284      636F7272 
  18284      69656E74 
  18284      6500
- 18285              	.LASF65:
- 18286 01f4 42756666 		.ascii	"Buffer_LCD2\000"
- 18286      65725F4C 
- 18286      43443200 
- 18287              	.LASF15:
- 18288 0200 63686172 		.ascii	"char\000"
- 18288      00
- 18289              	.LASF71:
- 18290 0205 626C6F71 		.ascii	"bloqueo_LCD\000"
- 18290      75656F5F 
- 18290      4C434400 
- 18291              	.LASF53:
- 18292 0211 69645F74 		.ascii	"id_teclado2\000"
- 18292      65636C61 
- 18292      646F3200 
- 18293              	.LASF20:
- 18294 021d 6D616E67 		.ascii	"mangueras\000"
- 18294      75657261 
- 18294      7300
- 18295              	.LASF12:
- 18296 0227 75696E74 		.ascii	"uint16\000"
- 18296      313600
- 18297              	.LASF97:
- 18298 022e 7072696E 		.ascii	"print1\000"
- 18298      743100
- 18299              	.LASF98:
- 18300 0235 7072696E 		.ascii	"print2\000"
- 18300      743200
- 18301              	.LASF32:
- 18302 023c 7469706F 		.ascii	"tipo_venta\000"
- 18302      5F76656E 
- 18302      746100
- 18303              	.LASF29:
- 18304 0247 69645F65 		.ascii	"id_ef\000"
- 18304      6600
- 18305              	.LASF35:
- 18306 024d 7475726E 		.ascii	"turno\000"
- 18306      6F00
- 18307              	.LASF18:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 334
+ 18285              	.LASF140:
+ 18286 01f4 433A5C55 		.ascii	"C:\\Users\\diego\\Documents\\GitHub\\Prueba_GRPFlee"
+ 18286      73657273 
+ 18286      5C646965 
+ 18286      676F5C44 
+ 18286      6F63756D 
+ 18287 0222 745C4242 		.ascii	"t\\BBB.cydsn\000"
+ 18287      422E6379 
+ 18287      64736E00 
+ 18288              	.LASF65:
+ 18289 022e 42756666 		.ascii	"Buffer_LCD2\000"
+ 18289      65725F4C 
+ 18289      43443200 
+ 18290              	.LASF15:
+ 18291 023a 63686172 		.ascii	"char\000"
+ 18291      00
+ 18292              	.LASF71:
+ 18293 023f 626C6F71 		.ascii	"bloqueo_LCD\000"
+ 18293      75656F5F 
+ 18293      4C434400 
+ 18294              	.LASF53:
+ 18295 024b 69645F74 		.ascii	"id_teclado2\000"
+ 18295      65636C61 
+ 18295      646F3200 
+ 18296              	.LASF20:
+ 18297 0257 6D616E67 		.ascii	"mangueras\000"
+ 18297      75657261 
+ 18297      7300
+ 18298              	.LASF12:
+ 18299 0261 75696E74 		.ascii	"uint16\000"
+ 18299      313600
+ 18300              	.LASF97:
+ 18301 0268 7072696E 		.ascii	"print1\000"
+ 18301      743100
+ 18302              	.LASF98:
+ 18303 026f 7072696E 		.ascii	"print2\000"
+ 18303      743200
+ 18304              	.LASF32:
+ 18305 0276 7469706F 		.ascii	"tipo_venta\000"
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 334
 
 
- 18308 0253 746F7461 		.ascii	"totales\000"
- 18308      6C657300 
- 18309              	.LASF68:
- 18310 025b 70617373 		.ascii	"password_lcd\000"
- 18310      776F7264 
- 18310      5F6C6364 
- 18310      00
- 18311              	.LASF46:
- 18312 0268 636F756E 		.ascii	"count_teclas1\000"
- 18312      745F7465 
- 18312      636C6173 
- 18312      3100
- 18313              	.LASF51:
- 18314 0276 636F756E 		.ascii	"count_teclas2\000"
- 18314      745F7465 
- 18314      636C6173 
- 18314      3200
- 18315              	.LASF54:
- 18316 0284 706F7378 		.ascii	"posx1\000"
- 18316      3100
- 18317              	.LASF57:
- 18318 028a 706F7378 		.ascii	"posx2\000"
- 18318      3200
- 18319              	.LASF6:
- 18320 0290 6C6F6E67 		.ascii	"long long int\000"
- 18320      206C6F6E 
- 18320      6720696E 
- 18320      7400
- 18321              	.LASF26:
- 18322 029e 70726F64 		.ascii	"producto\000"
- 18322      7563746F 
- 18322      00
- 18323              	.LASF130:
- 18324 02a7 6D736E5F 		.ascii	"msn_extra\000"
- 18324      65787472 
- 18324      6100
- 18325              	.LASF33:
- 18326 02b1 63656475 		.ascii	"cedula\000"
- 18326      6C6100
- 18327              	.LASF121:
- 18328 02b8 6D736E5F 		.ascii	"msn_vol\000"
- 18328      766F6C00 
- 18329              	.LASF138:
- 18330 02c0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 18330      4320342E 
- 18330      392E3320 
- 18330      32303135 
- 18330      30333033 
- 18331 02f3 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 18331      20726576 
- 18331      6973696F 
- 18331      6E203232 
- 18331      31323230 
- 18332 0326 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 18332      66756E63 
- 18332      74696F6E 
- 18332      2D736563 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 335
+ 18305      5F76656E 
+ 18305      746100
+ 18306              	.LASF29:
+ 18307 0281 69645F65 		.ascii	"id_ef\000"
+ 18307      6600
+ 18308              	.LASF35:
+ 18309 0287 7475726E 		.ascii	"turno\000"
+ 18309      6F00
+ 18310              	.LASF18:
+ 18311 028d 746F7461 		.ascii	"totales\000"
+ 18311      6C657300 
+ 18312              	.LASF68:
+ 18313 0295 70617373 		.ascii	"password_lcd\000"
+ 18313      776F7264 
+ 18313      5F6C6364 
+ 18313      00
+ 18314              	.LASF46:
+ 18315 02a2 636F756E 		.ascii	"count_teclas1\000"
+ 18315      745F7465 
+ 18315      636C6173 
+ 18315      3100
+ 18316              	.LASF51:
+ 18317 02b0 636F756E 		.ascii	"count_teclas2\000"
+ 18317      745F7465 
+ 18317      636C6173 
+ 18317      3200
+ 18318              	.LASF54:
+ 18319 02be 706F7378 		.ascii	"posx1\000"
+ 18319      3100
+ 18320              	.LASF57:
+ 18321 02c4 706F7378 		.ascii	"posx2\000"
+ 18321      3200
+ 18322              	.LASF6:
+ 18323 02ca 6C6F6E67 		.ascii	"long long int\000"
+ 18323      206C6F6E 
+ 18323      6720696E 
+ 18323      7400
+ 18324              	.LASF26:
+ 18325 02d8 70726F64 		.ascii	"producto\000"
+ 18325      7563746F 
+ 18325      00
+ 18326              	.LASF130:
+ 18327 02e1 6D736E5F 		.ascii	"msn_extra\000"
+ 18327      65787472 
+ 18327      6100
+ 18328              	.LASF33:
+ 18329 02eb 63656475 		.ascii	"cedula\000"
+ 18329      6C6100
+ 18330              	.LASF121:
+ 18331 02f2 6D736E5F 		.ascii	"msn_vol\000"
+ 18331      766F6C00 
+ 18332              	.LASF138:
+ 18333 02fa 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 18333      4320342E 
+ 18333      392E3320 
+ 18333      32303135 
+ 18333      30333033 
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 335
 
 
- 18332      74696F6E 
- 18333              	.LASF126:
- 18334 034e 6D736E5F 		.ascii	"msn_id\000"
- 18334      696400
- 18335              	.LASF55:
- 18336 0355 706F7379 		.ascii	"posy1\000"
- 18336      3100
- 18337              	.LASF58:
- 18338 035b 706F7379 		.ascii	"posy2\000"
- 18338      3200
- 18339              	.LASF105:
- 18340 0361 67756C66 		.ascii	"gulf\000"
- 18340      00
- 18341              	.LASF129:
- 18342 0366 6D736E5F 		.ascii	"msn_diesel\000"
- 18342      64696573 
- 18342      656C00
- 18343              	.LASF22:
- 18344 0371 72656369 		.ascii	"recibo\000"
- 18344      626F00
- 18345              	.LASF24:
- 18346 0378 64696E65 		.ascii	"dinero\000"
- 18346      726F00
- 18347              	.LASF64:
- 18348 037f 42756666 		.ascii	"Buffer_LCD1\000"
- 18348      65725F4C 
- 18348      43443100 
- 18349              	.LASF17:
- 18350 038b 65737461 		.ascii	"estado\000"
- 18350      646F00
- 18351              	.LASF37:
- 18352 0392 70617373 		.ascii	"password_local\000"
- 18352      776F7264 
- 18352      5F6C6F63 
- 18352      616C00
- 18353              	.LASF75:
- 18354 03a1 70707578 		.ascii	"ppux10\000"
- 18354      313000
- 18355              	.LASF82:
- 18356 03a8 6E6F6D62 		.ascii	"nombre\000"
- 18356      726500
- 18357              	.LASF96:
- 18358 03af 6372635F 		.ascii	"crc_total\000"
- 18358      746F7461 
- 18358      6C00
- 18359              	.LASF87:
- 18360 03b9 69645F6C 		.ascii	"id_logo\000"
- 18360      6F676F00 
- 18361              	.LASF38:
- 18362 03c1 7072696E 		.ascii	"print\000"
- 18362      7400
- 18363              	.LASF2:
- 18364 03c7 73686F72 		.ascii	"short int\000"
- 18364      7420696E 
- 18364      7400
- 18365              	.LASF4:
- 18366 03d1 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 336
+ 18334 032d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 18334      20726576 
+ 18334      6973696F 
+ 18334      6E203232 
+ 18334      31323230 
+ 18335 0360 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 18335      66756E63 
+ 18335      74696F6E 
+ 18335      2D736563 
+ 18335      74696F6E 
+ 18336              	.LASF126:
+ 18337 0388 6D736E5F 		.ascii	"msn_id\000"
+ 18337      696400
+ 18338              	.LASF55:
+ 18339 038f 706F7379 		.ascii	"posy1\000"
+ 18339      3100
+ 18340              	.LASF58:
+ 18341 0395 706F7379 		.ascii	"posy2\000"
+ 18341      3200
+ 18342              	.LASF105:
+ 18343 039b 67756C66 		.ascii	"gulf\000"
+ 18343      00
+ 18344              	.LASF129:
+ 18345 03a0 6D736E5F 		.ascii	"msn_diesel\000"
+ 18345      64696573 
+ 18345      656C00
+ 18346              	.LASF22:
+ 18347 03ab 72656369 		.ascii	"recibo\000"
+ 18347      626F00
+ 18348              	.LASF24:
+ 18349 03b2 64696E65 		.ascii	"dinero\000"
+ 18349      726F00
+ 18350              	.LASF64:
+ 18351 03b9 42756666 		.ascii	"Buffer_LCD1\000"
+ 18351      65725F4C 
+ 18351      43443100 
+ 18352              	.LASF17:
+ 18353 03c5 65737461 		.ascii	"estado\000"
+ 18353      646F00
+ 18354              	.LASF37:
+ 18355 03cc 70617373 		.ascii	"password_local\000"
+ 18355      776F7264 
+ 18355      5F6C6F63 
+ 18355      616C00
+ 18356              	.LASF75:
+ 18357 03db 70707578 		.ascii	"ppux10\000"
+ 18357      313000
+ 18358              	.LASF82:
+ 18359 03e2 6E6F6D62 		.ascii	"nombre\000"
+ 18359      726500
+ 18360              	.LASF96:
+ 18361 03e9 6372635F 		.ascii	"crc_total\000"
+ 18361      746F7461 
+ 18361      6C00
+ 18362              	.LASF87:
+ 18363 03f3 69645F6C 		.ascii	"id_logo\000"
+ 18363      6F676F00 
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 336
 
 
- 18366      20696E74 
- 18366      00
- 18367              	.LASF134:
- 18368 03da 6D736E5F 		.ascii	"msn_ufcorte\000"
- 18368      7566636F 
- 18368      72746500 
- 18369              	.LASF45:
- 18370 03e6 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 18370      52784275 
- 18370      66666572 
- 18370      00
- 18371              	.LASF125:
- 18372 03f3 6D736E5F 		.ascii	"msn_km\000"
- 18372      6B6D00
- 18373              	.LASF112:
- 18374 03fa 7A657573 		.ascii	"zeus\000"
- 18374      00
- 18375              	.LASF21:
- 18376 03ff 73757274 		.ascii	"surtidor\000"
- 18376      69646F72 
- 18376      00
- 18377              	.LASF47:
- 18378 0408 636F6D61 		.ascii	"comas1\000"
- 18378      733100
- 18379              	.LASF48:
- 18380 040f 636F6D61 		.ascii	"comas2\000"
- 18380      733200
- 18381              	.LASF106:
- 18382 0416 6D696E65 		.ascii	"mineroil\000"
- 18382      726F696C 
- 18382      00
- 18383              	.LASF76:
- 18384 041f 6E6F6D62 		.ascii	"nombre_pro1\000"
- 18384      72655F70 
- 18384      726F3100 
- 18385              	.LASF78:
- 18386 042b 6E6F6D62 		.ascii	"nombre_pro3\000"
- 18386      72655F70 
- 18386      726F3300 
- 18387              	.LASF44:
- 18388 0437 70756572 		.ascii	"puerto\000"
- 18388      746F00
- 18389              	.LASF124:
- 18390 043e 6D736E5F 		.ascii	"msn_cuenta\000"
- 18390      6375656E 
- 18390      746100
- 18391              	.LASF43:
- 18392 0449 6C6F676F 		.ascii	"logo\000"
- 18392      00
- 18393              	.LASF102:
- 18394 044e 65636F73 		.ascii	"ecospetrol\000"
- 18394      70657472 
- 18394      6F6C00
- 18395              	.LASF39:
- 18396 0459 70726F64 		.ascii	"prod\000"
- 18396      00
- 18397              	.LASF16:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 337
+ 18364              	.LASF38:
+ 18365 03fb 7072696E 		.ascii	"print\000"
+ 18365      7400
+ 18366              	.LASF2:
+ 18367 0401 73686F72 		.ascii	"short int\000"
+ 18367      7420696E 
+ 18367      7400
+ 18368              	.LASF4:
+ 18369 040b 6C6F6E67 		.ascii	"long int\000"
+ 18369      20696E74 
+ 18369      00
+ 18370              	.LASF134:
+ 18371 0414 6D736E5F 		.ascii	"msn_ufcorte\000"
+ 18371      7566636F 
+ 18371      72746500 
+ 18372              	.LASF45:
+ 18373 0420 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 18373      52784275 
+ 18373      66666572 
+ 18373      00
+ 18374              	.LASF125:
+ 18375 042d 6D736E5F 		.ascii	"msn_km\000"
+ 18375      6B6D00
+ 18376              	.LASF112:
+ 18377 0434 7A657573 		.ascii	"zeus\000"
+ 18377      00
+ 18378              	.LASF21:
+ 18379 0439 73757274 		.ascii	"surtidor\000"
+ 18379      69646F72 
+ 18379      00
+ 18380              	.LASF47:
+ 18381 0442 636F6D61 		.ascii	"comas1\000"
+ 18381      733100
+ 18382              	.LASF48:
+ 18383 0449 636F6D61 		.ascii	"comas2\000"
+ 18383      733200
+ 18384              	.LASF106:
+ 18385 0450 6D696E65 		.ascii	"mineroil\000"
+ 18385      726F696C 
+ 18385      00
+ 18386              	.LASF76:
+ 18387 0459 6E6F6D62 		.ascii	"nombre_pro1\000"
+ 18387      72655F70 
+ 18387      726F3100 
+ 18388              	.LASF78:
+ 18389 0465 6E6F6D62 		.ascii	"nombre_pro3\000"
+ 18389      72655F70 
+ 18389      726F3300 
+ 18390              	.LASF44:
+ 18391 0471 70756572 		.ascii	"puerto\000"
+ 18391      746F00
+ 18392              	.LASF124:
+ 18393 0478 6D736E5F 		.ascii	"msn_cuenta\000"
+ 18393      6375656E 
+ 18393      746100
+ 18394              	.LASF43:
+ 18395 0483 6C6F676F 		.ascii	"logo\000"
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 337
 
 
- 18398 045e 73697A65 		.ascii	"sizetype\000"
- 18398      74797065 
- 18398      00
- 18399              	.LASF5:
- 18400 0467 6C6F6E67 		.ascii	"long unsigned int\000"
- 18400      20756E73 
- 18400      69676E65 
- 18400      6420696E 
- 18400      7400
- 18401              	.LASF140:
- 18402 0479 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Desktop\\Prueba_GRPFleet\\BBB"
- 18402      73657273 
- 18402      5C526563 
- 18402      65706369 
- 18402      6F6E5C44 
- 18403 04a7 2E637964 		.ascii	".cydsn\000"
- 18403      736E00
+ 18395      00
+ 18396              	.LASF102:
+ 18397 0488 65636F73 		.ascii	"ecospetrol\000"
+ 18397      70657472 
+ 18397      6F6C00
+ 18398              	.LASF39:
+ 18399 0493 70726F64 		.ascii	"prod\000"
+ 18399      00
+ 18400              	.LASF16:
+ 18401 0498 73697A65 		.ascii	"sizetype\000"
+ 18401      74797065 
+ 18401      00
+ 18402              	.LASF5:
+ 18403 04a1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 18403      20756E73 
+ 18403      69676E65 
+ 18403      6420696E 
+ 18403      7400
  18404              	.LASF10:
- 18405 04ae 696E7433 		.ascii	"int32_t\000"
+ 18405 04b3 696E7433 		.ascii	"int32_t\000"
  18405      325F7400 
  18406              	.LASF117:
- 18407 04b6 6D736E5F 		.ascii	"msn_fecha\000"
+ 18407 04bb 6D736E5F 		.ascii	"msn_fecha\000"
  18407      66656368 
  18407      6100
  18408              	.LASF109:
- 18409 04c0 706C7573 		.ascii	"plus\000"
+ 18409 04c5 706C7573 		.ascii	"plus\000"
  18409      00
  18410              	.LASF36:
- 18411 04c5 6175746F 		.ascii	"autorizado\000"
+ 18411 04ca 6175746F 		.ascii	"autorizado\000"
  18411      72697A61 
  18411      646F00
  18412              	.LASF1:
- 18413 04d0 756E7369 		.ascii	"unsigned char\000"
+ 18413 04d5 756E7369 		.ascii	"unsigned char\000"
  18413      676E6564 
  18413      20636861 
  18413      7200
  18414              	.LASF127:
- 18415 04de 6D736E5F 		.ascii	"msn_copia\000"
+ 18415 04e3 6D736E5F 		.ascii	"msn_copia\000"
  18415      636F7069 
  18415      6100
  18416              	.LASF88:
- 18417 04e8 66656368 		.ascii	"fecha\000"
+ 18417 04ed 66656368 		.ascii	"fecha\000"
  18417      6100
  18418              	.LASF107:
- 18419 04ee 6D6F6269 		.ascii	"mobil\000"
+ 18419 04f3 6D6F6269 		.ascii	"mobil\000"
  18419      6C00
  18420              	.LASF111:
- 18421 04f4 74657861 		.ascii	"texaco\000"
+ 18421 04f9 74657861 		.ascii	"texaco\000"
  18421      636F00
  18422              	.LASF81:
- 18423 04fb 6C61646F 		.ascii	"lado2\000"
+ 18423 0500 6C61646F 		.ascii	"lado2\000"
  18423      3200
  18424              	.LASF40:
- 18425 0501 6B6D5F70 		.ascii	"km_p\000"
+ 18425 0506 6B6D5F70 		.ascii	"km_p\000"
  18425      00
  18426              	.LASF93:
- 18427 0506 6F6B5F64 		.ascii	"ok_datosRF\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 338
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 338
 
 
+ 18427 050b 6F6B5F64 		.ascii	"ok_datosRF\000"
  18427      61746F73 
  18427      524600
  18428              	.LASF110:
- 18429 0511 74657270 		.ascii	"terpel\000"
+ 18429 0516 74657270 		.ascii	"terpel\000"
  18429      656C00
  18430              	.LASF77:
- 18431 0518 6E6F6D62 		.ascii	"nombre_pro2\000"
+ 18431 051d 6E6F6D62 		.ascii	"nombre_pro2\000"
  18431      72655F70 
  18431      726F3200 
  18432              	.LASF0:
- 18433 0524 7369676E 		.ascii	"signed char\000"
+ 18433 0529 7369676E 		.ascii	"signed char\000"
  18433      65642063 
  18433      68617200 
  18434              	.LASF66:
- 18435 0530 636F756E 		.ascii	"count_protector\000"
+ 18435 0535 636F756E 		.ascii	"count_protector\000"
  18435      745F7072 
  18435      6F746563 
  18435      746F7200 
  18436              	.LASF3:
- 18437 0540 73686F72 		.ascii	"short unsigned int\000"
+ 18437 0545 73686F72 		.ascii	"short unsigned int\000"
  18437      7420756E 
  18437      7369676E 
  18437      65642069 
  18437      6E7400
  18438              	.LASF11:
- 18439 0553 75696E74 		.ascii	"uint8\000"
+ 18439 0558 75696E74 		.ascii	"uint8\000"
  18439      3800
  18440              	.LASF14:
- 18441 0559 646F7562 		.ascii	"double\000"
+ 18441 055e 646F7562 		.ascii	"double\000"
  18441      6C6500
  18442              	.LASF131:
- 18443 0560 6D736E5F 		.ascii	"msn_producto\000"
+ 18443 0565 6D736E5F 		.ascii	"msn_producto\000"
  18443      70726F64 
  18443      7563746F 
  18443      00
  18444              	.LASF99:
- 18445 056d 62696F6D 		.ascii	"biomax\000"
+ 18445 0572 62696F6D 		.ascii	"biomax\000"
  18445      617800
  18446              	.LASF72:
- 18447 0574 69645F65 		.ascii	"id_estacion\000"
+ 18447 0579 69645F65 		.ascii	"id_estacion\000"
  18447      73746163 
  18447      696F6E00 
  18448              	.LASF27:
- 18449 0580 6D616E67 		.ascii	"manguera\000"
+ 18449 0585 6D616E67 		.ascii	"manguera\000"
  18449      75657261 
  18449      00
  18450              	.LASF135:
- 18451 0589 6D736E5F 		.ascii	"msn_uhcorte\000"
+ 18451 058e 6D736E5F 		.ascii	"msn_uhcorte\000"
  18451      7568636F 
  18451      72746500 
  18452              	.LASF19:
- 18453 0595 67726164 		.ascii	"grado\000"
+ 18453 059a 67726164 		.ascii	"grado\000"
  18453      6F00
  18454              	.LASF115:
- 18455 059b 6D736E5F 		.ascii	"msn_nit\000"
+ 18455 05a0 6D736E5F 		.ascii	"msn_nit\000"
  18455      6E697400 
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccfMYbSg.s 			page 339
+
+
  18456              	.LASF56:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccqMftRO.s 			page 339
-
-
- 18457 05a3 73697A65 		.ascii	"sizeletra1\000"
+ 18457 05a8 73697A65 		.ascii	"sizeletra1\000"
  18457      6C657472 
  18457      613100
  18458              	.LASF59:
- 18459 05ae 73697A65 		.ascii	"sizeletra2\000"
+ 18459 05b3 73697A65 		.ascii	"sizeletra2\000"
  18459      6C657472 
  18459      613200
  18460              	.LASF122:
- 18461 05b9 6D736E5F 		.ascii	"msn_din\000"
+ 18461 05be 6D736E5F 		.ascii	"msn_din\000"
  18461      64696E00 
  18462              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -144,7 +144,7 @@ void init(void){
 //	lado1.grado[1][0]=3;
 //	lado1.grado[2][0]=0;
     //version[1]=6;
-	version[2]=0;
+	version[2]=2;
 	version[3]=3;
     CyDelay(5);	
     
@@ -240,7 +240,7 @@ void error_op(uint8 lcd, uint16 imagen){
 */
 void init_surt(void){
 	uint8 estado, ok=0;
-	while(ok!=2){
+	while(ok<=1){
 		ok=0;
 		if((lado1.dir==0xFF)||(lado2.dir==0xFF)){
 			while(ver_pos()==0){};
@@ -388,7 +388,7 @@ void polling_rf(void){
 	uint16 status1, status2,size,x,t_preset;
 	uint8  precio[5],preset[8];
     
-	if(PC_GetRxBufferSize()>=3){
+	if(PC_GetRxBufferSize()>=6){
 		status1=PC_GetRxBufferSize();
 		CyDelay(10);
 		status2=PC_GetRxBufferSize();
@@ -523,11 +523,15 @@ void polling_rf(void){
 					break;
 					
 					case cimprimir:
-						set_imagen(1,55);
-                        if(PC_rxBuffer[5] =='2'){
-                            lado1.estado=libre;
-    						error_op(1,12);	
-                        }											
+						set_imagen(1,55);					
+						if(lado1.dir==(lado1.dir & 0x0F)){
+							lado1.estado=libre;
+							flujo_LCD1=0;
+						}
+						else if(lado2.dir==(PC_rxBuffer[4] & 0x0F)){
+							lado2.estado=libre;
+							flujo_LCD1=0;
+						}						
 					break;
 					
 					case creset:                                   
@@ -711,9 +715,10 @@ void polling_LCD1(void){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
                 switch(LCD_1_rxBuffer[3]){
                     case 0x5F:							//Sin ID	                                                                              
-                      set_imagen(1,5);                 //Pasa a pantalla de tipo de venta 
+                      set_imagen(1,18);                 //Pasa a pantalla de tipo de venta viejo:5
                       tipo_venta = 0;
-                      flujo_LCD1 = 4; 
+                      id_teclado1 = 8;
+                      flujo_LCD1 = 11;                 // viejo: 4
                     break;
                     
                     case 0x5E:  						//Con ID                                         
@@ -761,7 +766,7 @@ void polling_LCD1(void){
                       flujo_LCD1 = 12; 
                     break;
                     
-                    case 0x10: 									//G 
+                    case 0x10: 									//L 
 					  for(x=0;x<=7;x++){
 					 	rventa1.preset[x]=0;
 					  }						                      
@@ -775,7 +780,7 @@ void polling_LCD1(void){
 					  posx1=4;
 					  posy1=3;
 					  sizeletra1=1;					
-					  write_LCD(1,'G', 3, 4, 1);
+					  write_LCD(1,'L', 3, 4, 1);
                       flujo_LCD1=12; 
                     break;
                     
@@ -908,24 +913,44 @@ void polling_LCD1(void){
 					    rf_mod[x+4] = y+55;
 				    }
 			    }
+                
             }
             if(tipo_venta == 0){
-                for(x=0;x<=15;x++){						//Serial efectivo				
-				    y=(rventa1.id_ef[x])&0x0F;
-                    rf_mod[x+4] = y+48;
+                for(x=0;x<=15;x++){						//Serial				
+				    y=(rventa1.id[x/2]>>4)&0x0F;
 				    if((x%2)==0){
-					    y=rventa1.id_ef[x]&0x0F;
-				    }				    
+					    y=rventa1.id[x/2]&0x0F;
+				    }
+				    rf_mod[x+4] = y+48;
 				    if(y>9){
 					    rf_mod[x+4] = y+55;
 				    }
-                }
+			    }
+//                for(x=0;x<=15;x++){						//Serial efectivo				
+//				    y=(rventa1.id_ef[x])&0x0F;
+//                    rf_mod[x+4] = y+48;
+//				    if((x%2)==0){
+//					    y=rventa1.id_ef[x]&0x0F;
+//				    }				    
+//				    if(y>9){
+//					    rf_mod[x+4] = y+55;
+//				    }
+//                }
             }
-			rf_mod[20]=(lado1.grado[rventa1.manguera-1][0])+48;			//Id Producto					
-			rf_mod[21]= id_estacion[4];								    //Id Estación
-			rf_mod[22]= id_estacion[3];
-			rf_mod[23]= id_estacion[2];
-			rf_mod[24]= id_estacion[1];        			
+			rf_mod[20]=(lado1.grado[rventa1.manguera-1][0])+48;			//Id Producto
+            if(tipo_venta == 0){
+                rf_mod[21]= id_estacion[4];								    //Id vehiculo
+			    rf_mod[22]= id_estacion[3];
+			    rf_mod[23]= id_estacion[2];
+			    rf_mod[24]= id_estacion[1];  
+            }
+			if(tipo_venta == 1){
+                rf_mod[21]= '0';								    //Id Estación
+			    rf_mod[22]= '0';
+			    rf_mod[23]= '0';
+			    rf_mod[24]= '0';  
+            } 
+            
             if(ppux10==0){
     			rf_mod[25]=(lado1.ppu[rventa1.manguera-1][4]&0x0F)+0x30;		//PPU
     			rf_mod[26]=(lado1.ppu[rventa1.manguera-1][3]&0x0F)+0x30;
@@ -1005,7 +1030,12 @@ void polling_LCD1(void){
                         if(id_teclado1 ==10){
                             set_imagen(1,19);
                             flujo_LCD1 = 19;
-                        }else{
+                        }
+                        if(id_teclado1 ==8){
+                            set_imagen(1,36);
+                            flujo_LCD1 = 12;
+                        }
+                        if(id_teclado1 !=8 && id_teclado1 !=10){
                             id_teclado1=2;
                             set_imagen(1,14);
                             flujo_LCD1=12;
@@ -1118,7 +1148,7 @@ void polling_LCD1(void){
 									}
 								}
 								num_decimal=atof(numero);
-								if(((rventa1.preset[0]==1)&&(num_decimal>=800))||((rventa1.preset[0]==2)&&(num_decimal<=900)&&(num_decimal>0))){
+								if(((rventa1.preset[0]==1)&&(num_decimal>=5))||((rventa1.preset[0]==2)&&(num_decimal<=5)&&(num_decimal>0))){
 									for(x=count_teclas1;x>=1;x--){
 										rventa1.preset[x]=Buffer_LCD1[(count_teclas1-x)+1];
 									}
@@ -1286,9 +1316,11 @@ void polling_LCD1(void){
                     		for(x=8;x<=12;x++){	
                     			EEPROM_WriteByte(id_estacion[x-8], x);
                     		}   
-                        	flujo_LCD1 = 0;	
-                        	set_imagen(1,60);
+                        	flujo_LCD1 = 12;	//viejo: 0
+                            id_teclado1 = 2;
+                        	set_imagen(1,14); //viejo: 60
                             CyDelay(200);
+                            count_teclas1 = 0;
 							lado1.estado=libre;                                    
                         break;
 					}					
@@ -1372,16 +1404,26 @@ void polling_LCD1(void){
 				    }
 			    }
             }else{
-                for(x=0;x<=15;x++){						//Serial efectivo				
-				    y=(rventa1.id[x])&0x0F;
+                for(x=0;x<=15;x++){						//Serial				
+				    y=(rventa1.id[x/2]>>4)&0x0F;
 				    if((x%2)==0){
-					    y=rventa1.id[x]&0x0F;
+					    y=rventa1.id[x/2]&0x0F;
 				    }
 				    rf_mod[x+29] = y+48;
 				    if(y>9){
 					    rf_mod[x+29] = y+55;
 				    }
-			    }                
+			    }
+//                for(x=0;x<=15;x++){						//Serial efectivo				
+//				    y=(rventa1.id[x])&0x0F;
+//				    if((x%2)==0){
+//					    y=rventa1.id[x]&0x0F;
+//				    }
+//				    rf_mod[x+29] = y+48;
+//				    if(y>9){
+//					    rf_mod[x+29] = y+55;
+//				    }
+//			    }                
             }
 			num_decimal2++;
 			id_venta[4]=(num_decimal2/1000)+48;
