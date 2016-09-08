@@ -1,6 +1,6 @@
 -- Project:   BBB
--- Generated: 05/12/2016 10:44:18
--- PSoC Creator  3.3 SP1
+-- Generated: 09/08/2016 14:43:16
+-- PSoC Creator  3.3 CP2
 
 ENTITY BBB IS
     PORT(
