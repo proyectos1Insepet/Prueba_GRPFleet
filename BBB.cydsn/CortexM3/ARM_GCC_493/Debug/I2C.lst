@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 1
 
 
    1              		.syntax unified
@@ -36,56 +36,62 @@ ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
   33              		.comm	teclas2,1,1
   34              		.comm	flujo_LCD1,1,1
   35              		.comm	flujo_LCD2,1,1
-  36              		.comm	Buffer_LCD1,30,4
-  37              		.comm	Buffer_LCD2,30,4
-  38              		.comm	count_protector,1,1
-  39              		.comm	count_protector2,1,1
-  40              		.comm	password_lcd,9,4
-  41              		.comm	imagen_grado,2,2
-  42              		.comm	prox_caso,8,4
-  43              		.comm	bloqueo_LCD,3,4
-  44              		.comm	id_estacion,5,4
-  45              		.comm	id_venta,8,4
-  46              		.comm	trama_totales,200,4
-  47              		.comm	ppux10,1,1
-  48              		.comm	nombre_pro1,17,4
-  49              		.comm	nombre_pro2,17,4
-  50              		.comm	nombre_pro3,17,4
-  51              		.comm	version,4,4
-  52              		.comm	lado1,93,4
-  53              		.comm	lado2,93,4
-  54              		.comm	nombre,33,4
-  55              		.comm	nit,15,4
-  56              		.comm	telefono,20,4
-  57              		.comm	direccion,33,4
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 2
+  36              		.comm	flujo_pos1,1,1
+  37              		.comm	flujo_pos2,1,1
+  38              		.comm	seleccion_pos,1,1
+  39              		.comm	flujo_pos,1,1
+  40              		.comm	venta_activa,1,1
+  41              		.comm	venta_activa2,1,1
+  42              		.comm	Buffer_LCD1,30,4
+  43              		.comm	Buffer_LCD2,30,4
+  44              		.comm	count_protector,1,1
+  45              		.comm	count_protector2,1,1
+  46              		.comm	password_lcd,9,4
+  47              		.comm	imagen_grado,2,2
+  48              		.comm	prox_caso,8,4
+  49              		.comm	bloqueo_LCD,3,4
+  50              		.comm	id_estacion,5,4
+  51              		.comm	id_venta,8,4
+  52              		.comm	trama_totales,200,4
+  53              		.comm	ppux10,1,1
+  54              		.comm	nombre_pro1,17,4
+  55              		.comm	nombre_pro2,17,4
+  56              		.comm	nombre_pro3,17,4
+  57              		.comm	version,4,4
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 2
 
 
-  58              		.comm	lema1,32,4
-  59              		.comm	lema2,32,4
-  60              		.comm	id_logo,2,4
-  61              		.comm	km,2,4
-  62              		.comm	fecha,3,4
-  63              		.comm	hora,2,4
-  64              		.comm	rventa1,118,4
-  65              		.comm	rventa2,118,4
-  66              		.comm	ok_RF,1,1
-  67              		.comm	ok_datosRF,1,1
-  68              		.comm	rf_mod,200,4
-  69              		.comm	buffer_i2c,64,4
-  70              		.comm	crc_total,1,1
-  71              		.comm	print1,2,4
-  72              		.comm	print2,2,4
-  73              		.comm	tipo_venta,1,1
-  74              		.section	.text.leer_hora,"ax",%progbits
-  75              		.align	2
-  76              		.global	leer_hora
-  77              		.thumb
-  78              		.thumb_func
-  79              		.type	leer_hora, %function
-  80              	leer_hora:
-  81              	.LFB63:
-  82              		.file 1 ".\\I2C.c"
+  58              		.comm	lado1,93,4
+  59              		.comm	lado2,93,4
+  60              		.comm	nombre,33,4
+  61              		.comm	nit,15,4
+  62              		.comm	telefono,20,4
+  63              		.comm	direccion,33,4
+  64              		.comm	lema1,32,4
+  65              		.comm	lema2,32,4
+  66              		.comm	id_logo,2,4
+  67              		.comm	km,2,4
+  68              		.comm	fecha,3,4
+  69              		.comm	hora,2,4
+  70              		.comm	rventa1,118,4
+  71              		.comm	rventa2,118,4
+  72              		.comm	ok_RF,1,1
+  73              		.comm	ok_datosRF,1,1
+  74              		.comm	rf_mod,200,4
+  75              		.comm	buffer_i2c,64,4
+  76              		.comm	crc_total,1,1
+  77              		.comm	print1,2,4
+  78              		.comm	print2,2,4
+  79              		.comm	tipo_venta,1,1
+  80              		.section	.text.leer_hora,"ax",%progbits
+  81              		.align	2
+  82              		.global	leer_hora
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	leer_hora, %function
+  86              	leer_hora:
+  87              	.LFB63:
+  88              		.file 1 ".\\I2C.c"
    1:.\I2C.c       **** /*
    2:.\I2C.c       **** ***************************************************************************************************
    3:.\I2C.c       **** *                                           GRP550/700 CODE
@@ -112,15 +118,15 @@ ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
   24:.\I2C.c       **** * Version       : V1.00
   25:.\I2C.c       **** * Programmer(s) : 
   26:.\I2C.c       ****                   
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 3
+
+
   27:.\I2C.c       **** ***************************************************************************************************
   28:.\I2C.c       **** */
   29:.\I2C.c       **** 
   30:.\I2C.c       **** 
   31:.\I2C.c       **** /*
   32:.\I2C.c       **** ***************************************************************************************************
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 3
-
-
   33:.\I2C.c       **** *                                             INCLUDE FILES
   34:.\I2C.c       **** ***************************************************************************************************
   35:.\I2C.c       **** */
@@ -145,163 +151,163 @@ ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
   54:.\I2C.c       **** ***************************************************************************************************
   55:.\I2C.c       **** */
   56:.\I2C.c       **** uint8 leer_hora(){
-  83              		.loc 1 56 0
-  84              		.cfi_startproc
-  85              		@ args = 0, pretend = 0, frame = 8
-  86              		@ frame_needed = 1, uses_anonymous_args = 0
-  87 0000 90B5     		push	{r4, r7, lr}
-  88              		.cfi_def_cfa_offset 12
-  89              		.cfi_offset 4, -12
-  90              		.cfi_offset 7, -8
-  91              		.cfi_offset 14, -4
-  92 0002 83B0     		sub	sp, sp, #12
-  93              		.cfi_def_cfa_offset 24
-  94 0004 00AF     		add	r7, sp, #0
-  95              		.cfi_def_cfa_register 7
+  89              		.loc 1 56 0
+  90              		.cfi_startproc
+  91              		@ args = 0, pretend = 0, frame = 8
+  92              		@ frame_needed = 1, uses_anonymous_args = 0
+  93 0000 90B5     		push	{r4, r7, lr}
+  94              		.cfi_def_cfa_offset 12
+  95              		.cfi_offset 4, -12
+  96              		.cfi_offset 7, -8
+  97              		.cfi_offset 14, -4
+  98 0002 83B0     		sub	sp, sp, #12
+  99              		.cfi_def_cfa_offset 24
+ 100 0004 00AF     		add	r7, sp, #0
+ 101              		.cfi_def_cfa_register 7
   57:.\I2C.c       **** 	uint8 status,i;
   58:.\I2C.c       **** 	for(i=1;i<=2;i++){
-  96              		.loc 1 58 0
-  97 0006 0123     		movs	r3, #1
-  98 0008 FB71     		strb	r3, [r7, #7]
-  99 000a 36E0     		b	.L2
- 100              	.L9:
+ 102              		.loc 1 58 0
+ 103 0006 0123     		movs	r3, #1
+ 104 0008 FB71     		strb	r3, [r7, #7]
+ 105 000a 36E0     		b	.L2
+ 106              	.L9:
   59:.\I2C.c       ****         I2C_1_MasterClearStatus();
- 101              		.loc 1 59 0
- 102 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 107              		.loc 1 59 0
+ 108 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
   60:.\I2C.c       ****         status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
- 103              		.loc 1 60 0
- 104 0010 6820     		movs	r0, #104
- 105 0012 0021     		movs	r1, #0
- 106 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
- 107 0018 0346     		mov	r3, r0
- 108 001a BB71     		strb	r3, [r7, #6]
+ 109              		.loc 1 60 0
+ 110 0010 6820     		movs	r0, #104
+ 111 0012 0021     		movs	r1, #0
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 4
+
+
+ 112 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 113 0018 0346     		mov	r3, r0
+ 114 001a BB71     		strb	r3, [r7, #6]
   61:.\I2C.c       ****         if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors *
- 109              		.loc 1 61 0
- 110 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 4
-
-
- 111 001e 002B     		cmp	r3, #0
- 112 0020 26D1     		bne	.L3
+ 115              		.loc 1 61 0
+ 116 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 117 001e 002B     		cmp	r3, #0
+ 118 0020 26D1     		bne	.L3
   62:.\I2C.c       ****     	{
   63:.\I2C.c       ****             status = I2C_1_MasterWriteByte(i);
- 113              		.loc 1 63 0
- 114 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 115 0024 1846     		mov	r0, r3
- 116 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
- 117 002a 0346     		mov	r3, r0
- 118 002c BB71     		strb	r3, [r7, #6]
+ 119              		.loc 1 63 0
+ 120 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 121 0024 1846     		mov	r0, r3
+ 122 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 123 002a 0346     		mov	r3, r0
+ 124 002c BB71     		strb	r3, [r7, #6]
   64:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
- 119              		.loc 1 64 0
- 120 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 121 0030 002B     		cmp	r3, #0
- 122 0032 01D0     		beq	.L4
+ 125              		.loc 1 64 0
+ 126 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 127 0030 002B     		cmp	r3, #0
+ 128 0032 01D0     		beq	.L4
   65:.\I2C.c       ****             {
   66:.\I2C.c       ****                 return 0;
- 123              		.loc 1 66 0
- 124 0034 0023     		movs	r3, #0
- 125 0036 24E0     		b	.L5
- 126              	.L4:
+ 129              		.loc 1 66 0
+ 130 0034 0023     		movs	r3, #0
+ 131 0036 24E0     		b	.L5
+ 132              	.L4:
   67:.\I2C.c       ****             }
   68:.\I2C.c       **** 			else{
   69:.\I2C.c       **** 		        I2C_1_MasterSendStop(); 										/* Send Stop */
- 127              		.loc 1 69 0
- 128 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 133              		.loc 1 69 0
+ 134 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
   70:.\I2C.c       **** 		        CyDelay(10);
- 129              		.loc 1 70 0
- 130 003c 0A20     		movs	r0, #10
- 131 003e FFF7FEFF 		bl	CyDelay
+ 135              		.loc 1 70 0
+ 136 003c 0A20     		movs	r0, #10
+ 137 003e FFF7FEFF 		bl	CyDelay
   71:.\I2C.c       **** 		        status = I2C_1_MasterSendStart(0x68, I2C_1_READ_XFER_MODE);
- 132              		.loc 1 71 0
- 133 0042 6820     		movs	r0, #104
- 134 0044 0121     		movs	r1, #1
- 135 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
- 136 004a 0346     		mov	r3, r0
- 137 004c BB71     		strb	r3, [r7, #6]
+ 138              		.loc 1 71 0
+ 139 0042 6820     		movs	r0, #104
+ 140 0044 0121     		movs	r1, #1
+ 141 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 142 004a 0346     		mov	r3, r0
+ 143 004c BB71     		strb	r3, [r7, #6]
   72:.\I2C.c       **** 		        if(I2C_1_MSTR_NO_ERROR == status){
- 138              		.loc 1 72 0
- 139 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 140 0050 002B     		cmp	r3, #0
- 141 0052 0BD1     		bne	.L6
+ 144              		.loc 1 72 0
+ 145 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 146 0050 002B     		cmp	r3, #0
+ 147 0052 0BD1     		bne	.L6
   73:.\I2C.c       **** 		            hora[i-1] = I2C_1_MasterReadByte(I2C_1_NAK_DATA);
- 142              		.loc 1 73 0
- 143 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 144 0056 5C1E     		subs	r4, r3, #1
- 145 0058 0020     		movs	r0, #0
- 146 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
- 147 005e 0346     		mov	r3, r0
- 148 0060 1A46     		mov	r2, r3
- 149 0062 0A4B     		ldr	r3, .L11
- 150 0064 1A55     		strb	r2, [r3, r4]
+ 148              		.loc 1 73 0
+ 149 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 150 0056 5C1E     		subs	r4, r3, #1
+ 151 0058 0020     		movs	r0, #0
+ 152 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 153 005e 0346     		mov	r3, r0
+ 154 0060 1A46     		mov	r2, r3
+ 155 0062 0A4B     		ldr	r3, .L11
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 5
+
+
+ 156 0064 1A55     		strb	r2, [r3, r4]
   74:.\I2C.c       **** 		        }
   75:.\I2C.c       **** 				else{
   76:.\I2C.c       **** 					return 0;
   77:.\I2C.c       **** 				}
   78:.\I2C.c       **** 		        I2C_1_MasterSendStop();	
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 5
-
-
- 151              		.loc 1 78 0
- 152 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
- 153 006a 03E0     		b	.L10
- 154              	.L6:
+ 157              		.loc 1 78 0
+ 158 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 159 006a 03E0     		b	.L10
+ 160              	.L6:
   76:.\I2C.c       **** 				}
- 155              		.loc 1 76 0
- 156 006c 0023     		movs	r3, #0
- 157 006e 08E0     		b	.L5
- 158              	.L3:
+ 161              		.loc 1 76 0
+ 162 006c 0023     		movs	r3, #0
+ 163 006e 08E0     		b	.L5
+ 164              	.L3:
   79:.\I2C.c       **** 			}
   80:.\I2C.c       ****         }
   81:.\I2C.c       **** 		else{
   82:.\I2C.c       **** 			return 0;
- 159              		.loc 1 82 0
- 160 0070 0023     		movs	r3, #0
- 161 0072 06E0     		b	.L5
- 162              	.L10:
+ 165              		.loc 1 82 0
+ 166 0070 0023     		movs	r3, #0
+ 167 0072 06E0     		b	.L5
+ 168              	.L10:
   58:.\I2C.c       ****         I2C_1_MasterClearStatus();
- 163              		.loc 1 58 0 discriminator 2
- 164 0074 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 165 0076 0133     		adds	r3, r3, #1
- 166 0078 FB71     		strb	r3, [r7, #7]
- 167              	.L2:
+ 169              		.loc 1 58 0 discriminator 2
+ 170 0074 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 171 0076 0133     		adds	r3, r3, #1
+ 172 0078 FB71     		strb	r3, [r7, #7]
+ 173              	.L2:
   58:.\I2C.c       ****         I2C_1_MasterClearStatus();
- 168              		.loc 1 58 0 is_stmt 0 discriminator 1
- 169 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 170 007c 022B     		cmp	r3, #2
- 171 007e C5D9     		bls	.L9
+ 174              		.loc 1 58 0 is_stmt 0 discriminator 1
+ 175 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 176 007c 022B     		cmp	r3, #2
+ 177 007e C5D9     		bls	.L9
   83:.\I2C.c       **** 		}		
   84:.\I2C.c       **** 	}
   85:.\I2C.c       **** 	return 1;
- 172              		.loc 1 85 0 is_stmt 1
- 173 0080 0123     		movs	r3, #1
- 174              	.L5:
+ 178              		.loc 1 85 0 is_stmt 1
+ 179 0080 0123     		movs	r3, #1
+ 180              	.L5:
   86:.\I2C.c       **** }
- 175              		.loc 1 86 0
- 176 0082 1846     		mov	r0, r3
- 177 0084 0C37     		adds	r7, r7, #12
- 178              		.cfi_def_cfa_offset 12
- 179 0086 BD46     		mov	sp, r7
- 180              		.cfi_def_cfa_register 13
- 181              		@ sp needed
- 182 0088 90BD     		pop	{r4, r7, pc}
- 183              	.L12:
- 184 008a 00BF     		.align	2
- 185              	.L11:
- 186 008c 00000000 		.word	hora
- 187              		.cfi_endproc
- 188              	.LFE63:
- 189              		.size	leer_hora, .-leer_hora
- 190              		.section	.text.leer_fecha,"ax",%progbits
- 191              		.align	2
- 192              		.global	leer_fecha
- 193              		.thumb
- 194              		.thumb_func
- 195              		.type	leer_fecha, %function
- 196              	leer_fecha:
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 6
+ 181              		.loc 1 86 0
+ 182 0082 1846     		mov	r0, r3
+ 183 0084 0C37     		adds	r7, r7, #12
+ 184              		.cfi_def_cfa_offset 12
+ 185 0086 BD46     		mov	sp, r7
+ 186              		.cfi_def_cfa_register 13
+ 187              		@ sp needed
+ 188 0088 90BD     		pop	{r4, r7, pc}
+ 189              	.L12:
+ 190 008a 00BF     		.align	2
+ 191              	.L11:
+ 192 008c 00000000 		.word	hora
+ 193              		.cfi_endproc
+ 194              	.LFE63:
+ 195              		.size	leer_hora, .-leer_hora
+ 196              		.section	.text.leer_fecha,"ax",%progbits
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 6
 
 
- 197              	.LFB64:
+ 197              		.align	2
+ 198              		.global	leer_fecha
+ 199              		.thumb
+ 200              		.thumb_func
+ 201              		.type	leer_fecha, %function
+ 202              	leer_fecha:
+ 203              	.LFB64:
   87:.\I2C.c       **** 
   88:.\I2C.c       **** /*
   89:.\I2C.c       **** ***************************************************************************************************
@@ -320,167 +326,167 @@ ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
  102:.\I2C.c       **** ***************************************************************************************************
  103:.\I2C.c       **** */
  104:.\I2C.c       **** uint8 leer_fecha(){
- 198              		.loc 1 104 0
- 199              		.cfi_startproc
- 200              		@ args = 0, pretend = 0, frame = 8
- 201              		@ frame_needed = 1, uses_anonymous_args = 0
- 202 0000 90B5     		push	{r4, r7, lr}
- 203              		.cfi_def_cfa_offset 12
- 204              		.cfi_offset 4, -12
- 205              		.cfi_offset 7, -8
- 206              		.cfi_offset 14, -4
- 207 0002 83B0     		sub	sp, sp, #12
- 208              		.cfi_def_cfa_offset 24
- 209 0004 00AF     		add	r7, sp, #0
- 210              		.cfi_def_cfa_register 7
+ 204              		.loc 1 104 0
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 8
+ 207              		@ frame_needed = 1, uses_anonymous_args = 0
+ 208 0000 90B5     		push	{r4, r7, lr}
+ 209              		.cfi_def_cfa_offset 12
+ 210              		.cfi_offset 4, -12
+ 211              		.cfi_offset 7, -8
+ 212              		.cfi_offset 14, -4
+ 213 0002 83B0     		sub	sp, sp, #12
+ 214              		.cfi_def_cfa_offset 24
+ 215 0004 00AF     		add	r7, sp, #0
+ 216              		.cfi_def_cfa_register 7
  105:.\I2C.c       **** 	uint8 status,i;
  106:.\I2C.c       **** 	for(i=4;i<=6;i++){
- 211              		.loc 1 106 0
- 212 0006 0423     		movs	r3, #4
- 213 0008 FB71     		strb	r3, [r7, #7]
- 214 000a 36E0     		b	.L14
- 215              	.L21:
+ 217              		.loc 1 106 0
+ 218 0006 0423     		movs	r3, #4
+ 219 0008 FB71     		strb	r3, [r7, #7]
+ 220 000a 36E0     		b	.L14
+ 221              	.L21:
  107:.\I2C.c       ****         I2C_1_MasterClearStatus();
- 216              		.loc 1 107 0
- 217 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 222              		.loc 1 107 0
+ 223 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
  108:.\I2C.c       ****         status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
- 218              		.loc 1 108 0
- 219 0010 6820     		movs	r0, #104
- 220 0012 0021     		movs	r1, #0
- 221 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
- 222 0018 0346     		mov	r3, r0
- 223 001a BB71     		strb	r3, [r7, #6]
+ 224              		.loc 1 108 0
+ 225 0010 6820     		movs	r0, #104
+ 226 0012 0021     		movs	r1, #0
+ 227 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 228 0018 0346     		mov	r3, r0
+ 229 001a BB71     		strb	r3, [r7, #6]
  109:.\I2C.c       ****         if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors *
- 224              		.loc 1 109 0
- 225 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 226 001e 002B     		cmp	r3, #0
- 227 0020 26D1     		bne	.L15
+ 230              		.loc 1 109 0
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 7
+
+
+ 231 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 232 001e 002B     		cmp	r3, #0
+ 233 0020 26D1     		bne	.L15
  110:.\I2C.c       ****     	{
  111:.\I2C.c       ****             status = I2C_1_MasterWriteByte(i);
- 228              		.loc 1 111 0
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 7
-
-
- 229 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 230 0024 1846     		mov	r0, r3
- 231 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
- 232 002a 0346     		mov	r3, r0
- 233 002c BB71     		strb	r3, [r7, #6]
+ 234              		.loc 1 111 0
+ 235 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 236 0024 1846     		mov	r0, r3
+ 237 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 238 002a 0346     		mov	r3, r0
+ 239 002c BB71     		strb	r3, [r7, #6]
  112:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
- 234              		.loc 1 112 0
- 235 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 236 0030 002B     		cmp	r3, #0
- 237 0032 01D0     		beq	.L16
+ 240              		.loc 1 112 0
+ 241 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 242 0030 002B     		cmp	r3, #0
+ 243 0032 01D0     		beq	.L16
  113:.\I2C.c       ****             {
  114:.\I2C.c       ****                 return 0;
- 238              		.loc 1 114 0
- 239 0034 0023     		movs	r3, #0
- 240 0036 24E0     		b	.L17
- 241              	.L16:
+ 244              		.loc 1 114 0
+ 245 0034 0023     		movs	r3, #0
+ 246 0036 24E0     		b	.L17
+ 247              	.L16:
  115:.\I2C.c       ****             }
  116:.\I2C.c       **** 			else{
  117:.\I2C.c       **** 		        I2C_1_MasterSendStop(); 										/* Send Stop */
- 242              		.loc 1 117 0
- 243 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 248              		.loc 1 117 0
+ 249 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
  118:.\I2C.c       **** 		        CyDelay(10);
- 244              		.loc 1 118 0
- 245 003c 0A20     		movs	r0, #10
- 246 003e FFF7FEFF 		bl	CyDelay
+ 250              		.loc 1 118 0
+ 251 003c 0A20     		movs	r0, #10
+ 252 003e FFF7FEFF 		bl	CyDelay
  119:.\I2C.c       **** 		        status = I2C_1_MasterSendStart(0x68, I2C_1_READ_XFER_MODE);
- 247              		.loc 1 119 0
- 248 0042 6820     		movs	r0, #104
- 249 0044 0121     		movs	r1, #1
- 250 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
- 251 004a 0346     		mov	r3, r0
- 252 004c BB71     		strb	r3, [r7, #6]
+ 253              		.loc 1 119 0
+ 254 0042 6820     		movs	r0, #104
+ 255 0044 0121     		movs	r1, #1
+ 256 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 257 004a 0346     		mov	r3, r0
+ 258 004c BB71     		strb	r3, [r7, #6]
  120:.\I2C.c       **** 		        if(I2C_1_MSTR_NO_ERROR == status){
- 253              		.loc 1 120 0
- 254 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 255 0050 002B     		cmp	r3, #0
- 256 0052 0BD1     		bne	.L18
+ 259              		.loc 1 120 0
+ 260 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 261 0050 002B     		cmp	r3, #0
+ 262 0052 0BD1     		bne	.L18
  121:.\I2C.c       **** 		            fecha[i-4] = I2C_1_MasterReadByte(I2C_1_NAK_DATA);
- 257              		.loc 1 121 0
- 258 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 259 0056 1C1F     		subs	r4, r3, #4
- 260 0058 0020     		movs	r0, #0
- 261 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
- 262 005e 0346     		mov	r3, r0
- 263 0060 1A46     		mov	r2, r3
- 264 0062 0A4B     		ldr	r3, .L23
- 265 0064 1A55     		strb	r2, [r3, r4]
+ 263              		.loc 1 121 0
+ 264 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 265 0056 1C1F     		subs	r4, r3, #4
+ 266 0058 0020     		movs	r0, #0
+ 267 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 268 005e 0346     		mov	r3, r0
+ 269 0060 1A46     		mov	r2, r3
+ 270 0062 0A4B     		ldr	r3, .L23
+ 271 0064 1A55     		strb	r2, [r3, r4]
  122:.\I2C.c       **** 		        }
  123:.\I2C.c       **** 				else{
  124:.\I2C.c       **** 					return 0;
  125:.\I2C.c       **** 				}
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 8
+
+
  126:.\I2C.c       **** 		        I2C_1_MasterSendStop();	
- 266              		.loc 1 126 0
- 267 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
- 268 006a 03E0     		b	.L22
- 269              	.L18:
+ 272              		.loc 1 126 0
+ 273 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 274 006a 03E0     		b	.L22
+ 275              	.L18:
  124:.\I2C.c       **** 				}
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 8
-
-
- 270              		.loc 1 124 0
- 271 006c 0023     		movs	r3, #0
- 272 006e 08E0     		b	.L17
- 273              	.L15:
+ 276              		.loc 1 124 0
+ 277 006c 0023     		movs	r3, #0
+ 278 006e 08E0     		b	.L17
+ 279              	.L15:
  127:.\I2C.c       **** 			}
  128:.\I2C.c       ****         }
  129:.\I2C.c       **** 		else{
  130:.\I2C.c       **** 			return 0;
- 274              		.loc 1 130 0
- 275 0070 0023     		movs	r3, #0
- 276 0072 06E0     		b	.L17
- 277              	.L22:
+ 280              		.loc 1 130 0
+ 281 0070 0023     		movs	r3, #0
+ 282 0072 06E0     		b	.L17
+ 283              	.L22:
  106:.\I2C.c       ****         I2C_1_MasterClearStatus();
- 278              		.loc 1 106 0 discriminator 2
- 279 0074 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 280 0076 0133     		adds	r3, r3, #1
- 281 0078 FB71     		strb	r3, [r7, #7]
- 282              	.L14:
+ 284              		.loc 1 106 0 discriminator 2
+ 285 0074 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 286 0076 0133     		adds	r3, r3, #1
+ 287 0078 FB71     		strb	r3, [r7, #7]
+ 288              	.L14:
  106:.\I2C.c       ****         I2C_1_MasterClearStatus();
- 283              		.loc 1 106 0 is_stmt 0 discriminator 1
- 284 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 285 007c 062B     		cmp	r3, #6
- 286 007e C5D9     		bls	.L21
+ 289              		.loc 1 106 0 is_stmt 0 discriminator 1
+ 290 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 291 007c 062B     		cmp	r3, #6
+ 292 007e C5D9     		bls	.L21
  131:.\I2C.c       **** 		}		
  132:.\I2C.c       **** 	}
  133:.\I2C.c       **** 	return 1;
- 287              		.loc 1 133 0 is_stmt 1
- 288 0080 0123     		movs	r3, #1
- 289              	.L17:
+ 293              		.loc 1 133 0 is_stmt 1
+ 294 0080 0123     		movs	r3, #1
+ 295              	.L17:
  134:.\I2C.c       **** }
- 290              		.loc 1 134 0
- 291 0082 1846     		mov	r0, r3
- 292 0084 0C37     		adds	r7, r7, #12
- 293              		.cfi_def_cfa_offset 12
- 294 0086 BD46     		mov	sp, r7
- 295              		.cfi_def_cfa_register 13
- 296              		@ sp needed
- 297 0088 90BD     		pop	{r4, r7, pc}
- 298              	.L24:
- 299 008a 00BF     		.align	2
- 300              	.L23:
- 301 008c 00000000 		.word	fecha
- 302              		.cfi_endproc
- 303              	.LFE64:
- 304              		.size	leer_fecha, .-leer_fecha
- 305              		.section	.text.write_hora,"ax",%progbits
- 306              		.align	2
- 307              		.global	write_hora
- 308              		.thumb
- 309              		.thumb_func
- 310              		.type	write_hora, %function
- 311              	write_hora:
- 312              	.LFB65:
+ 296              		.loc 1 134 0
+ 297 0082 1846     		mov	r0, r3
+ 298 0084 0C37     		adds	r7, r7, #12
+ 299              		.cfi_def_cfa_offset 12
+ 300 0086 BD46     		mov	sp, r7
+ 301              		.cfi_def_cfa_register 13
+ 302              		@ sp needed
+ 303 0088 90BD     		pop	{r4, r7, pc}
+ 304              	.L24:
+ 305 008a 00BF     		.align	2
+ 306              	.L23:
+ 307 008c 00000000 		.word	fecha
+ 308              		.cfi_endproc
+ 309              	.LFE64:
+ 310              		.size	leer_fecha, .-leer_fecha
+ 311              		.section	.text.write_hora,"ax",%progbits
+ 312              		.align	2
+ 313              		.global	write_hora
+ 314              		.thumb
+ 315              		.thumb_func
+ 316              		.type	write_hora, %function
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 9
+
+
+ 317              	write_hora:
+ 318              	.LFB65:
  135:.\I2C.c       **** 
  136:.\I2C.c       **** /*
  137:.\I2C.c       **** ***************************************************************************************************
  138:.\I2C.c       **** *                                         uint8 write_hora( void )
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 9
-
-
  139:.\I2C.c       **** *
  140:.\I2C.c       **** * Description : 
  141:.\I2C.c       **** *               
@@ -496,137 +502,137 @@ ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
  151:.\I2C.c       **** */
  152:.\I2C.c       **** 
  153:.\I2C.c       **** uint8 write_hora( void ){
- 313              		.loc 1 153 0
- 314              		.cfi_startproc
- 315              		@ args = 0, pretend = 0, frame = 8
- 316              		@ frame_needed = 1, uses_anonymous_args = 0
- 317 0000 80B5     		push	{r7, lr}
- 318              		.cfi_def_cfa_offset 8
- 319              		.cfi_offset 7, -8
- 320              		.cfi_offset 14, -4
- 321 0002 82B0     		sub	sp, sp, #8
- 322              		.cfi_def_cfa_offset 16
- 323 0004 00AF     		add	r7, sp, #0
- 324              		.cfi_def_cfa_register 7
+ 319              		.loc 1 153 0
+ 320              		.cfi_startproc
+ 321              		@ args = 0, pretend = 0, frame = 8
+ 322              		@ frame_needed = 1, uses_anonymous_args = 0
+ 323 0000 80B5     		push	{r7, lr}
+ 324              		.cfi_def_cfa_offset 8
+ 325              		.cfi_offset 7, -8
+ 326              		.cfi_offset 14, -4
+ 327 0002 82B0     		sub	sp, sp, #8
+ 328              		.cfi_def_cfa_offset 16
+ 329 0004 00AF     		add	r7, sp, #0
+ 330              		.cfi_def_cfa_register 7
  154:.\I2C.c       **** 	uint8 status, dato[3],i;
  155:.\I2C.c       **** 	dato[0]=1;
- 325              		.loc 1 155 0
- 326 0006 0123     		movs	r3, #1
- 327 0008 3B70     		strb	r3, [r7]
+ 331              		.loc 1 155 0
+ 332 0006 0123     		movs	r3, #1
+ 333 0008 3B70     		strb	r3, [r7]
  156:.\I2C.c       **** 	dato[1]=hora[0];
- 328              		.loc 1 156 0
- 329 000a 1A4B     		ldr	r3, .L34
- 330 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 331 000e 7B70     		strb	r3, [r7, #1]
+ 334              		.loc 1 156 0
+ 335 000a 1A4B     		ldr	r3, .L34
+ 336 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 337 000e 7B70     		strb	r3, [r7, #1]
  157:.\I2C.c       **** 	dato[2]=hora[1];
- 332              		.loc 1 157 0
- 333 0010 184B     		ldr	r3, .L34
- 334 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
- 335 0014 BB70     		strb	r3, [r7, #2]
+ 338              		.loc 1 157 0
+ 339 0010 184B     		ldr	r3, .L34
+ 340 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 341 0014 BB70     		strb	r3, [r7, #2]
  158:.\I2C.c       **** 	I2C_1_MasterClearStatus();
- 336              		.loc 1 158 0
- 337 0016 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 342              		.loc 1 158 0
+ 343 0016 FFF7FEFF 		bl	I2C_1_MasterClearStatus
  159:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
- 338              		.loc 1 159 0
- 339 001a 6820     		movs	r0, #104
- 340 001c 0021     		movs	r1, #0
- 341 001e FFF7FEFF 		bl	I2C_1_MasterSendStart
- 342 0022 0346     		mov	r3, r0
- 343 0024 BB71     		strb	r3, [r7, #6]
+ 344              		.loc 1 159 0
+ 345 001a 6820     		movs	r0, #104
+ 346 001c 0021     		movs	r1, #0
+ 347 001e FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 348 0022 0346     		mov	r3, r0
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 10
+
+
+ 349 0024 BB71     		strb	r3, [r7, #6]
  160:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
- 344              		.loc 1 160 0
- 345 0026 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 346 0028 002B     		cmp	r3, #0
- 347 002a 19D1     		bne	.L26
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 10
-
-
+ 350              		.loc 1 160 0
+ 351 0026 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 352 0028 002B     		cmp	r3, #0
+ 353 002a 19D1     		bne	.L26
  161:.\I2C.c       ****     {
  162:.\I2C.c       ****         for(i=0; i<3; i++)
- 348              		.loc 1 162 0
- 349 002c 0023     		movs	r3, #0
- 350 002e FB71     		strb	r3, [r7, #7]
- 351 0030 12E0     		b	.L27
- 352              	.L30:
+ 354              		.loc 1 162 0
+ 355 002c 0023     		movs	r3, #0
+ 356 002e FB71     		strb	r3, [r7, #7]
+ 357 0030 12E0     		b	.L27
+ 358              	.L30:
  163:.\I2C.c       ****         {
  164:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
- 353              		.loc 1 164 0
- 354 0032 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 355 0034 07F10802 		add	r2, r7, #8
- 356 0038 1344     		add	r3, r3, r2
- 357 003a 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
- 358 003e 1846     		mov	r0, r3
- 359 0040 FFF7FEFF 		bl	I2C_1_MasterWriteByte
- 360 0044 0346     		mov	r3, r0
- 361 0046 BB71     		strb	r3, [r7, #6]
+ 359              		.loc 1 164 0
+ 360 0032 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 361 0034 07F10802 		add	r2, r7, #8
+ 362 0038 1344     		add	r3, r3, r2
+ 363 003a 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 364 003e 1846     		mov	r0, r3
+ 365 0040 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 366 0044 0346     		mov	r3, r0
+ 367 0046 BB71     		strb	r3, [r7, #6]
  165:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
- 362              		.loc 1 165 0
- 363 0048 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 364 004a 002B     		cmp	r3, #0
- 365 004c 01D0     		beq	.L28
+ 368              		.loc 1 165 0
+ 369 0048 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 370 004a 002B     		cmp	r3, #0
+ 371 004c 01D0     		beq	.L28
  166:.\I2C.c       ****             {
  167:.\I2C.c       ****                 return 0;
- 366              		.loc 1 167 0
- 367 004e 0023     		movs	r3, #0
- 368 0050 0BE0     		b	.L32
- 369              	.L28:
+ 372              		.loc 1 167 0
+ 373 004e 0023     		movs	r3, #0
+ 374 0050 0BE0     		b	.L32
+ 375              	.L28:
  162:.\I2C.c       ****         {
- 370              		.loc 1 162 0 discriminator 2
- 371 0052 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 372 0054 0133     		adds	r3, r3, #1
- 373 0056 FB71     		strb	r3, [r7, #7]
- 374              	.L27:
+ 376              		.loc 1 162 0 discriminator 2
+ 377 0052 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 378 0054 0133     		adds	r3, r3, #1
+ 379 0056 FB71     		strb	r3, [r7, #7]
+ 380              	.L27:
  162:.\I2C.c       ****         {
- 375              		.loc 1 162 0 is_stmt 0 discriminator 1
- 376 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 377 005a 022B     		cmp	r3, #2
- 378 005c E9D9     		bls	.L30
- 379 005e 01E0     		b	.L33
- 380              	.L26:
+ 381              		.loc 1 162 0 is_stmt 0 discriminator 1
+ 382 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 383 005a 022B     		cmp	r3, #2
+ 384 005c E9D9     		bls	.L30
+ 385 005e 01E0     		b	.L33
+ 386              	.L26:
  168:.\I2C.c       ****             }
  169:.\I2C.c       ****         }
  170:.\I2C.c       ****     }
  171:.\I2C.c       ****     else{
  172:.\I2C.c       **** 		return 0;
- 381              		.loc 1 172 0 is_stmt 1
- 382 0060 0023     		movs	r3, #0
- 383 0062 02E0     		b	.L32
- 384              	.L33:
+ 387              		.loc 1 172 0 is_stmt 1
+ 388 0060 0023     		movs	r3, #0
+ 389 0062 02E0     		b	.L32
+ 390              	.L33:
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 11
+
+
  173:.\I2C.c       ****     }
  174:.\I2C.c       ****     I2C_1_MasterSendStop();	
- 385              		.loc 1 174 0
- 386 0064 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 391              		.loc 1 174 0
+ 392 0064 FFF7FEFF 		bl	I2C_1_MasterSendStop
  175:.\I2C.c       **** 	return 1;
- 387              		.loc 1 175 0
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 11
-
-
- 388 0068 0123     		movs	r3, #1
- 389              	.L32:
+ 393              		.loc 1 175 0
+ 394 0068 0123     		movs	r3, #1
+ 395              	.L32:
  176:.\I2C.c       **** }
- 390              		.loc 1 176 0 discriminator 1
- 391 006a 1846     		mov	r0, r3
- 392 006c 0837     		adds	r7, r7, #8
- 393              		.cfi_def_cfa_offset 8
- 394 006e BD46     		mov	sp, r7
- 395              		.cfi_def_cfa_register 13
- 396              		@ sp needed
- 397 0070 80BD     		pop	{r7, pc}
- 398              	.L35:
- 399 0072 00BF     		.align	2
- 400              	.L34:
- 401 0074 00000000 		.word	hora
- 402              		.cfi_endproc
- 403              	.LFE65:
- 404              		.size	write_hora, .-write_hora
- 405              		.section	.text.write_fecha,"ax",%progbits
- 406              		.align	2
- 407              		.global	write_fecha
- 408              		.thumb
- 409              		.thumb_func
- 410              		.type	write_fecha, %function
- 411              	write_fecha:
- 412              	.LFB66:
+ 396              		.loc 1 176 0 discriminator 1
+ 397 006a 1846     		mov	r0, r3
+ 398 006c 0837     		adds	r7, r7, #8
+ 399              		.cfi_def_cfa_offset 8
+ 400 006e BD46     		mov	sp, r7
+ 401              		.cfi_def_cfa_register 13
+ 402              		@ sp needed
+ 403 0070 80BD     		pop	{r7, pc}
+ 404              	.L35:
+ 405 0072 00BF     		.align	2
+ 406              	.L34:
+ 407 0074 00000000 		.word	hora
+ 408              		.cfi_endproc
+ 409              	.LFE65:
+ 410              		.size	write_hora, .-write_hora
+ 411              		.section	.text.write_fecha,"ax",%progbits
+ 412              		.align	2
+ 413              		.global	write_fecha
+ 414              		.thumb
+ 415              		.thumb_func
+ 416              		.type	write_fecha, %function
+ 417              	write_fecha:
+ 418              	.LFB66:
  177:.\I2C.c       **** 
  178:.\I2C.c       **** /*
  179:.\I2C.c       **** ***************************************************************************************************
@@ -646,145 +652,145 @@ ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
  193:.\I2C.c       **** */
  194:.\I2C.c       **** 
  195:.\I2C.c       **** uint8 write_fecha( void ){
- 413              		.loc 1 195 0
- 414              		.cfi_startproc
- 415              		@ args = 0, pretend = 0, frame = 8
- 416              		@ frame_needed = 1, uses_anonymous_args = 0
- 417 0000 80B5     		push	{r7, lr}
- 418              		.cfi_def_cfa_offset 8
- 419              		.cfi_offset 7, -8
- 420              		.cfi_offset 14, -4
- 421 0002 82B0     		sub	sp, sp, #8
- 422              		.cfi_def_cfa_offset 16
- 423 0004 00AF     		add	r7, sp, #0
- 424              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 12
+ 419              		.loc 1 195 0
+ 420              		.cfi_startproc
+ 421              		@ args = 0, pretend = 0, frame = 8
+ 422              		@ frame_needed = 1, uses_anonymous_args = 0
+ 423 0000 80B5     		push	{r7, lr}
+ 424              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 12
 
 
+ 425              		.cfi_offset 7, -8
+ 426              		.cfi_offset 14, -4
+ 427 0002 82B0     		sub	sp, sp, #8
+ 428              		.cfi_def_cfa_offset 16
+ 429 0004 00AF     		add	r7, sp, #0
+ 430              		.cfi_def_cfa_register 7
  196:.\I2C.c       **** 	uint8 status, dato[4],i;
  197:.\I2C.c       **** 	dato[0]=4;
- 425              		.loc 1 197 0
- 426 0006 0423     		movs	r3, #4
- 427 0008 3B70     		strb	r3, [r7]
+ 431              		.loc 1 197 0
+ 432 0006 0423     		movs	r3, #4
+ 433 0008 3B70     		strb	r3, [r7]
  198:.\I2C.c       **** 	dato[1]=fecha[0];
- 428              		.loc 1 198 0
- 429 000a 1B4B     		ldr	r3, .L45
- 430 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 431 000e 7B70     		strb	r3, [r7, #1]
+ 434              		.loc 1 198 0
+ 435 000a 1B4B     		ldr	r3, .L45
+ 436 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 437 000e 7B70     		strb	r3, [r7, #1]
  199:.\I2C.c       **** 	dato[2]=fecha[1];
- 432              		.loc 1 199 0
- 433 0010 194B     		ldr	r3, .L45
- 434 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
- 435 0014 BB70     		strb	r3, [r7, #2]
+ 438              		.loc 1 199 0
+ 439 0010 194B     		ldr	r3, .L45
+ 440 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 441 0014 BB70     		strb	r3, [r7, #2]
  200:.\I2C.c       **** 	dato[3]=fecha[2];
- 436              		.loc 1 200 0
- 437 0016 184B     		ldr	r3, .L45
- 438 0018 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
- 439 001a FB70     		strb	r3, [r7, #3]
+ 442              		.loc 1 200 0
+ 443 0016 184B     		ldr	r3, .L45
+ 444 0018 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 445 001a FB70     		strb	r3, [r7, #3]
  201:.\I2C.c       **** 	I2C_1_MasterClearStatus();
- 440              		.loc 1 201 0
- 441 001c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 446              		.loc 1 201 0
+ 447 001c FFF7FEFF 		bl	I2C_1_MasterClearStatus
  202:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
- 442              		.loc 1 202 0
- 443 0020 6820     		movs	r0, #104
- 444 0022 0021     		movs	r1, #0
- 445 0024 FFF7FEFF 		bl	I2C_1_MasterSendStart
- 446 0028 0346     		mov	r3, r0
- 447 002a BB71     		strb	r3, [r7, #6]
+ 448              		.loc 1 202 0
+ 449 0020 6820     		movs	r0, #104
+ 450 0022 0021     		movs	r1, #0
+ 451 0024 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 452 0028 0346     		mov	r3, r0
+ 453 002a BB71     		strb	r3, [r7, #6]
  203:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
- 448              		.loc 1 203 0
- 449 002c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 450 002e 002B     		cmp	r3, #0
- 451 0030 19D1     		bne	.L37
+ 454              		.loc 1 203 0
+ 455 002c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 456 002e 002B     		cmp	r3, #0
+ 457 0030 19D1     		bne	.L37
  204:.\I2C.c       ****     {
  205:.\I2C.c       ****         for(i=0; i<4; i++)
- 452              		.loc 1 205 0
- 453 0032 0023     		movs	r3, #0
- 454 0034 FB71     		strb	r3, [r7, #7]
- 455 0036 12E0     		b	.L38
- 456              	.L41:
+ 458              		.loc 1 205 0
+ 459 0032 0023     		movs	r3, #0
+ 460 0034 FB71     		strb	r3, [r7, #7]
+ 461 0036 12E0     		b	.L38
+ 462              	.L41:
  206:.\I2C.c       ****         {
  207:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
- 457              		.loc 1 207 0
- 458 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 459 003a 07F10802 		add	r2, r7, #8
- 460 003e 1344     		add	r3, r3, r2
- 461 0040 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
- 462 0044 1846     		mov	r0, r3
- 463 0046 FFF7FEFF 		bl	I2C_1_MasterWriteByte
- 464 004a 0346     		mov	r3, r0
- 465 004c BB71     		strb	r3, [r7, #6]
+ 463              		.loc 1 207 0
+ 464 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 465 003a 07F10802 		add	r2, r7, #8
+ 466 003e 1344     		add	r3, r3, r2
+ 467 0040 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 468 0044 1846     		mov	r0, r3
+ 469 0046 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 13
+
+
+ 470 004a 0346     		mov	r3, r0
+ 471 004c BB71     		strb	r3, [r7, #6]
  208:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
- 466              		.loc 1 208 0
- 467 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 468 0050 002B     		cmp	r3, #0
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 13
-
-
- 469 0052 01D0     		beq	.L39
+ 472              		.loc 1 208 0
+ 473 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 474 0050 002B     		cmp	r3, #0
+ 475 0052 01D0     		beq	.L39
  209:.\I2C.c       ****             {
  210:.\I2C.c       ****                 return 0;
- 470              		.loc 1 210 0
- 471 0054 0023     		movs	r3, #0
- 472 0056 0BE0     		b	.L43
- 473              	.L39:
+ 476              		.loc 1 210 0
+ 477 0054 0023     		movs	r3, #0
+ 478 0056 0BE0     		b	.L43
+ 479              	.L39:
  205:.\I2C.c       ****         {
- 474              		.loc 1 205 0 discriminator 2
- 475 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 476 005a 0133     		adds	r3, r3, #1
- 477 005c FB71     		strb	r3, [r7, #7]
- 478              	.L38:
+ 480              		.loc 1 205 0 discriminator 2
+ 481 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 482 005a 0133     		adds	r3, r3, #1
+ 483 005c FB71     		strb	r3, [r7, #7]
+ 484              	.L38:
  205:.\I2C.c       ****         {
- 479              		.loc 1 205 0 is_stmt 0 discriminator 1
- 480 005e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 481 0060 032B     		cmp	r3, #3
- 482 0062 E9D9     		bls	.L41
- 483 0064 01E0     		b	.L44
- 484              	.L37:
+ 485              		.loc 1 205 0 is_stmt 0 discriminator 1
+ 486 005e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 487 0060 032B     		cmp	r3, #3
+ 488 0062 E9D9     		bls	.L41
+ 489 0064 01E0     		b	.L44
+ 490              	.L37:
  211:.\I2C.c       ****             }
  212:.\I2C.c       ****         }
  213:.\I2C.c       ****     }
  214:.\I2C.c       ****     else{
  215:.\I2C.c       **** 		return 0;
- 485              		.loc 1 215 0 is_stmt 1
- 486 0066 0023     		movs	r3, #0
- 487 0068 02E0     		b	.L43
- 488              	.L44:
+ 491              		.loc 1 215 0 is_stmt 1
+ 492 0066 0023     		movs	r3, #0
+ 493 0068 02E0     		b	.L43
+ 494              	.L44:
  216:.\I2C.c       ****     }
  217:.\I2C.c       ****     I2C_1_MasterSendStop();	
- 489              		.loc 1 217 0
- 490 006a FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 495              		.loc 1 217 0
+ 496 006a FFF7FEFF 		bl	I2C_1_MasterSendStop
  218:.\I2C.c       **** 	return 1;
- 491              		.loc 1 218 0
- 492 006e 0123     		movs	r3, #1
- 493              	.L43:
+ 497              		.loc 1 218 0
+ 498 006e 0123     		movs	r3, #1
+ 499              	.L43:
  219:.\I2C.c       **** }
- 494              		.loc 1 219 0 discriminator 1
- 495 0070 1846     		mov	r0, r3
- 496 0072 0837     		adds	r7, r7, #8
- 497              		.cfi_def_cfa_offset 8
- 498 0074 BD46     		mov	sp, r7
- 499              		.cfi_def_cfa_register 13
- 500              		@ sp needed
- 501 0076 80BD     		pop	{r7, pc}
- 502              	.L46:
- 503              		.align	2
- 504              	.L45:
- 505 0078 00000000 		.word	fecha
- 506              		.cfi_endproc
- 507              	.LFE66:
- 508              		.size	write_fecha, .-write_fecha
- 509              		.section	.text.write_psoc1,"ax",%progbits
- 510              		.align	2
- 511              		.global	write_psoc1
- 512              		.thumb
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 14
+ 500              		.loc 1 219 0 discriminator 1
+ 501 0070 1846     		mov	r0, r3
+ 502 0072 0837     		adds	r7, r7, #8
+ 503              		.cfi_def_cfa_offset 8
+ 504 0074 BD46     		mov	sp, r7
+ 505              		.cfi_def_cfa_register 13
+ 506              		@ sp needed
+ 507 0076 80BD     		pop	{r7, pc}
+ 508              	.L46:
+ 509              		.align	2
+ 510              	.L45:
+ 511 0078 00000000 		.word	fecha
+ 512              		.cfi_endproc
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 14
 
 
- 513              		.thumb_func
- 514              		.type	write_psoc1, %function
- 515              	write_psoc1:
- 516              	.LFB67:
+ 513              	.LFE66:
+ 514              		.size	write_fecha, .-write_fecha
+ 515              		.section	.text.write_psoc1,"ax",%progbits
+ 516              		.align	2
+ 517              		.global	write_psoc1
+ 518              		.thumb
+ 519              		.thumb_func
+ 520              		.type	write_psoc1, %function
+ 521              	write_psoc1:
+ 522              	.LFB67:
  220:.\I2C.c       **** 
  221:.\I2C.c       **** /*
  222:.\I2C.c       **** ***************************************************************************************************
@@ -804,2034 +810,2112 @@ ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 1
  236:.\I2C.c       **** */
  237:.\I2C.c       **** 
  238:.\I2C.c       **** uint8 write_psoc1( uint8 puerto, uint8 valor ){
- 517              		.loc 1 238 0
- 518              		.cfi_startproc
- 519              		@ args = 0, pretend = 0, frame = 16
- 520              		@ frame_needed = 1, uses_anonymous_args = 0
- 521 0000 80B5     		push	{r7, lr}
- 522              		.cfi_def_cfa_offset 8
- 523              		.cfi_offset 7, -8
- 524              		.cfi_offset 14, -4
- 525 0002 84B0     		sub	sp, sp, #16
- 526              		.cfi_def_cfa_offset 24
- 527 0004 00AF     		add	r7, sp, #0
- 528              		.cfi_def_cfa_register 7
- 529 0006 0346     		mov	r3, r0
- 530 0008 0A46     		mov	r2, r1
- 531 000a FB71     		strb	r3, [r7, #7]
- 532 000c 1346     		mov	r3, r2
- 533 000e BB71     		strb	r3, [r7, #6]
+ 523              		.loc 1 238 0
+ 524              		.cfi_startproc
+ 525              		@ args = 0, pretend = 0, frame = 16
+ 526              		@ frame_needed = 1, uses_anonymous_args = 0
+ 527 0000 80B5     		push	{r7, lr}
+ 528              		.cfi_def_cfa_offset 8
+ 529              		.cfi_offset 7, -8
+ 530              		.cfi_offset 14, -4
+ 531 0002 84B0     		sub	sp, sp, #16
+ 532              		.cfi_def_cfa_offset 24
+ 533 0004 00AF     		add	r7, sp, #0
+ 534              		.cfi_def_cfa_register 7
+ 535 0006 0346     		mov	r3, r0
+ 536 0008 0A46     		mov	r2, r1
+ 537 000a FB71     		strb	r3, [r7, #7]
+ 538 000c 1346     		mov	r3, r2
+ 539 000e BB71     		strb	r3, [r7, #6]
  239:.\I2C.c       **** 	uint8 status, dato[2],i;
  240:.\I2C.c       **** 	dato[0]=puerto;
- 534              		.loc 1 240 0
- 535 0010 FB79     		ldrb	r3, [r7, #7]
- 536 0012 3B73     		strb	r3, [r7, #12]
+ 540              		.loc 1 240 0
+ 541 0010 FB79     		ldrb	r3, [r7, #7]
+ 542 0012 3B73     		strb	r3, [r7, #12]
  241:.\I2C.c       **** 	dato[1]=valor;
- 537              		.loc 1 241 0
- 538 0014 BB79     		ldrb	r3, [r7, #6]
- 539 0016 7B73     		strb	r3, [r7, #13]
+ 543              		.loc 1 241 0
+ 544 0014 BB79     		ldrb	r3, [r7, #6]
+ 545 0016 7B73     		strb	r3, [r7, #13]
  242:.\I2C.c       **** 	I2C_1_MasterClearStatus();
- 540              		.loc 1 242 0
- 541 0018 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 546              		.loc 1 242 0
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 15
+
+
+ 547 0018 FFF7FEFF 		bl	I2C_1_MasterClearStatus
  243:.\I2C.c       ****     status = I2C_1_MasterSendStart(7u, I2C_1_WRITE_XFER_MODE);
- 542              		.loc 1 243 0
- 543 001c 0720     		movs	r0, #7
- 544 001e 0021     		movs	r1, #0
- 545 0020 FFF7FEFF 		bl	I2C_1_MasterSendStart
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 15
-
-
- 546 0024 0346     		mov	r3, r0
- 547 0026 BB73     		strb	r3, [r7, #14]
+ 548              		.loc 1 243 0
+ 549 001c 0720     		movs	r0, #7
+ 550 001e 0021     		movs	r1, #0
+ 551 0020 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 552 0024 0346     		mov	r3, r0
+ 553 0026 BB73     		strb	r3, [r7, #14]
  244:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
- 548              		.loc 1 244 0
- 549 0028 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
- 550 002a 002B     		cmp	r3, #0
- 551 002c 19D1     		bne	.L48
+ 554              		.loc 1 244 0
+ 555 0028 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 556 002a 002B     		cmp	r3, #0
+ 557 002c 19D1     		bne	.L48
  245:.\I2C.c       ****     {
  246:.\I2C.c       ****         for(i=0; i<2; i++)
- 552              		.loc 1 246 0
- 553 002e 0023     		movs	r3, #0
- 554 0030 FB73     		strb	r3, [r7, #15]
- 555 0032 12E0     		b	.L49
- 556              	.L52:
+ 558              		.loc 1 246 0
+ 559 002e 0023     		movs	r3, #0
+ 560 0030 FB73     		strb	r3, [r7, #15]
+ 561 0032 12E0     		b	.L49
+ 562              	.L52:
  247:.\I2C.c       ****         {
  248:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
- 557              		.loc 1 248 0
- 558 0034 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 559 0036 07F11002 		add	r2, r7, #16
- 560 003a 1344     		add	r3, r3, r2
- 561 003c 13F8043C 		ldrb	r3, [r3, #-4]	@ zero_extendqisi2
- 562 0040 1846     		mov	r0, r3
- 563 0042 FFF7FEFF 		bl	I2C_1_MasterWriteByte
- 564 0046 0346     		mov	r3, r0
- 565 0048 BB73     		strb	r3, [r7, #14]
+ 563              		.loc 1 248 0
+ 564 0034 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 565 0036 07F11002 		add	r2, r7, #16
+ 566 003a 1344     		add	r3, r3, r2
+ 567 003c 13F8043C 		ldrb	r3, [r3, #-4]	@ zero_extendqisi2
+ 568 0040 1846     		mov	r0, r3
+ 569 0042 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 570 0046 0346     		mov	r3, r0
+ 571 0048 BB73     		strb	r3, [r7, #14]
  249:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
- 566              		.loc 1 249 0
- 567 004a BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
- 568 004c 002B     		cmp	r3, #0
- 569 004e 01D0     		beq	.L50
+ 572              		.loc 1 249 0
+ 573 004a BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 574 004c 002B     		cmp	r3, #0
+ 575 004e 01D0     		beq	.L50
  250:.\I2C.c       ****             {
  251:.\I2C.c       ****                 return 0;
- 570              		.loc 1 251 0
- 571 0050 0023     		movs	r3, #0
- 572 0052 0BE0     		b	.L54
- 573              	.L50:
+ 576              		.loc 1 251 0
+ 577 0050 0023     		movs	r3, #0
+ 578 0052 0BE0     		b	.L54
+ 579              	.L50:
  246:.\I2C.c       ****         {
- 574              		.loc 1 246 0 discriminator 2
- 575 0054 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 576 0056 0133     		adds	r3, r3, #1
- 577 0058 FB73     		strb	r3, [r7, #15]
- 578              	.L49:
+ 580              		.loc 1 246 0 discriminator 2
+ 581 0054 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 582 0056 0133     		adds	r3, r3, #1
+ 583 0058 FB73     		strb	r3, [r7, #15]
+ 584              	.L49:
  246:.\I2C.c       ****         {
- 579              		.loc 1 246 0 is_stmt 0 discriminator 1
- 580 005a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 581 005c 012B     		cmp	r3, #1
- 582 005e E9D9     		bls	.L52
- 583 0060 01E0     		b	.L55
- 584              	.L48:
+ 585              		.loc 1 246 0 is_stmt 0 discriminator 1
+ 586 005a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 587 005c 012B     		cmp	r3, #1
+ 588 005e E9D9     		bls	.L52
+ 589 0060 01E0     		b	.L55
+ 590              	.L48:
  252:.\I2C.c       ****             }
  253:.\I2C.c       ****         }
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 16
+
+
  254:.\I2C.c       ****     }
  255:.\I2C.c       ****     else{
  256:.\I2C.c       **** 		return 0;
- 585              		.loc 1 256 0 is_stmt 1
- 586 0062 0023     		movs	r3, #0
- 587 0064 02E0     		b	.L54
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 16
-
-
- 588              	.L55:
+ 591              		.loc 1 256 0 is_stmt 1
+ 592 0062 0023     		movs	r3, #0
+ 593 0064 02E0     		b	.L54
+ 594              	.L55:
  257:.\I2C.c       ****     }
  258:.\I2C.c       ****     I2C_1_MasterSendStop();	
- 589              		.loc 1 258 0
- 590 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 595              		.loc 1 258 0
+ 596 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
  259:.\I2C.c       **** 	return 1;
- 591              		.loc 1 259 0
- 592 006a 0123     		movs	r3, #1
- 593              	.L54:
+ 597              		.loc 1 259 0
+ 598 006a 0123     		movs	r3, #1
+ 599              	.L54:
  260:.\I2C.c       **** }
- 594              		.loc 1 260 0 discriminator 1
- 595 006c 1846     		mov	r0, r3
- 596 006e 1037     		adds	r7, r7, #16
- 597              		.cfi_def_cfa_offset 8
- 598 0070 BD46     		mov	sp, r7
- 599              		.cfi_def_cfa_register 13
- 600              		@ sp needed
- 601 0072 80BD     		pop	{r7, pc}
- 602              		.cfi_endproc
- 603              	.LFE67:
- 604              		.size	write_psoc1, .-write_psoc1
- 605              		.text
- 606              	.Letext0:
- 607              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 608              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 609              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 610              		.file 5 ".\\VariablesG.h"
- 611              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
- 612              		.section	.debug_info,"",%progbits
- 613              	.Ldebug_info0:
- 614 0000 DB080000 		.4byte	0x8db
- 615 0004 0400     		.2byte	0x4
- 616 0006 00000000 		.4byte	.Ldebug_abbrev0
- 617 000a 04       		.byte	0x4
- 618 000b 01       		.uleb128 0x1
- 619 000c 83010000 		.4byte	.LASF101
- 620 0010 01       		.byte	0x1
- 621 0011 00000000 		.4byte	.LASF102
- 622 0015 66000000 		.4byte	.LASF103
- 623 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 624 001d 00000000 		.4byte	0
- 625 0021 00000000 		.4byte	.Ldebug_line0
- 626 0025 02       		.uleb128 0x2
- 627 0026 01       		.byte	0x1
- 628 0027 06       		.byte	0x6
- 629 0028 76020000 		.4byte	.LASF0
- 630 002c 02       		.uleb128 0x2
- 631 002d 01       		.byte	0x1
- 632 002e 08       		.byte	0x8
- 633 002f 4B020000 		.4byte	.LASF1
- 634 0033 02       		.uleb128 0x2
- 635 0034 02       		.byte	0x2
- 636 0035 05       		.byte	0x5
- 637 0036 B8000000 		.4byte	.LASF2
- 638 003a 02       		.uleb128 0x2
- 639 003b 02       		.byte	0x2
- 640 003c 07       		.byte	0x7
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 17
+ 600              		.loc 1 260 0 discriminator 1
+ 601 006c 1846     		mov	r0, r3
+ 602 006e 1037     		adds	r7, r7, #16
+ 603              		.cfi_def_cfa_offset 8
+ 604 0070 BD46     		mov	sp, r7
+ 605              		.cfi_def_cfa_register 13
+ 606              		@ sp needed
+ 607 0072 80BD     		pop	{r7, pc}
+ 608              		.cfi_endproc
+ 609              	.LFE67:
+ 610              		.size	write_psoc1, .-write_psoc1
+ 611              		.text
+ 612              	.Letext0:
+ 613              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 614              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 615              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 616              		.file 5 ".\\VariablesG.h"
+ 617              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 618              		.section	.debug_info,"",%progbits
+ 619              	.Ldebug_info0:
+ 620 0000 41090000 		.4byte	0x941
+ 621 0004 0400     		.2byte	0x4
+ 622 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 623 000a 04       		.byte	0x4
+ 624 000b 01       		.uleb128 0x1
+ 625 000c 9A010000 		.4byte	.LASF107
+ 626 0010 01       		.byte	0x1
+ 627 0011 00000000 		.4byte	.LASF108
+ 628 0015 66000000 		.4byte	.LASF109
+ 629 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 630 001d 00000000 		.4byte	0
+ 631 0021 00000000 		.4byte	.Ldebug_line0
+ 632 0025 02       		.uleb128 0x2
+ 633 0026 01       		.byte	0x1
+ 634 0027 06       		.byte	0x6
+ 635 0028 A9020000 		.4byte	.LASF0
+ 636 002c 02       		.uleb128 0x2
+ 637 002d 01       		.byte	0x1
+ 638 002e 08       		.byte	0x8
+ 639 002f 78020000 		.4byte	.LASF1
+ 640 0033 02       		.uleb128 0x2
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 17
 
 
- 641 003d 0B030000 		.4byte	.LASF3
- 642 0041 03       		.uleb128 0x3
- 643 0042 73030000 		.4byte	.LASF9
- 644 0046 02       		.byte	0x2
- 645 0047 3F       		.byte	0x3f
- 646 0048 4C000000 		.4byte	0x4c
- 647 004c 02       		.uleb128 0x2
- 648 004d 04       		.byte	0x4
- 649 004e 05       		.byte	0x5
- 650 004f 68040000 		.4byte	.LASF4
- 651 0053 02       		.uleb128 0x2
- 652 0054 04       		.byte	0x4
- 653 0055 07       		.byte	0x7
- 654 0056 BD030000 		.4byte	.LASF5
- 655 005a 02       		.uleb128 0x2
- 656 005b 08       		.byte	0x8
- 657 005c 05       		.byte	0x5
- 658 005d 75010000 		.4byte	.LASF6
- 659 0061 02       		.uleb128 0x2
- 660 0062 08       		.byte	0x8
- 661 0063 07       		.byte	0x7
- 662 0064 82020000 		.4byte	.LASF7
- 663 0068 04       		.uleb128 0x4
- 664 0069 04       		.byte	0x4
- 665 006a 05       		.byte	0x5
- 666 006b 696E7400 		.ascii	"int\000"
- 667 006f 02       		.uleb128 0x2
- 668 0070 04       		.byte	0x4
- 669 0071 07       		.byte	0x7
- 670 0072 B6020000 		.4byte	.LASF8
- 671 0076 03       		.uleb128 0x3
- 672 0077 5D030000 		.4byte	.LASF10
- 673 007b 03       		.byte	0x3
- 674 007c 2C       		.byte	0x2c
- 675 007d 41000000 		.4byte	0x41
- 676 0081 03       		.uleb128 0x3
- 677 0082 4E010000 		.4byte	.LASF11
- 678 0086 04       		.byte	0x4
- 679 0087 B4       		.byte	0xb4
- 680 0088 2C000000 		.4byte	0x2c
- 681 008c 03       		.uleb128 0x3
- 682 008d 37010000 		.4byte	.LASF12
- 683 0091 04       		.byte	0x4
- 684 0092 B5       		.byte	0xb5
- 685 0093 3A000000 		.4byte	0x3a
- 686 0097 02       		.uleb128 0x2
- 687 0098 04       		.byte	0x4
- 688 0099 04       		.byte	0x4
- 689 009a 6F010000 		.4byte	.LASF13
- 690 009e 02       		.uleb128 0x2
- 691 009f 08       		.byte	0x8
- 692 00a0 04       		.byte	0x4
- 693 00a1 4B040000 		.4byte	.LASF14
- 694 00a5 02       		.uleb128 0x2
- 695 00a6 01       		.byte	0x1
- 696 00a7 08       		.byte	0x8
- 697 00a8 3B030000 		.4byte	.LASF15
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 18
+ 641 0034 02       		.byte	0x2
+ 642 0035 05       		.byte	0x5
+ 643 0036 B8000000 		.4byte	.LASF2
+ 644 003a 02       		.uleb128 0x2
+ 645 003b 02       		.byte	0x2
+ 646 003c 07       		.byte	0x7
+ 647 003d 3E030000 		.4byte	.LASF3
+ 648 0041 03       		.uleb128 0x3
+ 649 0042 A6030000 		.4byte	.LASF9
+ 650 0046 02       		.byte	0x2
+ 651 0047 3F       		.byte	0x3f
+ 652 0048 4C000000 		.4byte	0x4c
+ 653 004c 02       		.uleb128 0x2
+ 654 004d 04       		.byte	0x4
+ 655 004e 05       		.byte	0x5
+ 656 004f 9B040000 		.4byte	.LASF4
+ 657 0053 02       		.uleb128 0x2
+ 658 0054 04       		.byte	0x4
+ 659 0055 07       		.byte	0x7
+ 660 0056 F0030000 		.4byte	.LASF5
+ 661 005a 02       		.uleb128 0x2
+ 662 005b 08       		.byte	0x8
+ 663 005c 05       		.byte	0x5
+ 664 005d 8C010000 		.4byte	.LASF6
+ 665 0061 02       		.uleb128 0x2
+ 666 0062 08       		.byte	0x8
+ 667 0063 07       		.byte	0x7
+ 668 0064 B5020000 		.4byte	.LASF7
+ 669 0068 04       		.uleb128 0x4
+ 670 0069 04       		.byte	0x4
+ 671 006a 05       		.byte	0x5
+ 672 006b 696E7400 		.ascii	"int\000"
+ 673 006f 02       		.uleb128 0x2
+ 674 0070 04       		.byte	0x4
+ 675 0071 07       		.byte	0x7
+ 676 0072 E9020000 		.4byte	.LASF8
+ 677 0076 03       		.uleb128 0x3
+ 678 0077 90030000 		.4byte	.LASF10
+ 679 007b 03       		.byte	0x3
+ 680 007c 2C       		.byte	0x2c
+ 681 007d 41000000 		.4byte	0x41
+ 682 0081 03       		.uleb128 0x3
+ 683 0082 5B010000 		.4byte	.LASF11
+ 684 0086 04       		.byte	0x4
+ 685 0087 B4       		.byte	0xb4
+ 686 0088 2C000000 		.4byte	0x2c
+ 687 008c 03       		.uleb128 0x3
+ 688 008d 44010000 		.4byte	.LASF12
+ 689 0091 04       		.byte	0x4
+ 690 0092 B5       		.byte	0xb5
+ 691 0093 3A000000 		.4byte	0x3a
+ 692 0097 02       		.uleb128 0x2
+ 693 0098 04       		.byte	0x4
+ 694 0099 04       		.byte	0x4
+ 695 009a 7C010000 		.4byte	.LASF13
+ 696 009e 02       		.uleb128 0x2
+ 697 009f 08       		.byte	0x8
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 18
 
 
- 698 00ac 05       		.uleb128 0x5
- 699 00ad 81000000 		.4byte	0x81
- 700 00b1 05       		.uleb128 0x5
- 701 00b2 8C000000 		.4byte	0x8c
- 702 00b6 02       		.uleb128 0x2
- 703 00b7 04       		.byte	0x4
- 704 00b8 07       		.byte	0x7
- 705 00b9 11020000 		.4byte	.LASF16
- 706 00bd 06       		.uleb128 0x6
- 707 00be 81000000 		.4byte	0x81
- 708 00c2 CD000000 		.4byte	0xcd
- 709 00c6 07       		.uleb128 0x7
- 710 00c7 B6000000 		.4byte	0xb6
- 711 00cb 03       		.byte	0x3
- 712 00cc 00       		.byte	0
- 713 00cd 08       		.uleb128 0x8
- 714 00ce 60010000 		.4byte	.LASF21
- 715 00d2 5D       		.byte	0x5d
- 716 00d3 05       		.byte	0x5
- 717 00d4 57       		.byte	0x57
- 718 00d5 22010000 		.4byte	0x122
- 719 00d9 09       		.uleb128 0x9
- 720 00da 64697200 		.ascii	"dir\000"
- 721 00de 05       		.byte	0x5
- 722 00df 58       		.byte	0x58
- 723 00e0 AC000000 		.4byte	0xac
- 724 00e4 00       		.byte	0
- 725 00e5 0A       		.uleb128 0xa
- 726 00e6 71040000 		.4byte	.LASF17
- 727 00ea 05       		.byte	0x5
- 728 00eb 59       		.byte	0x59
- 729 00ec AC000000 		.4byte	0xac
- 730 00f0 01       		.byte	0x1
- 731 00f1 0A       		.uleb128 0xa
- 732 00f2 1A020000 		.4byte	.LASF18
- 733 00f6 05       		.byte	0x5
- 734 00f7 5A       		.byte	0x5a
- 735 00f8 38010000 		.4byte	0x138
- 736 00fc 02       		.byte	0x2
- 737 00fd 09       		.uleb128 0x9
- 738 00fe 70707500 		.ascii	"ppu\000"
- 739 0102 05       		.byte	0x5
- 740 0103 5B       		.byte	0x5b
- 741 0104 53010000 		.4byte	0x153
- 742 0108 4A       		.byte	0x4a
- 743 0109 0A       		.uleb128 0xa
- 744 010a 1E030000 		.4byte	.LASF19
- 745 010e 05       		.byte	0x5
- 746 010f 5C       		.byte	0x5c
- 747 0110 6E010000 		.4byte	0x16e
- 748 0114 59       		.byte	0x59
- 749 0115 0A       		.uleb128 0xa
- 750 0116 9C030000 		.4byte	.LASF20
- 751 011a 05       		.byte	0x5
- 752 011b 5D       		.byte	0x5d
- 753 011c AC000000 		.4byte	0xac
- 754 0120 5C       		.byte	0x5c
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 19
+ 698 00a0 04       		.byte	0x4
+ 699 00a1 7E040000 		.4byte	.LASF14
+ 700 00a5 02       		.uleb128 0x2
+ 701 00a6 01       		.byte	0x1
+ 702 00a7 08       		.byte	0x8
+ 703 00a8 6E030000 		.4byte	.LASF15
+ 704 00ac 05       		.uleb128 0x5
+ 705 00ad 81000000 		.4byte	0x81
+ 706 00b1 05       		.uleb128 0x5
+ 707 00b2 8C000000 		.4byte	0x8c
+ 708 00b6 02       		.uleb128 0x2
+ 709 00b7 04       		.byte	0x4
+ 710 00b8 07       		.byte	0x7
+ 711 00b9 28020000 		.4byte	.LASF16
+ 712 00bd 06       		.uleb128 0x6
+ 713 00be 81000000 		.4byte	0x81
+ 714 00c2 CD000000 		.4byte	0xcd
+ 715 00c6 07       		.uleb128 0x7
+ 716 00c7 B6000000 		.4byte	0xb6
+ 717 00cb 03       		.byte	0x3
+ 718 00cc 00       		.byte	0
+ 719 00cd 08       		.uleb128 0x8
+ 720 00ce 6D010000 		.4byte	.LASF21
+ 721 00d2 5D       		.byte	0x5d
+ 722 00d3 05       		.byte	0x5
+ 723 00d4 5B       		.byte	0x5b
+ 724 00d5 22010000 		.4byte	0x122
+ 725 00d9 09       		.uleb128 0x9
+ 726 00da 64697200 		.ascii	"dir\000"
+ 727 00de 05       		.byte	0x5
+ 728 00df 5C       		.byte	0x5c
+ 729 00e0 AC000000 		.4byte	0xac
+ 730 00e4 00       		.byte	0
+ 731 00e5 0A       		.uleb128 0xa
+ 732 00e6 A4040000 		.4byte	.LASF17
+ 733 00ea 05       		.byte	0x5
+ 734 00eb 5D       		.byte	0x5d
+ 735 00ec AC000000 		.4byte	0xac
+ 736 00f0 01       		.byte	0x1
+ 737 00f1 0A       		.uleb128 0xa
+ 738 00f2 39020000 		.4byte	.LASF18
+ 739 00f6 05       		.byte	0x5
+ 740 00f7 5E       		.byte	0x5e
+ 741 00f8 38010000 		.4byte	0x138
+ 742 00fc 02       		.byte	0x2
+ 743 00fd 09       		.uleb128 0x9
+ 744 00fe 70707500 		.ascii	"ppu\000"
+ 745 0102 05       		.byte	0x5
+ 746 0103 5F       		.byte	0x5f
+ 747 0104 53010000 		.4byte	0x153
+ 748 0108 4A       		.byte	0x4a
+ 749 0109 0A       		.uleb128 0xa
+ 750 010a 51030000 		.4byte	.LASF19
+ 751 010e 05       		.byte	0x5
+ 752 010f 60       		.byte	0x60
+ 753 0110 6E010000 		.4byte	0x16e
+ 754 0114 59       		.byte	0x59
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 19
 
 
- 755 0121 00       		.byte	0
- 756 0122 06       		.uleb128 0x6
- 757 0123 81000000 		.4byte	0x81
- 758 0127 38010000 		.4byte	0x138
- 759 012b 07       		.uleb128 0x7
- 760 012c B6000000 		.4byte	0xb6
- 761 0130 02       		.byte	0x2
- 762 0131 07       		.uleb128 0x7
- 763 0132 B6000000 		.4byte	0xb6
- 764 0136 17       		.byte	0x17
- 765 0137 00       		.byte	0
- 766 0138 05       		.uleb128 0x5
- 767 0139 22010000 		.4byte	0x122
- 768 013d 06       		.uleb128 0x6
- 769 013e 81000000 		.4byte	0x81
- 770 0142 53010000 		.4byte	0x153
- 771 0146 07       		.uleb128 0x7
- 772 0147 B6000000 		.4byte	0xb6
- 773 014b 02       		.byte	0x2
- 774 014c 07       		.uleb128 0x7
- 775 014d B6000000 		.4byte	0xb6
- 776 0151 04       		.byte	0x4
- 777 0152 00       		.byte	0
- 778 0153 05       		.uleb128 0x5
- 779 0154 3D010000 		.4byte	0x13d
- 780 0158 06       		.uleb128 0x6
- 781 0159 81000000 		.4byte	0x81
- 782 015d 6E010000 		.4byte	0x16e
- 783 0161 07       		.uleb128 0x7
- 784 0162 B6000000 		.4byte	0xb6
- 785 0166 02       		.byte	0x2
- 786 0167 07       		.uleb128 0x7
- 787 0168 B6000000 		.4byte	0xb6
- 788 016c 00       		.byte	0
- 789 016d 00       		.byte	0
- 790 016e 05       		.uleb128 0x5
- 791 016f 58010000 		.4byte	0x158
- 792 0173 08       		.uleb128 0x8
- 793 0174 CF030000 		.4byte	.LASF22
- 794 0178 76       		.byte	0x76
- 795 0179 05       		.byte	0x5
- 796 017a 6E       		.byte	0x6e
- 797 017b 62020000 		.4byte	0x262
- 798 017f 0A       		.uleb128 0xa
- 799 0180 65020000 		.4byte	.LASF23
- 800 0184 05       		.byte	0x5
- 801 0185 6F       		.byte	0x6f
- 802 0186 81000000 		.4byte	0x81
- 803 018a 00       		.byte	0
- 804 018b 0A       		.uleb128 0xa
- 805 018c 1E030000 		.4byte	.LASF19
- 806 0190 05       		.byte	0x5
- 807 0191 70       		.byte	0x70
- 808 0192 81000000 		.4byte	0x81
- 809 0196 01       		.byte	0x1
- 810 0197 09       		.uleb128 0x9
- 811 0198 70707500 		.ascii	"ppu\000"
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 20
+ 755 0115 0A       		.uleb128 0xa
+ 756 0116 CF030000 		.4byte	.LASF20
+ 757 011a 05       		.byte	0x5
+ 758 011b 61       		.byte	0x61
+ 759 011c AC000000 		.4byte	0xac
+ 760 0120 5C       		.byte	0x5c
+ 761 0121 00       		.byte	0
+ 762 0122 06       		.uleb128 0x6
+ 763 0123 81000000 		.4byte	0x81
+ 764 0127 38010000 		.4byte	0x138
+ 765 012b 07       		.uleb128 0x7
+ 766 012c B6000000 		.4byte	0xb6
+ 767 0130 02       		.byte	0x2
+ 768 0131 07       		.uleb128 0x7
+ 769 0132 B6000000 		.4byte	0xb6
+ 770 0136 17       		.byte	0x17
+ 771 0137 00       		.byte	0
+ 772 0138 05       		.uleb128 0x5
+ 773 0139 22010000 		.4byte	0x122
+ 774 013d 06       		.uleb128 0x6
+ 775 013e 81000000 		.4byte	0x81
+ 776 0142 53010000 		.4byte	0x153
+ 777 0146 07       		.uleb128 0x7
+ 778 0147 B6000000 		.4byte	0xb6
+ 779 014b 02       		.byte	0x2
+ 780 014c 07       		.uleb128 0x7
+ 781 014d B6000000 		.4byte	0xb6
+ 782 0151 04       		.byte	0x4
+ 783 0152 00       		.byte	0
+ 784 0153 05       		.uleb128 0x5
+ 785 0154 3D010000 		.4byte	0x13d
+ 786 0158 06       		.uleb128 0x6
+ 787 0159 81000000 		.4byte	0x81
+ 788 015d 6E010000 		.4byte	0x16e
+ 789 0161 07       		.uleb128 0x7
+ 790 0162 B6000000 		.4byte	0xb6
+ 791 0166 02       		.byte	0x2
+ 792 0167 07       		.uleb128 0x7
+ 793 0168 B6000000 		.4byte	0xb6
+ 794 016c 00       		.byte	0
+ 795 016d 00       		.byte	0
+ 796 016e 05       		.uleb128 0x5
+ 797 016f 58010000 		.4byte	0x158
+ 798 0173 08       		.uleb128 0x8
+ 799 0174 02040000 		.4byte	.LASF22
+ 800 0178 76       		.byte	0x76
+ 801 0179 05       		.byte	0x5
+ 802 017a 72       		.byte	0x72
+ 803 017b 62020000 		.4byte	0x262
+ 804 017f 0A       		.uleb128 0xa
+ 805 0180 92020000 		.4byte	.LASF23
+ 806 0184 05       		.byte	0x5
+ 807 0185 73       		.byte	0x73
+ 808 0186 81000000 		.4byte	0x81
+ 809 018a 00       		.byte	0
+ 810 018b 0A       		.uleb128 0xa
+ 811 018c 51030000 		.4byte	.LASF19
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 20
 
 
- 812 019c 05       		.byte	0x5
- 813 019d 71       		.byte	0x71
- 814 019e 62020000 		.4byte	0x262
- 815 01a2 02       		.byte	0x2
- 816 01a3 0A       		.uleb128 0xa
- 817 01a4 DC000000 		.4byte	.LASF24
- 818 01a8 05       		.byte	0x5
- 819 01a9 72       		.byte	0x72
- 820 01aa 72020000 		.4byte	0x272
- 821 01ae 07       		.byte	0x7
- 822 01af 0A       		.uleb128 0xa
- 823 01b0 6E020000 		.4byte	.LASF25
- 824 01b4 05       		.byte	0x5
- 825 01b5 73       		.byte	0x73
- 826 01b6 72020000 		.4byte	0x272
- 827 01ba 10       		.byte	0x10
- 828 01bb 0A       		.uleb128 0xa
- 829 01bc EA020000 		.4byte	.LASF26
- 830 01c0 05       		.byte	0x5
- 831 01c1 74       		.byte	0x74
- 832 01c2 81000000 		.4byte	0x81
- 833 01c6 19       		.byte	0x19
- 834 01c7 0A       		.uleb128 0xa
- 835 01c8 45010000 		.4byte	.LASF27
- 836 01cc 05       		.byte	0x5
- 837 01cd 75       		.byte	0x75
- 838 01ce 81000000 		.4byte	0x81
- 839 01d2 1A       		.byte	0x1a
- 840 01d3 0A       		.uleb128 0xa
- 841 01d4 F0030000 		.4byte	.LASF28
- 842 01d8 05       		.byte	0x5
- 843 01d9 76       		.byte	0x76
- 844 01da 82020000 		.4byte	0x282
- 845 01de 1B       		.byte	0x1b
- 846 01df 09       		.uleb128 0x9
- 847 01e0 696400   		.ascii	"id\000"
- 848 01e3 05       		.byte	0x5
- 849 01e4 77       		.byte	0x77
- 850 01e5 92020000 		.4byte	0x292
- 851 01e9 23       		.byte	0x23
- 852 01ea 0A       		.uleb128 0xa
- 853 01eb 78040000 		.4byte	.LASF29
- 854 01ef 05       		.byte	0x5
- 855 01f0 78       		.byte	0x78
- 856 01f1 92020000 		.4byte	0x292
- 857 01f5 33       		.byte	0x33
- 858 01f6 09       		.uleb128 0x9
- 859 01f7 6B6D00   		.ascii	"km\000"
- 860 01fa 05       		.byte	0x5
- 861 01fb 79       		.byte	0x79
- 862 01fc A2020000 		.4byte	0x2a2
- 863 0200 43       		.byte	0x43
- 864 0201 0A       		.uleb128 0xa
- 865 0202 45040000 		.4byte	.LASF30
- 866 0206 05       		.byte	0x5
- 867 0207 7A       		.byte	0x7a
- 868 0208 72020000 		.4byte	0x272
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 21
+ 812 0190 05       		.byte	0x5
+ 813 0191 74       		.byte	0x74
+ 814 0192 81000000 		.4byte	0x81
+ 815 0196 01       		.byte	0x1
+ 816 0197 09       		.uleb128 0x9
+ 817 0198 70707500 		.ascii	"ppu\000"
+ 818 019c 05       		.byte	0x5
+ 819 019d 75       		.byte	0x75
+ 820 019e 62020000 		.4byte	0x262
+ 821 01a2 02       		.byte	0x2
+ 822 01a3 0A       		.uleb128 0xa
+ 823 01a4 DC000000 		.4byte	.LASF24
+ 824 01a8 05       		.byte	0x5
+ 825 01a9 76       		.byte	0x76
+ 826 01aa 72020000 		.4byte	0x272
+ 827 01ae 07       		.byte	0x7
+ 828 01af 0A       		.uleb128 0xa
+ 829 01b0 31020000 		.4byte	.LASF25
+ 830 01b4 05       		.byte	0x5
+ 831 01b5 77       		.byte	0x77
+ 832 01b6 72020000 		.4byte	0x272
+ 833 01ba 10       		.byte	0x10
+ 834 01bb 0A       		.uleb128 0xa
+ 835 01bc 1D030000 		.4byte	.LASF26
+ 836 01c0 05       		.byte	0x5
+ 837 01c1 78       		.byte	0x78
+ 838 01c2 81000000 		.4byte	0x81
+ 839 01c6 19       		.byte	0x19
+ 840 01c7 0A       		.uleb128 0xa
+ 841 01c8 52010000 		.4byte	.LASF27
+ 842 01cc 05       		.byte	0x5
+ 843 01cd 79       		.byte	0x79
+ 844 01ce 81000000 		.4byte	0x81
+ 845 01d2 1A       		.byte	0x1a
+ 846 01d3 0A       		.uleb128 0xa
+ 847 01d4 23040000 		.4byte	.LASF28
+ 848 01d8 05       		.byte	0x5
+ 849 01d9 7A       		.byte	0x7a
+ 850 01da 82020000 		.4byte	0x282
+ 851 01de 1B       		.byte	0x1b
+ 852 01df 09       		.uleb128 0x9
+ 853 01e0 696400   		.ascii	"id\000"
+ 854 01e3 05       		.byte	0x5
+ 855 01e4 7B       		.byte	0x7b
+ 856 01e5 92020000 		.4byte	0x292
+ 857 01e9 23       		.byte	0x23
+ 858 01ea 0A       		.uleb128 0xa
+ 859 01eb C1040000 		.4byte	.LASF29
+ 860 01ef 05       		.byte	0x5
+ 861 01f0 7C       		.byte	0x7c
+ 862 01f1 92020000 		.4byte	0x292
+ 863 01f5 33       		.byte	0x33
+ 864 01f6 09       		.uleb128 0x9
+ 865 01f7 6B6D00   		.ascii	"km\000"
+ 866 01fa 05       		.byte	0x5
+ 867 01fb 7D       		.byte	0x7d
+ 868 01fc A2020000 		.4byte	0x2a2
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 21
 
 
- 869 020c 4E       		.byte	0x4e
- 870 020d 0A       		.uleb128 0xa
- 871 020e 2E010000 		.4byte	.LASF31
- 872 0212 05       		.byte	0x5
- 873 0213 7B       		.byte	0x7b
- 874 0214 81000000 		.4byte	0x81
- 875 0218 57       		.byte	0x57
- 876 0219 0A       		.uleb128 0xa
- 877 021a 3A040000 		.4byte	.LASF32
- 878 021e 05       		.byte	0x5
- 879 021f 7C       		.byte	0x7c
- 880 0220 81000000 		.4byte	0x81
- 881 0224 58       		.byte	0x58
- 882 0225 0A       		.uleb128 0xa
- 883 0226 F9000000 		.4byte	.LASF33
- 884 022a 05       		.byte	0x5
- 885 022b 7D       		.byte	0x7d
- 886 022c A2020000 		.4byte	0x2a2
- 887 0230 59       		.byte	0x59
- 888 0231 0A       		.uleb128 0xa
- 889 0232 00010000 		.4byte	.LASF34
- 890 0236 05       		.byte	0x5
- 891 0237 7E       		.byte	0x7e
- 892 0238 A2020000 		.4byte	0x2a2
- 893 023c 64       		.byte	0x64
- 894 023d 0A       		.uleb128 0xa
- 895 023e 09010000 		.4byte	.LASF35
- 896 0242 05       		.byte	0x5
- 897 0243 7F       		.byte	0x7f
- 898 0244 81000000 		.4byte	0x81
- 899 0248 6F       		.byte	0x6f
- 900 0249 0A       		.uleb128 0xa
- 901 024a AB020000 		.4byte	.LASF36
- 902 024e 05       		.byte	0x5
- 903 024f 80       		.byte	0x80
- 904 0250 81000000 		.4byte	0x81
- 905 0254 70       		.byte	0x70
- 906 0255 0A       		.uleb128 0xa
- 907 0256 57000000 		.4byte	.LASF37
- 908 025a 05       		.byte	0x5
- 909 025b 81       		.byte	0x81
- 910 025c 62020000 		.4byte	0x262
- 911 0260 71       		.byte	0x71
- 912 0261 00       		.byte	0
- 913 0262 06       		.uleb128 0x6
- 914 0263 81000000 		.4byte	0x81
- 915 0267 72020000 		.4byte	0x272
- 916 026b 07       		.uleb128 0x7
- 917 026c B6000000 		.4byte	0xb6
- 918 0270 04       		.byte	0x4
- 919 0271 00       		.byte	0
- 920 0272 06       		.uleb128 0x6
- 921 0273 81000000 		.4byte	0x81
- 922 0277 82020000 		.4byte	0x282
- 923 027b 07       		.uleb128 0x7
- 924 027c B6000000 		.4byte	0xb6
- 925 0280 08       		.byte	0x8
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 22
+ 869 0200 43       		.byte	0x43
+ 870 0201 0A       		.uleb128 0xa
+ 871 0202 78040000 		.4byte	.LASF30
+ 872 0206 05       		.byte	0x5
+ 873 0207 7E       		.byte	0x7e
+ 874 0208 72020000 		.4byte	0x272
+ 875 020c 4E       		.byte	0x4e
+ 876 020d 0A       		.uleb128 0xa
+ 877 020e 2E010000 		.4byte	.LASF31
+ 878 0212 05       		.byte	0x5
+ 879 0213 7F       		.byte	0x7f
+ 880 0214 81000000 		.4byte	0x81
+ 881 0218 57       		.byte	0x57
+ 882 0219 0A       		.uleb128 0xa
+ 883 021a 6D040000 		.4byte	.LASF32
+ 884 021e 05       		.byte	0x5
+ 885 021f 80       		.byte	0x80
+ 886 0220 81000000 		.4byte	0x81
+ 887 0224 58       		.byte	0x58
+ 888 0225 0A       		.uleb128 0xa
+ 889 0226 F9000000 		.4byte	.LASF33
+ 890 022a 05       		.byte	0x5
+ 891 022b 81       		.byte	0x81
+ 892 022c A2020000 		.4byte	0x2a2
+ 893 0230 59       		.byte	0x59
+ 894 0231 0A       		.uleb128 0xa
+ 895 0232 00010000 		.4byte	.LASF34
+ 896 0236 05       		.byte	0x5
+ 897 0237 82       		.byte	0x82
+ 898 0238 A2020000 		.4byte	0x2a2
+ 899 023c 64       		.byte	0x64
+ 900 023d 0A       		.uleb128 0xa
+ 901 023e 09010000 		.4byte	.LASF35
+ 902 0242 05       		.byte	0x5
+ 903 0243 83       		.byte	0x83
+ 904 0244 81000000 		.4byte	0x81
+ 905 0248 6F       		.byte	0x6f
+ 906 0249 0A       		.uleb128 0xa
+ 907 024a DE020000 		.4byte	.LASF36
+ 908 024e 05       		.byte	0x5
+ 909 024f 84       		.byte	0x84
+ 910 0250 81000000 		.4byte	0x81
+ 911 0254 70       		.byte	0x70
+ 912 0255 0A       		.uleb128 0xa
+ 913 0256 57000000 		.4byte	.LASF37
+ 914 025a 05       		.byte	0x5
+ 915 025b 85       		.byte	0x85
+ 916 025c 62020000 		.4byte	0x262
+ 917 0260 71       		.byte	0x71
+ 918 0261 00       		.byte	0
+ 919 0262 06       		.uleb128 0x6
+ 920 0263 81000000 		.4byte	0x81
+ 921 0267 72020000 		.4byte	0x272
+ 922 026b 07       		.uleb128 0x7
+ 923 026c B6000000 		.4byte	0xb6
+ 924 0270 04       		.byte	0x4
+ 925 0271 00       		.byte	0
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 22
 
 
- 926 0281 00       		.byte	0
- 927 0282 06       		.uleb128 0x6
- 928 0283 81000000 		.4byte	0x81
- 929 0287 92020000 		.4byte	0x292
- 930 028b 07       		.uleb128 0x7
- 931 028c B6000000 		.4byte	0xb6
- 932 0290 07       		.byte	0x7
- 933 0291 00       		.byte	0
- 934 0292 06       		.uleb128 0x6
- 935 0293 81000000 		.4byte	0x81
- 936 0297 A2020000 		.4byte	0x2a2
- 937 029b 07       		.uleb128 0x7
- 938 029c B6000000 		.4byte	0xb6
- 939 02a0 0F       		.byte	0xf
- 940 02a1 00       		.byte	0
- 941 02a2 06       		.uleb128 0x6
- 942 02a3 81000000 		.4byte	0x81
- 943 02a7 B2020000 		.4byte	0x2b2
- 944 02ab 07       		.uleb128 0x7
- 945 02ac B6000000 		.4byte	0xb6
- 946 02b0 0A       		.byte	0xa
- 947 02b1 00       		.byte	0
- 948 02b2 0B       		.uleb128 0xb
- 949 02b3 41020000 		.4byte	.LASF39
- 950 02b7 01       		.byte	0x1
- 951 02b8 38       		.byte	0x38
- 952 02b9 81000000 		.4byte	0x81
- 953 02bd 00000000 		.4byte	.LFB63
- 954 02c1 90000000 		.4byte	.LFE63-.LFB63
- 955 02c5 01       		.uleb128 0x1
- 956 02c6 9C       		.byte	0x9c
- 957 02c7 E6020000 		.4byte	0x2e6
- 958 02cb 0C       		.uleb128 0xc
- 959 02cc 24030000 		.4byte	.LASF38
- 960 02d0 01       		.byte	0x1
- 961 02d1 39       		.byte	0x39
- 962 02d2 81000000 		.4byte	0x81
- 963 02d6 02       		.uleb128 0x2
- 964 02d7 91       		.byte	0x91
- 965 02d8 6E       		.sleb128 -18
- 966 02d9 0D       		.uleb128 0xd
- 967 02da 6900     		.ascii	"i\000"
- 968 02dc 01       		.byte	0x1
- 969 02dd 39       		.byte	0x39
- 970 02de 81000000 		.4byte	0x81
- 971 02e2 02       		.uleb128 0x2
- 972 02e3 91       		.byte	0x91
- 973 02e4 6F       		.sleb128 -17
- 974 02e5 00       		.byte	0
- 975 02e6 0B       		.uleb128 0xb
- 976 02e7 E5030000 		.4byte	.LASF40
- 977 02eb 01       		.byte	0x1
- 978 02ec 68       		.byte	0x68
- 979 02ed 81000000 		.4byte	0x81
- 980 02f1 00000000 		.4byte	.LFB64
- 981 02f5 90000000 		.4byte	.LFE64-.LFB64
- 982 02f9 01       		.uleb128 0x1
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 23
+ 926 0272 06       		.uleb128 0x6
+ 927 0273 81000000 		.4byte	0x81
+ 928 0277 82020000 		.4byte	0x282
+ 929 027b 07       		.uleb128 0x7
+ 930 027c B6000000 		.4byte	0xb6
+ 931 0280 08       		.byte	0x8
+ 932 0281 00       		.byte	0
+ 933 0282 06       		.uleb128 0x6
+ 934 0283 81000000 		.4byte	0x81
+ 935 0287 92020000 		.4byte	0x292
+ 936 028b 07       		.uleb128 0x7
+ 937 028c B6000000 		.4byte	0xb6
+ 938 0290 07       		.byte	0x7
+ 939 0291 00       		.byte	0
+ 940 0292 06       		.uleb128 0x6
+ 941 0293 81000000 		.4byte	0x81
+ 942 0297 A2020000 		.4byte	0x2a2
+ 943 029b 07       		.uleb128 0x7
+ 944 029c B6000000 		.4byte	0xb6
+ 945 02a0 0F       		.byte	0xf
+ 946 02a1 00       		.byte	0
+ 947 02a2 06       		.uleb128 0x6
+ 948 02a3 81000000 		.4byte	0x81
+ 949 02a7 B2020000 		.4byte	0x2b2
+ 950 02ab 07       		.uleb128 0x7
+ 951 02ac B6000000 		.4byte	0xb6
+ 952 02b0 0A       		.byte	0xa
+ 953 02b1 00       		.byte	0
+ 954 02b2 0B       		.uleb128 0xb
+ 955 02b3 6E020000 		.4byte	.LASF39
+ 956 02b7 01       		.byte	0x1
+ 957 02b8 38       		.byte	0x38
+ 958 02b9 81000000 		.4byte	0x81
+ 959 02bd 00000000 		.4byte	.LFB63
+ 960 02c1 90000000 		.4byte	.LFE63-.LFB63
+ 961 02c5 01       		.uleb128 0x1
+ 962 02c6 9C       		.byte	0x9c
+ 963 02c7 E6020000 		.4byte	0x2e6
+ 964 02cb 0C       		.uleb128 0xc
+ 965 02cc 57030000 		.4byte	.LASF38
+ 966 02d0 01       		.byte	0x1
+ 967 02d1 39       		.byte	0x39
+ 968 02d2 81000000 		.4byte	0x81
+ 969 02d6 02       		.uleb128 0x2
+ 970 02d7 91       		.byte	0x91
+ 971 02d8 6E       		.sleb128 -18
+ 972 02d9 0D       		.uleb128 0xd
+ 973 02da 6900     		.ascii	"i\000"
+ 974 02dc 01       		.byte	0x1
+ 975 02dd 39       		.byte	0x39
+ 976 02de 81000000 		.4byte	0x81
+ 977 02e2 02       		.uleb128 0x2
+ 978 02e3 91       		.byte	0x91
+ 979 02e4 6F       		.sleb128 -17
+ 980 02e5 00       		.byte	0
+ 981 02e6 0B       		.uleb128 0xb
+ 982 02e7 18040000 		.4byte	.LASF40
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 23
 
 
- 983 02fa 9C       		.byte	0x9c
- 984 02fb 1A030000 		.4byte	0x31a
- 985 02ff 0C       		.uleb128 0xc
- 986 0300 24030000 		.4byte	.LASF38
- 987 0304 01       		.byte	0x1
- 988 0305 69       		.byte	0x69
- 989 0306 81000000 		.4byte	0x81
- 990 030a 02       		.uleb128 0x2
- 991 030b 91       		.byte	0x91
- 992 030c 6E       		.sleb128 -18
- 993 030d 0D       		.uleb128 0xd
- 994 030e 6900     		.ascii	"i\000"
- 995 0310 01       		.byte	0x1
- 996 0311 69       		.byte	0x69
- 997 0312 81000000 		.4byte	0x81
- 998 0316 02       		.uleb128 0x2
- 999 0317 91       		.byte	0x91
- 1000 0318 6F       		.sleb128 -17
- 1001 0319 00       		.byte	0
- 1002 031a 0E       		.uleb128 0xe
- 1003 031b 23010000 		.4byte	.LASF42
- 1004 031f 01       		.byte	0x1
- 1005 0320 99       		.byte	0x99
- 1006 0321 81000000 		.4byte	0x81
- 1007 0325 00000000 		.4byte	.LFB65
- 1008 0329 78000000 		.4byte	.LFE65-.LFB65
- 1009 032d 01       		.uleb128 0x1
- 1010 032e 9C       		.byte	0x9c
- 1011 032f 5C030000 		.4byte	0x35c
- 1012 0333 0C       		.uleb128 0xc
- 1013 0334 24030000 		.4byte	.LASF38
- 1014 0338 01       		.byte	0x1
- 1015 0339 9A       		.byte	0x9a
- 1016 033a 81000000 		.4byte	0x81
- 1017 033e 02       		.uleb128 0x2
- 1018 033f 91       		.byte	0x91
- 1019 0340 76       		.sleb128 -10
- 1020 0341 0C       		.uleb128 0xc
- 1021 0342 E0030000 		.4byte	.LASF41
- 1022 0346 01       		.byte	0x1
- 1023 0347 9A       		.byte	0x9a
- 1024 0348 5C030000 		.4byte	0x35c
- 1025 034c 02       		.uleb128 0x2
- 1026 034d 91       		.byte	0x91
- 1027 034e 70       		.sleb128 -16
- 1028 034f 0D       		.uleb128 0xd
- 1029 0350 6900     		.ascii	"i\000"
- 1030 0352 01       		.byte	0x1
- 1031 0353 9A       		.byte	0x9a
- 1032 0354 81000000 		.4byte	0x81
- 1033 0358 02       		.uleb128 0x2
- 1034 0359 91       		.byte	0x91
- 1035 035a 77       		.sleb128 -9
- 1036 035b 00       		.byte	0
- 1037 035c 06       		.uleb128 0x6
- 1038 035d 81000000 		.4byte	0x81
- 1039 0361 6C030000 		.4byte	0x36c
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 24
+ 983 02eb 01       		.byte	0x1
+ 984 02ec 68       		.byte	0x68
+ 985 02ed 81000000 		.4byte	0x81
+ 986 02f1 00000000 		.4byte	.LFB64
+ 987 02f5 90000000 		.4byte	.LFE64-.LFB64
+ 988 02f9 01       		.uleb128 0x1
+ 989 02fa 9C       		.byte	0x9c
+ 990 02fb 1A030000 		.4byte	0x31a
+ 991 02ff 0C       		.uleb128 0xc
+ 992 0300 57030000 		.4byte	.LASF38
+ 993 0304 01       		.byte	0x1
+ 994 0305 69       		.byte	0x69
+ 995 0306 81000000 		.4byte	0x81
+ 996 030a 02       		.uleb128 0x2
+ 997 030b 91       		.byte	0x91
+ 998 030c 6E       		.sleb128 -18
+ 999 030d 0D       		.uleb128 0xd
+ 1000 030e 6900     		.ascii	"i\000"
+ 1001 0310 01       		.byte	0x1
+ 1002 0311 69       		.byte	0x69
+ 1003 0312 81000000 		.4byte	0x81
+ 1004 0316 02       		.uleb128 0x2
+ 1005 0317 91       		.byte	0x91
+ 1006 0318 6F       		.sleb128 -17
+ 1007 0319 00       		.byte	0
+ 1008 031a 0E       		.uleb128 0xe
+ 1009 031b 23010000 		.4byte	.LASF42
+ 1010 031f 01       		.byte	0x1
+ 1011 0320 99       		.byte	0x99
+ 1012 0321 81000000 		.4byte	0x81
+ 1013 0325 00000000 		.4byte	.LFB65
+ 1014 0329 78000000 		.4byte	.LFE65-.LFB65
+ 1015 032d 01       		.uleb128 0x1
+ 1016 032e 9C       		.byte	0x9c
+ 1017 032f 5C030000 		.4byte	0x35c
+ 1018 0333 0C       		.uleb128 0xc
+ 1019 0334 57030000 		.4byte	.LASF38
+ 1020 0338 01       		.byte	0x1
+ 1021 0339 9A       		.byte	0x9a
+ 1022 033a 81000000 		.4byte	0x81
+ 1023 033e 02       		.uleb128 0x2
+ 1024 033f 91       		.byte	0x91
+ 1025 0340 76       		.sleb128 -10
+ 1026 0341 0C       		.uleb128 0xc
+ 1027 0342 13040000 		.4byte	.LASF41
+ 1028 0346 01       		.byte	0x1
+ 1029 0347 9A       		.byte	0x9a
+ 1030 0348 5C030000 		.4byte	0x35c
+ 1031 034c 02       		.uleb128 0x2
+ 1032 034d 91       		.byte	0x91
+ 1033 034e 70       		.sleb128 -16
+ 1034 034f 0D       		.uleb128 0xd
+ 1035 0350 6900     		.ascii	"i\000"
+ 1036 0352 01       		.byte	0x1
+ 1037 0353 9A       		.byte	0x9a
+ 1038 0354 81000000 		.4byte	0x81
+ 1039 0358 02       		.uleb128 0x2
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 24
 
 
- 1040 0365 07       		.uleb128 0x7
- 1041 0366 B6000000 		.4byte	0xb6
- 1042 036a 02       		.byte	0x2
- 1043 036b 00       		.byte	0
- 1044 036c 0E       		.uleb128 0xe
- 1045 036d 28040000 		.4byte	.LASF43
- 1046 0371 01       		.byte	0x1
- 1047 0372 C3       		.byte	0xc3
- 1048 0373 81000000 		.4byte	0x81
- 1049 0377 00000000 		.4byte	.LFB66
- 1050 037b 7C000000 		.4byte	.LFE66-.LFB66
- 1051 037f 01       		.uleb128 0x1
- 1052 0380 9C       		.byte	0x9c
- 1053 0381 AE030000 		.4byte	0x3ae
- 1054 0385 0C       		.uleb128 0xc
- 1055 0386 24030000 		.4byte	.LASF38
- 1056 038a 01       		.byte	0x1
- 1057 038b C4       		.byte	0xc4
- 1058 038c 81000000 		.4byte	0x81
- 1059 0390 02       		.uleb128 0x2
- 1060 0391 91       		.byte	0x91
- 1061 0392 76       		.sleb128 -10
- 1062 0393 0C       		.uleb128 0xc
- 1063 0394 E0030000 		.4byte	.LASF41
- 1064 0398 01       		.byte	0x1
- 1065 0399 C4       		.byte	0xc4
- 1066 039a BD000000 		.4byte	0xbd
- 1067 039e 02       		.uleb128 0x2
- 1068 039f 91       		.byte	0x91
- 1069 03a0 70       		.sleb128 -16
- 1070 03a1 0D       		.uleb128 0xd
- 1071 03a2 6900     		.ascii	"i\000"
- 1072 03a4 01       		.byte	0x1
- 1073 03a5 C4       		.byte	0xc4
- 1074 03a6 81000000 		.4byte	0x81
- 1075 03aa 02       		.uleb128 0x2
- 1076 03ab 91       		.byte	0x91
- 1077 03ac 77       		.sleb128 -9
- 1078 03ad 00       		.byte	0
- 1079 03ae 0E       		.uleb128 0xe
- 1080 03af AC000000 		.4byte	.LASF44
- 1081 03b3 01       		.byte	0x1
- 1082 03b4 EE       		.byte	0xee
- 1083 03b5 81000000 		.4byte	0x81
- 1084 03b9 00000000 		.4byte	.LFB67
- 1085 03bd 74000000 		.4byte	.LFE67-.LFB67
- 1086 03c1 01       		.uleb128 0x1
- 1087 03c2 9C       		.byte	0x9c
- 1088 03c3 0C040000 		.4byte	0x40c
- 1089 03c7 0F       		.uleb128 0xf
- 1090 03c8 7E040000 		.4byte	.LASF45
- 1091 03cc 01       		.byte	0x1
- 1092 03cd EE       		.byte	0xee
- 1093 03ce 81000000 		.4byte	0x81
- 1094 03d2 02       		.uleb128 0x2
- 1095 03d3 91       		.byte	0x91
- 1096 03d4 6F       		.sleb128 -17
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 25
+ 1040 0359 91       		.byte	0x91
+ 1041 035a 77       		.sleb128 -9
+ 1042 035b 00       		.byte	0
+ 1043 035c 06       		.uleb128 0x6
+ 1044 035d 81000000 		.4byte	0x81
+ 1045 0361 6C030000 		.4byte	0x36c
+ 1046 0365 07       		.uleb128 0x7
+ 1047 0366 B6000000 		.4byte	0xb6
+ 1048 036a 02       		.byte	0x2
+ 1049 036b 00       		.byte	0
+ 1050 036c 0E       		.uleb128 0xe
+ 1051 036d 5B040000 		.4byte	.LASF43
+ 1052 0371 01       		.byte	0x1
+ 1053 0372 C3       		.byte	0xc3
+ 1054 0373 81000000 		.4byte	0x81
+ 1055 0377 00000000 		.4byte	.LFB66
+ 1056 037b 7C000000 		.4byte	.LFE66-.LFB66
+ 1057 037f 01       		.uleb128 0x1
+ 1058 0380 9C       		.byte	0x9c
+ 1059 0381 AE030000 		.4byte	0x3ae
+ 1060 0385 0C       		.uleb128 0xc
+ 1061 0386 57030000 		.4byte	.LASF38
+ 1062 038a 01       		.byte	0x1
+ 1063 038b C4       		.byte	0xc4
+ 1064 038c 81000000 		.4byte	0x81
+ 1065 0390 02       		.uleb128 0x2
+ 1066 0391 91       		.byte	0x91
+ 1067 0392 76       		.sleb128 -10
+ 1068 0393 0C       		.uleb128 0xc
+ 1069 0394 13040000 		.4byte	.LASF41
+ 1070 0398 01       		.byte	0x1
+ 1071 0399 C4       		.byte	0xc4
+ 1072 039a BD000000 		.4byte	0xbd
+ 1073 039e 02       		.uleb128 0x2
+ 1074 039f 91       		.byte	0x91
+ 1075 03a0 70       		.sleb128 -16
+ 1076 03a1 0D       		.uleb128 0xd
+ 1077 03a2 6900     		.ascii	"i\000"
+ 1078 03a4 01       		.byte	0x1
+ 1079 03a5 C4       		.byte	0xc4
+ 1080 03a6 81000000 		.4byte	0x81
+ 1081 03aa 02       		.uleb128 0x2
+ 1082 03ab 91       		.byte	0x91
+ 1083 03ac 77       		.sleb128 -9
+ 1084 03ad 00       		.byte	0
+ 1085 03ae 0E       		.uleb128 0xe
+ 1086 03af AC000000 		.4byte	.LASF44
+ 1087 03b3 01       		.byte	0x1
+ 1088 03b4 EE       		.byte	0xee
+ 1089 03b5 81000000 		.4byte	0x81
+ 1090 03b9 00000000 		.4byte	.LFB67
+ 1091 03bd 74000000 		.4byte	.LFE67-.LFB67
+ 1092 03c1 01       		.uleb128 0x1
+ 1093 03c2 9C       		.byte	0x9c
+ 1094 03c3 0C040000 		.4byte	0x40c
+ 1095 03c7 0F       		.uleb128 0xf
+ 1096 03c8 C7040000 		.4byte	.LASF45
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 25
 
 
- 1097 03d5 0F       		.uleb128 0xf
- 1098 03d6 1D010000 		.4byte	.LASF46
- 1099 03da 01       		.byte	0x1
- 1100 03db EE       		.byte	0xee
- 1101 03dc 81000000 		.4byte	0x81
- 1102 03e0 02       		.uleb128 0x2
- 1103 03e1 91       		.byte	0x91
- 1104 03e2 6E       		.sleb128 -18
- 1105 03e3 0C       		.uleb128 0xc
- 1106 03e4 24030000 		.4byte	.LASF38
- 1107 03e8 01       		.byte	0x1
- 1108 03e9 EF       		.byte	0xef
- 1109 03ea 81000000 		.4byte	0x81
- 1110 03ee 02       		.uleb128 0x2
- 1111 03ef 91       		.byte	0x91
- 1112 03f0 76       		.sleb128 -10
- 1113 03f1 0C       		.uleb128 0xc
- 1114 03f2 E0030000 		.4byte	.LASF41
- 1115 03f6 01       		.byte	0x1
- 1116 03f7 EF       		.byte	0xef
- 1117 03f8 0C040000 		.4byte	0x40c
- 1118 03fc 02       		.uleb128 0x2
- 1119 03fd 91       		.byte	0x91
- 1120 03fe 74       		.sleb128 -12
- 1121 03ff 0D       		.uleb128 0xd
- 1122 0400 6900     		.ascii	"i\000"
- 1123 0402 01       		.byte	0x1
- 1124 0403 EF       		.byte	0xef
- 1125 0404 81000000 		.4byte	0x81
- 1126 0408 02       		.uleb128 0x2
- 1127 0409 91       		.byte	0x91
- 1128 040a 77       		.sleb128 -9
- 1129 040b 00       		.byte	0
- 1130 040c 06       		.uleb128 0x6
- 1131 040d 81000000 		.4byte	0x81
- 1132 0411 1C040000 		.4byte	0x41c
- 1133 0415 07       		.uleb128 0x7
- 1134 0416 B6000000 		.4byte	0xb6
- 1135 041a 01       		.byte	0x1
- 1136 041b 00       		.byte	0
- 1137 041c 10       		.uleb128 0x10
- 1138 041d 40030000 		.4byte	.LASF47
- 1139 0421 06       		.byte	0x6
- 1140 0422 2A06     		.2byte	0x62a
- 1141 0424 28040000 		.4byte	0x428
- 1142 0428 05       		.uleb128 0x5
- 1143 0429 76000000 		.4byte	0x76
- 1144 042d 11       		.uleb128 0x11
- 1145 042e 65030000 		.4byte	.LASF48
- 1146 0432 05       		.byte	0x5
- 1147 0433 42       		.byte	0x42
- 1148 0434 AC000000 		.4byte	0xac
- 1149 0438 05       		.uleb128 0x5
- 1150 0439 03       		.byte	0x3
- 1151 043a 00000000 		.4byte	count_teclas1
- 1152 043e 11       		.uleb128 0x11
- 1153 043f 85040000 		.4byte	.LASF49
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 26
+ 1097 03cc 01       		.byte	0x1
+ 1098 03cd EE       		.byte	0xee
+ 1099 03ce 81000000 		.4byte	0x81
+ 1100 03d2 02       		.uleb128 0x2
+ 1101 03d3 91       		.byte	0x91
+ 1102 03d4 6F       		.sleb128 -17
+ 1103 03d5 0F       		.uleb128 0xf
+ 1104 03d6 1D010000 		.4byte	.LASF46
+ 1105 03da 01       		.byte	0x1
+ 1106 03db EE       		.byte	0xee
+ 1107 03dc 81000000 		.4byte	0x81
+ 1108 03e0 02       		.uleb128 0x2
+ 1109 03e1 91       		.byte	0x91
+ 1110 03e2 6E       		.sleb128 -18
+ 1111 03e3 0C       		.uleb128 0xc
+ 1112 03e4 57030000 		.4byte	.LASF38
+ 1113 03e8 01       		.byte	0x1
+ 1114 03e9 EF       		.byte	0xef
+ 1115 03ea 81000000 		.4byte	0x81
+ 1116 03ee 02       		.uleb128 0x2
+ 1117 03ef 91       		.byte	0x91
+ 1118 03f0 76       		.sleb128 -10
+ 1119 03f1 0C       		.uleb128 0xc
+ 1120 03f2 13040000 		.4byte	.LASF41
+ 1121 03f6 01       		.byte	0x1
+ 1122 03f7 EF       		.byte	0xef
+ 1123 03f8 0C040000 		.4byte	0x40c
+ 1124 03fc 02       		.uleb128 0x2
+ 1125 03fd 91       		.byte	0x91
+ 1126 03fe 74       		.sleb128 -12
+ 1127 03ff 0D       		.uleb128 0xd
+ 1128 0400 6900     		.ascii	"i\000"
+ 1129 0402 01       		.byte	0x1
+ 1130 0403 EF       		.byte	0xef
+ 1131 0404 81000000 		.4byte	0x81
+ 1132 0408 02       		.uleb128 0x2
+ 1133 0409 91       		.byte	0x91
+ 1134 040a 77       		.sleb128 -9
+ 1135 040b 00       		.byte	0
+ 1136 040c 06       		.uleb128 0x6
+ 1137 040d 81000000 		.4byte	0x81
+ 1138 0411 1C040000 		.4byte	0x41c
+ 1139 0415 07       		.uleb128 0x7
+ 1140 0416 B6000000 		.4byte	0xb6
+ 1141 041a 01       		.byte	0x1
+ 1142 041b 00       		.byte	0
+ 1143 041c 10       		.uleb128 0x10
+ 1144 041d 73030000 		.4byte	.LASF47
+ 1145 0421 06       		.byte	0x6
+ 1146 0422 2A06     		.2byte	0x62a
+ 1147 0424 28040000 		.4byte	0x428
+ 1148 0428 05       		.uleb128 0x5
+ 1149 0429 76000000 		.4byte	0x76
+ 1150 042d 11       		.uleb128 0x11
+ 1151 042e 98030000 		.4byte	.LASF48
+ 1152 0432 05       		.byte	0x5
+ 1153 0433 42       		.byte	0x42
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 26
 
 
- 1154 0443 05       		.byte	0x5
- 1155 0444 42       		.byte	0x42
- 1156 0445 AC000000 		.4byte	0xac
- 1157 0449 05       		.uleb128 0x5
- 1158 044a 03       		.byte	0x3
- 1159 044b 00000000 		.4byte	comas1
- 1160 044f 11       		.uleb128 0x11
- 1161 0450 8C040000 		.4byte	.LASF50
- 1162 0454 05       		.byte	0x5
- 1163 0455 42       		.byte	0x42
- 1164 0456 AC000000 		.4byte	0xac
- 1165 045a 05       		.uleb128 0x5
- 1166 045b 03       		.byte	0x3
- 1167 045c 00000000 		.4byte	comas2
- 1168 0460 11       		.uleb128 0x11
- 1169 0461 F7030000 		.4byte	.LASF51
- 1170 0465 05       		.byte	0x5
- 1171 0466 42       		.byte	0x42
- 1172 0467 AC000000 		.4byte	0xac
- 1173 046b 05       		.uleb128 0x5
- 1174 046c 03       		.byte	0x3
- 1175 046d 00000000 		.4byte	id_coma1
- 1176 0471 11       		.uleb128 0x11
- 1177 0472 59020000 		.4byte	.LASF52
- 1178 0476 05       		.byte	0x5
- 1179 0477 42       		.byte	0x42
- 1180 0478 AC000000 		.4byte	0xac
- 1181 047c 05       		.uleb128 0x5
- 1182 047d 03       		.byte	0x3
- 1183 047e 00000000 		.4byte	id_teclado1
- 1184 0482 11       		.uleb128 0x11
- 1185 0483 20000000 		.4byte	.LASF53
- 1186 0487 05       		.byte	0x5
- 1187 0488 42       		.byte	0x42
- 1188 0489 AC000000 		.4byte	0xac
- 1189 048d 05       		.uleb128 0x5
- 1190 048e 03       		.byte	0x3
- 1191 048f 00000000 		.4byte	count_teclas2
- 1192 0493 11       		.uleb128 0x11
- 1193 0494 00040000 		.4byte	.LASF54
- 1194 0498 05       		.byte	0x5
- 1195 0499 42       		.byte	0x42
- 1196 049a AC000000 		.4byte	0xac
- 1197 049e 05       		.uleb128 0x5
- 1198 049f 03       		.byte	0x3
- 1199 04a0 00000000 		.4byte	id_coma2
- 1200 04a4 11       		.uleb128 0x11
- 1201 04a5 15040000 		.4byte	.LASF55
- 1202 04a9 05       		.byte	0x5
- 1203 04aa 42       		.byte	0x42
- 1204 04ab AC000000 		.4byte	0xac
- 1205 04af 05       		.uleb128 0x5
- 1206 04b0 03       		.byte	0x3
- 1207 04b1 00000000 		.4byte	id_teclado2
- 1208 04b5 11       		.uleb128 0x11
- 1209 04b6 08000000 		.4byte	.LASF56
- 1210 04ba 05       		.byte	0x5
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 27
+ 1154 0434 AC000000 		.4byte	0xac
+ 1155 0438 05       		.uleb128 0x5
+ 1156 0439 03       		.byte	0x3
+ 1157 043a 00000000 		.4byte	count_teclas1
+ 1158 043e 11       		.uleb128 0x11
+ 1159 043f CE040000 		.4byte	.LASF49
+ 1160 0443 05       		.byte	0x5
+ 1161 0444 42       		.byte	0x42
+ 1162 0445 AC000000 		.4byte	0xac
+ 1163 0449 05       		.uleb128 0x5
+ 1164 044a 03       		.byte	0x3
+ 1165 044b 00000000 		.4byte	comas1
+ 1166 044f 11       		.uleb128 0x11
+ 1167 0450 D5040000 		.4byte	.LASF50
+ 1168 0454 05       		.byte	0x5
+ 1169 0455 42       		.byte	0x42
+ 1170 0456 AC000000 		.4byte	0xac
+ 1171 045a 05       		.uleb128 0x5
+ 1172 045b 03       		.byte	0x3
+ 1173 045c 00000000 		.4byte	comas2
+ 1174 0460 11       		.uleb128 0x11
+ 1175 0461 2A040000 		.4byte	.LASF51
+ 1176 0465 05       		.byte	0x5
+ 1177 0466 42       		.byte	0x42
+ 1178 0467 AC000000 		.4byte	0xac
+ 1179 046b 05       		.uleb128 0x5
+ 1180 046c 03       		.byte	0x3
+ 1181 046d 00000000 		.4byte	id_coma1
+ 1182 0471 11       		.uleb128 0x11
+ 1183 0472 86020000 		.4byte	.LASF52
+ 1184 0476 05       		.byte	0x5
+ 1185 0477 42       		.byte	0x42
+ 1186 0478 AC000000 		.4byte	0xac
+ 1187 047c 05       		.uleb128 0x5
+ 1188 047d 03       		.byte	0x3
+ 1189 047e 00000000 		.4byte	id_teclado1
+ 1190 0482 11       		.uleb128 0x11
+ 1191 0483 20000000 		.4byte	.LASF53
+ 1192 0487 05       		.byte	0x5
+ 1193 0488 42       		.byte	0x42
+ 1194 0489 AC000000 		.4byte	0xac
+ 1195 048d 05       		.uleb128 0x5
+ 1196 048e 03       		.byte	0x3
+ 1197 048f 00000000 		.4byte	count_teclas2
+ 1198 0493 11       		.uleb128 0x11
+ 1199 0494 33040000 		.4byte	.LASF54
+ 1200 0498 05       		.byte	0x5
+ 1201 0499 42       		.byte	0x42
+ 1202 049a AC000000 		.4byte	0xac
+ 1203 049e 05       		.uleb128 0x5
+ 1204 049f 03       		.byte	0x3
+ 1205 04a0 00000000 		.4byte	id_coma2
+ 1206 04a4 11       		.uleb128 0x11
+ 1207 04a5 48040000 		.4byte	.LASF55
+ 1208 04a9 05       		.byte	0x5
+ 1209 04aa 42       		.byte	0x42
+ 1210 04ab AC000000 		.4byte	0xac
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 27
 
 
- 1211 04bb 43       		.byte	0x43
- 1212 04bc B1000000 		.4byte	0xb1
- 1213 04c0 05       		.uleb128 0x5
- 1214 04c1 03       		.byte	0x3
- 1215 04c2 00000000 		.4byte	posx1
- 1216 04c6 11       		.uleb128 0x11
- 1217 04c7 54010000 		.4byte	.LASF57
- 1218 04cb 05       		.byte	0x5
- 1219 04cc 43       		.byte	0x43
- 1220 04cd B1000000 		.4byte	0xb1
- 1221 04d1 05       		.uleb128 0x5
- 1222 04d2 03       		.byte	0x3
- 1223 04d3 00000000 		.4byte	posy1
- 1224 04d7 11       		.uleb128 0x11
- 1225 04d8 C3020000 		.4byte	.LASF58
- 1226 04dc 05       		.byte	0x5
- 1227 04dd 43       		.byte	0x43
- 1228 04de B1000000 		.4byte	0xb1
- 1229 04e2 05       		.uleb128 0x5
- 1230 04e3 03       		.byte	0x3
- 1231 04e4 00000000 		.4byte	sizeletra1
- 1232 04e8 11       		.uleb128 0x11
- 1233 04e9 0E000000 		.4byte	.LASF59
- 1234 04ed 05       		.byte	0x5
- 1235 04ee 43       		.byte	0x43
- 1236 04ef B1000000 		.4byte	0xb1
- 1237 04f3 05       		.uleb128 0x5
- 1238 04f4 03       		.byte	0x3
- 1239 04f5 00000000 		.4byte	posx2
- 1240 04f9 11       		.uleb128 0x11
- 1241 04fa 5A010000 		.4byte	.LASF60
- 1242 04fe 05       		.byte	0x5
- 1243 04ff 43       		.byte	0x43
- 1244 0500 B1000000 		.4byte	0xb1
- 1245 0504 05       		.uleb128 0x5
- 1246 0505 03       		.byte	0x3
- 1247 0506 00000000 		.4byte	posy2
- 1248 050a 11       		.uleb128 0x11
- 1249 050b CE020000 		.4byte	.LASF61
- 1250 050f 05       		.byte	0x5
- 1251 0510 43       		.byte	0x43
- 1252 0511 B1000000 		.4byte	0xb1
- 1253 0515 05       		.uleb128 0x5
- 1254 0516 03       		.byte	0x3
- 1255 0517 00000000 		.4byte	sizeletra2
- 1256 051b 11       		.uleb128 0x11
- 1257 051c 2B030000 		.4byte	.LASF62
- 1258 0520 05       		.byte	0x5
- 1259 0521 44       		.byte	0x44
- 1260 0522 AC000000 		.4byte	0xac
- 1261 0526 05       		.uleb128 0x5
- 1262 0527 03       		.byte	0x3
- 1263 0528 00000000 		.4byte	teclas1
- 1264 052c 11       		.uleb128 0x11
- 1265 052d 33030000 		.4byte	.LASF63
- 1266 0531 05       		.byte	0x5
- 1267 0532 44       		.byte	0x44
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 28
+ 1211 04af 05       		.uleb128 0x5
+ 1212 04b0 03       		.byte	0x3
+ 1213 04b1 00000000 		.4byte	id_teclado2
+ 1214 04b5 11       		.uleb128 0x11
+ 1215 04b6 08000000 		.4byte	.LASF56
+ 1216 04ba 05       		.byte	0x5
+ 1217 04bb 43       		.byte	0x43
+ 1218 04bc B1000000 		.4byte	0xb1
+ 1219 04c0 05       		.uleb128 0x5
+ 1220 04c1 03       		.byte	0x3
+ 1221 04c2 00000000 		.4byte	posx1
+ 1222 04c6 11       		.uleb128 0x11
+ 1223 04c7 61010000 		.4byte	.LASF57
+ 1224 04cb 05       		.byte	0x5
+ 1225 04cc 43       		.byte	0x43
+ 1226 04cd B1000000 		.4byte	0xb1
+ 1227 04d1 05       		.uleb128 0x5
+ 1228 04d2 03       		.byte	0x3
+ 1229 04d3 00000000 		.4byte	posy1
+ 1230 04d7 11       		.uleb128 0x11
+ 1231 04d8 F6020000 		.4byte	.LASF58
+ 1232 04dc 05       		.byte	0x5
+ 1233 04dd 43       		.byte	0x43
+ 1234 04de B1000000 		.4byte	0xb1
+ 1235 04e2 05       		.uleb128 0x5
+ 1236 04e3 03       		.byte	0x3
+ 1237 04e4 00000000 		.4byte	sizeletra1
+ 1238 04e8 11       		.uleb128 0x11
+ 1239 04e9 0E000000 		.4byte	.LASF59
+ 1240 04ed 05       		.byte	0x5
+ 1241 04ee 43       		.byte	0x43
+ 1242 04ef B1000000 		.4byte	0xb1
+ 1243 04f3 05       		.uleb128 0x5
+ 1244 04f4 03       		.byte	0x3
+ 1245 04f5 00000000 		.4byte	posx2
+ 1246 04f9 11       		.uleb128 0x11
+ 1247 04fa 67010000 		.4byte	.LASF60
+ 1248 04fe 05       		.byte	0x5
+ 1249 04ff 43       		.byte	0x43
+ 1250 0500 B1000000 		.4byte	0xb1
+ 1251 0504 05       		.uleb128 0x5
+ 1252 0505 03       		.byte	0x3
+ 1253 0506 00000000 		.4byte	posy2
+ 1254 050a 11       		.uleb128 0x11
+ 1255 050b 01030000 		.4byte	.LASF61
+ 1256 050f 05       		.byte	0x5
+ 1257 0510 43       		.byte	0x43
+ 1258 0511 B1000000 		.4byte	0xb1
+ 1259 0515 05       		.uleb128 0x5
+ 1260 0516 03       		.byte	0x3
+ 1261 0517 00000000 		.4byte	sizeletra2
+ 1262 051b 11       		.uleb128 0x11
+ 1263 051c 5E030000 		.4byte	.LASF62
+ 1264 0520 05       		.byte	0x5
+ 1265 0521 44       		.byte	0x44
+ 1266 0522 AC000000 		.4byte	0xac
+ 1267 0526 05       		.uleb128 0x5
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 28
 
 
- 1268 0533 AC000000 		.4byte	0xac
- 1269 0537 05       		.uleb128 0x5
- 1270 0538 03       		.byte	0x3
- 1271 0539 00000000 		.4byte	teclas2
- 1272 053d 11       		.uleb128 0x11
- 1273 053e E3000000 		.4byte	.LASF64
- 1274 0542 05       		.byte	0x5
- 1275 0543 45       		.byte	0x45
- 1276 0544 AC000000 		.4byte	0xac
- 1277 0548 05       		.uleb128 0x5
- 1278 0549 03       		.byte	0x3
- 1279 054a 00000000 		.4byte	flujo_LCD1
- 1280 054e 11       		.uleb128 0x11
- 1281 054f EE000000 		.4byte	.LASF65
- 1282 0553 05       		.byte	0x5
- 1283 0554 45       		.byte	0x45
- 1284 0555 AC000000 		.4byte	0xac
- 1285 0559 05       		.uleb128 0x5
- 1286 055a 03       		.byte	0x3
- 1287 055b 00000000 		.4byte	flujo_LCD2
- 1288 055f 06       		.uleb128 0x6
- 1289 0560 81000000 		.4byte	0x81
- 1290 0564 6F050000 		.4byte	0x56f
- 1291 0568 07       		.uleb128 0x7
- 1292 0569 B6000000 		.4byte	0xb6
- 1293 056d 1D       		.byte	0x1d
- 1294 056e 00       		.byte	0
- 1295 056f 11       		.uleb128 0x11
- 1296 0570 F3020000 		.4byte	.LASF66
- 1297 0574 05       		.byte	0x5
- 1298 0575 46       		.byte	0x46
- 1299 0576 80050000 		.4byte	0x580
- 1300 057a 05       		.uleb128 0x5
- 1301 057b 03       		.byte	0x3
- 1302 057c 00000000 		.4byte	Buffer_LCD1
- 1303 0580 05       		.uleb128 0x5
- 1304 0581 5F050000 		.4byte	0x55f
- 1305 0585 11       		.uleb128 0x11
- 1306 0586 FF020000 		.4byte	.LASF67
- 1307 058a 05       		.byte	0x5
- 1308 058b 47       		.byte	0x47
- 1309 058c 96050000 		.4byte	0x596
- 1310 0590 05       		.uleb128 0x5
- 1311 0591 03       		.byte	0x3
- 1312 0592 00000000 		.4byte	Buffer_LCD2
- 1313 0596 05       		.uleb128 0x5
- 1314 0597 5F050000 		.4byte	0x55f
- 1315 059b 11       		.uleb128 0x11
- 1316 059c C2000000 		.4byte	.LASF68
- 1317 05a0 05       		.byte	0x5
- 1318 05a1 48       		.byte	0x48
- 1319 05a2 AC000000 		.4byte	0xac
- 1320 05a6 05       		.uleb128 0x5
- 1321 05a7 03       		.byte	0x3
- 1322 05a8 00000000 		.4byte	count_protector
- 1323 05ac 11       		.uleb128 0x11
- 1324 05ad 30020000 		.4byte	.LASF69
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 29
+ 1268 0527 03       		.byte	0x3
+ 1269 0528 00000000 		.4byte	teclas1
+ 1270 052c 11       		.uleb128 0x11
+ 1271 052d 66030000 		.4byte	.LASF63
+ 1272 0531 05       		.byte	0x5
+ 1273 0532 44       		.byte	0x44
+ 1274 0533 AC000000 		.4byte	0xac
+ 1275 0537 05       		.uleb128 0x5
+ 1276 0538 03       		.byte	0x3
+ 1277 0539 00000000 		.4byte	teclas2
+ 1278 053d 11       		.uleb128 0x11
+ 1279 053e E3000000 		.4byte	.LASF64
+ 1280 0542 05       		.byte	0x5
+ 1281 0543 45       		.byte	0x45
+ 1282 0544 AC000000 		.4byte	0xac
+ 1283 0548 05       		.uleb128 0x5
+ 1284 0549 03       		.byte	0x3
+ 1285 054a 00000000 		.4byte	flujo_LCD1
+ 1286 054e 11       		.uleb128 0x11
+ 1287 054f EE000000 		.4byte	.LASF65
+ 1288 0553 05       		.byte	0x5
+ 1289 0554 45       		.byte	0x45
+ 1290 0555 AC000000 		.4byte	0xac
+ 1291 0559 05       		.uleb128 0x5
+ 1292 055a 03       		.byte	0x3
+ 1293 055b 00000000 		.4byte	flujo_LCD2
+ 1294 055f 11       		.uleb128 0x11
+ 1295 0560 AB040000 		.4byte	.LASF66
+ 1296 0564 05       		.byte	0x5
+ 1297 0565 46       		.byte	0x46
+ 1298 0566 AC000000 		.4byte	0xac
+ 1299 056a 05       		.uleb128 0x5
+ 1300 056b 03       		.byte	0x3
+ 1301 056c 00000000 		.4byte	flujo_pos1
+ 1302 0570 11       		.uleb128 0x11
+ 1303 0571 B6040000 		.4byte	.LASF67
+ 1304 0575 05       		.byte	0x5
+ 1305 0576 46       		.byte	0x46
+ 1306 0577 AC000000 		.4byte	0xac
+ 1307 057b 05       		.uleb128 0x5
+ 1308 057c 03       		.byte	0x3
+ 1309 057d 00000000 		.4byte	flujo_pos2
+ 1310 0581 11       		.uleb128 0x11
+ 1311 0582 9B020000 		.4byte	.LASF68
+ 1312 0586 05       		.byte	0x5
+ 1313 0587 47       		.byte	0x47
+ 1314 0588 AC000000 		.4byte	0xac
+ 1315 058c 05       		.uleb128 0x5
+ 1316 058d 03       		.byte	0x3
+ 1317 058e 00000000 		.4byte	seleccion_pos
+ 1318 0592 11       		.uleb128 0x11
+ 1319 0593 82010000 		.4byte	.LASF69
+ 1320 0597 05       		.byte	0x5
+ 1321 0598 48       		.byte	0x48
+ 1322 0599 AC000000 		.4byte	0xac
+ 1323 059d 05       		.uleb128 0x5
+ 1324 059e 03       		.byte	0x3
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 29
 
 
- 1325 05b1 05       		.byte	0x5
- 1326 05b2 48       		.byte	0x48
- 1327 05b3 AC000000 		.4byte	0xac
- 1328 05b7 05       		.uleb128 0x5
- 1329 05b8 03       		.byte	0x3
- 1330 05b9 00000000 		.4byte	count_protector2
- 1331 05bd 11       		.uleb128 0x11
- 1332 05be 5B040000 		.4byte	.LASF70
- 1333 05c2 05       		.byte	0x5
- 1334 05c3 49       		.byte	0x49
- 1335 05c4 CE050000 		.4byte	0x5ce
- 1336 05c8 05       		.uleb128 0x5
- 1337 05c9 03       		.byte	0x3
- 1338 05ca 00000000 		.4byte	password_lcd
- 1339 05ce 05       		.uleb128 0x5
- 1340 05cf 72020000 		.4byte	0x272
- 1341 05d3 11       		.uleb128 0x11
- 1342 05d4 A6030000 		.4byte	.LASF71
- 1343 05d8 05       		.byte	0x5
- 1344 05d9 4A       		.byte	0x4a
- 1345 05da B1000000 		.4byte	0xb1
- 1346 05de 05       		.uleb128 0x5
- 1347 05df 03       		.byte	0x3
- 1348 05e0 00000000 		.4byte	imagen_grado
- 1349 05e4 06       		.uleb128 0x6
- 1350 05e5 8C000000 		.4byte	0x8c
- 1351 05e9 FA050000 		.4byte	0x5fa
- 1352 05ed 07       		.uleb128 0x7
- 1353 05ee B6000000 		.4byte	0xb6
- 1354 05f2 01       		.byte	0x1
- 1355 05f3 07       		.uleb128 0x7
- 1356 05f4 B6000000 		.4byte	0xb6
- 1357 05f8 01       		.byte	0x1
- 1358 05f9 00       		.byte	0
- 1359 05fa 11       		.uleb128 0x11
- 1360 05fb D2000000 		.4byte	.LASF72
- 1361 05ff 05       		.byte	0x5
- 1362 0600 4B       		.byte	0x4b
- 1363 0601 0B060000 		.4byte	0x60b
- 1364 0605 05       		.uleb128 0x5
- 1365 0606 03       		.byte	0x3
- 1366 0607 00000000 		.4byte	prox_caso
- 1367 060b 05       		.uleb128 0x5
- 1368 060c E4050000 		.4byte	0x5e4
- 1369 0610 11       		.uleb128 0x11
- 1370 0611 A0000000 		.4byte	.LASF73
- 1371 0615 05       		.byte	0x5
- 1372 0616 4C       		.byte	0x4c
- 1373 0617 21060000 		.4byte	0x621
- 1374 061b 05       		.uleb128 0x5
- 1375 061c 03       		.byte	0x3
- 1376 061d 00000000 		.4byte	bloqueo_LCD
- 1377 0621 05       		.uleb128 0x5
- 1378 0622 5C030000 		.4byte	0x35c
- 1379 0626 11       		.uleb128 0x11
- 1380 0627 42000000 		.4byte	.LASF74
- 1381 062b 05       		.byte	0x5
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 30
+ 1325 059f 00000000 		.4byte	flujo_pos
+ 1326 05a3 11       		.uleb128 0x11
+ 1327 05a4 37010000 		.4byte	.LASF70
+ 1328 05a8 05       		.byte	0x5
+ 1329 05a9 49       		.byte	0x49
+ 1330 05aa AC000000 		.4byte	0xac
+ 1331 05ae 05       		.uleb128 0x5
+ 1332 05af 03       		.byte	0x3
+ 1333 05b0 00000000 		.4byte	venta_activa
+ 1334 05b4 11       		.uleb128 0x11
+ 1335 05b5 60020000 		.4byte	.LASF71
+ 1336 05b9 05       		.byte	0x5
+ 1337 05ba 49       		.byte	0x49
+ 1338 05bb AC000000 		.4byte	0xac
+ 1339 05bf 05       		.uleb128 0x5
+ 1340 05c0 03       		.byte	0x3
+ 1341 05c1 00000000 		.4byte	venta_activa2
+ 1342 05c5 06       		.uleb128 0x6
+ 1343 05c6 81000000 		.4byte	0x81
+ 1344 05ca D5050000 		.4byte	0x5d5
+ 1345 05ce 07       		.uleb128 0x7
+ 1346 05cf B6000000 		.4byte	0xb6
+ 1347 05d3 1D       		.byte	0x1d
+ 1348 05d4 00       		.byte	0
+ 1349 05d5 11       		.uleb128 0x11
+ 1350 05d6 26030000 		.4byte	.LASF72
+ 1351 05da 05       		.byte	0x5
+ 1352 05db 4A       		.byte	0x4a
+ 1353 05dc E6050000 		.4byte	0x5e6
+ 1354 05e0 05       		.uleb128 0x5
+ 1355 05e1 03       		.byte	0x3
+ 1356 05e2 00000000 		.4byte	Buffer_LCD1
+ 1357 05e6 05       		.uleb128 0x5
+ 1358 05e7 C5050000 		.4byte	0x5c5
+ 1359 05eb 11       		.uleb128 0x11
+ 1360 05ec 32030000 		.4byte	.LASF73
+ 1361 05f0 05       		.byte	0x5
+ 1362 05f1 4B       		.byte	0x4b
+ 1363 05f2 FC050000 		.4byte	0x5fc
+ 1364 05f6 05       		.uleb128 0x5
+ 1365 05f7 03       		.byte	0x3
+ 1366 05f8 00000000 		.4byte	Buffer_LCD2
+ 1367 05fc 05       		.uleb128 0x5
+ 1368 05fd C5050000 		.4byte	0x5c5
+ 1369 0601 11       		.uleb128 0x11
+ 1370 0602 C2000000 		.4byte	.LASF74
+ 1371 0606 05       		.byte	0x5
+ 1372 0607 4C       		.byte	0x4c
+ 1373 0608 AC000000 		.4byte	0xac
+ 1374 060c 05       		.uleb128 0x5
+ 1375 060d 03       		.byte	0x3
+ 1376 060e 00000000 		.4byte	count_protector
+ 1377 0612 11       		.uleb128 0x11
+ 1378 0613 4F020000 		.4byte	.LASF75
+ 1379 0617 05       		.byte	0x5
+ 1380 0618 4C       		.byte	0x4c
+ 1381 0619 AC000000 		.4byte	0xac
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 30
 
 
- 1382 062c 4D       		.byte	0x4d
- 1383 062d 37060000 		.4byte	0x637
- 1384 0631 05       		.uleb128 0x5
- 1385 0632 03       		.byte	0x3
- 1386 0633 00000000 		.4byte	id_estacion
- 1387 0637 05       		.uleb128 0x5
- 1388 0638 62020000 		.4byte	0x262
- 1389 063c 11       		.uleb128 0x11
- 1390 063d 4E000000 		.4byte	.LASF75
- 1391 0641 05       		.byte	0x5
- 1392 0642 4E       		.byte	0x4e
- 1393 0643 4D060000 		.4byte	0x64d
- 1394 0647 05       		.uleb128 0x5
- 1395 0648 03       		.byte	0x3
- 1396 0649 00000000 		.4byte	id_venta
- 1397 064d 05       		.uleb128 0x5
- 1398 064e 82020000 		.4byte	0x282
- 1399 0652 06       		.uleb128 0x6
- 1400 0653 81000000 		.4byte	0x81
- 1401 0657 62060000 		.4byte	0x662
- 1402 065b 07       		.uleb128 0x7
- 1403 065c B6000000 		.4byte	0xb6
- 1404 0660 C7       		.byte	0xc7
- 1405 0661 00       		.byte	0
- 1406 0662 11       		.uleb128 0x11
- 1407 0663 22020000 		.4byte	.LASF76
- 1408 0667 05       		.byte	0x5
- 1409 0668 4F       		.byte	0x4f
- 1410 0669 73060000 		.4byte	0x673
- 1411 066d 05       		.uleb128 0x5
- 1412 066e 03       		.byte	0x3
- 1413 066f 00000000 		.4byte	trama_totales
- 1414 0673 05       		.uleb128 0x5
- 1415 0674 52060000 		.4byte	0x652
- 1416 0678 11       		.uleb128 0x11
- 1417 0679 99020000 		.4byte	.LASF77
- 1418 067d 05       		.byte	0x5
- 1419 067e 53       		.byte	0x53
- 1420 067f AC000000 		.4byte	0xac
- 1421 0683 05       		.uleb128 0x5
- 1422 0684 03       		.byte	0x3
- 1423 0685 00000000 		.4byte	ppux10
- 1424 0689 06       		.uleb128 0x6
- 1425 068a 81000000 		.4byte	0x81
- 1426 068e 99060000 		.4byte	0x699
- 1427 0692 07       		.uleb128 0x7
- 1428 0693 B6000000 		.4byte	0xb6
- 1429 0697 10       		.byte	0x10
- 1430 0698 00       		.byte	0
- 1431 0699 11       		.uleb128 0x11
- 1432 069a 14000000 		.4byte	.LASF78
- 1433 069e 05       		.byte	0x5
- 1434 069f 54       		.byte	0x54
- 1435 06a0 AA060000 		.4byte	0x6aa
- 1436 06a4 05       		.uleb128 0x5
- 1437 06a5 03       		.byte	0x3
- 1438 06a6 00000000 		.4byte	nombre_pro1
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 31
+ 1382 061d 05       		.uleb128 0x5
+ 1383 061e 03       		.byte	0x3
+ 1384 061f 00000000 		.4byte	count_protector2
+ 1385 0623 11       		.uleb128 0x11
+ 1386 0624 8E040000 		.4byte	.LASF76
+ 1387 0628 05       		.byte	0x5
+ 1388 0629 4D       		.byte	0x4d
+ 1389 062a 34060000 		.4byte	0x634
+ 1390 062e 05       		.uleb128 0x5
+ 1391 062f 03       		.byte	0x3
+ 1392 0630 00000000 		.4byte	password_lcd
+ 1393 0634 05       		.uleb128 0x5
+ 1394 0635 72020000 		.4byte	0x272
+ 1395 0639 11       		.uleb128 0x11
+ 1396 063a D9030000 		.4byte	.LASF77
+ 1397 063e 05       		.byte	0x5
+ 1398 063f 4E       		.byte	0x4e
+ 1399 0640 B1000000 		.4byte	0xb1
+ 1400 0644 05       		.uleb128 0x5
+ 1401 0645 03       		.byte	0x3
+ 1402 0646 00000000 		.4byte	imagen_grado
+ 1403 064a 06       		.uleb128 0x6
+ 1404 064b 8C000000 		.4byte	0x8c
+ 1405 064f 60060000 		.4byte	0x660
+ 1406 0653 07       		.uleb128 0x7
+ 1407 0654 B6000000 		.4byte	0xb6
+ 1408 0658 01       		.byte	0x1
+ 1409 0659 07       		.uleb128 0x7
+ 1410 065a B6000000 		.4byte	0xb6
+ 1411 065e 01       		.byte	0x1
+ 1412 065f 00       		.byte	0
+ 1413 0660 11       		.uleb128 0x11
+ 1414 0661 D2000000 		.4byte	.LASF78
+ 1415 0665 05       		.byte	0x5
+ 1416 0666 4F       		.byte	0x4f
+ 1417 0667 71060000 		.4byte	0x671
+ 1418 066b 05       		.uleb128 0x5
+ 1419 066c 03       		.byte	0x3
+ 1420 066d 00000000 		.4byte	prox_caso
+ 1421 0671 05       		.uleb128 0x5
+ 1422 0672 4A060000 		.4byte	0x64a
+ 1423 0676 11       		.uleb128 0x11
+ 1424 0677 A0000000 		.4byte	.LASF79
+ 1425 067b 05       		.byte	0x5
+ 1426 067c 50       		.byte	0x50
+ 1427 067d 87060000 		.4byte	0x687
+ 1428 0681 05       		.uleb128 0x5
+ 1429 0682 03       		.byte	0x3
+ 1430 0683 00000000 		.4byte	bloqueo_LCD
+ 1431 0687 05       		.uleb128 0x5
+ 1432 0688 5C030000 		.4byte	0x35c
+ 1433 068c 11       		.uleb128 0x11
+ 1434 068d 42000000 		.4byte	.LASF80
+ 1435 0691 05       		.byte	0x5
+ 1436 0692 51       		.byte	0x51
+ 1437 0693 9D060000 		.4byte	0x69d
+ 1438 0697 05       		.uleb128 0x5
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 31
 
 
- 1439 06aa 05       		.uleb128 0x5
- 1440 06ab 89060000 		.4byte	0x689
- 1441 06af 11       		.uleb128 0x11
- 1442 06b0 09040000 		.4byte	.LASF79
- 1443 06b4 05       		.byte	0x5
- 1444 06b5 54       		.byte	0x54
- 1445 06b6 C0060000 		.4byte	0x6c0
- 1446 06ba 05       		.uleb128 0x5
- 1447 06bb 03       		.byte	0x3
- 1448 06bc 00000000 		.4byte	nombre_pro2
- 1449 06c0 05       		.uleb128 0x5
- 1450 06c1 89060000 		.4byte	0x689
- 1451 06c5 11       		.uleb128 0x11
- 1452 06c6 2E000000 		.4byte	.LASF80
- 1453 06ca 05       		.byte	0x5
- 1454 06cb 54       		.byte	0x54
- 1455 06cc D6060000 		.4byte	0x6d6
- 1456 06d0 05       		.uleb128 0x5
- 1457 06d1 03       		.byte	0x3
- 1458 06d2 00000000 		.4byte	nombre_pro3
- 1459 06d6 05       		.uleb128 0x5
- 1460 06d7 89060000 		.4byte	0x689
- 1461 06db 11       		.uleb128 0x11
- 1462 06dc 3A000000 		.4byte	.LASF81
- 1463 06e0 05       		.byte	0x5
- 1464 06e1 55       		.byte	0x55
- 1465 06e2 EC060000 		.4byte	0x6ec
- 1466 06e6 05       		.uleb128 0x5
- 1467 06e7 03       		.byte	0x3
- 1468 06e8 00000000 		.4byte	version
- 1469 06ec 05       		.uleb128 0x5
- 1470 06ed BD000000 		.4byte	0xbd
- 1471 06f1 11       		.uleb128 0x11
- 1472 06f2 69010000 		.4byte	.LASF82
- 1473 06f6 05       		.byte	0x5
- 1474 06f7 5F       		.byte	0x5f
- 1475 06f8 CD000000 		.4byte	0xcd
- 1476 06fc 05       		.uleb128 0x5
- 1477 06fd 03       		.byte	0x3
- 1478 06fe 00000000 		.4byte	lado1
- 1479 0702 11       		.uleb128 0x11
- 1480 0703 83030000 		.4byte	.LASF83
- 1481 0707 05       		.byte	0x5
- 1482 0708 60       		.byte	0x60
- 1483 0709 CD000000 		.4byte	0xcd
- 1484 070d 05       		.uleb128 0x5
- 1485 070e 03       		.byte	0x3
- 1486 070f 00000000 		.4byte	lado2
- 1487 0713 06       		.uleb128 0x6
- 1488 0714 81000000 		.4byte	0x81
- 1489 0718 23070000 		.4byte	0x723
- 1490 071c 07       		.uleb128 0x7
- 1491 071d B6000000 		.4byte	0xb6
- 1492 0721 20       		.byte	0x20
- 1493 0722 00       		.byte	0
- 1494 0723 11       		.uleb128 0x11
- 1495 0724 3E010000 		.4byte	.LASF84
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 32
+ 1439 0698 03       		.byte	0x3
+ 1440 0699 00000000 		.4byte	id_estacion
+ 1441 069d 05       		.uleb128 0x5
+ 1442 069e 62020000 		.4byte	0x262
+ 1443 06a2 11       		.uleb128 0x11
+ 1444 06a3 4E000000 		.4byte	.LASF81
+ 1445 06a7 05       		.byte	0x5
+ 1446 06a8 52       		.byte	0x52
+ 1447 06a9 B3060000 		.4byte	0x6b3
+ 1448 06ad 05       		.uleb128 0x5
+ 1449 06ae 03       		.byte	0x3
+ 1450 06af 00000000 		.4byte	id_venta
+ 1451 06b3 05       		.uleb128 0x5
+ 1452 06b4 82020000 		.4byte	0x282
+ 1453 06b8 06       		.uleb128 0x6
+ 1454 06b9 81000000 		.4byte	0x81
+ 1455 06bd C8060000 		.4byte	0x6c8
+ 1456 06c1 07       		.uleb128 0x7
+ 1457 06c2 B6000000 		.4byte	0xb6
+ 1458 06c6 C7       		.byte	0xc7
+ 1459 06c7 00       		.byte	0
+ 1460 06c8 11       		.uleb128 0x11
+ 1461 06c9 41020000 		.4byte	.LASF82
+ 1462 06cd 05       		.byte	0x5
+ 1463 06ce 53       		.byte	0x53
+ 1464 06cf D9060000 		.4byte	0x6d9
+ 1465 06d3 05       		.uleb128 0x5
+ 1466 06d4 03       		.byte	0x3
+ 1467 06d5 00000000 		.4byte	trama_totales
+ 1468 06d9 05       		.uleb128 0x5
+ 1469 06da B8060000 		.4byte	0x6b8
+ 1470 06de 11       		.uleb128 0x11
+ 1471 06df CC020000 		.4byte	.LASF83
+ 1472 06e3 05       		.byte	0x5
+ 1473 06e4 57       		.byte	0x57
+ 1474 06e5 AC000000 		.4byte	0xac
+ 1475 06e9 05       		.uleb128 0x5
+ 1476 06ea 03       		.byte	0x3
+ 1477 06eb 00000000 		.4byte	ppux10
+ 1478 06ef 06       		.uleb128 0x6
+ 1479 06f0 81000000 		.4byte	0x81
+ 1480 06f4 FF060000 		.4byte	0x6ff
+ 1481 06f8 07       		.uleb128 0x7
+ 1482 06f9 B6000000 		.4byte	0xb6
+ 1483 06fd 10       		.byte	0x10
+ 1484 06fe 00       		.byte	0
+ 1485 06ff 11       		.uleb128 0x11
+ 1486 0700 14000000 		.4byte	.LASF84
+ 1487 0704 05       		.byte	0x5
+ 1488 0705 58       		.byte	0x58
+ 1489 0706 10070000 		.4byte	0x710
+ 1490 070a 05       		.uleb128 0x5
+ 1491 070b 03       		.byte	0x3
+ 1492 070c 00000000 		.4byte	nombre_pro1
+ 1493 0710 05       		.uleb128 0x5
+ 1494 0711 EF060000 		.4byte	0x6ef
+ 1495 0715 11       		.uleb128 0x11
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 32
 
 
- 1496 0728 05       		.byte	0x5
- 1497 0729 64       		.byte	0x64
- 1498 072a 34070000 		.4byte	0x734
- 1499 072e 05       		.uleb128 0x5
- 1500 072f 03       		.byte	0x3
- 1501 0730 00000000 		.4byte	nombre
- 1502 0734 05       		.uleb128 0x5
- 1503 0735 13070000 		.4byte	0x713
- 1504 0739 06       		.uleb128 0x6
- 1505 073a 81000000 		.4byte	0x81
- 1506 073e 49070000 		.4byte	0x749
- 1507 0742 07       		.uleb128 0x7
- 1508 0743 B6000000 		.4byte	0xb6
- 1509 0747 0E       		.byte	0xe
- 1510 0748 00       		.byte	0
- 1511 0749 12       		.uleb128 0x12
- 1512 074a 6E697400 		.ascii	"nit\000"
- 1513 074e 05       		.byte	0x5
- 1514 074f 65       		.byte	0x65
- 1515 0750 5A070000 		.4byte	0x75a
- 1516 0754 05       		.uleb128 0x5
- 1517 0755 03       		.byte	0x3
- 1518 0756 00000000 		.4byte	nit
- 1519 075a 05       		.uleb128 0x5
- 1520 075b 39070000 		.4byte	0x739
- 1521 075f 06       		.uleb128 0x6
- 1522 0760 81000000 		.4byte	0x81
- 1523 0764 6F070000 		.4byte	0x76f
- 1524 0768 07       		.uleb128 0x7
- 1525 0769 B6000000 		.4byte	0xb6
- 1526 076d 13       		.byte	0x13
- 1527 076e 00       		.byte	0
- 1528 076f 11       		.uleb128 0x11
- 1529 0770 52040000 		.4byte	.LASF85
- 1530 0774 05       		.byte	0x5
- 1531 0775 66       		.byte	0x66
- 1532 0776 80070000 		.4byte	0x780
- 1533 077a 05       		.uleb128 0x5
- 1534 077b 03       		.byte	0x3
- 1535 077c 00000000 		.4byte	telefono
- 1536 0780 05       		.uleb128 0x5
- 1537 0781 5F070000 		.4byte	0x75f
- 1538 0785 11       		.uleb128 0x11
- 1539 0786 B3030000 		.4byte	.LASF86
- 1540 078a 05       		.byte	0x5
- 1541 078b 67       		.byte	0x67
- 1542 078c 96070000 		.4byte	0x796
- 1543 0790 05       		.uleb128 0x5
- 1544 0791 03       		.byte	0x3
- 1545 0792 00000000 		.4byte	direccion
- 1546 0796 05       		.uleb128 0x5
- 1547 0797 13070000 		.4byte	0x713
- 1548 079b 06       		.uleb128 0x6
- 1549 079c 81000000 		.4byte	0x81
- 1550 07a0 AB070000 		.4byte	0x7ab
- 1551 07a4 07       		.uleb128 0x7
- 1552 07a5 B6000000 		.4byte	0xb6
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 33
+ 1496 0716 3C040000 		.4byte	.LASF85
+ 1497 071a 05       		.byte	0x5
+ 1498 071b 58       		.byte	0x58
+ 1499 071c 26070000 		.4byte	0x726
+ 1500 0720 05       		.uleb128 0x5
+ 1501 0721 03       		.byte	0x3
+ 1502 0722 00000000 		.4byte	nombre_pro2
+ 1503 0726 05       		.uleb128 0x5
+ 1504 0727 EF060000 		.4byte	0x6ef
+ 1505 072b 11       		.uleb128 0x11
+ 1506 072c 2E000000 		.4byte	.LASF86
+ 1507 0730 05       		.byte	0x5
+ 1508 0731 58       		.byte	0x58
+ 1509 0732 3C070000 		.4byte	0x73c
+ 1510 0736 05       		.uleb128 0x5
+ 1511 0737 03       		.byte	0x3
+ 1512 0738 00000000 		.4byte	nombre_pro3
+ 1513 073c 05       		.uleb128 0x5
+ 1514 073d EF060000 		.4byte	0x6ef
+ 1515 0741 11       		.uleb128 0x11
+ 1516 0742 3A000000 		.4byte	.LASF87
+ 1517 0746 05       		.byte	0x5
+ 1518 0747 59       		.byte	0x59
+ 1519 0748 52070000 		.4byte	0x752
+ 1520 074c 05       		.uleb128 0x5
+ 1521 074d 03       		.byte	0x3
+ 1522 074e 00000000 		.4byte	version
+ 1523 0752 05       		.uleb128 0x5
+ 1524 0753 BD000000 		.4byte	0xbd
+ 1525 0757 11       		.uleb128 0x11
+ 1526 0758 76010000 		.4byte	.LASF88
+ 1527 075c 05       		.byte	0x5
+ 1528 075d 63       		.byte	0x63
+ 1529 075e CD000000 		.4byte	0xcd
+ 1530 0762 05       		.uleb128 0x5
+ 1531 0763 03       		.byte	0x3
+ 1532 0764 00000000 		.4byte	lado1
+ 1533 0768 11       		.uleb128 0x11
+ 1534 0769 B6030000 		.4byte	.LASF89
+ 1535 076d 05       		.byte	0x5
+ 1536 076e 64       		.byte	0x64
+ 1537 076f CD000000 		.4byte	0xcd
+ 1538 0773 05       		.uleb128 0x5
+ 1539 0774 03       		.byte	0x3
+ 1540 0775 00000000 		.4byte	lado2
+ 1541 0779 06       		.uleb128 0x6
+ 1542 077a 81000000 		.4byte	0x81
+ 1543 077e 89070000 		.4byte	0x789
+ 1544 0782 07       		.uleb128 0x7
+ 1545 0783 B6000000 		.4byte	0xb6
+ 1546 0787 20       		.byte	0x20
+ 1547 0788 00       		.byte	0
+ 1548 0789 11       		.uleb128 0x11
+ 1549 078a 4B010000 		.4byte	.LASF90
+ 1550 078e 05       		.byte	0x5
+ 1551 078f 68       		.byte	0x68
+ 1552 0790 9A070000 		.4byte	0x79a
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 33
 
 
- 1553 07a9 1F       		.byte	0x1f
- 1554 07aa 00       		.byte	0
- 1555 07ab 11       		.uleb128 0x11
- 1556 07ac D9020000 		.4byte	.LASF87
- 1557 07b0 05       		.byte	0x5
- 1558 07b1 68       		.byte	0x68
- 1559 07b2 BC070000 		.4byte	0x7bc
- 1560 07b6 05       		.uleb128 0x5
- 1561 07b7 03       		.byte	0x3
- 1562 07b8 00000000 		.4byte	lema1
- 1563 07bc 05       		.uleb128 0x5
- 1564 07bd 9B070000 		.4byte	0x79b
- 1565 07c1 11       		.uleb128 0x11
- 1566 07c2 DF020000 		.4byte	.LASF88
- 1567 07c6 05       		.byte	0x5
- 1568 07c7 69       		.byte	0x69
- 1569 07c8 D2070000 		.4byte	0x7d2
- 1570 07cc 05       		.uleb128 0x5
- 1571 07cd 03       		.byte	0x3
- 1572 07ce 00000000 		.4byte	lema2
- 1573 07d2 05       		.uleb128 0x5
- 1574 07d3 9B070000 		.4byte	0x79b
- 1575 07d7 11       		.uleb128 0x11
- 1576 07d8 94030000 		.4byte	.LASF89
- 1577 07dc 05       		.byte	0x5
- 1578 07dd 6A       		.byte	0x6a
- 1579 07de E8070000 		.4byte	0x7e8
- 1580 07e2 05       		.uleb128 0x5
- 1581 07e3 03       		.byte	0x3
- 1582 07e4 00000000 		.4byte	id_logo
- 1583 07e8 05       		.uleb128 0x5
- 1584 07e9 0C040000 		.4byte	0x40c
- 1585 07ed 12       		.uleb128 0x12
- 1586 07ee 6B6D00   		.ascii	"km\000"
- 1587 07f1 05       		.byte	0x5
- 1588 07f2 6B       		.byte	0x6b
- 1589 07f3 FD070000 		.4byte	0x7fd
- 1590 07f7 05       		.uleb128 0x5
- 1591 07f8 03       		.byte	0x3
- 1592 07f9 00000000 		.4byte	km
- 1593 07fd 05       		.uleb128 0x5
- 1594 07fe 0C040000 		.4byte	0x40c
- 1595 0802 11       		.uleb128 0x11
- 1596 0803 7D030000 		.4byte	.LASF90
- 1597 0807 05       		.byte	0x5
- 1598 0808 6C       		.byte	0x6c
- 1599 0809 5C030000 		.4byte	0x35c
- 1600 080d 05       		.uleb128 0x5
- 1601 080e 03       		.byte	0x3
- 1602 080f 00000000 		.4byte	fecha
- 1603 0813 11       		.uleb128 0x11
- 1604 0814 E5020000 		.4byte	.LASF91
- 1605 0818 05       		.byte	0x5
- 1606 0819 6D       		.byte	0x6d
- 1607 081a 0C040000 		.4byte	0x40c
- 1608 081e 05       		.uleb128 0x5
- 1609 081f 03       		.byte	0x3
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 34
+ 1553 0794 05       		.uleb128 0x5
+ 1554 0795 03       		.byte	0x3
+ 1555 0796 00000000 		.4byte	nombre
+ 1556 079a 05       		.uleb128 0x5
+ 1557 079b 79070000 		.4byte	0x779
+ 1558 079f 06       		.uleb128 0x6
+ 1559 07a0 81000000 		.4byte	0x81
+ 1560 07a4 AF070000 		.4byte	0x7af
+ 1561 07a8 07       		.uleb128 0x7
+ 1562 07a9 B6000000 		.4byte	0xb6
+ 1563 07ad 0E       		.byte	0xe
+ 1564 07ae 00       		.byte	0
+ 1565 07af 12       		.uleb128 0x12
+ 1566 07b0 6E697400 		.ascii	"nit\000"
+ 1567 07b4 05       		.byte	0x5
+ 1568 07b5 69       		.byte	0x69
+ 1569 07b6 C0070000 		.4byte	0x7c0
+ 1570 07ba 05       		.uleb128 0x5
+ 1571 07bb 03       		.byte	0x3
+ 1572 07bc 00000000 		.4byte	nit
+ 1573 07c0 05       		.uleb128 0x5
+ 1574 07c1 9F070000 		.4byte	0x79f
+ 1575 07c5 06       		.uleb128 0x6
+ 1576 07c6 81000000 		.4byte	0x81
+ 1577 07ca D5070000 		.4byte	0x7d5
+ 1578 07ce 07       		.uleb128 0x7
+ 1579 07cf B6000000 		.4byte	0xb6
+ 1580 07d3 13       		.byte	0x13
+ 1581 07d4 00       		.byte	0
+ 1582 07d5 11       		.uleb128 0x11
+ 1583 07d6 85040000 		.4byte	.LASF91
+ 1584 07da 05       		.byte	0x5
+ 1585 07db 6A       		.byte	0x6a
+ 1586 07dc E6070000 		.4byte	0x7e6
+ 1587 07e0 05       		.uleb128 0x5
+ 1588 07e1 03       		.byte	0x3
+ 1589 07e2 00000000 		.4byte	telefono
+ 1590 07e6 05       		.uleb128 0x5
+ 1591 07e7 C5070000 		.4byte	0x7c5
+ 1592 07eb 11       		.uleb128 0x11
+ 1593 07ec E6030000 		.4byte	.LASF92
+ 1594 07f0 05       		.byte	0x5
+ 1595 07f1 6B       		.byte	0x6b
+ 1596 07f2 FC070000 		.4byte	0x7fc
+ 1597 07f6 05       		.uleb128 0x5
+ 1598 07f7 03       		.byte	0x3
+ 1599 07f8 00000000 		.4byte	direccion
+ 1600 07fc 05       		.uleb128 0x5
+ 1601 07fd 79070000 		.4byte	0x779
+ 1602 0801 06       		.uleb128 0x6
+ 1603 0802 81000000 		.4byte	0x81
+ 1604 0806 11080000 		.4byte	0x811
+ 1605 080a 07       		.uleb128 0x7
+ 1606 080b B6000000 		.4byte	0xb6
+ 1607 080f 1F       		.byte	0x1f
+ 1608 0810 00       		.byte	0
+ 1609 0811 11       		.uleb128 0x11
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 34
 
 
- 1610 0820 00000000 		.4byte	hora
- 1611 0824 11       		.uleb128 0x11
- 1612 0825 4D030000 		.4byte	.LASF92
- 1613 0829 05       		.byte	0x5
- 1614 082a 83       		.byte	0x83
- 1615 082b 73010000 		.4byte	0x173
- 1616 082f 05       		.uleb128 0x5
- 1617 0830 03       		.byte	0x3
- 1618 0831 00000000 		.4byte	rventa1
- 1619 0835 11       		.uleb128 0x11
- 1620 0836 55030000 		.4byte	.LASF93
- 1621 083a 05       		.byte	0x5
- 1622 083b 84       		.byte	0x84
- 1623 083c 73010000 		.4byte	0x173
- 1624 0840 05       		.uleb128 0x5
- 1625 0841 03       		.byte	0x3
- 1626 0842 00000000 		.4byte	rventa2
- 1627 0846 11       		.uleb128 0x11
- 1628 0847 34040000 		.4byte	.LASF94
- 1629 084b 05       		.byte	0x5
- 1630 084c 89       		.byte	0x89
- 1631 084d 81000000 		.4byte	0x81
- 1632 0851 05       		.uleb128 0x5
- 1633 0852 03       		.byte	0x3
- 1634 0853 00000000 		.4byte	ok_RF
- 1635 0857 11       		.uleb128 0x11
- 1636 0858 A0020000 		.4byte	.LASF95
- 1637 085c 05       		.byte	0x5
- 1638 085d 8A       		.byte	0x8a
- 1639 085e 81000000 		.4byte	0x81
- 1640 0862 05       		.uleb128 0x5
- 1641 0863 03       		.byte	0x3
- 1642 0864 00000000 		.4byte	ok_datosRF
- 1643 0868 11       		.uleb128 0x11
- 1644 0869 21040000 		.4byte	.LASF96
- 1645 086d 05       		.byte	0x5
- 1646 086e 8B       		.byte	0x8b
- 1647 086f 52060000 		.4byte	0x652
- 1648 0873 05       		.uleb128 0x5
- 1649 0874 03       		.byte	0x3
- 1650 0875 00000000 		.4byte	rf_mod
- 1651 0879 06       		.uleb128 0x6
- 1652 087a 81000000 		.4byte	0x81
- 1653 087e 89080000 		.4byte	0x889
- 1654 0882 07       		.uleb128 0x7
- 1655 0883 B6000000 		.4byte	0xb6
- 1656 0887 3F       		.byte	0x3f
- 1657 0888 00       		.byte	0
- 1658 0889 11       		.uleb128 0x11
- 1659 088a 89030000 		.4byte	.LASF97
- 1660 088e 05       		.byte	0x5
- 1661 088f 90       		.byte	0x90
- 1662 0890 79080000 		.4byte	0x879
- 1663 0894 05       		.uleb128 0x5
- 1664 0895 03       		.byte	0x3
- 1665 0896 00000000 		.4byte	buffer_i2c
- 1666 089a 11       		.uleb128 0x11
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 35
+ 1610 0812 0C030000 		.4byte	.LASF93
+ 1611 0816 05       		.byte	0x5
+ 1612 0817 6C       		.byte	0x6c
+ 1613 0818 22080000 		.4byte	0x822
+ 1614 081c 05       		.uleb128 0x5
+ 1615 081d 03       		.byte	0x3
+ 1616 081e 00000000 		.4byte	lema1
+ 1617 0822 05       		.uleb128 0x5
+ 1618 0823 01080000 		.4byte	0x801
+ 1619 0827 11       		.uleb128 0x11
+ 1620 0828 12030000 		.4byte	.LASF94
+ 1621 082c 05       		.byte	0x5
+ 1622 082d 6D       		.byte	0x6d
+ 1623 082e 38080000 		.4byte	0x838
+ 1624 0832 05       		.uleb128 0x5
+ 1625 0833 03       		.byte	0x3
+ 1626 0834 00000000 		.4byte	lema2
+ 1627 0838 05       		.uleb128 0x5
+ 1628 0839 01080000 		.4byte	0x801
+ 1629 083d 11       		.uleb128 0x11
+ 1630 083e C7030000 		.4byte	.LASF95
+ 1631 0842 05       		.byte	0x5
+ 1632 0843 6E       		.byte	0x6e
+ 1633 0844 4E080000 		.4byte	0x84e
+ 1634 0848 05       		.uleb128 0x5
+ 1635 0849 03       		.byte	0x3
+ 1636 084a 00000000 		.4byte	id_logo
+ 1637 084e 05       		.uleb128 0x5
+ 1638 084f 0C040000 		.4byte	0x40c
+ 1639 0853 12       		.uleb128 0x12
+ 1640 0854 6B6D00   		.ascii	"km\000"
+ 1641 0857 05       		.byte	0x5
+ 1642 0858 6F       		.byte	0x6f
+ 1643 0859 63080000 		.4byte	0x863
+ 1644 085d 05       		.uleb128 0x5
+ 1645 085e 03       		.byte	0x3
+ 1646 085f 00000000 		.4byte	km
+ 1647 0863 05       		.uleb128 0x5
+ 1648 0864 0C040000 		.4byte	0x40c
+ 1649 0868 11       		.uleb128 0x11
+ 1650 0869 B0030000 		.4byte	.LASF96
+ 1651 086d 05       		.byte	0x5
+ 1652 086e 70       		.byte	0x70
+ 1653 086f 5C030000 		.4byte	0x35c
+ 1654 0873 05       		.uleb128 0x5
+ 1655 0874 03       		.byte	0x3
+ 1656 0875 00000000 		.4byte	fecha
+ 1657 0879 11       		.uleb128 0x11
+ 1658 087a 18030000 		.4byte	.LASF97
+ 1659 087e 05       		.byte	0x5
+ 1660 087f 71       		.byte	0x71
+ 1661 0880 0C040000 		.4byte	0x40c
+ 1662 0884 05       		.uleb128 0x5
+ 1663 0885 03       		.byte	0x3
+ 1664 0886 00000000 		.4byte	hora
+ 1665 088a 11       		.uleb128 0x11
+ 1666 088b 80030000 		.4byte	.LASF98
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 35
 
 
- 1667 089b D6030000 		.4byte	.LASF98
- 1668 089f 05       		.byte	0x5
- 1669 08a0 95       		.byte	0x95
- 1670 08a1 81000000 		.4byte	0x81
- 1671 08a5 05       		.uleb128 0x5
- 1672 08a6 03       		.byte	0x3
- 1673 08a7 00000000 		.4byte	crc_total
- 1674 08ab 11       		.uleb128 0x11
- 1675 08ac 0F010000 		.4byte	.LASF99
- 1676 08b0 05       		.byte	0x5
- 1677 08b1 99       		.byte	0x99
- 1678 08b2 0C040000 		.4byte	0x40c
- 1679 08b6 05       		.uleb128 0x5
- 1680 08b7 03       		.byte	0x3
- 1681 08b8 00000000 		.4byte	print1
- 1682 08bc 11       		.uleb128 0x11
- 1683 08bd 16010000 		.4byte	.LASF100
- 1684 08c1 05       		.byte	0x5
- 1685 08c2 9A       		.byte	0x9a
- 1686 08c3 0C040000 		.4byte	0x40c
- 1687 08c7 05       		.uleb128 0x5
- 1688 08c8 03       		.byte	0x3
- 1689 08c9 00000000 		.4byte	print2
- 1690 08cd 11       		.uleb128 0x11
- 1691 08ce 3A040000 		.4byte	.LASF32
- 1692 08d2 05       		.byte	0x5
- 1693 08d3 9F       		.byte	0x9f
- 1694 08d4 81000000 		.4byte	0x81
- 1695 08d8 05       		.uleb128 0x5
- 1696 08d9 03       		.byte	0x3
- 1697 08da 00000000 		.4byte	tipo_venta
- 1698 08de 00       		.byte	0
- 1699              		.section	.debug_abbrev,"",%progbits
- 1700              	.Ldebug_abbrev0:
- 1701 0000 01       		.uleb128 0x1
- 1702 0001 11       		.uleb128 0x11
- 1703 0002 01       		.byte	0x1
- 1704 0003 25       		.uleb128 0x25
- 1705 0004 0E       		.uleb128 0xe
- 1706 0005 13       		.uleb128 0x13
- 1707 0006 0B       		.uleb128 0xb
- 1708 0007 03       		.uleb128 0x3
- 1709 0008 0E       		.uleb128 0xe
- 1710 0009 1B       		.uleb128 0x1b
- 1711 000a 0E       		.uleb128 0xe
- 1712 000b 55       		.uleb128 0x55
- 1713 000c 17       		.uleb128 0x17
- 1714 000d 11       		.uleb128 0x11
- 1715 000e 01       		.uleb128 0x1
- 1716 000f 10       		.uleb128 0x10
- 1717 0010 17       		.uleb128 0x17
- 1718 0011 00       		.byte	0
- 1719 0012 00       		.byte	0
- 1720 0013 02       		.uleb128 0x2
- 1721 0014 24       		.uleb128 0x24
- 1722 0015 00       		.byte	0
- 1723 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 36
+ 1667 088f 05       		.byte	0x5
+ 1668 0890 87       		.byte	0x87
+ 1669 0891 73010000 		.4byte	0x173
+ 1670 0895 05       		.uleb128 0x5
+ 1671 0896 03       		.byte	0x3
+ 1672 0897 00000000 		.4byte	rventa1
+ 1673 089b 11       		.uleb128 0x11
+ 1674 089c 88030000 		.4byte	.LASF99
+ 1675 08a0 05       		.byte	0x5
+ 1676 08a1 88       		.byte	0x88
+ 1677 08a2 73010000 		.4byte	0x173
+ 1678 08a6 05       		.uleb128 0x5
+ 1679 08a7 03       		.byte	0x3
+ 1680 08a8 00000000 		.4byte	rventa2
+ 1681 08ac 11       		.uleb128 0x11
+ 1682 08ad 67040000 		.4byte	.LASF100
+ 1683 08b1 05       		.byte	0x5
+ 1684 08b2 8D       		.byte	0x8d
+ 1685 08b3 81000000 		.4byte	0x81
+ 1686 08b7 05       		.uleb128 0x5
+ 1687 08b8 03       		.byte	0x3
+ 1688 08b9 00000000 		.4byte	ok_RF
+ 1689 08bd 11       		.uleb128 0x11
+ 1690 08be D3020000 		.4byte	.LASF101
+ 1691 08c2 05       		.byte	0x5
+ 1692 08c3 8E       		.byte	0x8e
+ 1693 08c4 81000000 		.4byte	0x81
+ 1694 08c8 05       		.uleb128 0x5
+ 1695 08c9 03       		.byte	0x3
+ 1696 08ca 00000000 		.4byte	ok_datosRF
+ 1697 08ce 11       		.uleb128 0x11
+ 1698 08cf 54040000 		.4byte	.LASF102
+ 1699 08d3 05       		.byte	0x5
+ 1700 08d4 8F       		.byte	0x8f
+ 1701 08d5 B8060000 		.4byte	0x6b8
+ 1702 08d9 05       		.uleb128 0x5
+ 1703 08da 03       		.byte	0x3
+ 1704 08db 00000000 		.4byte	rf_mod
+ 1705 08df 06       		.uleb128 0x6
+ 1706 08e0 81000000 		.4byte	0x81
+ 1707 08e4 EF080000 		.4byte	0x8ef
+ 1708 08e8 07       		.uleb128 0x7
+ 1709 08e9 B6000000 		.4byte	0xb6
+ 1710 08ed 3F       		.byte	0x3f
+ 1711 08ee 00       		.byte	0
+ 1712 08ef 11       		.uleb128 0x11
+ 1713 08f0 BC030000 		.4byte	.LASF103
+ 1714 08f4 05       		.byte	0x5
+ 1715 08f5 94       		.byte	0x94
+ 1716 08f6 DF080000 		.4byte	0x8df
+ 1717 08fa 05       		.uleb128 0x5
+ 1718 08fb 03       		.byte	0x3
+ 1719 08fc 00000000 		.4byte	buffer_i2c
+ 1720 0900 11       		.uleb128 0x11
+ 1721 0901 09040000 		.4byte	.LASF104
+ 1722 0905 05       		.byte	0x5
+ 1723 0906 99       		.byte	0x99
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 36
 
 
- 1724 0017 0B       		.uleb128 0xb
- 1725 0018 3E       		.uleb128 0x3e
- 1726 0019 0B       		.uleb128 0xb
- 1727 001a 03       		.uleb128 0x3
- 1728 001b 0E       		.uleb128 0xe
- 1729 001c 00       		.byte	0
- 1730 001d 00       		.byte	0
- 1731 001e 03       		.uleb128 0x3
- 1732 001f 16       		.uleb128 0x16
- 1733 0020 00       		.byte	0
- 1734 0021 03       		.uleb128 0x3
- 1735 0022 0E       		.uleb128 0xe
- 1736 0023 3A       		.uleb128 0x3a
- 1737 0024 0B       		.uleb128 0xb
- 1738 0025 3B       		.uleb128 0x3b
- 1739 0026 0B       		.uleb128 0xb
- 1740 0027 49       		.uleb128 0x49
- 1741 0028 13       		.uleb128 0x13
- 1742 0029 00       		.byte	0
- 1743 002a 00       		.byte	0
- 1744 002b 04       		.uleb128 0x4
- 1745 002c 24       		.uleb128 0x24
- 1746 002d 00       		.byte	0
- 1747 002e 0B       		.uleb128 0xb
- 1748 002f 0B       		.uleb128 0xb
- 1749 0030 3E       		.uleb128 0x3e
- 1750 0031 0B       		.uleb128 0xb
- 1751 0032 03       		.uleb128 0x3
- 1752 0033 08       		.uleb128 0x8
- 1753 0034 00       		.byte	0
- 1754 0035 00       		.byte	0
- 1755 0036 05       		.uleb128 0x5
- 1756 0037 35       		.uleb128 0x35
- 1757 0038 00       		.byte	0
- 1758 0039 49       		.uleb128 0x49
- 1759 003a 13       		.uleb128 0x13
- 1760 003b 00       		.byte	0
- 1761 003c 00       		.byte	0
- 1762 003d 06       		.uleb128 0x6
- 1763 003e 01       		.uleb128 0x1
- 1764 003f 01       		.byte	0x1
- 1765 0040 49       		.uleb128 0x49
- 1766 0041 13       		.uleb128 0x13
- 1767 0042 01       		.uleb128 0x1
- 1768 0043 13       		.uleb128 0x13
- 1769 0044 00       		.byte	0
- 1770 0045 00       		.byte	0
- 1771 0046 07       		.uleb128 0x7
- 1772 0047 21       		.uleb128 0x21
- 1773 0048 00       		.byte	0
- 1774 0049 49       		.uleb128 0x49
- 1775 004a 13       		.uleb128 0x13
- 1776 004b 2F       		.uleb128 0x2f
- 1777 004c 0B       		.uleb128 0xb
- 1778 004d 00       		.byte	0
- 1779 004e 00       		.byte	0
- 1780 004f 08       		.uleb128 0x8
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 37
+ 1724 0907 81000000 		.4byte	0x81
+ 1725 090b 05       		.uleb128 0x5
+ 1726 090c 03       		.byte	0x3
+ 1727 090d 00000000 		.4byte	crc_total
+ 1728 0911 11       		.uleb128 0x11
+ 1729 0912 0F010000 		.4byte	.LASF105
+ 1730 0916 05       		.byte	0x5
+ 1731 0917 9D       		.byte	0x9d
+ 1732 0918 0C040000 		.4byte	0x40c
+ 1733 091c 05       		.uleb128 0x5
+ 1734 091d 03       		.byte	0x3
+ 1735 091e 00000000 		.4byte	print1
+ 1736 0922 11       		.uleb128 0x11
+ 1737 0923 16010000 		.4byte	.LASF106
+ 1738 0927 05       		.byte	0x5
+ 1739 0928 9E       		.byte	0x9e
+ 1740 0929 0C040000 		.4byte	0x40c
+ 1741 092d 05       		.uleb128 0x5
+ 1742 092e 03       		.byte	0x3
+ 1743 092f 00000000 		.4byte	print2
+ 1744 0933 11       		.uleb128 0x11
+ 1745 0934 6D040000 		.4byte	.LASF32
+ 1746 0938 05       		.byte	0x5
+ 1747 0939 A3       		.byte	0xa3
+ 1748 093a 81000000 		.4byte	0x81
+ 1749 093e 05       		.uleb128 0x5
+ 1750 093f 03       		.byte	0x3
+ 1751 0940 00000000 		.4byte	tipo_venta
+ 1752 0944 00       		.byte	0
+ 1753              		.section	.debug_abbrev,"",%progbits
+ 1754              	.Ldebug_abbrev0:
+ 1755 0000 01       		.uleb128 0x1
+ 1756 0001 11       		.uleb128 0x11
+ 1757 0002 01       		.byte	0x1
+ 1758 0003 25       		.uleb128 0x25
+ 1759 0004 0E       		.uleb128 0xe
+ 1760 0005 13       		.uleb128 0x13
+ 1761 0006 0B       		.uleb128 0xb
+ 1762 0007 03       		.uleb128 0x3
+ 1763 0008 0E       		.uleb128 0xe
+ 1764 0009 1B       		.uleb128 0x1b
+ 1765 000a 0E       		.uleb128 0xe
+ 1766 000b 55       		.uleb128 0x55
+ 1767 000c 17       		.uleb128 0x17
+ 1768 000d 11       		.uleb128 0x11
+ 1769 000e 01       		.uleb128 0x1
+ 1770 000f 10       		.uleb128 0x10
+ 1771 0010 17       		.uleb128 0x17
+ 1772 0011 00       		.byte	0
+ 1773 0012 00       		.byte	0
+ 1774 0013 02       		.uleb128 0x2
+ 1775 0014 24       		.uleb128 0x24
+ 1776 0015 00       		.byte	0
+ 1777 0016 0B       		.uleb128 0xb
+ 1778 0017 0B       		.uleb128 0xb
+ 1779 0018 3E       		.uleb128 0x3e
+ 1780 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 37
 
 
- 1781 0050 13       		.uleb128 0x13
- 1782 0051 01       		.byte	0x1
- 1783 0052 03       		.uleb128 0x3
- 1784 0053 0E       		.uleb128 0xe
- 1785 0054 0B       		.uleb128 0xb
- 1786 0055 0B       		.uleb128 0xb
- 1787 0056 3A       		.uleb128 0x3a
- 1788 0057 0B       		.uleb128 0xb
- 1789 0058 3B       		.uleb128 0x3b
- 1790 0059 0B       		.uleb128 0xb
- 1791 005a 01       		.uleb128 0x1
- 1792 005b 13       		.uleb128 0x13
- 1793 005c 00       		.byte	0
- 1794 005d 00       		.byte	0
- 1795 005e 09       		.uleb128 0x9
- 1796 005f 0D       		.uleb128 0xd
- 1797 0060 00       		.byte	0
- 1798 0061 03       		.uleb128 0x3
- 1799 0062 08       		.uleb128 0x8
- 1800 0063 3A       		.uleb128 0x3a
- 1801 0064 0B       		.uleb128 0xb
- 1802 0065 3B       		.uleb128 0x3b
- 1803 0066 0B       		.uleb128 0xb
- 1804 0067 49       		.uleb128 0x49
- 1805 0068 13       		.uleb128 0x13
- 1806 0069 38       		.uleb128 0x38
- 1807 006a 0B       		.uleb128 0xb
- 1808 006b 00       		.byte	0
- 1809 006c 00       		.byte	0
- 1810 006d 0A       		.uleb128 0xa
- 1811 006e 0D       		.uleb128 0xd
- 1812 006f 00       		.byte	0
- 1813 0070 03       		.uleb128 0x3
- 1814 0071 0E       		.uleb128 0xe
- 1815 0072 3A       		.uleb128 0x3a
- 1816 0073 0B       		.uleb128 0xb
- 1817 0074 3B       		.uleb128 0x3b
- 1818 0075 0B       		.uleb128 0xb
- 1819 0076 49       		.uleb128 0x49
- 1820 0077 13       		.uleb128 0x13
- 1821 0078 38       		.uleb128 0x38
- 1822 0079 0B       		.uleb128 0xb
- 1823 007a 00       		.byte	0
- 1824 007b 00       		.byte	0
- 1825 007c 0B       		.uleb128 0xb
- 1826 007d 2E       		.uleb128 0x2e
- 1827 007e 01       		.byte	0x1
- 1828 007f 3F       		.uleb128 0x3f
- 1829 0080 19       		.uleb128 0x19
- 1830 0081 03       		.uleb128 0x3
- 1831 0082 0E       		.uleb128 0xe
- 1832 0083 3A       		.uleb128 0x3a
- 1833 0084 0B       		.uleb128 0xb
- 1834 0085 3B       		.uleb128 0x3b
- 1835 0086 0B       		.uleb128 0xb
- 1836 0087 49       		.uleb128 0x49
- 1837 0088 13       		.uleb128 0x13
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 38
+ 1781 001a 03       		.uleb128 0x3
+ 1782 001b 0E       		.uleb128 0xe
+ 1783 001c 00       		.byte	0
+ 1784 001d 00       		.byte	0
+ 1785 001e 03       		.uleb128 0x3
+ 1786 001f 16       		.uleb128 0x16
+ 1787 0020 00       		.byte	0
+ 1788 0021 03       		.uleb128 0x3
+ 1789 0022 0E       		.uleb128 0xe
+ 1790 0023 3A       		.uleb128 0x3a
+ 1791 0024 0B       		.uleb128 0xb
+ 1792 0025 3B       		.uleb128 0x3b
+ 1793 0026 0B       		.uleb128 0xb
+ 1794 0027 49       		.uleb128 0x49
+ 1795 0028 13       		.uleb128 0x13
+ 1796 0029 00       		.byte	0
+ 1797 002a 00       		.byte	0
+ 1798 002b 04       		.uleb128 0x4
+ 1799 002c 24       		.uleb128 0x24
+ 1800 002d 00       		.byte	0
+ 1801 002e 0B       		.uleb128 0xb
+ 1802 002f 0B       		.uleb128 0xb
+ 1803 0030 3E       		.uleb128 0x3e
+ 1804 0031 0B       		.uleb128 0xb
+ 1805 0032 03       		.uleb128 0x3
+ 1806 0033 08       		.uleb128 0x8
+ 1807 0034 00       		.byte	0
+ 1808 0035 00       		.byte	0
+ 1809 0036 05       		.uleb128 0x5
+ 1810 0037 35       		.uleb128 0x35
+ 1811 0038 00       		.byte	0
+ 1812 0039 49       		.uleb128 0x49
+ 1813 003a 13       		.uleb128 0x13
+ 1814 003b 00       		.byte	0
+ 1815 003c 00       		.byte	0
+ 1816 003d 06       		.uleb128 0x6
+ 1817 003e 01       		.uleb128 0x1
+ 1818 003f 01       		.byte	0x1
+ 1819 0040 49       		.uleb128 0x49
+ 1820 0041 13       		.uleb128 0x13
+ 1821 0042 01       		.uleb128 0x1
+ 1822 0043 13       		.uleb128 0x13
+ 1823 0044 00       		.byte	0
+ 1824 0045 00       		.byte	0
+ 1825 0046 07       		.uleb128 0x7
+ 1826 0047 21       		.uleb128 0x21
+ 1827 0048 00       		.byte	0
+ 1828 0049 49       		.uleb128 0x49
+ 1829 004a 13       		.uleb128 0x13
+ 1830 004b 2F       		.uleb128 0x2f
+ 1831 004c 0B       		.uleb128 0xb
+ 1832 004d 00       		.byte	0
+ 1833 004e 00       		.byte	0
+ 1834 004f 08       		.uleb128 0x8
+ 1835 0050 13       		.uleb128 0x13
+ 1836 0051 01       		.byte	0x1
+ 1837 0052 03       		.uleb128 0x3
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 38
 
 
- 1838 0089 11       		.uleb128 0x11
- 1839 008a 01       		.uleb128 0x1
- 1840 008b 12       		.uleb128 0x12
- 1841 008c 06       		.uleb128 0x6
- 1842 008d 40       		.uleb128 0x40
- 1843 008e 18       		.uleb128 0x18
- 1844 008f 9642     		.uleb128 0x2116
- 1845 0091 19       		.uleb128 0x19
- 1846 0092 01       		.uleb128 0x1
- 1847 0093 13       		.uleb128 0x13
- 1848 0094 00       		.byte	0
- 1849 0095 00       		.byte	0
- 1850 0096 0C       		.uleb128 0xc
- 1851 0097 34       		.uleb128 0x34
- 1852 0098 00       		.byte	0
- 1853 0099 03       		.uleb128 0x3
- 1854 009a 0E       		.uleb128 0xe
- 1855 009b 3A       		.uleb128 0x3a
- 1856 009c 0B       		.uleb128 0xb
- 1857 009d 3B       		.uleb128 0x3b
- 1858 009e 0B       		.uleb128 0xb
- 1859 009f 49       		.uleb128 0x49
- 1860 00a0 13       		.uleb128 0x13
- 1861 00a1 02       		.uleb128 0x2
- 1862 00a2 18       		.uleb128 0x18
- 1863 00a3 00       		.byte	0
- 1864 00a4 00       		.byte	0
- 1865 00a5 0D       		.uleb128 0xd
- 1866 00a6 34       		.uleb128 0x34
- 1867 00a7 00       		.byte	0
- 1868 00a8 03       		.uleb128 0x3
- 1869 00a9 08       		.uleb128 0x8
- 1870 00aa 3A       		.uleb128 0x3a
- 1871 00ab 0B       		.uleb128 0xb
- 1872 00ac 3B       		.uleb128 0x3b
- 1873 00ad 0B       		.uleb128 0xb
- 1874 00ae 49       		.uleb128 0x49
- 1875 00af 13       		.uleb128 0x13
- 1876 00b0 02       		.uleb128 0x2
- 1877 00b1 18       		.uleb128 0x18
- 1878 00b2 00       		.byte	0
- 1879 00b3 00       		.byte	0
- 1880 00b4 0E       		.uleb128 0xe
- 1881 00b5 2E       		.uleb128 0x2e
- 1882 00b6 01       		.byte	0x1
- 1883 00b7 3F       		.uleb128 0x3f
- 1884 00b8 19       		.uleb128 0x19
- 1885 00b9 03       		.uleb128 0x3
- 1886 00ba 0E       		.uleb128 0xe
- 1887 00bb 3A       		.uleb128 0x3a
- 1888 00bc 0B       		.uleb128 0xb
- 1889 00bd 3B       		.uleb128 0x3b
- 1890 00be 0B       		.uleb128 0xb
- 1891 00bf 27       		.uleb128 0x27
- 1892 00c0 19       		.uleb128 0x19
- 1893 00c1 49       		.uleb128 0x49
- 1894 00c2 13       		.uleb128 0x13
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 39
+ 1838 0053 0E       		.uleb128 0xe
+ 1839 0054 0B       		.uleb128 0xb
+ 1840 0055 0B       		.uleb128 0xb
+ 1841 0056 3A       		.uleb128 0x3a
+ 1842 0057 0B       		.uleb128 0xb
+ 1843 0058 3B       		.uleb128 0x3b
+ 1844 0059 0B       		.uleb128 0xb
+ 1845 005a 01       		.uleb128 0x1
+ 1846 005b 13       		.uleb128 0x13
+ 1847 005c 00       		.byte	0
+ 1848 005d 00       		.byte	0
+ 1849 005e 09       		.uleb128 0x9
+ 1850 005f 0D       		.uleb128 0xd
+ 1851 0060 00       		.byte	0
+ 1852 0061 03       		.uleb128 0x3
+ 1853 0062 08       		.uleb128 0x8
+ 1854 0063 3A       		.uleb128 0x3a
+ 1855 0064 0B       		.uleb128 0xb
+ 1856 0065 3B       		.uleb128 0x3b
+ 1857 0066 0B       		.uleb128 0xb
+ 1858 0067 49       		.uleb128 0x49
+ 1859 0068 13       		.uleb128 0x13
+ 1860 0069 38       		.uleb128 0x38
+ 1861 006a 0B       		.uleb128 0xb
+ 1862 006b 00       		.byte	0
+ 1863 006c 00       		.byte	0
+ 1864 006d 0A       		.uleb128 0xa
+ 1865 006e 0D       		.uleb128 0xd
+ 1866 006f 00       		.byte	0
+ 1867 0070 03       		.uleb128 0x3
+ 1868 0071 0E       		.uleb128 0xe
+ 1869 0072 3A       		.uleb128 0x3a
+ 1870 0073 0B       		.uleb128 0xb
+ 1871 0074 3B       		.uleb128 0x3b
+ 1872 0075 0B       		.uleb128 0xb
+ 1873 0076 49       		.uleb128 0x49
+ 1874 0077 13       		.uleb128 0x13
+ 1875 0078 38       		.uleb128 0x38
+ 1876 0079 0B       		.uleb128 0xb
+ 1877 007a 00       		.byte	0
+ 1878 007b 00       		.byte	0
+ 1879 007c 0B       		.uleb128 0xb
+ 1880 007d 2E       		.uleb128 0x2e
+ 1881 007e 01       		.byte	0x1
+ 1882 007f 3F       		.uleb128 0x3f
+ 1883 0080 19       		.uleb128 0x19
+ 1884 0081 03       		.uleb128 0x3
+ 1885 0082 0E       		.uleb128 0xe
+ 1886 0083 3A       		.uleb128 0x3a
+ 1887 0084 0B       		.uleb128 0xb
+ 1888 0085 3B       		.uleb128 0x3b
+ 1889 0086 0B       		.uleb128 0xb
+ 1890 0087 49       		.uleb128 0x49
+ 1891 0088 13       		.uleb128 0x13
+ 1892 0089 11       		.uleb128 0x11
+ 1893 008a 01       		.uleb128 0x1
+ 1894 008b 12       		.uleb128 0x12
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 39
 
 
- 1895 00c3 11       		.uleb128 0x11
- 1896 00c4 01       		.uleb128 0x1
- 1897 00c5 12       		.uleb128 0x12
- 1898 00c6 06       		.uleb128 0x6
- 1899 00c7 40       		.uleb128 0x40
- 1900 00c8 18       		.uleb128 0x18
- 1901 00c9 9642     		.uleb128 0x2116
- 1902 00cb 19       		.uleb128 0x19
- 1903 00cc 01       		.uleb128 0x1
- 1904 00cd 13       		.uleb128 0x13
- 1905 00ce 00       		.byte	0
- 1906 00cf 00       		.byte	0
- 1907 00d0 0F       		.uleb128 0xf
- 1908 00d1 05       		.uleb128 0x5
- 1909 00d2 00       		.byte	0
- 1910 00d3 03       		.uleb128 0x3
- 1911 00d4 0E       		.uleb128 0xe
- 1912 00d5 3A       		.uleb128 0x3a
- 1913 00d6 0B       		.uleb128 0xb
- 1914 00d7 3B       		.uleb128 0x3b
- 1915 00d8 0B       		.uleb128 0xb
- 1916 00d9 49       		.uleb128 0x49
- 1917 00da 13       		.uleb128 0x13
- 1918 00db 02       		.uleb128 0x2
- 1919 00dc 18       		.uleb128 0x18
- 1920 00dd 00       		.byte	0
- 1921 00de 00       		.byte	0
- 1922 00df 10       		.uleb128 0x10
- 1923 00e0 34       		.uleb128 0x34
- 1924 00e1 00       		.byte	0
- 1925 00e2 03       		.uleb128 0x3
- 1926 00e3 0E       		.uleb128 0xe
- 1927 00e4 3A       		.uleb128 0x3a
- 1928 00e5 0B       		.uleb128 0xb
- 1929 00e6 3B       		.uleb128 0x3b
- 1930 00e7 05       		.uleb128 0x5
- 1931 00e8 49       		.uleb128 0x49
- 1932 00e9 13       		.uleb128 0x13
- 1933 00ea 3F       		.uleb128 0x3f
- 1934 00eb 19       		.uleb128 0x19
- 1935 00ec 3C       		.uleb128 0x3c
- 1936 00ed 19       		.uleb128 0x19
- 1937 00ee 00       		.byte	0
- 1938 00ef 00       		.byte	0
- 1939 00f0 11       		.uleb128 0x11
- 1940 00f1 34       		.uleb128 0x34
- 1941 00f2 00       		.byte	0
- 1942 00f3 03       		.uleb128 0x3
- 1943 00f4 0E       		.uleb128 0xe
- 1944 00f5 3A       		.uleb128 0x3a
- 1945 00f6 0B       		.uleb128 0xb
- 1946 00f7 3B       		.uleb128 0x3b
- 1947 00f8 0B       		.uleb128 0xb
- 1948 00f9 49       		.uleb128 0x49
- 1949 00fa 13       		.uleb128 0x13
- 1950 00fb 3F       		.uleb128 0x3f
- 1951 00fc 19       		.uleb128 0x19
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 40
+ 1895 008c 06       		.uleb128 0x6
+ 1896 008d 40       		.uleb128 0x40
+ 1897 008e 18       		.uleb128 0x18
+ 1898 008f 9642     		.uleb128 0x2116
+ 1899 0091 19       		.uleb128 0x19
+ 1900 0092 01       		.uleb128 0x1
+ 1901 0093 13       		.uleb128 0x13
+ 1902 0094 00       		.byte	0
+ 1903 0095 00       		.byte	0
+ 1904 0096 0C       		.uleb128 0xc
+ 1905 0097 34       		.uleb128 0x34
+ 1906 0098 00       		.byte	0
+ 1907 0099 03       		.uleb128 0x3
+ 1908 009a 0E       		.uleb128 0xe
+ 1909 009b 3A       		.uleb128 0x3a
+ 1910 009c 0B       		.uleb128 0xb
+ 1911 009d 3B       		.uleb128 0x3b
+ 1912 009e 0B       		.uleb128 0xb
+ 1913 009f 49       		.uleb128 0x49
+ 1914 00a0 13       		.uleb128 0x13
+ 1915 00a1 02       		.uleb128 0x2
+ 1916 00a2 18       		.uleb128 0x18
+ 1917 00a3 00       		.byte	0
+ 1918 00a4 00       		.byte	0
+ 1919 00a5 0D       		.uleb128 0xd
+ 1920 00a6 34       		.uleb128 0x34
+ 1921 00a7 00       		.byte	0
+ 1922 00a8 03       		.uleb128 0x3
+ 1923 00a9 08       		.uleb128 0x8
+ 1924 00aa 3A       		.uleb128 0x3a
+ 1925 00ab 0B       		.uleb128 0xb
+ 1926 00ac 3B       		.uleb128 0x3b
+ 1927 00ad 0B       		.uleb128 0xb
+ 1928 00ae 49       		.uleb128 0x49
+ 1929 00af 13       		.uleb128 0x13
+ 1930 00b0 02       		.uleb128 0x2
+ 1931 00b1 18       		.uleb128 0x18
+ 1932 00b2 00       		.byte	0
+ 1933 00b3 00       		.byte	0
+ 1934 00b4 0E       		.uleb128 0xe
+ 1935 00b5 2E       		.uleb128 0x2e
+ 1936 00b6 01       		.byte	0x1
+ 1937 00b7 3F       		.uleb128 0x3f
+ 1938 00b8 19       		.uleb128 0x19
+ 1939 00b9 03       		.uleb128 0x3
+ 1940 00ba 0E       		.uleb128 0xe
+ 1941 00bb 3A       		.uleb128 0x3a
+ 1942 00bc 0B       		.uleb128 0xb
+ 1943 00bd 3B       		.uleb128 0x3b
+ 1944 00be 0B       		.uleb128 0xb
+ 1945 00bf 27       		.uleb128 0x27
+ 1946 00c0 19       		.uleb128 0x19
+ 1947 00c1 49       		.uleb128 0x49
+ 1948 00c2 13       		.uleb128 0x13
+ 1949 00c3 11       		.uleb128 0x11
+ 1950 00c4 01       		.uleb128 0x1
+ 1951 00c5 12       		.uleb128 0x12
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 40
 
 
- 1952 00fd 02       		.uleb128 0x2
- 1953 00fe 18       		.uleb128 0x18
- 1954 00ff 00       		.byte	0
- 1955 0100 00       		.byte	0
- 1956 0101 12       		.uleb128 0x12
- 1957 0102 34       		.uleb128 0x34
- 1958 0103 00       		.byte	0
- 1959 0104 03       		.uleb128 0x3
- 1960 0105 08       		.uleb128 0x8
- 1961 0106 3A       		.uleb128 0x3a
- 1962 0107 0B       		.uleb128 0xb
- 1963 0108 3B       		.uleb128 0x3b
- 1964 0109 0B       		.uleb128 0xb
- 1965 010a 49       		.uleb128 0x49
- 1966 010b 13       		.uleb128 0x13
- 1967 010c 3F       		.uleb128 0x3f
- 1968 010d 19       		.uleb128 0x19
- 1969 010e 02       		.uleb128 0x2
- 1970 010f 18       		.uleb128 0x18
- 1971 0110 00       		.byte	0
- 1972 0111 00       		.byte	0
- 1973 0112 00       		.byte	0
- 1974              		.section	.debug_aranges,"",%progbits
- 1975 0000 3C000000 		.4byte	0x3c
- 1976 0004 0200     		.2byte	0x2
- 1977 0006 00000000 		.4byte	.Ldebug_info0
- 1978 000a 04       		.byte	0x4
- 1979 000b 00       		.byte	0
- 1980 000c 0000     		.2byte	0
- 1981 000e 0000     		.2byte	0
- 1982 0010 00000000 		.4byte	.LFB63
- 1983 0014 90000000 		.4byte	.LFE63-.LFB63
- 1984 0018 00000000 		.4byte	.LFB64
- 1985 001c 90000000 		.4byte	.LFE64-.LFB64
- 1986 0020 00000000 		.4byte	.LFB65
- 1987 0024 78000000 		.4byte	.LFE65-.LFB65
- 1988 0028 00000000 		.4byte	.LFB66
- 1989 002c 7C000000 		.4byte	.LFE66-.LFB66
- 1990 0030 00000000 		.4byte	.LFB67
- 1991 0034 74000000 		.4byte	.LFE67-.LFB67
- 1992 0038 00000000 		.4byte	0
- 1993 003c 00000000 		.4byte	0
- 1994              		.section	.debug_ranges,"",%progbits
- 1995              	.Ldebug_ranges0:
- 1996 0000 00000000 		.4byte	.LFB63
- 1997 0004 90000000 		.4byte	.LFE63
- 1998 0008 00000000 		.4byte	.LFB64
- 1999 000c 90000000 		.4byte	.LFE64
- 2000 0010 00000000 		.4byte	.LFB65
- 2001 0014 78000000 		.4byte	.LFE65
- 2002 0018 00000000 		.4byte	.LFB66
- 2003 001c 7C000000 		.4byte	.LFE66
- 2004 0020 00000000 		.4byte	.LFB67
- 2005 0024 74000000 		.4byte	.LFE67
- 2006 0028 00000000 		.4byte	0
- 2007 002c 00000000 		.4byte	0
- 2008              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 41
+ 1952 00c6 06       		.uleb128 0x6
+ 1953 00c7 40       		.uleb128 0x40
+ 1954 00c8 18       		.uleb128 0x18
+ 1955 00c9 9642     		.uleb128 0x2116
+ 1956 00cb 19       		.uleb128 0x19
+ 1957 00cc 01       		.uleb128 0x1
+ 1958 00cd 13       		.uleb128 0x13
+ 1959 00ce 00       		.byte	0
+ 1960 00cf 00       		.byte	0
+ 1961 00d0 0F       		.uleb128 0xf
+ 1962 00d1 05       		.uleb128 0x5
+ 1963 00d2 00       		.byte	0
+ 1964 00d3 03       		.uleb128 0x3
+ 1965 00d4 0E       		.uleb128 0xe
+ 1966 00d5 3A       		.uleb128 0x3a
+ 1967 00d6 0B       		.uleb128 0xb
+ 1968 00d7 3B       		.uleb128 0x3b
+ 1969 00d8 0B       		.uleb128 0xb
+ 1970 00d9 49       		.uleb128 0x49
+ 1971 00da 13       		.uleb128 0x13
+ 1972 00db 02       		.uleb128 0x2
+ 1973 00dc 18       		.uleb128 0x18
+ 1974 00dd 00       		.byte	0
+ 1975 00de 00       		.byte	0
+ 1976 00df 10       		.uleb128 0x10
+ 1977 00e0 34       		.uleb128 0x34
+ 1978 00e1 00       		.byte	0
+ 1979 00e2 03       		.uleb128 0x3
+ 1980 00e3 0E       		.uleb128 0xe
+ 1981 00e4 3A       		.uleb128 0x3a
+ 1982 00e5 0B       		.uleb128 0xb
+ 1983 00e6 3B       		.uleb128 0x3b
+ 1984 00e7 05       		.uleb128 0x5
+ 1985 00e8 49       		.uleb128 0x49
+ 1986 00e9 13       		.uleb128 0x13
+ 1987 00ea 3F       		.uleb128 0x3f
+ 1988 00eb 19       		.uleb128 0x19
+ 1989 00ec 3C       		.uleb128 0x3c
+ 1990 00ed 19       		.uleb128 0x19
+ 1991 00ee 00       		.byte	0
+ 1992 00ef 00       		.byte	0
+ 1993 00f0 11       		.uleb128 0x11
+ 1994 00f1 34       		.uleb128 0x34
+ 1995 00f2 00       		.byte	0
+ 1996 00f3 03       		.uleb128 0x3
+ 1997 00f4 0E       		.uleb128 0xe
+ 1998 00f5 3A       		.uleb128 0x3a
+ 1999 00f6 0B       		.uleb128 0xb
+ 2000 00f7 3B       		.uleb128 0x3b
+ 2001 00f8 0B       		.uleb128 0xb
+ 2002 00f9 49       		.uleb128 0x49
+ 2003 00fa 13       		.uleb128 0x13
+ 2004 00fb 3F       		.uleb128 0x3f
+ 2005 00fc 19       		.uleb128 0x19
+ 2006 00fd 02       		.uleb128 0x2
+ 2007 00fe 18       		.uleb128 0x18
+ 2008 00ff 00       		.byte	0
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 41
 
 
- 2009              	.Ldebug_line0:
- 2010 0000 51020000 		.section	.debug_str,"MS",%progbits,1
- 2010      02005A01 
- 2010      00000201 
- 2010      FB0E0D00 
- 2010      01010101 
- 2011              	.LASF102:
- 2012 0000 2E5C4932 		.ascii	".\\I2C.c\000"
- 2012      432E6300 
- 2013              	.LASF56:
- 2014 0008 706F7378 		.ascii	"posx1\000"
- 2014      3100
- 2015              	.LASF59:
- 2016 000e 706F7378 		.ascii	"posx2\000"
- 2016      3200
- 2017              	.LASF78:
- 2018 0014 6E6F6D62 		.ascii	"nombre_pro1\000"
- 2018      72655F70 
- 2018      726F3100 
- 2019              	.LASF53:
- 2020 0020 636F756E 		.ascii	"count_teclas2\000"
- 2020      745F7465 
- 2020      636C6173 
- 2020      3200
- 2021              	.LASF80:
- 2022 002e 6E6F6D62 		.ascii	"nombre_pro3\000"
- 2022      72655F70 
- 2022      726F3300 
- 2023              	.LASF81:
- 2024 003a 76657273 		.ascii	"version\000"
- 2024      696F6E00 
- 2025              	.LASF74:
- 2026 0042 69645F65 		.ascii	"id_estacion\000"
- 2026      73746163 
- 2026      696F6E00 
- 2027              	.LASF75:
- 2028 004e 69645F76 		.ascii	"id_venta\000"
- 2028      656E7461 
- 2028      00
- 2029              	.LASF37:
- 2030 0057 70617373 		.ascii	"password_local\000"
- 2030      776F7264 
- 2030      5F6C6F63 
- 2030      616C00
- 2031              	.LASF103:
- 2032 0066 433A5C55 		.ascii	"C:\\Users\\diego\\Documents\\GitHub\\Prueba_GRPFlee"
- 2032      73657273 
- 2032      5C646965 
- 2032      676F5C44 
- 2032      6F63756D 
- 2033 0094 745C4242 		.ascii	"t\\BBB.cydsn\000"
- 2033      422E6379 
- 2033      64736E00 
- 2034              	.LASF73:
- 2035 00a0 626C6F71 		.ascii	"bloqueo_LCD\000"
- 2035      75656F5F 
- 2035      4C434400 
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 42
+ 2009 0100 00       		.byte	0
+ 2010 0101 12       		.uleb128 0x12
+ 2011 0102 34       		.uleb128 0x34
+ 2012 0103 00       		.byte	0
+ 2013 0104 03       		.uleb128 0x3
+ 2014 0105 08       		.uleb128 0x8
+ 2015 0106 3A       		.uleb128 0x3a
+ 2016 0107 0B       		.uleb128 0xb
+ 2017 0108 3B       		.uleb128 0x3b
+ 2018 0109 0B       		.uleb128 0xb
+ 2019 010a 49       		.uleb128 0x49
+ 2020 010b 13       		.uleb128 0x13
+ 2021 010c 3F       		.uleb128 0x3f
+ 2022 010d 19       		.uleb128 0x19
+ 2023 010e 02       		.uleb128 0x2
+ 2024 010f 18       		.uleb128 0x18
+ 2025 0110 00       		.byte	0
+ 2026 0111 00       		.byte	0
+ 2027 0112 00       		.byte	0
+ 2028              		.section	.debug_aranges,"",%progbits
+ 2029 0000 3C000000 		.4byte	0x3c
+ 2030 0004 0200     		.2byte	0x2
+ 2031 0006 00000000 		.4byte	.Ldebug_info0
+ 2032 000a 04       		.byte	0x4
+ 2033 000b 00       		.byte	0
+ 2034 000c 0000     		.2byte	0
+ 2035 000e 0000     		.2byte	0
+ 2036 0010 00000000 		.4byte	.LFB63
+ 2037 0014 90000000 		.4byte	.LFE63-.LFB63
+ 2038 0018 00000000 		.4byte	.LFB64
+ 2039 001c 90000000 		.4byte	.LFE64-.LFB64
+ 2040 0020 00000000 		.4byte	.LFB65
+ 2041 0024 78000000 		.4byte	.LFE65-.LFB65
+ 2042 0028 00000000 		.4byte	.LFB66
+ 2043 002c 7C000000 		.4byte	.LFE66-.LFB66
+ 2044 0030 00000000 		.4byte	.LFB67
+ 2045 0034 74000000 		.4byte	.LFE67-.LFB67
+ 2046 0038 00000000 		.4byte	0
+ 2047 003c 00000000 		.4byte	0
+ 2048              		.section	.debug_ranges,"",%progbits
+ 2049              	.Ldebug_ranges0:
+ 2050 0000 00000000 		.4byte	.LFB63
+ 2051 0004 90000000 		.4byte	.LFE63
+ 2052 0008 00000000 		.4byte	.LFB64
+ 2053 000c 90000000 		.4byte	.LFE64
+ 2054 0010 00000000 		.4byte	.LFB65
+ 2055 0014 78000000 		.4byte	.LFE65
+ 2056 0018 00000000 		.4byte	.LFB66
+ 2057 001c 7C000000 		.4byte	.LFE66
+ 2058 0020 00000000 		.4byte	.LFB67
+ 2059 0024 74000000 		.4byte	.LFE67
+ 2060 0028 00000000 		.4byte	0
+ 2061 002c 00000000 		.4byte	0
+ 2062              		.section	.debug_line,"",%progbits
+ 2063              	.Ldebug_line0:
+ 2064 0000 51020000 		.section	.debug_str,"MS",%progbits,1
+ 2064      02005A01 
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 42
 
 
- 2036              	.LASF44:
- 2037 00ac 77726974 		.ascii	"write_psoc1\000"
- 2037      655F7073 
- 2037      6F633100 
- 2038              	.LASF2:
- 2039 00b8 73686F72 		.ascii	"short int\000"
- 2039      7420696E 
- 2039      7400
- 2040              	.LASF68:
- 2041 00c2 636F756E 		.ascii	"count_protector\000"
- 2041      745F7072 
- 2041      6F746563 
- 2041      746F7200 
- 2042              	.LASF72:
- 2043 00d2 70726F78 		.ascii	"prox_caso\000"
- 2043      5F636173 
- 2043      6F00
- 2044              	.LASF24:
- 2045 00dc 64696E65 		.ascii	"dinero\000"
- 2045      726F00
- 2046              	.LASF64:
- 2047 00e3 666C756A 		.ascii	"flujo_LCD1\000"
- 2047      6F5F4C43 
- 2047      443100
- 2048              	.LASF65:
- 2049 00ee 666C756A 		.ascii	"flujo_LCD2\000"
- 2049      6F5F4C43 
- 2049      443200
- 2050              	.LASF33:
- 2051 00f9 63656475 		.ascii	"cedula\000"
- 2051      6C6100
- 2052              	.LASF34:
- 2053 0100 70617373 		.ascii	"password\000"
- 2053      776F7264 
- 2053      00
- 2054              	.LASF35:
- 2055 0109 7475726E 		.ascii	"turno\000"
- 2055      6F00
- 2056              	.LASF99:
- 2057 010f 7072696E 		.ascii	"print1\000"
- 2057      743100
- 2058              	.LASF100:
- 2059 0116 7072696E 		.ascii	"print2\000"
- 2059      743200
- 2060              	.LASF46:
- 2061 011d 76616C6F 		.ascii	"valor\000"
- 2061      7200
- 2062              	.LASF42:
- 2063 0123 77726974 		.ascii	"write_hora\000"
- 2063      655F686F 
- 2063      726100
- 2064              	.LASF31:
- 2065 012e 696D7072 		.ascii	"imprimir\000"
- 2065      696D6972 
- 2065      00
- 2066              	.LASF12:
- 2067 0137 75696E74 		.ascii	"uint16\000"
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 43
+ 2064      00000201 
+ 2064      FB0E0D00 
+ 2064      01010101 
+ 2065              	.LASF108:
+ 2066 0000 2E5C4932 		.ascii	".\\I2C.c\000"
+ 2066      432E6300 
+ 2067              	.LASF56:
+ 2068 0008 706F7378 		.ascii	"posx1\000"
+ 2068      3100
+ 2069              	.LASF59:
+ 2070 000e 706F7378 		.ascii	"posx2\000"
+ 2070      3200
+ 2071              	.LASF84:
+ 2072 0014 6E6F6D62 		.ascii	"nombre_pro1\000"
+ 2072      72655F70 
+ 2072      726F3100 
+ 2073              	.LASF53:
+ 2074 0020 636F756E 		.ascii	"count_teclas2\000"
+ 2074      745F7465 
+ 2074      636C6173 
+ 2074      3200
+ 2075              	.LASF86:
+ 2076 002e 6E6F6D62 		.ascii	"nombre_pro3\000"
+ 2076      72655F70 
+ 2076      726F3300 
+ 2077              	.LASF87:
+ 2078 003a 76657273 		.ascii	"version\000"
+ 2078      696F6E00 
+ 2079              	.LASF80:
+ 2080 0042 69645F65 		.ascii	"id_estacion\000"
+ 2080      73746163 
+ 2080      696F6E00 
+ 2081              	.LASF81:
+ 2082 004e 69645F76 		.ascii	"id_venta\000"
+ 2082      656E7461 
+ 2082      00
+ 2083              	.LASF37:
+ 2084 0057 70617373 		.ascii	"password_local\000"
+ 2084      776F7264 
+ 2084      5F6C6F63 
+ 2084      616C00
+ 2085              	.LASF109:
+ 2086 0066 433A5C55 		.ascii	"C:\\Users\\diego\\Documents\\GitHub\\Prueba_GRPFlee"
+ 2086      73657273 
+ 2086      5C646965 
+ 2086      676F5C44 
+ 2086      6F63756D 
+ 2087 0094 745C4242 		.ascii	"t\\BBB.cydsn\000"
+ 2087      422E6379 
+ 2087      64736E00 
+ 2088              	.LASF79:
+ 2089 00a0 626C6F71 		.ascii	"bloqueo_LCD\000"
+ 2089      75656F5F 
+ 2089      4C434400 
+ 2090              	.LASF44:
+ 2091 00ac 77726974 		.ascii	"write_psoc1\000"
+ 2091      655F7073 
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 43
 
 
- 2067      313600
- 2068              	.LASF84:
- 2069 013e 6E6F6D62 		.ascii	"nombre\000"
- 2069      726500
- 2070              	.LASF27:
- 2071 0145 6D616E67 		.ascii	"manguera\000"
- 2071      75657261 
- 2071      00
- 2072              	.LASF11:
- 2073 014e 75696E74 		.ascii	"uint8\000"
- 2073      3800
- 2074              	.LASF57:
- 2075 0154 706F7379 		.ascii	"posy1\000"
- 2075      3100
- 2076              	.LASF60:
- 2077 015a 706F7379 		.ascii	"posy2\000"
- 2077      3200
- 2078              	.LASF21:
- 2079 0160 73757274 		.ascii	"surtidor\000"
- 2079      69646F72 
- 2079      00
- 2080              	.LASF82:
- 2081 0169 6C61646F 		.ascii	"lado1\000"
- 2081      3100
- 2082              	.LASF13:
- 2083 016f 666C6F61 		.ascii	"float\000"
- 2083      7400
- 2084              	.LASF6:
- 2085 0175 6C6F6E67 		.ascii	"long long int\000"
- 2085      206C6F6E 
- 2085      6720696E 
- 2085      7400
- 2086              	.LASF101:
- 2087 0183 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2087      4320342E 
- 2087      392E3320 
- 2087      32303135 
- 2087      30333033 
- 2088 01b6 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 2088      20726576 
- 2088      6973696F 
- 2088      6E203232 
- 2088      31323230 
- 2089 01e9 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 2089      66756E63 
- 2089      74696F6E 
- 2089      2D736563 
- 2089      74696F6E 
- 2090              	.LASF16:
- 2091 0211 73697A65 		.ascii	"sizetype\000"
- 2091      74797065 
- 2091      00
- 2092              	.LASF18:
- 2093 021a 746F7461 		.ascii	"totales\000"
- 2093      6C657300 
- 2094              	.LASF76:
- 2095 0222 7472616D 		.ascii	"trama_totales\000"
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 44
-
-
- 2095      615F746F 
- 2095      74616C65 
- 2095      7300
- 2096              	.LASF69:
- 2097 0230 636F756E 		.ascii	"count_protector2\000"
- 2097      745F7072 
- 2097      6F746563 
- 2097      746F7232 
- 2097      00
- 2098              	.LASF39:
- 2099 0241 6C656572 		.ascii	"leer_hora\000"
- 2099      5F686F72 
- 2099      6100
- 2100              	.LASF1:
- 2101 024b 756E7369 		.ascii	"unsigned char\000"
- 2101      676E6564 
- 2101      20636861 
- 2101      7200
- 2102              	.LASF52:
- 2103 0259 69645F74 		.ascii	"id_teclado1\000"
- 2103      65636C61 
- 2103      646F3100 
- 2104              	.LASF23:
- 2105 0265 706F7369 		.ascii	"posicion\000"
- 2105      63696F6E 
- 2105      00
- 2106              	.LASF25:
- 2107 026e 766F6C75 		.ascii	"volumen\000"
- 2107      6D656E00 
- 2108              	.LASF0:
- 2109 0276 7369676E 		.ascii	"signed char\000"
- 2109      65642063 
- 2109      68617200 
- 2110              	.LASF7:
- 2111 0282 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2111      206C6F6E 
- 2111      6720756E 
- 2111      7369676E 
- 2111      65642069 
- 2112              	.LASF77:
- 2113 0299 70707578 		.ascii	"ppux10\000"
- 2113      313000
- 2114              	.LASF95:
- 2115 02a0 6F6B5F64 		.ascii	"ok_datosRF\000"
- 2115      61746F73 
- 2115      524600
- 2116              	.LASF36:
- 2117 02ab 6175746F 		.ascii	"autorizado\000"
- 2117      72697A61 
- 2117      646F00
- 2118              	.LASF8:
- 2119 02b6 756E7369 		.ascii	"unsigned int\000"
- 2119      676E6564 
- 2119      20696E74 
+ 2091      6F633100 
+ 2092              	.LASF2:
+ 2093 00b8 73686F72 		.ascii	"short int\000"
+ 2093      7420696E 
+ 2093      7400
+ 2094              	.LASF74:
+ 2095 00c2 636F756E 		.ascii	"count_protector\000"
+ 2095      745F7072 
+ 2095      6F746563 
+ 2095      746F7200 
+ 2096              	.LASF78:
+ 2097 00d2 70726F78 		.ascii	"prox_caso\000"
+ 2097      5F636173 
+ 2097      6F00
+ 2098              	.LASF24:
+ 2099 00dc 64696E65 		.ascii	"dinero\000"
+ 2099      726F00
+ 2100              	.LASF64:
+ 2101 00e3 666C756A 		.ascii	"flujo_LCD1\000"
+ 2101      6F5F4C43 
+ 2101      443100
+ 2102              	.LASF65:
+ 2103 00ee 666C756A 		.ascii	"flujo_LCD2\000"
+ 2103      6F5F4C43 
+ 2103      443200
+ 2104              	.LASF33:
+ 2105 00f9 63656475 		.ascii	"cedula\000"
+ 2105      6C6100
+ 2106              	.LASF34:
+ 2107 0100 70617373 		.ascii	"password\000"
+ 2107      776F7264 
+ 2107      00
+ 2108              	.LASF35:
+ 2109 0109 7475726E 		.ascii	"turno\000"
+ 2109      6F00
+ 2110              	.LASF105:
+ 2111 010f 7072696E 		.ascii	"print1\000"
+ 2111      743100
+ 2112              	.LASF106:
+ 2113 0116 7072696E 		.ascii	"print2\000"
+ 2113      743200
+ 2114              	.LASF46:
+ 2115 011d 76616C6F 		.ascii	"valor\000"
+ 2115      7200
+ 2116              	.LASF42:
+ 2117 0123 77726974 		.ascii	"write_hora\000"
+ 2117      655F686F 
+ 2117      726100
+ 2118              	.LASF31:
+ 2119 012e 696D7072 		.ascii	"imprimir\000"
+ 2119      696D6972 
  2119      00
- 2120              	.LASF58:
- 2121 02c3 73697A65 		.ascii	"sizeletra1\000"
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 45
+ 2120              	.LASF70:
+ 2121 0137 76656E74 		.ascii	"venta_activa\000"
+ 2121      615F6163 
+ 2121      74697661 
+ 2121      00
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 44
 
 
- 2121      6C657472 
- 2121      613100
- 2122              	.LASF61:
- 2123 02ce 73697A65 		.ascii	"sizeletra2\000"
- 2123      6C657472 
- 2123      613200
- 2124              	.LASF87:
- 2125 02d9 6C656D61 		.ascii	"lema1\000"
- 2125      3100
- 2126              	.LASF88:
- 2127 02df 6C656D61 		.ascii	"lema2\000"
- 2127      3200
- 2128              	.LASF91:
- 2129 02e5 686F7261 		.ascii	"hora\000"
- 2129      00
- 2130              	.LASF26:
- 2131 02ea 70726F64 		.ascii	"producto\000"
- 2131      7563746F 
- 2131      00
- 2132              	.LASF66:
- 2133 02f3 42756666 		.ascii	"Buffer_LCD1\000"
- 2133      65725F4C 
- 2133      43443100 
- 2134              	.LASF67:
- 2135 02ff 42756666 		.ascii	"Buffer_LCD2\000"
- 2135      65725F4C 
- 2135      43443200 
- 2136              	.LASF3:
- 2137 030b 73686F72 		.ascii	"short unsigned int\000"
- 2137      7420756E 
- 2137      7369676E 
- 2137      65642069 
- 2137      6E7400
- 2138              	.LASF19:
- 2139 031e 67726164 		.ascii	"grado\000"
- 2139      6F00
- 2140              	.LASF38:
- 2141 0324 73746174 		.ascii	"status\000"
- 2141      757300
- 2142              	.LASF62:
- 2143 032b 7465636C 		.ascii	"teclas1\000"
- 2143      61733100 
- 2144              	.LASF63:
- 2145 0333 7465636C 		.ascii	"teclas2\000"
- 2145      61733200 
- 2146              	.LASF15:
- 2147 033b 63686172 		.ascii	"char\000"
- 2147      00
- 2148              	.LASF47:
- 2149 0340 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2149      52784275 
- 2149      66666572 
+ 2122              	.LASF12:
+ 2123 0144 75696E74 		.ascii	"uint16\000"
+ 2123      313600
+ 2124              	.LASF90:
+ 2125 014b 6E6F6D62 		.ascii	"nombre\000"
+ 2125      726500
+ 2126              	.LASF27:
+ 2127 0152 6D616E67 		.ascii	"manguera\000"
+ 2127      75657261 
+ 2127      00
+ 2128              	.LASF11:
+ 2129 015b 75696E74 		.ascii	"uint8\000"
+ 2129      3800
+ 2130              	.LASF57:
+ 2131 0161 706F7379 		.ascii	"posy1\000"
+ 2131      3100
+ 2132              	.LASF60:
+ 2133 0167 706F7379 		.ascii	"posy2\000"
+ 2133      3200
+ 2134              	.LASF21:
+ 2135 016d 73757274 		.ascii	"surtidor\000"
+ 2135      69646F72 
+ 2135      00
+ 2136              	.LASF88:
+ 2137 0176 6C61646F 		.ascii	"lado1\000"
+ 2137      3100
+ 2138              	.LASF13:
+ 2139 017c 666C6F61 		.ascii	"float\000"
+ 2139      7400
+ 2140              	.LASF69:
+ 2141 0182 666C756A 		.ascii	"flujo_pos\000"
+ 2141      6F5F706F 
+ 2141      7300
+ 2142              	.LASF6:
+ 2143 018c 6C6F6E67 		.ascii	"long long int\000"
+ 2143      206C6F6E 
+ 2143      6720696E 
+ 2143      7400
+ 2144              	.LASF107:
+ 2145 019a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2145      4320342E 
+ 2145      392E3320 
+ 2145      32303135 
+ 2145      30333033 
+ 2146 01cd 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2146      20726576 
+ 2146      6973696F 
+ 2146      6E203232 
+ 2146      31323230 
+ 2147 0200 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2147      66756E63 
+ 2147      74696F6E 
+ 2147      2D736563 
+ 2147      74696F6E 
+ 2148              	.LASF16:
+ 2149 0228 73697A65 		.ascii	"sizetype\000"
+ 2149      74797065 
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 45
+
+
  2149      00
- 2150              	.LASF92:
- 2151 034d 7276656E 		.ascii	"rventa1\000"
- 2151      74613100 
- 2152              	.LASF93:
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 46
-
-
- 2153 0355 7276656E 		.ascii	"rventa2\000"
- 2153      74613200 
- 2154              	.LASF10:
- 2155 035d 696E7433 		.ascii	"int32_t\000"
- 2155      325F7400 
- 2156              	.LASF48:
- 2157 0365 636F756E 		.ascii	"count_teclas1\000"
- 2157      745F7465 
- 2157      636C6173 
- 2157      3100
- 2158              	.LASF9:
- 2159 0373 5F5F696E 		.ascii	"__int32_t\000"
- 2159      7433325F 
- 2159      7400
- 2160              	.LASF90:
- 2161 037d 66656368 		.ascii	"fecha\000"
+ 2150              	.LASF25:
+ 2151 0231 766F6C75 		.ascii	"volumen\000"
+ 2151      6D656E00 
+ 2152              	.LASF18:
+ 2153 0239 746F7461 		.ascii	"totales\000"
+ 2153      6C657300 
+ 2154              	.LASF82:
+ 2155 0241 7472616D 		.ascii	"trama_totales\000"
+ 2155      615F746F 
+ 2155      74616C65 
+ 2155      7300
+ 2156              	.LASF75:
+ 2157 024f 636F756E 		.ascii	"count_protector2\000"
+ 2157      745F7072 
+ 2157      6F746563 
+ 2157      746F7232 
+ 2157      00
+ 2158              	.LASF71:
+ 2159 0260 76656E74 		.ascii	"venta_activa2\000"
+ 2159      615F6163 
+ 2159      74697661 
+ 2159      3200
+ 2160              	.LASF39:
+ 2161 026e 6C656572 		.ascii	"leer_hora\000"
+ 2161      5F686F72 
  2161      6100
- 2162              	.LASF83:
- 2163 0383 6C61646F 		.ascii	"lado2\000"
- 2163      3200
- 2164              	.LASF97:
- 2165 0389 62756666 		.ascii	"buffer_i2c\000"
- 2165      65725F69 
- 2165      326300
- 2166              	.LASF89:
- 2167 0394 69645F6C 		.ascii	"id_logo\000"
- 2167      6F676F00 
- 2168              	.LASF20:
- 2169 039c 6D616E67 		.ascii	"mangueras\000"
- 2169      75657261 
+ 2162              	.LASF1:
+ 2163 0278 756E7369 		.ascii	"unsigned char\000"
+ 2163      676E6564 
+ 2163      20636861 
+ 2163      7200
+ 2164              	.LASF52:
+ 2165 0286 69645F74 		.ascii	"id_teclado1\000"
+ 2165      65636C61 
+ 2165      646F3100 
+ 2166              	.LASF23:
+ 2167 0292 706F7369 		.ascii	"posicion\000"
+ 2167      63696F6E 
+ 2167      00
+ 2168              	.LASF68:
+ 2169 029b 73656C65 		.ascii	"seleccion_pos\000"
+ 2169      6363696F 
+ 2169      6E5F706F 
  2169      7300
- 2170              	.LASF71:
- 2171 03a6 696D6167 		.ascii	"imagen_grado\000"
- 2171      656E5F67 
- 2171      7261646F 
- 2171      00
- 2172              	.LASF86:
- 2173 03b3 64697265 		.ascii	"direccion\000"
- 2173      6363696F 
- 2173      6E00
- 2174              	.LASF5:
- 2175 03bd 6C6F6E67 		.ascii	"long unsigned int\000"
- 2175      20756E73 
- 2175      69676E65 
- 2175      6420696E 
- 2175      7400
- 2176              	.LASF22:
- 2177 03cf 72656369 		.ascii	"recibo\000"
- 2177      626F00
- 2178              	.LASF98:
- 2179 03d6 6372635F 		.ascii	"crc_total\000"
- 2179      746F7461 
- 2179      6C00
- 2180              	.LASF41:
- 2181 03e0 6461746F 		.ascii	"dato\000"
+ 2170              	.LASF0:
+ 2171 02a9 7369676E 		.ascii	"signed char\000"
+ 2171      65642063 
+ 2171      68617200 
+ 2172              	.LASF7:
+ 2173 02b5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2173      206C6F6E 
+ 2173      6720756E 
+ 2173      7369676E 
+ 2173      65642069 
+ 2174              	.LASF83:
+ 2175 02cc 70707578 		.ascii	"ppux10\000"
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 46
+
+
+ 2175      313000
+ 2176              	.LASF101:
+ 2177 02d3 6F6B5F64 		.ascii	"ok_datosRF\000"
+ 2177      61746F73 
+ 2177      524600
+ 2178              	.LASF36:
+ 2179 02de 6175746F 		.ascii	"autorizado\000"
+ 2179      72697A61 
+ 2179      646F00
+ 2180              	.LASF8:
+ 2181 02e9 756E7369 		.ascii	"unsigned int\000"
+ 2181      676E6564 
+ 2181      20696E74 
  2181      00
- 2182              	.LASF40:
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 47
+ 2182              	.LASF58:
+ 2183 02f6 73697A65 		.ascii	"sizeletra1\000"
+ 2183      6C657472 
+ 2183      613100
+ 2184              	.LASF61:
+ 2185 0301 73697A65 		.ascii	"sizeletra2\000"
+ 2185      6C657472 
+ 2185      613200
+ 2186              	.LASF93:
+ 2187 030c 6C656D61 		.ascii	"lema1\000"
+ 2187      3100
+ 2188              	.LASF94:
+ 2189 0312 6C656D61 		.ascii	"lema2\000"
+ 2189      3200
+ 2190              	.LASF97:
+ 2191 0318 686F7261 		.ascii	"hora\000"
+ 2191      00
+ 2192              	.LASF26:
+ 2193 031d 70726F64 		.ascii	"producto\000"
+ 2193      7563746F 
+ 2193      00
+ 2194              	.LASF72:
+ 2195 0326 42756666 		.ascii	"Buffer_LCD1\000"
+ 2195      65725F4C 
+ 2195      43443100 
+ 2196              	.LASF73:
+ 2197 0332 42756666 		.ascii	"Buffer_LCD2\000"
+ 2197      65725F4C 
+ 2197      43443200 
+ 2198              	.LASF3:
+ 2199 033e 73686F72 		.ascii	"short unsigned int\000"
+ 2199      7420756E 
+ 2199      7369676E 
+ 2199      65642069 
+ 2199      6E7400
+ 2200              	.LASF19:
+ 2201 0351 67726164 		.ascii	"grado\000"
+ 2201      6F00
+ 2202              	.LASF38:
+ 2203 0357 73746174 		.ascii	"status\000"
+ 2203      757300
+ 2204              	.LASF62:
+ 2205 035e 7465636C 		.ascii	"teclas1\000"
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 47
 
 
- 2183 03e5 6C656572 		.ascii	"leer_fecha\000"
- 2183      5F666563 
- 2183      686100
- 2184              	.LASF28:
- 2185 03f0 70726573 		.ascii	"preset\000"
- 2185      657400
- 2186              	.LASF51:
- 2187 03f7 69645F63 		.ascii	"id_coma1\000"
- 2187      6F6D6131 
- 2187      00
- 2188              	.LASF54:
- 2189 0400 69645F63 		.ascii	"id_coma2\000"
- 2189      6F6D6132 
- 2189      00
- 2190              	.LASF79:
- 2191 0409 6E6F6D62 		.ascii	"nombre_pro2\000"
- 2191      72655F70 
- 2191      726F3200 
- 2192              	.LASF55:
- 2193 0415 69645F74 		.ascii	"id_teclado2\000"
- 2193      65636C61 
- 2193      646F3200 
- 2194              	.LASF96:
- 2195 0421 72665F6D 		.ascii	"rf_mod\000"
- 2195      6F6400
- 2196              	.LASF43:
- 2197 0428 77726974 		.ascii	"write_fecha\000"
- 2197      655F6665 
- 2197      63686100 
- 2198              	.LASF94:
- 2199 0434 6F6B5F52 		.ascii	"ok_RF\000"
- 2199      4600
- 2200              	.LASF32:
- 2201 043a 7469706F 		.ascii	"tipo_venta\000"
- 2201      5F76656E 
- 2201      746100
- 2202              	.LASF30:
- 2203 0445 706C6163 		.ascii	"placa\000"
- 2203      6100
- 2204              	.LASF14:
- 2205 044b 646F7562 		.ascii	"double\000"
- 2205      6C6500
- 2206              	.LASF85:
- 2207 0452 74656C65 		.ascii	"telefono\000"
- 2207      666F6E6F 
- 2207      00
- 2208              	.LASF70:
- 2209 045b 70617373 		.ascii	"password_lcd\000"
- 2209      776F7264 
- 2209      5F6C6364 
+ 2205      61733100 
+ 2206              	.LASF63:
+ 2207 0366 7465636C 		.ascii	"teclas2\000"
+ 2207      61733200 
+ 2208              	.LASF15:
+ 2209 036e 63686172 		.ascii	"char\000"
  2209      00
- 2210              	.LASF4:
- 2211 0468 6C6F6E67 		.ascii	"long int\000"
- 2211      20696E74 
+ 2210              	.LASF47:
+ 2211 0373 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2211      52784275 
+ 2211      66666572 
  2211      00
- 2212              	.LASF17:
- 2213 0471 65737461 		.ascii	"estado\000"
-ARM GAS  C:\Users\diego\AppData\Local\Temp\cc2SJw0d.s 			page 48
+ 2212              	.LASF98:
+ 2213 0380 7276656E 		.ascii	"rventa1\000"
+ 2213      74613100 
+ 2214              	.LASF99:
+ 2215 0388 7276656E 		.ascii	"rventa2\000"
+ 2215      74613200 
+ 2216              	.LASF10:
+ 2217 0390 696E7433 		.ascii	"int32_t\000"
+ 2217      325F7400 
+ 2218              	.LASF48:
+ 2219 0398 636F756E 		.ascii	"count_teclas1\000"
+ 2219      745F7465 
+ 2219      636C6173 
+ 2219      3100
+ 2220              	.LASF9:
+ 2221 03a6 5F5F696E 		.ascii	"__int32_t\000"
+ 2221      7433325F 
+ 2221      7400
+ 2222              	.LASF96:
+ 2223 03b0 66656368 		.ascii	"fecha\000"
+ 2223      6100
+ 2224              	.LASF89:
+ 2225 03b6 6C61646F 		.ascii	"lado2\000"
+ 2225      3200
+ 2226              	.LASF103:
+ 2227 03bc 62756666 		.ascii	"buffer_i2c\000"
+ 2227      65725F69 
+ 2227      326300
+ 2228              	.LASF95:
+ 2229 03c7 69645F6C 		.ascii	"id_logo\000"
+ 2229      6F676F00 
+ 2230              	.LASF20:
+ 2231 03cf 6D616E67 		.ascii	"mangueras\000"
+ 2231      75657261 
+ 2231      7300
+ 2232              	.LASF77:
+ 2233 03d9 696D6167 		.ascii	"imagen_grado\000"
+ 2233      656E5F67 
+ 2233      7261646F 
+ 2233      00
+ 2234              	.LASF92:
+ 2235 03e6 64697265 		.ascii	"direccion\000"
+ 2235      6363696F 
+ 2235      6E00
+ 2236              	.LASF5:
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 48
 
 
- 2213      646F00
- 2214              	.LASF29:
- 2215 0478 69645F65 		.ascii	"id_ef\000"
- 2215      6600
- 2216              	.LASF45:
- 2217 047e 70756572 		.ascii	"puerto\000"
- 2217      746F00
- 2218              	.LASF49:
- 2219 0485 636F6D61 		.ascii	"comas1\000"
- 2219      733100
- 2220              	.LASF50:
- 2221 048c 636F6D61 		.ascii	"comas2\000"
- 2221      733200
- 2222              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 2237 03f0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2237      20756E73 
+ 2237      69676E65 
+ 2237      6420696E 
+ 2237      7400
+ 2238              	.LASF22:
+ 2239 0402 72656369 		.ascii	"recibo\000"
+ 2239      626F00
+ 2240              	.LASF104:
+ 2241 0409 6372635F 		.ascii	"crc_total\000"
+ 2241      746F7461 
+ 2241      6C00
+ 2242              	.LASF41:
+ 2243 0413 6461746F 		.ascii	"dato\000"
+ 2243      00
+ 2244              	.LASF40:
+ 2245 0418 6C656572 		.ascii	"leer_fecha\000"
+ 2245      5F666563 
+ 2245      686100
+ 2246              	.LASF28:
+ 2247 0423 70726573 		.ascii	"preset\000"
+ 2247      657400
+ 2248              	.LASF51:
+ 2249 042a 69645F63 		.ascii	"id_coma1\000"
+ 2249      6F6D6131 
+ 2249      00
+ 2250              	.LASF54:
+ 2251 0433 69645F63 		.ascii	"id_coma2\000"
+ 2251      6F6D6132 
+ 2251      00
+ 2252              	.LASF85:
+ 2253 043c 6E6F6D62 		.ascii	"nombre_pro2\000"
+ 2253      72655F70 
+ 2253      726F3200 
+ 2254              	.LASF55:
+ 2255 0448 69645F74 		.ascii	"id_teclado2\000"
+ 2255      65636C61 
+ 2255      646F3200 
+ 2256              	.LASF102:
+ 2257 0454 72665F6D 		.ascii	"rf_mod\000"
+ 2257      6F6400
+ 2258              	.LASF43:
+ 2259 045b 77726974 		.ascii	"write_fecha\000"
+ 2259      655F6665 
+ 2259      63686100 
+ 2260              	.LASF100:
+ 2261 0467 6F6B5F52 		.ascii	"ok_RF\000"
+ 2261      4600
+ 2262              	.LASF32:
+ 2263 046d 7469706F 		.ascii	"tipo_venta\000"
+ 2263      5F76656E 
+ 2263      746100
+ 2264              	.LASF30:
+ 2265 0478 706C6163 		.ascii	"placa\000"
+ 2265      6100
+ 2266              	.LASF14:
+ 2267 047e 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\diego\AppData\Local\Temp\ccjVqE8U.s 			page 49
+
+
+ 2267      6C6500
+ 2268              	.LASF91:
+ 2269 0485 74656C65 		.ascii	"telefono\000"
+ 2269      666F6E6F 
+ 2269      00
+ 2270              	.LASF76:
+ 2271 048e 70617373 		.ascii	"password_lcd\000"
+ 2271      776F7264 
+ 2271      5F6C6364 
+ 2271      00
+ 2272              	.LASF4:
+ 2273 049b 6C6F6E67 		.ascii	"long int\000"
+ 2273      20696E74 
+ 2273      00
+ 2274              	.LASF17:
+ 2275 04a4 65737461 		.ascii	"estado\000"
+ 2275      646F00
+ 2276              	.LASF66:
+ 2277 04ab 666C756A 		.ascii	"flujo_pos1\000"
+ 2277      6F5F706F 
+ 2277      733100
+ 2278              	.LASF67:
+ 2279 04b6 666C756A 		.ascii	"flujo_pos2\000"
+ 2279      6F5F706F 
+ 2279      733200
+ 2280              	.LASF29:
+ 2281 04c1 69645F65 		.ascii	"id_ef\000"
+ 2281      6600
+ 2282              	.LASF45:
+ 2283 04c7 70756572 		.ascii	"puerto\000"
+ 2283      746F00
+ 2284              	.LASF49:
+ 2285 04ce 636F6D61 		.ascii	"comas1\000"
+ 2285      733100
+ 2286              	.LASF50:
+ 2287 04d5 636F6D61 		.ascii	"comas2\000"
+ 2287      733200
+ 2288              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
