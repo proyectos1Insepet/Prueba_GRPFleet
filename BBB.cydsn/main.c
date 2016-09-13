@@ -289,7 +289,8 @@ void init_surt(void){
 				break;
 				
 				case 0x08:
-			     	flujo_LCD1=11;
+			     	flujo_LCD1=8;
+                    seleccion_pos = 1;
 					ok++;
 				break;
 					
@@ -338,7 +339,8 @@ void init_surt(void){
 				break;
 				
 				case 0x08:
-			     	flujo_LCD2=11;
+			     	flujo_LCD2=8;
+                    seleccion_pos =2;
 				 	set_imagen(2,8);
 					ok++;
 				break;
@@ -832,7 +834,51 @@ void polling_LCD1(void){
          isr_3_StartEx(animacion); 
          Timer_Animacion_Start();
          count_protector=0;
-         flujo_LCD1=1;	       
+         flujo_LCD1=21;	       
+        break;
+        
+        case 21:
+//            set_imagen(1,27);                 //Pasa a pantalla de tipo de venta viejo:5
+//            tipo_venta = 0;
+//            id_teclado1 = 8;
+//            flujo_LCD1 = 11;             
+                if(touch_present(1)==1){
+                    if(touch_write(1,0x33)){
+    	                for(x=0;x<=7;x++){
+    	                    rventa1.id[x]=touch_read_byte(1);
+                            rventa2.id[x]=rventa1.id[x];
+    	                }
+    				    crc_total=0;
+    				    for(x=0;x<7;x++){
+    				 	    crc_total=crc_check(crc_total,rventa1.id[x]);
+    				    }					
+    				    if(crc_total==rventa1.id[7]){
+    		                set_imagen(1,19);
+    		                CyDelay(500);					 				 
+    					    count_teclas1=0;							//Inicia el contador de teclas						    
+    					    teclas1=10;
+    					    posx1=2;
+    					    posy1=3;
+    					    sizeletra1=1;	 
+                            flujo_LCD1 = 20;
+                            set_imagen(1,46);
+    					    	
+    				    }
+                    }
+                }  
+                   
+            
+            if(LCD_1_GetRxBufferSize()==8){
+                if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
+                    switch(LCD_1_rxBuffer[3]){
+                        case 0x3B:
+                            flujo_LCD1=0; 
+                        break; 
+                    }
+                }
+                CyDelay(100);            
+                LCD_1_ClearRxBuffer();            
+        }
         break;
         
         case 1:
@@ -851,15 +897,23 @@ void polling_LCD1(void){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){                    
                 switch(LCD_1_rxBuffer[3]){
 			        case 0x56:						        //POS A                                                                                                                                           
-                        set_imagen(1,99);           //Inicio opciones GRP 700 POS A
+                        set_imagen(1,36);           //Inicio opciones GRP 700 POS A
                         seleccion_pos = 1;
-                        flujo_LCD1  = 2;                                                
+                        flujo_LCD1    = 12;  
+                        id_teclado1   = 8;
 				    break;
                         		       
 				    case 0x57:  				            //POS B                                                                                             
-                        set_imagen(1,99);           //Inicio opciones GRP 700
+                        set_imagen(1,36);           //Inicio opciones GRP 700
 				        seleccion_pos = 2;
-                        flujo_LCD1 = 2;                                                                                
+                        flujo_LCD1    = 12;  
+                        id_teclado1   = 8;
+				    break;
+                    
+                    case 0x94:  				            //POS B                                                                                             
+                        set_imagen(1,114);
+                        seleccion_pos = 1;
+                        flujo_LCD1 = 15;
 				    break;
                                                
 			    }                                                            
@@ -1399,6 +1453,7 @@ void polling_LCD1(void){
     			for(x=0;x<=6;x++){
     				rf_mod[38+x]=rventa1.km[x+1] + 48;
     			}
+                rf_mod[45]=0x31;
             }
             
             if(seleccion_pos == 2){
@@ -1486,8 +1541,8 @@ void polling_LCD1(void){
     			for(x=0;x<=6;x++){
     				rf_mod[38+x]=rventa2.km[x+1] + 48;
     			}
-            }
-			rf_mod[45]=0x31;
+                rf_mod[45]=0x32;    
+            }			
 			rf_mod[46]='*';
 			PC_ClearRxBuffer();				
 		    for(x=0;x<=46;x++){
@@ -1517,7 +1572,8 @@ void polling_LCD1(void){
     					    teclas1=10;
     					    posx1=2;
     					    posy1=3;
-    					    sizeletra1=1;	                        
+    					    sizeletra1=1;	
+                            count_protector = 0;
                             if(id_teclado1 ==10){
                                 set_imagen(1,19);
                                 flujo_LCD1 = 19;
@@ -1688,16 +1744,27 @@ void polling_LCD1(void){
 								}
 							}
 						break;
-						case 2:	
-                            set_imagen(1,5);
+						case 2:	                            
                             for(x=0;x<=10;x++){
                               rventa1.km[x]=0;
                             }
 							for(x=count_teclas1;x>=1;x--){
 								rventa1.km[x]=Buffer_LCD1[(count_teclas1-x)+1];
-							}
-	                        flujo_LCD1=4;		                        
+							}	                                                    
+                            if(seleccion_pos == 1){
+            					for(x=0;x<=7;x++){
+            					 	rventa1.preset[x]=0;
+            					}
+                                rventa1.preset[0]=3;					
+            					for(x=5;x<=7;x++){
+            						rventa1.preset[x]=9;		
+            					}								                                     
+            		            set_imagen(1,7);
+            					lado1.estado=espera;
+                                flujo_LCD1 = 6;  
+                            }                                                      
 						break;
+                            
 						case 3:
 							for(x=count_teclas1;x>=1;x--){
 								rventa1.cedula[x]=Buffer_LCD1[(count_teclas1-x)+1]+48;
@@ -1961,14 +2028,24 @@ void polling_LCD1(void){
 							}
 						break;
 						case 2:	
-                            set_imagen(1,5);
                             for(x=0;x<=10;x++){
                               rventa2.km[x]=0;
                             }
 							for(x=count_teclas1;x>=1;x--){
 								rventa2.km[x]=Buffer_LCD1[(count_teclas1-x)+1];
-							}
-	                        flujo_LCD1=4;		                        
+							}	                                                    
+                            if(seleccion_pos == 2){
+            					for(x=0;x<=7;x++){
+            					 	rventa2.preset[x]=0;
+            					}
+                                rventa2.preset[0]=3;					
+            					for(x=5;x<=7;x++){
+            						rventa2.preset[x]=9;		
+            					}								                                     
+            		            set_imagen(1,7);
+            					lado2.estado=espera;
+                                flujo_LCD1 = 6;  
+                            }    		                        
 						break;
 						case 3:
 							for(x=count_teclas1;x>=1;x--){
@@ -1993,9 +2070,9 @@ void polling_LCD1(void){
 						break;	
                         case 5:
 							for(x=count_teclas1;x>=1;x--){
-								rventa2.password_local[x]=Buffer_LCD1[(count_teclas1-x)+1]+48;
+								rventa1.password_local[x]=Buffer_LCD1[(count_teclas1-x)+1]+48;
 							}
-                            if(clave_local[0]==rventa2.password_local[4] && clave_local[1]==rventa2.password_local[3] && clave_local[2]==rventa2.password_local[2] && clave_local[3]==rventa2.password_local[1]){                        	    	
+                            if(clave_local[0]==rventa1.password_local[4] && clave_local[1]==rventa1.password_local[3] && clave_local[2]==rventa1.password_local[2] && clave_local[3]==rventa1.password_local[1]){                        	    	
                         	    set_imagen(1,38); 
                                 CyDelay(200);
 							    set_imagen(1,70);  
@@ -2123,7 +2200,7 @@ void polling_LCD1(void){
                         	set_imagen(1,14); //viejo: 60
                             CyDelay(200);
                             count_teclas1 = 0;
-							lado2.estado=libre;                                    
+							lado2.estado=libre;                                     
                         break;
 					}					
                 }
@@ -2244,7 +2321,7 @@ void polling_LCD1(void){
 			rf_mod[1]='U';
 			rf_mod[2]='X';
 			rf_mod[3]='1';
-			rf_mod[4]=1 + 48;								//Cara
+			rf_mod[4]=2 + 48;								//Cara
 			rf_mod[5]=(lado2.grado[rventa2.producto-1][0] + 48);	//Id Producto	
 			rf_mod[6]=rventa2.volumen[5] + 48;						//Volumen
 			rf_mod[7]=rventa2.volumen[4] + 48;

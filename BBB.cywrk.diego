@@ -398,6 +398,8 @@
 <name v=".\BBB.cydsn\main.c" />
 <name v=".\BBB.cydsn\ibuton.c" />
 <name v=".\BBB.cydsn\Generated_Source\PSoC5\PC.c" />
+<name v=".\BBB.cydsn\Generated_Source\PSoC5\LCD_1_INT.c" />
+<name v=".\BBB.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
