@@ -1,6 +1,6 @@
--- Project:   C:\Users\Recepcion\Desktop\Prueba_GRPFleet\BBB.cydsn\BBB.cyprj
--- Generated: 05/12/2016 10:44:22
--- PSoC Creator  3.3 SP1
+-- Project:   C:\Users\diego\Documents\GitHub\Prueba_GRPFleet\BBB.cydsn\BBB.cyprj
+-- Generated: 09/08/2016 14:43:23
+-- PSoC Creator  3.3 CP2
 
 ENTITY BBB IS
     PORT(

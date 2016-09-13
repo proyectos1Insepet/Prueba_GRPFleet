@@ -578,6 +578,12 @@ function imprimir_venta(){
                             console.log("Cuenta"+ncuenta);
                         }
                     
+                    
+                    
+                    
+                    
+                
+          
             console.log("IMPRIMIENDO");
             var logo = new Buffer(5);
             logo [0]  = 0x1c;

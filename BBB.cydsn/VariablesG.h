@@ -67,6 +67,10 @@ volatile uint8 	count_teclas1, comas1, comas2, id_coma1, id_teclado1, count_tecl
 volatile uint16 posx1,posy1,sizeletra1,posx2,posy2,sizeletra2;	
 volatile uint8 	teclas1,teclas2;
 volatile uint8 	flujo_LCD1,flujo_LCD2;
+volatile uint8 	flujo_pos1,flujo_pos2;
+volatile uint8 	seleccion_pos;
+volatile uint8  flujo_pos;
+volatile uint8  venta_activa,venta_activa2;
 volatile uint8 	Buffer_LCD1[30];
 volatile uint8 	Buffer_LCD2[30];
 volatile uint8 	count_protector,count_protector2;
