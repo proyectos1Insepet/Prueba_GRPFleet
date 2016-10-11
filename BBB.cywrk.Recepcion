@@ -333,7 +333,6 @@
 <v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\IB2.lst</v>
 <v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\ibuton.lst</v>
 <v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_1.lst</v>
-<v>BBB\BBB\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_3.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -348,21 +347,6 @@
 <v>BBB\BBB\PSoC 5 Architecture TRM</v>
 <v>BBB\BBB\CY8C58LP Family Datasheet</v>
 <v>BBB\BBB\System Reference Guides</v>
-<v>BBB\BBB\System Reference Guides\cy_boot_v5_10</v>
-<v>BBB\BBB\cy_clock_v2_20</v>
-<v>BBB\BBB\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>BBB\BBB\cy_isr_v1_70</v>
-<v>BBB\BBB\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>BBB\BBB\cy_pins_v2_10</v>
-<v>BBB\BBB\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>BBB\BBB\EEPROM_v3_0.pdf</v>
-<v>BBB\BBB\I2C_v3_50.pdf</v>
-<v>BBB\BBB\Timer_v2_70</v>
-<v>BBB\BBB\Timer_v2_70\Timer_v2_70.pdf</v>
-<v>BBB\BBB\UART_v2_50</v>
-<v>BBB\BBB\UART_v2_50\UART_v2_50.pdf</v>
-<v>BBB\BBB\ZeroTerminal</v>
-<v>BBB\BBB\ZeroTerminal\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>BBB</v>
@@ -370,21 +354,6 @@
 <v>BBB\BBB\PSoC 5 Architecture TRM</v>
 <v>BBB\BBB\CY8C58LP Family Datasheet</v>
 <v>BBB\BBB\System Reference Guides</v>
-<v>BBB\BBB\System Reference Guides\cy_boot_v5_10</v>
-<v>BBB\BBB\cy_clock_v2_20</v>
-<v>BBB\BBB\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>BBB\BBB\cy_isr_v1_70</v>
-<v>BBB\BBB\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>BBB\BBB\cy_pins_v2_10</v>
-<v>BBB\BBB\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>BBB\BBB\EEPROM_v3_0.pdf</v>
-<v>BBB\BBB\I2C_v3_50.pdf</v>
-<v>BBB\BBB\Timer_v2_70</v>
-<v>BBB\BBB\Timer_v2_70\Timer_v2_70.pdf</v>
-<v>BBB\BBB\UART_v2_50</v>
-<v>BBB\BBB\UART_v2_50\UART_v2_50.pdf</v>
-<v>BBB\BBB\ZeroTerminal</v>
-<v>BBB\BBB\ZeroTerminal\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -396,6 +365,7 @@
 <OpenDocs>
 <name v=".\BBB.cydsn\main.c" />
 <name v=".\BBB.cydsn\Generated_Source\PSoC5\LCD_2_INT.c" />
+<name v=".\BBB.cydsn\Print.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
