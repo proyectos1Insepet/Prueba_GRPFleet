@@ -263,7 +263,7 @@ void init_surt(void){
 			}
 			flujo_LCD2=0;
 			flujo_LCD1=0;			
-			ok=2;	
+			ok=1;	
 		}
 		else{
 			estado=get_estado(lado1.dir);										
