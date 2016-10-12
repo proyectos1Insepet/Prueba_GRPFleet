@@ -1,4 +1,4 @@
---------------- Build Started: 10/11/2016 08:53:17 Project: BBB, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Build Started: 10/11/2016 09:23:50 Project: BBB, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\main.c -o .\CortexM3\ARM_GCC_493\Debug\main.o
 .\main.c: In function 'polling_LCD1':
@@ -16,4 +16,4 @@ cyelftool.exe -C C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\CortexM3
 cyelftool.exe -S C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\CortexM3\ARM_GCC_493\Debug\BBB.elf
 Flash used: 54784 of 262144 bytes (20,9 %).
 SRAM used: 24397 of 65536 bytes (37,2 %). Stack: 16384 bytes. Heap: 4096 bytes.
---------------- Build Succeeded: 10/11/2016 08:53:19 ---------------
+--------------- Build Succeeded: 10/11/2016 09:23:51 ---------------
