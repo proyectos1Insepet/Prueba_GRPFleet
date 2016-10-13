@@ -48,6 +48,7 @@ var nproducto2;
 var nproducto3;
 
 /**************Variables para la venta*****************************/
+var nombreoperario;
 var dineroDia;
 var dineroMes;
 var dineroSema;
@@ -847,7 +848,7 @@ function autorizaMux(){
     console.log("Id Producto: "+idproducto);
     console.log("Precio: ");                                   //Precio
     console.log(">>Cambio:"+ cambio_precio1);
-    if(cambio_precio1 == 0 && serial != '1111111111111111'){
+    if(cambio_precio1 == 1 && serial != '1111111111111111'){
         precio_cambio();
         for(var i=0; i<=4; i++){
             muxport.write(revprecio[i]);
@@ -867,7 +868,7 @@ function autorizaMux(){
         muxport.write(preset);
         console.log('>>'+preset);
     }else{
-        muxport.write('0009900');    
+        muxport.write('0009990');    
         console.log('Cantidad Autorizada: 0009900');
     }
     muxport.write(String(tipopreset));
