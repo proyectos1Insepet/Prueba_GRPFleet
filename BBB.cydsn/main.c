@@ -389,7 +389,7 @@ void polling_rf(void){
 	uint16 status1, status2,size,x,t_preset;
 	uint8  precio[5],preset[8];
     
-	if(PC_GetRxBufferSize()>=6){
+	if(PC_GetRxBufferSize()>=3){
 		status1=PC_GetRxBufferSize();
 		CyDelay(10);
 		status2=PC_GetRxBufferSize();
