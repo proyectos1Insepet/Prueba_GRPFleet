@@ -132,21 +132,18 @@ void init(void){
 	version[3]=EEPROM_ReadByte(32);
 		 
 	lado1.dir=EEPROM_ReadByte(26);							//Lado A
-
 	lado2.dir=EEPROM_ReadByte(28);							//Lado B
 
+    pantallas =EEPROM_ReadByte(33);
+    kmscreen  =EEPROM_ReadByte(34);
+    efectivo  =EEPROM_ReadByte(35);
+    
     lado1.estado=libre;
     lado2.estado=libre;
     estado_tanqueando=0;
-	//ppux10=1;//1 estacion autogas prueba version de digitos 6
-	lado1.mangueras=3;
-//	lado1.grado[0][0]=2;				//1 Diesel 2 Corriente 3 Extra 4 Supreme Diesel
-//	lado1.grado[1][0]=3;
-//	lado1.grado[2][0]=0;
-    //version[1]=6;
 	version[2]=0;
 	version[3]=3;
-    flujo_LCD1 = 0;
+    flujo_LCD1=0;
     CyDelay(5);	
     
 }
@@ -227,7 +224,7 @@ void error_op(uint8 lcd, uint16 imagen){
 *********************************************************************************************************
 *                                         init_surt( void )
 *
-* Description : Busca las posiciones del surtidor y las graba en lado.a.dir y lado.b.dir
+* Description : Busca las posiciones del surtidor y las graba en lado.lado1.dir y lado.lado2.dir
 *               
 *
 * Argument(s) : none
@@ -400,6 +397,7 @@ void polling_rf(void){
 				ok_datosRF=0;   
 				switch(PC_rxBuffer[3]){
 					case cautorizar:
+                    if(PC_rxBuffer[4]=='1'){
                     PC_rxBuffer[3] = 0;
 						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor		
 							error_op((PC_rxBuffer[4] & 0x0F),28);
@@ -523,6 +521,131 @@ void polling_rf(void){
 							size=8;
 							ok_datosRF=1;							
 						}
+                    }else{                        
+                        PC_rxBuffer[3] = 0;
+    						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor		
+    							error_op((PC_rxBuffer[4] & 0x0F),28);
+    							break;
+    						}
+    						if(PC_rxBuffer[10]=='F'){		//Cambia precio
+                                precio[0]=lado2.ppu[rventa2.manguera-1][0]&0x0f;	
+        						precio[1]=lado2.ppu[rventa2.manguera-1][1]&0x0f;
+        						precio[2]=lado2.ppu[rventa2.manguera-1][2]&0x0f;
+        						precio[3]=lado2.ppu[rventa2.manguera-1][3]&0x0f;
+        						precio[4]=lado2.ppu[rventa2.manguera-1][4]&0x0f;
+                            	if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
+    								rf_mod[0]='M';
+    								rf_mod[1]='U';
+    								rf_mod[2]='X';
+    								rf_mod[3]=creset;
+    								rf_mod[4]=cautorizar;
+    								rf_mod[5]=PC_rxBuffer[4];
+    								rf_mod[6]='1';
+    								rf_mod[7]='*';
+    								size=8;
+    								ok_datosRF=1;
+    								break;
+    							}                                                      
+      						}
+                            else{
+    							totales(lado2.dir, lado2.mangueras);
+                                if(ppux10==1){
+        							precio[4]=PC_rxBuffer[9];	
+        							precio[3]=PC_rxBuffer[8];
+        							precio[2]=PC_rxBuffer[7];
+        							precio[1]=PC_rxBuffer[6];
+        							precio[0]=0;			
+                                }
+                                if(ppux10==0){
+        							precio[4]=PC_rxBuffer[10];	
+        							precio[3]=PC_rxBuffer[9];
+        							precio[2]=PC_rxBuffer[8];
+        							precio[1]=PC_rxBuffer[7];
+        							precio[0]=PC_rxBuffer[6];                            
+                                }
+    							if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
+    								rf_mod[0]='M';
+    								rf_mod[1]='U';
+    								rf_mod[2]='X';
+    								rf_mod[3]=creset;
+    								rf_mod[4]=cautorizar;
+    								rf_mod[5]=PC_rxBuffer[4];
+    								rf_mod[6]='1';
+    								rf_mod[7]='*';
+    								size=8;
+    								ok_datosRF=1;
+    								break;
+    							}
+                            }
+    						preset[1]=PC_rxBuffer[17];				//Preset
+    						if(PC_rxBuffer[17]!=','){
+    							preset[1]=PC_rxBuffer[17] & 0x0F;
+    						}
+    						preset[2]=PC_rxBuffer[16];
+    						if(PC_rxBuffer[16]!=','){
+    							preset[2]=PC_rxBuffer[16] & 0x0F;
+    						}
+    						preset[3]=PC_rxBuffer[15];
+    						if(PC_rxBuffer[15]!=','){
+    							preset[3]=PC_rxBuffer[15] & 0x0F;
+    						}
+    						preset[4]=PC_rxBuffer[14];
+    						if(PC_rxBuffer[14]!=','){
+    							preset[4]=PC_rxBuffer[14] & 0x0F;
+    						}
+    						preset[5]=PC_rxBuffer[13];
+    						if(PC_rxBuffer[13]!=','){
+    							preset[5]=PC_rxBuffer[13] & 0x0F;
+    						}
+    						preset[6]=PC_rxBuffer[12];
+    						if(PC_rxBuffer[12]!=','){
+    							preset[6]=PC_rxBuffer[12] & 0x0F;
+    						}
+    						preset[7]=PC_rxBuffer[11];
+    						if(PC_rxBuffer[11]!=','){
+    							preset[7]=PC_rxBuffer[11] & 0x0F;
+    						}
+    						t_preset=PC_rxBuffer[18];
+    						if(t_preset=='1'){
+    							t_preset=2;
+    						}
+    						else{
+    							t_preset=1;
+    						}
+    						if(programar((lado2.dir & 0x0F),rventa2.manguera,preset,t_preset)==1){		//Programar
+                                if(ppuinicial==0){                          
+    //                                for(x=0;x<=4;x++){
+    //                            	    precio[x]=lado1.ppu[0][x];	    
+    //                                }
+    //                                cambiar_precio(lado1.dir,precio,1);    
+    //                                for(x=0;x<=4;x++){
+    //                            	    precio[x]=lado1.ppu[1][x];	    
+    //                                }    
+    //                                cambiar_precio(lado1.dir,precio,2);
+    //                                for(x=0;x<=4;x++){
+    //                            	    precio[x]=lado1.ppu[2][x];	    
+    //                                }
+    //                                cambiar_precio(lado1.dir,precio,3);       
+                                }
+                                CyDelay(10);
+    							Surtidor_PutChar(0x10|(lado2.dir & 0x0F));							
+    							lado2.estado=tanqueo;
+    							flujo_LCD1=8;
+    							set_imagen(1,8);
+    						}
+    						else{
+    							rf_mod[0]='M';
+    							rf_mod[1]='U';
+    							rf_mod[2]='X';
+    							rf_mod[3]=creset;
+    							rf_mod[4]=cautorizar;
+    							rf_mod[5]=PC_rxBuffer[4];
+    							rf_mod[6]='2';
+    							rf_mod[7]='*';
+    							size=8;
+    							ok_datosRF=1;							
+    						}                    
+                    }
 					break;
 					
 					case cimprimir:
@@ -561,213 +684,43 @@ void polling_rf(void){
     								
     						}                        
 					break;
-				}
-				if(ok_datosRF==1){
-				    for(x=0;x<size;x++){
-					   PC_PutChar(rf_mod[x]);
-				    }	               
-				}
-			}
-			PC_ClearRxBuffer();
-            Surtidor_ClearRxBuffer();
-			status1=0;
-			status2=0;			
-		}		
-	}	
-}
-
-
-
-/*
-*********************************************************************************************************
-*                                         uint8 polling_rf(void)
-*
-* Description : 
-*               
-*
-* Argument(s) : none
-*
-* Return(s)   : none
-*
-* Caller(s)   : 
-*
-* Note(s)     : none.
-*********************************************************************************************************
-*/
-void polling_rf2(void){
-	uint16 status1, status2,size,x,t_preset;
-	uint8  precio[5],preset[8];
-    
-	if(PC_GetRxBufferSize()>=6){
-		status1=PC_GetRxBufferSize();
-		CyDelay(10);
-		status2=PC_GetRxBufferSize();
-		if(status1==status2){		
-			if((PC_rxBuffer[0]=='B')&&(PC_rxBuffer[1]=='B')&&(PC_rxBuffer[2]=='B')){
-				ok_datosRF=0;   
-				switch(PC_rxBuffer[3]){
-					case cautorizar:
-                    PC_rxBuffer[3] = 0;
-						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor		
-							error_op((PC_rxBuffer[4] & 0x0F),28);
-							break;
-						}
-						if(PC_rxBuffer[10]=='F'){		//Cambia precio
-                            precio[0]=lado2.ppu[rventa1.manguera-1][0]&0x0f;	
-    						precio[1]=lado2.ppu[rventa1.manguera-1][1]&0x0f;
-    						precio[2]=lado2.ppu[rventa1.manguera-1][2]&0x0f;
-    						precio[3]=lado2.ppu[rventa1.manguera-1][3]&0x0f;
-    						precio[4]=lado2.ppu[rventa1.manguera-1][4]&0x0f;
-                        	if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
-								rf_mod[0]='M';
-								rf_mod[1]='U';
-								rf_mod[2]='X';
-								rf_mod[3]=creset;
-								rf_mod[4]=cautorizar;
-								rf_mod[5]=PC_rxBuffer[4];
-								rf_mod[6]='1';
-								rf_mod[7]='*';
-								size=8;
-								ok_datosRF=1;
-								break;
-							}                                                      
-  						}
-                        else{
-							totales(lado2.dir, lado2.mangueras);
-                            if(ppux10==1){
-    							precio[4]=PC_rxBuffer[9];	
-    							precio[3]=PC_rxBuffer[8];
-    							precio[2]=PC_rxBuffer[7];
-    							precio[1]=PC_rxBuffer[6];
-    							precio[0]=0;			
-                            }
-                            if(ppux10==0){
-    							precio[4]=PC_rxBuffer[10];	
-    							precio[3]=PC_rxBuffer[9];
-    							precio[2]=PC_rxBuffer[8];
-    							precio[1]=PC_rxBuffer[7];
-    							precio[0]=PC_rxBuffer[6];                            
-                            }
-							if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
-								rf_mod[0]='M';
-								rf_mod[1]='U';
-								rf_mod[2]='X';
-								rf_mod[3]=creset;
-								rf_mod[4]=cautorizar;
-								rf_mod[5]=PC_rxBuffer[4];
-								rf_mod[6]='1';
-								rf_mod[7]='*';
-								size=8;
-								ok_datosRF=1;
-								break;
-							}
-                        }
-						preset[1]=PC_rxBuffer[17];				//Preset
-						if(PC_rxBuffer[17]!=','){
-							preset[1]=PC_rxBuffer[17] & 0x0F;
-						}
-						preset[2]=PC_rxBuffer[16];
-						if(PC_rxBuffer[16]!=','){
-							preset[2]=PC_rxBuffer[16] & 0x0F;
-						}
-						preset[3]=PC_rxBuffer[15];
-						if(PC_rxBuffer[15]!=','){
-							preset[3]=PC_rxBuffer[15] & 0x0F;
-						}
-						preset[4]=PC_rxBuffer[14];
-						if(PC_rxBuffer[14]!=','){
-							preset[4]=PC_rxBuffer[14] & 0x0F;
-						}
-						preset[5]=PC_rxBuffer[13];
-						if(PC_rxBuffer[13]!=','){
-							preset[5]=PC_rxBuffer[13] & 0x0F;
-						}
-						preset[6]=PC_rxBuffer[12];
-						if(PC_rxBuffer[12]!=','){
-							preset[6]=PC_rxBuffer[12] & 0x0F;
-						}
-						preset[7]=PC_rxBuffer[11];
-						if(PC_rxBuffer[11]!=','){
-							preset[7]=PC_rxBuffer[11] & 0x0F;
-						}
-						t_preset=PC_rxBuffer[18];
-						if(t_preset=='1'){
-							t_preset=2;
-						}
-						else{
-							t_preset=1;
-						}
-						if(programar((lado2.dir & 0x0F),rventa2.manguera,preset,t_preset)==1){		//Programar
-                            if(ppuinicial==0){                          
-//                                for(x=0;x<=4;x++){
-//                            	    precio[x]=lado1.ppu[0][x];	    
-//                                }
-//                                cambiar_precio(lado1.dir,precio,1);    
-//                                for(x=0;x<=4;x++){
-//                            	    precio[x]=lado1.ppu[1][x];	    
-//                                }    
-//                                cambiar_precio(lado1.dir,precio,2);
-//                                for(x=0;x<=4;x++){
-//                            	    precio[x]=lado1.ppu[2][x];	    
-//                                }
-//                                cambiar_precio(lado1.dir,precio,3);       
-                            }
-                            CyDelay(10);
-							Surtidor_PutChar(0x10|(lado2.dir & 0x0F));							
-							lado2.estado=tanqueo;
-							flujo_LCD1=8;
-							set_imagen(1,8);
-						}
-						else{
-							rf_mod[0]='M';
-							rf_mod[1]='U';
-							rf_mod[2]='X';
-							rf_mod[3]=creset;
-							rf_mod[4]=cautorizar;
-							rf_mod[5]=PC_rxBuffer[4];
-							rf_mod[6]='2';
-							rf_mod[7]='*';
-							size=8;
-							ok_datosRF=1;							
-						}
-					break;
-					
-					case cimprimir:
-						set_imagen(1,55);					
-						if(lado1.dir==(lado1.dir & 0x0F)){
-							lado1.estado=libre;
-							flujo_LCD1=0;
-						}
-						else if(lado2.dir==(PC_rxBuffer[4] & 0x0F)){
-							lado2.estado=libre;
-							flujo_LCD1=0;
-						}						
-					break;
-					
-					case creset:                                   
-    						switch(PC_rxBuffer[5]){
-    							case '1':														
-    								lado2.estado=libre;
-    								error_op(1,28);					 //Error de id					
-    							break;
-    								
-    							case '2':
-    								lado2.estado=libre;
-    								error_op(1,12);					//Gracias por su compra
-    							break;
-    								
-    							case '3':
-    								lado2.estado=libre;
-    								error_op(1,12);					//Error de Operacion //85
-    							break;
-    								
-    							case '4':
-//    								lado1.estado=libre;//
-//    								error_op(1,12);		//			//Fin Corte
-    							break;								
-    								
-    						}                        
-					break;
+                    case cconfigurar:
+                        lado1.mangueras   = PC_rxBuffer[4]-48; //Numero de mangueras
+                        lado1.grado[0][0] = PC_rxBuffer[5]-48;
+                        lado1.grado[1][0] = PC_rxBuffer[6]-48; //Grados
+                        lado1.grado[2][0] = PC_rxBuffer[7]-48;
+                        lado2.mangueras   = PC_rxBuffer[8]-48;
+                        lado2.grado[0][0] = PC_rxBuffer[9]-48;
+                        lado2.grado[1][0] = PC_rxBuffer[10]-48;
+                        lado2.grado[2][0] = PC_rxBuffer[11]-48;
+                        version[1]    = PC_rxBuffer[12]-48;	//Version surtidor
+                    	version[2]    = PC_rxBuffer[13]-48; //Decimales dinero
+                    	version[3]    = PC_rxBuffer[14]-48; //Decimales volumen
+                        ppux10        = PC_rxBuffer[15]-48; //ppux10  
+                        pantallas     = PC_rxBuffer[16]-48; //pantallas por pos  
+                        kmscreen      = PC_rxBuffer[17]-48; //solicita pantalla de kilometraje   
+                        efectivo      = PC_rxBuffer[18]-48; //solicita pantalla de kilometraje   
+                        
+                        EEPROM_WriteByte(lado1.mangueras,15);  //Almacena configuraciones en MUX
+                        EEPROM_WriteByte(lado1.grado[0][0],16);
+                        EEPROM_WriteByte(lado1.grado[1][0],17);
+                        EEPROM_WriteByte(lado1.grado[2][0],18);
+                        EEPROM_WriteByte(lado2.mangueras,19);
+                        EEPROM_WriteByte(lado2.grado[0][0],20);
+                        EEPROM_WriteByte(lado2.grado[1][0],21);
+                        EEPROM_WriteByte(lado2.grado[2][0],22);
+                        EEPROM_WriteByte(ppux10,23);
+                        EEPROM_WriteByte(version[1],30);
+                        EEPROM_WriteByte(version[2],31);
+                        EEPROM_WriteByte(version[3],32);
+                        EEPROM_WriteByte(pantallas,33);
+                        EEPROM_WriteByte(kmscreen,34);
+                        EEPROM_WriteByte(efectivo,35);
+                        set_imagen(1,60); 
+                        CyDelay(500);
+                        init();
+                        flujo_LCD1 = 0;                        
+                    break;
 				}
 				if(ok_datosRF==1){
 				    for(x=0;x<size;x++){
@@ -826,7 +779,7 @@ void polling_surt(void){
 */
 
 void polling_LCD1(void){
-    uint8 x,y,aux[10],precio[5],x_1,xaux;
+    uint8 x,y,aux[10],precio[5],x_1;
 	char numero[8];
 	double num_decimal;   
     switch(flujo_LCD1){
@@ -1912,13 +1865,21 @@ void polling_LCD1(void){
                             }
                     		for(x=8;x<=12;x++){	
                     			EEPROM_WriteByte(id_estacion[x-8], x);
-                    		}   
-                        	flujo_LCD1 = 12;	//viejo: 0
-                            id_teclado1 = 2;
-                        	set_imagen(1,14); //viejo: 60
-                            CyDelay(200);
-                            count_teclas1 = 0;
-							lado1.estado=libre;                                    
+                    		}
+                            if(kmscreen ==1){
+                                flujo_LCD1 = 12;	//viejo: 0
+                                id_teclado1 = 2;
+                            	set_imagen(1,14); //viejo: 60
+                                CyDelay(200);
+                                count_teclas1 = 0;
+    							lado1.estado=libre; 
+                            }
+                            if (kmscreen == 0){
+                                flujo_LCD1 = 6;
+                                set_imagen(1,7);
+            					lado1.estado=espera;                                
+                            }
+                        	                                   
                         break;
 					}					
                 }
@@ -2527,23 +2488,89 @@ void polling_LCD1(void){
 	            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
 	                switch(LCD_1_rxBuffer[3]){
                         case 0x7F:      //configurar productos                            
-                            set_imagen(1,88);                            
-                            flujo_LCD1 = 18;
+//                            set_imagen(1,88);                            
+//                            flujo_LCD1 = 18;
+                            rf_mod[0]='M';
+    		                rf_mod[1]='U';
+    		                rf_mod[2]='X';
+    		                rf_mod[3]='6';
+                            rf_mod[4]='*';
+    						PC_ClearRxBuffer();				
+    					    for(x=0;x<=4;x++){
+    						   PC_PutChar(rf_mod[x]);
+    					    }
+                            CyDelay(150);
+                            if(pantallas == 1){
+                                set_imagen(1,46);
+                            }else{
+                                set_imagen(1,21);
+                            }
+    						flujo_LCD1=0;
+                            if(seleccion_pos == 1){
+    						    lado1.estado=libre;     //Fin de reimpresion  
+                            }
+                            if(seleccion_pos == 2){
+    						    lado2.estado=libre;     //Fin de reimpresion  
+                            }
                         break;
                         case 0x80:      //configurar version de digitos                             
-                            set_imagen(1,100);
-                            id_teclado1 = 6;
-					        count_teclas1 = 0;							    //Inicia el contador de teclas	
-					        id_coma1=',';	
-                            teclas1=1;              						//cantidad de teclas q puede digitar                      comas1=0;									
-					        posx1=4;
-					        posy1=3;
-					        sizeletra1=1;  
-                            flujo_LCD1 = 12;
+//                            set_imagen(1,100);
+//                            id_teclado1 = 6;
+//					        count_teclas1 = 0;							    //Inicia el contador de teclas	
+//					        id_coma1=',';	
+//                            teclas1=1;              						//cantidad de teclas q puede digitar                      comas1=0;									
+//					        posx1=4;
+//					        posy1=3;
+//					        sizeletra1=1;  
+//                            flujo_LCD1 = 12;
+                            rf_mod[0]='M';
+    		                rf_mod[1]='U';
+    		                rf_mod[2]='X';
+    		                rf_mod[3]='6';
+                            rf_mod[4]='*';
+    						PC_ClearRxBuffer();				
+    					    for(x=0;x<=4;x++){
+    						   PC_PutChar(rf_mod[x]);
+    					    }
+                            CyDelay(150);
+                            if(pantallas == 1){
+                                set_imagen(1,46);
+                            }else{
+                                set_imagen(1,21);
+                            }
+    						flujo_LCD1=0;
+                            if(seleccion_pos == 1){
+    						    lado1.estado=libre;     //Fin de reimpresion  
+                            }
+                            if(seleccion_pos == 2){
+    						    lado2.estado=libre;     //Fin de reimpresion  
+                            }
                         break;
                         case 0x81:      //configurar ppux10,ppux1
-                            flujo_LCD1 = 17;
-                            set_imagen(1,109);                        
+//                            flujo_LCD1 = 17;
+//                            set_imagen(1,109); 
+                            rf_mod[0]='M';
+    		                rf_mod[1]='U';
+    		                rf_mod[2]='X';
+    		                rf_mod[3]='6';
+                            rf_mod[4]='*';
+    						PC_ClearRxBuffer();				
+    					    for(x=0;x<=4;x++){
+    						   PC_PutChar(rf_mod[x]);
+    					    }
+                            CyDelay(150);
+                            if(pantallas == 1){
+                                set_imagen(1,46);
+                            }else{
+                                set_imagen(1,21);
+                            }
+    						flujo_LCD1=0;
+                            if(seleccion_pos == 1){
+    						    lado1.estado=libre;     //Fin de reimpresion  
+                            }
+                            if(seleccion_pos == 2){
+    						    lado2.estado=libre;     //Fin de reimpresion  
+                            }
                         break;
                         case 0xC2:      //id estacion   ahora datos ibutton                         
                             set_imagen(1,110);                                
@@ -2592,289 +2619,7 @@ void polling_LCD1(void){
 	            LCD_1_ClearRxBuffer();
             }              
         break;    
-          
-        case 18:
-            if(seleccion_pos == 1){							   
-    	        if(LCD_1_GetRxBufferSize()==8){
-    	            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
-    	                switch(LCD_1_rxBuffer[3]){
-                            case 0x80:  //Producto 1
-                                Producto=1;                                                    
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    //Inicia el contador de teclas	
-    					        id_coma1=',';	
-                                teclas1=1;              						//cantidad de teclas q puede digitar                      comas1=0;									
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;  
-                                flujo_LCD1 = 12;
-                            break;
-                            case 0x81:  //Producto 2
-                                Producto=2;                                                    
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    	
-    					        id_coma1=',';	
-                                teclas1=1;              															
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;  
-                                flujo_LCD1 = 12;
-                            break;                            
-                            case 0x7F:  //Producto 3
-                                Producto=3;                                                    
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    
-    					        id_coma1=',';	
-                                teclas1=1;              													
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;                      
-                                flujo_LCD1 = 12;
-                            break;                            
-                            case 0x82:  //Producto 4
-                                Producto=4;                                                   
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    	
-    					        id_coma1=',';	
-                                teclas1=1;              														
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;        
-                                flujo_LCD1 = 12;
-                            break;                     
-    	                    case 0x7E:	//Envía datos al Beagle de productos 
-                            	rf_mod[0]='M';
-    			                rf_mod[1]='U';
-    			                rf_mod[2]='X';
-    			                rf_mod[3]='4'; 
-                                y=4;
-                                for(x=0;x<=2;x++){
-                                    switch(lado1.grado[x][0]){
-                                    	case 1:
-                                    		rf_mod[y]='1';//Diesel
-                                    	break;
-                                    	case 2:
-                                    		rf_mod[y]='2';//Corriente
-                                    	break;
-                                    	case 3:
-                                    		rf_mod[y]='3';//Extra
-                                    	break;
-                                    	case 4:
-                                    		rf_mod[y]='4';//Supremo diesel
-                                    	break;
-                                        default:
-                                            rf_mod[y]='0';
-                                        break;
-                                    }                                                 
-                                    y++;                                
-                                }  
-                                if(producto1==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='1'){
-                                           rf_mod[x]='0';     
-                                            lado1.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }        
-                                if(producto2==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='2'){
-                                           rf_mod[x]='0';     
-                                            lado1.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }     
-                                if(producto3==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='3'){
-                                           rf_mod[x]='0';     
-                                            lado1.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }
-                                if(producto4==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='4'){
-                                           rf_mod[x]='0';     
-                                            lado1.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }                                                                                                         
-                                rf_mod[7]='*';
-    							PC_ClearRxBuffer();				
-    						    for(x=0;x<=7;x++){
-    							   PC_PutChar(rf_mod[x]);
-    						    }                      
-                                producto1=1;
-                                producto2=1;
-                                producto3=1;
-                                producto4=1;                                
-                                EEPROM_WriteByte(lado1.grado[0][0],16);
-                                EEPROM_WriteByte(lado1.grado[1][0],17);
-                                EEPROM_WriteByte(lado1.grado[2][0],18);
-    						    set_imagen(1,74);	
-    	                        flujo_LCD1 = 0;    
-    							lado1.estado=libre;  
-    	                    break;                         
-                        }
-                    }
-                    CyDelay(100);            
-    	            LCD_1_ClearRxBuffer();
-                }   
-            }
-            if(seleccion_pos == 2){							   
-    	        if(LCD_1_GetRxBufferSize()==8){
-    	            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
-    	                switch(LCD_1_rxBuffer[3]){
-                            case 0x80:  //Producto 1
-                                Producto=1;                                                    
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    //Inicia el contador de teclas	
-    					        id_coma1=',';	
-                                teclas1=1;              						//cantidad de teclas q puede digitar                      comas1=0;									
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;  
-                                flujo_LCD1 = 12;
-                            break;
-                            case 0x81:  //Producto 2
-                                Producto=2;                                                    
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    	
-    					        id_coma1=',';	
-                                teclas1=1;              															
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;  
-                                flujo_LCD1 = 12;
-                            break;                            
-                            case 0x7F:  //Producto 3
-                                Producto=3;                                                    
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    
-    					        id_coma1=',';	
-                                teclas1=1;              													
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;                      
-                                flujo_LCD1 = 12;
-                            break;                            
-                            case 0x82:  //Producto 4
-                                Producto=4;                                                   
-                                set_imagen(1,6);  
-                                id_teclado1=7;
-    					        count_teclas1=0;							    	
-    					        id_coma1=',';	
-                                teclas1=1;              														
-    					        posx1=4;
-    					        posy1=3;
-    					        sizeletra1=1;        
-                                flujo_LCD1 = 12;
-                            break;                     
-    	                    case 0x7E:	//Envía datos al Beagle de productos 
-                            	rf_mod[0]='M';
-    			                rf_mod[1]='U';
-    			                rf_mod[2]='X';
-    			                rf_mod[3]='4'; 
-                                y=4;
-                                for(x=0;x<=2;x++){
-                                    switch(lado2.grado[x][0]){
-                                    	case 1:
-                                    		rf_mod[y]='1';//Diesel
-                                    	break;
-                                    	case 2:
-                                    		rf_mod[y]='2';//Corriente
-                                    	break;
-                                    	case 3:
-                                    		rf_mod[y]='3';//Extra
-                                    	break;
-                                    	case 4:
-                                    		rf_mod[y]='4';//Supremo diesel
-                                    	break;
-                                        default:
-                                            rf_mod[y]='0';
-                                        break;
-                                    }                                                 
-                                    y++;                                
-                                }  
-                                if(producto1==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='1'){
-                                           rf_mod[x]='0';     
-                                            lado2.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }        
-                                if(producto2==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='2'){
-                                           rf_mod[x]='0';     
-                                            lado2.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }     
-                                if(producto3==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='3'){
-                                           rf_mod[x]='0';     
-                                            lado2.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }
-                                if(producto4==0){
-                                    y=0;                                    
-                                    for(x=4;x<=6;x++){
-                                        if(rf_mod[x]=='4'){
-                                           rf_mod[x]='0';     
-                                            lado2.grado[y][0]=0;                                        
-                                        }
-                                        y++;
-                                    }
-                                }                                                                                                         
-                                rf_mod[7]='*';
-    							PC_ClearRxBuffer();				
-    						    for(x=0;x<=7;x++){
-    							   PC_PutChar(rf_mod[x]);
-    						    }                      
-                                producto1=1;
-                                producto2=1;
-                                producto3=1;
-                                producto4=1;                                
-                                EEPROM_WriteByte(lado2.grado[0][0],16);
-                                EEPROM_WriteByte(lado2.grado[1][0],17);
-                                EEPROM_WriteByte(lado2.grado[2][0],18);  // eeprom de productos
-    						    set_imagen(1,74);	
-    	                        flujo_LCD1 = 0;    
-    							lado2.estado=libre;  
-    	                    break;                         
-                        }
-                    }
-                    CyDelay(100);            
-    	            LCD_1_ClearRxBuffer();
-                }   
-            }
-        break;
+                  
             
         case 19:
 			rf_mod[0]='M';
@@ -3100,7 +2845,7 @@ CY_ISR(modo_mux){
 void insert_ppuInit(void){
     
     //uint8 precio_mod[5];    
-    int x;    
+    //int x;    
     
   uint8 precio_mod[5];    
 	precio_mod[0]=0;	
@@ -3137,14 +2882,8 @@ int main(){
          //sin el sistema Mux Advance              		
     		CyWdtClear();        
            	polling_LCD1();
-    		CyWdtClear();  
-            if(seleccion_pos ==1 || seleccion_pos ==0){                
-                polling_rf();
-            }
-            if(seleccion_pos ==2){                
-                polling_rf2();
-            }
-         
+    		CyWdtClear();              
+            polling_rf();                                 
     }
 
 }

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 1
 
 
    1              		.syntax unified
@@ -58,40 +58,43 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 1
   55              		.comm	nombre_pro2,17,4
   56              		.comm	nombre_pro3,17,4
   57              		.comm	version,4,4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 2
 
 
-  58              		.comm	lado1,93,4
-  59              		.comm	lado2,93,4
-  60              		.comm	nombre,33,4
-  61              		.comm	nit,15,4
-  62              		.comm	telefono,20,4
-  63              		.comm	direccion,33,4
-  64              		.comm	lema1,32,4
-  65              		.comm	lema2,32,4
-  66              		.comm	id_logo,2,4
-  67              		.comm	km,2,4
-  68              		.comm	fecha,3,4
-  69              		.comm	hora,2,4
-  70              		.comm	rventa1,118,4
-  71              		.comm	rventa2,118,4
-  72              		.comm	ok_RF,1,1
-  73              		.comm	ok_datosRF,1,1
-  74              		.comm	rf_mod,200,4
-  75              		.comm	buffer_i2c,64,4
-  76              		.comm	crc_total,1,1
-  77              		.comm	print1,2,4
-  78              		.comm	print2,2,4
-  79              		.comm	tipo_venta,1,1
-  80              		.section	.text.touch_present,"ax",%progbits
-  81              		.align	2
-  82              		.global	touch_present
-  83              		.thumb
-  84              		.thumb_func
-  85              		.type	touch_present, %function
-  86              	touch_present:
-  87              	.LFB63:
-  88              		.file 1 ".\\ibuton.c"
+  58              		.comm	kmscreen,1,1
+  59              		.comm	pantallas,1,1
+  60              		.comm	efectivo,1,1
+  61              		.comm	lado1,93,4
+  62              		.comm	lado2,93,4
+  63              		.comm	nombre,33,4
+  64              		.comm	nit,15,4
+  65              		.comm	telefono,20,4
+  66              		.comm	direccion,33,4
+  67              		.comm	lema1,32,4
+  68              		.comm	lema2,32,4
+  69              		.comm	id_logo,2,4
+  70              		.comm	km,2,4
+  71              		.comm	fecha,3,4
+  72              		.comm	hora,2,4
+  73              		.comm	rventa1,118,4
+  74              		.comm	rventa2,118,4
+  75              		.comm	ok_RF,1,1
+  76              		.comm	ok_datosRF,1,1
+  77              		.comm	rf_mod,200,4
+  78              		.comm	buffer_i2c,64,4
+  79              		.comm	crc_total,1,1
+  80              		.comm	print1,2,4
+  81              		.comm	print2,2,4
+  82              		.comm	tipo_venta,1,1
+  83              		.section	.text.touch_present,"ax",%progbits
+  84              		.align	2
+  85              		.global	touch_present
+  86              		.thumb
+  87              		.thumb_func
+  88              		.type	touch_present, %function
+  89              	touch_present:
+  90              	.LFB63:
+  91              		.file 1 ".\\ibuton.c"
    1:.\ibuton.c    **** /*
    2:.\ibuton.c    **** ***************************************************************************************************
    3:.\ibuton.c    **** *                                           GRP550M CODE
@@ -115,12 +118,12 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 1
   21:.\ibuton.c    **** *                                            CY8C5969AXI-LP035
   22:.\ibuton.c    **** *
   23:.\ibuton.c    **** * Filename      : ibutton.c
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 3
+
+
   24:.\ibuton.c    **** * Version       : V1.00
   25:.\ibuton.c    **** * Programmer(s) : 
   26:.\ibuton.c    ****                   
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 3
-
-
   27:.\ibuton.c    **** ***************************************************************************************************
   28:.\ibuton.c    **** */
   29:.\ibuton.c    **** 
@@ -150,189 +153,189 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 1
   53:.\ibuton.c    **** */
   54:.\ibuton.c    **** 
   55:.\ibuton.c    **** uint8 touch_present(uint8 ibutton){  
-  89              		.loc 1 55 0
-  90              		.cfi_startproc
-  91              		@ args = 0, pretend = 0, frame = 16
-  92              		@ frame_needed = 1, uses_anonymous_args = 0
-  93 0000 80B5     		push	{r7, lr}
-  94              		.cfi_def_cfa_offset 8
-  95              		.cfi_offset 7, -8
-  96              		.cfi_offset 14, -4
-  97 0002 84B0     		sub	sp, sp, #16
-  98              		.cfi_def_cfa_offset 24
-  99 0004 00AF     		add	r7, sp, #0
- 100              		.cfi_def_cfa_register 7
- 101 0006 0346     		mov	r3, r0
- 102 0008 FB71     		strb	r3, [r7, #7]
+  92              		.loc 1 55 0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 16
+  95              		@ frame_needed = 1, uses_anonymous_args = 0
+  96 0000 80B5     		push	{r7, lr}
+  97              		.cfi_def_cfa_offset 8
+  98              		.cfi_offset 7, -8
+  99              		.cfi_offset 14, -4
+ 100 0002 84B0     		sub	sp, sp, #16
+ 101              		.cfi_def_cfa_offset 24
+ 102 0004 00AF     		add	r7, sp, #0
+ 103              		.cfi_def_cfa_register 7
+ 104 0006 0346     		mov	r3, r0
+ 105 0008 FB71     		strb	r3, [r7, #7]
   56:.\ibuton.c    ****     uint8 present;
   57:.\ibuton.c    **** 	if(ibutton==1){
- 103              		.loc 1 57 0
- 104 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 105 000c 012B     		cmp	r3, #1
- 106 000e 29D1     		bne	.L2
+ 106              		.loc 1 57 0
+ 107 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 108 000c 012B     		cmp	r3, #1
+ 109 000e 29D1     		bne	.L2
   58:.\ibuton.c    **** 	    IB1_Write(0);
- 107              		.loc 1 58 0
- 108 0010 0020     		movs	r0, #0
- 109 0012 FFF7FEFF 		bl	IB1_Write
+ 110              		.loc 1 58 0
+ 111 0010 0020     		movs	r0, #0
+ 112 0012 FFF7FEFF 		bl	IB1_Write
   59:.\ibuton.c    **** 	    CyDelayUs(500);
- 110              		.loc 1 59 0
- 111 0016 4FF4FA70 		mov	r0, #500
- 112 001a FFF7FEFF 		bl	CyDelayUs
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 4
 
 
+ 113              		.loc 1 59 0
+ 114 0016 4FF4FA70 		mov	r0, #500
+ 115 001a FFF7FEFF 		bl	CyDelayUs
   60:.\ibuton.c    **** 	    IB1_Write(1);
- 113              		.loc 1 60 0
- 114 001e 0120     		movs	r0, #1
- 115 0020 FFF7FEFF 		bl	IB1_Write
+ 116              		.loc 1 60 0
+ 117 001e 0120     		movs	r0, #1
+ 118 0020 FFF7FEFF 		bl	IB1_Write
   61:.\ibuton.c    **** 	    CyDelayUs(5);
- 116              		.loc 1 61 0
- 117 0024 0520     		movs	r0, #5
- 118 0026 FFF7FEFF 		bl	CyDelayUs
+ 119              		.loc 1 61 0
+ 120 0024 0520     		movs	r0, #5
+ 121 0026 FFF7FEFF 		bl	CyDelayUs
   62:.\ibuton.c    **** 
   63:.\ibuton.c    **** 	    if(!IB1_Read()){
- 119              		.loc 1 63 0
- 120 002a FFF7FEFF 		bl	IB1_Read
- 121 002e 0346     		mov	r3, r0
- 122 0030 002B     		cmp	r3, #0
- 123 0032 01D1     		bne	.L3
+ 122              		.loc 1 63 0
+ 123 002a FFF7FEFF 		bl	IB1_Read
+ 124 002e 0346     		mov	r3, r0
+ 125 0030 002B     		cmp	r3, #0
+ 126 0032 01D1     		bne	.L3
   64:.\ibuton.c    **** 	        return 0;
- 124              		.loc 1 64 0
- 125 0034 0023     		movs	r3, #0
- 126 0036 3EE0     		b	.L4
- 127              	.L3:
+ 127              		.loc 1 64 0
+ 128 0034 0023     		movs	r3, #0
+ 129 0036 3EE0     		b	.L4
+ 130              	.L3:
   65:.\ibuton.c    **** 	    }
   66:.\ibuton.c    **** 
   67:.\ibuton.c    **** 	    CyDelayUs(65);
- 128              		.loc 1 67 0
- 129 0038 4120     		movs	r0, #65
- 130 003a FFF7FEFF 		bl	CyDelayUs
+ 131              		.loc 1 67 0
+ 132 0038 4120     		movs	r0, #65
+ 133 003a FFF7FEFF 		bl	CyDelayUs
   68:.\ibuton.c    **** 	    present=!IB1_Read();
- 131              		.loc 1 68 0
- 132 003e FFF7FEFF 		bl	IB1_Read
- 133 0042 0346     		mov	r3, r0
- 134 0044 002B     		cmp	r3, #0
- 135 0046 0CBF     		ite	eq
- 136 0048 0123     		moveq	r3, #1
- 137 004a 0023     		movne	r3, #0
- 138 004c DBB2     		uxtb	r3, r3
- 139 004e FB73     		strb	r3, [r7, #15]
+ 134              		.loc 1 68 0
+ 135 003e FFF7FEFF 		bl	IB1_Read
+ 136 0042 0346     		mov	r3, r0
+ 137 0044 002B     		cmp	r3, #0
+ 138 0046 0CBF     		ite	eq
+ 139 0048 0123     		moveq	r3, #1
+ 140 004a 0023     		movne	r3, #0
+ 141 004c DBB2     		uxtb	r3, r3
+ 142 004e FB73     		strb	r3, [r7, #15]
   69:.\ibuton.c    **** 	    CyDelayUs(240);
- 140              		.loc 1 69 0
- 141 0050 F020     		movs	r0, #240
- 142 0052 FFF7FEFF 		bl	CyDelayUs
+ 143              		.loc 1 69 0
+ 144 0050 F020     		movs	r0, #240
+ 145 0052 FFF7FEFF 		bl	CyDelayUs
   70:.\ibuton.c    **** 	    if(present){
- 143              		.loc 1 70 0
- 144 0056 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 145 0058 002B     		cmp	r3, #0
- 146 005a 01D0     		beq	.L5
+ 146              		.loc 1 70 0
+ 147 0056 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 148 0058 002B     		cmp	r3, #0
+ 149 005a 01D0     		beq	.L5
   71:.\ibuton.c    **** 	        return 1;
- 147              		.loc 1 71 0
- 148 005c 0123     		movs	r3, #1
- 149 005e 2AE0     		b	.L4
- 150              	.L5:
+ 150              		.loc 1 71 0
+ 151 005c 0123     		movs	r3, #1
+ 152 005e 2AE0     		b	.L4
+ 153              	.L5:
   72:.\ibuton.c    **** 	    }
   73:.\ibuton.c    **** 	    else{
   74:.\ibuton.c    **** 	        return 0;
- 151              		.loc 1 74 0
- 152 0060 0023     		movs	r3, #0
- 153 0062 28E0     		b	.L4
- 154              	.L2:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 5
+ 154              		.loc 1 74 0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 5
 
 
+ 155 0060 0023     		movs	r3, #0
+ 156 0062 28E0     		b	.L4
+ 157              	.L2:
   75:.\ibuton.c    **** 	    } 
   76:.\ibuton.c    **** 	}
   77:.\ibuton.c    **** 	else{
   78:.\ibuton.c    **** 	    IB2_Write(0);
- 155              		.loc 1 78 0
- 156 0064 0020     		movs	r0, #0
- 157 0066 FFF7FEFF 		bl	IB2_Write
+ 158              		.loc 1 78 0
+ 159 0064 0020     		movs	r0, #0
+ 160 0066 FFF7FEFF 		bl	IB2_Write
   79:.\ibuton.c    **** 	    CyDelayUs(500);
- 158              		.loc 1 79 0
- 159 006a 4FF4FA70 		mov	r0, #500
- 160 006e FFF7FEFF 		bl	CyDelayUs
+ 161              		.loc 1 79 0
+ 162 006a 4FF4FA70 		mov	r0, #500
+ 163 006e FFF7FEFF 		bl	CyDelayUs
   80:.\ibuton.c    **** 	    IB2_Write(1);
- 161              		.loc 1 80 0
- 162 0072 0120     		movs	r0, #1
- 163 0074 FFF7FEFF 		bl	IB2_Write
+ 164              		.loc 1 80 0
+ 165 0072 0120     		movs	r0, #1
+ 166 0074 FFF7FEFF 		bl	IB2_Write
   81:.\ibuton.c    **** 	    CyDelayUs(5);
- 164              		.loc 1 81 0
- 165 0078 0520     		movs	r0, #5
- 166 007a FFF7FEFF 		bl	CyDelayUs
+ 167              		.loc 1 81 0
+ 168 0078 0520     		movs	r0, #5
+ 169 007a FFF7FEFF 		bl	CyDelayUs
   82:.\ibuton.c    **** 
   83:.\ibuton.c    **** 	    if(!IB2_Read()){
- 167              		.loc 1 83 0
- 168 007e FFF7FEFF 		bl	IB2_Read
- 169 0082 0346     		mov	r3, r0
- 170 0084 002B     		cmp	r3, #0
- 171 0086 01D1     		bne	.L6
+ 170              		.loc 1 83 0
+ 171 007e FFF7FEFF 		bl	IB2_Read
+ 172 0082 0346     		mov	r3, r0
+ 173 0084 002B     		cmp	r3, #0
+ 174 0086 01D1     		bne	.L6
   84:.\ibuton.c    **** 	        return 0;
- 172              		.loc 1 84 0
- 173 0088 0023     		movs	r3, #0
- 174 008a 14E0     		b	.L4
- 175              	.L6:
+ 175              		.loc 1 84 0
+ 176 0088 0023     		movs	r3, #0
+ 177 008a 14E0     		b	.L4
+ 178              	.L6:
   85:.\ibuton.c    **** 	    }
   86:.\ibuton.c    **** 
   87:.\ibuton.c    **** 	    CyDelayUs(65);
- 176              		.loc 1 87 0
- 177 008c 4120     		movs	r0, #65
- 178 008e FFF7FEFF 		bl	CyDelayUs
+ 179              		.loc 1 87 0
+ 180 008c 4120     		movs	r0, #65
+ 181 008e FFF7FEFF 		bl	CyDelayUs
   88:.\ibuton.c    **** 	    present=!IB2_Read();
- 179              		.loc 1 88 0
- 180 0092 FFF7FEFF 		bl	IB2_Read
- 181 0096 0346     		mov	r3, r0
- 182 0098 002B     		cmp	r3, #0
- 183 009a 0CBF     		ite	eq
- 184 009c 0123     		moveq	r3, #1
- 185 009e 0023     		movne	r3, #0
- 186 00a0 DBB2     		uxtb	r3, r3
- 187 00a2 FB73     		strb	r3, [r7, #15]
+ 182              		.loc 1 88 0
+ 183 0092 FFF7FEFF 		bl	IB2_Read
+ 184 0096 0346     		mov	r3, r0
+ 185 0098 002B     		cmp	r3, #0
+ 186 009a 0CBF     		ite	eq
+ 187 009c 0123     		moveq	r3, #1
+ 188 009e 0023     		movne	r3, #0
+ 189 00a0 DBB2     		uxtb	r3, r3
+ 190 00a2 FB73     		strb	r3, [r7, #15]
   89:.\ibuton.c    **** 	    CyDelayUs(240);
- 188              		.loc 1 89 0
- 189 00a4 F020     		movs	r0, #240
- 190 00a6 FFF7FEFF 		bl	CyDelayUs
+ 191              		.loc 1 89 0
+ 192 00a4 F020     		movs	r0, #240
+ 193 00a6 FFF7FEFF 		bl	CyDelayUs
   90:.\ibuton.c    **** 	    if(present){
- 191              		.loc 1 90 0
- 192 00aa FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 193 00ac 002B     		cmp	r3, #0
- 194 00ae 01D0     		beq	.L7
+ 194              		.loc 1 90 0
+ 195 00aa FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 6
+
+
+ 196 00ac 002B     		cmp	r3, #0
+ 197 00ae 01D0     		beq	.L7
   91:.\ibuton.c    **** 	        return 1;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 6
-
-
- 195              		.loc 1 91 0
- 196 00b0 0123     		movs	r3, #1
- 197 00b2 00E0     		b	.L4
- 198              	.L7:
+ 198              		.loc 1 91 0
+ 199 00b0 0123     		movs	r3, #1
+ 200 00b2 00E0     		b	.L4
+ 201              	.L7:
   92:.\ibuton.c    **** 	    }
   93:.\ibuton.c    **** 	    else{
   94:.\ibuton.c    **** 	        return 0;
- 199              		.loc 1 94 0
- 200 00b4 0023     		movs	r3, #0
- 201              	.L4:
+ 202              		.loc 1 94 0
+ 203 00b4 0023     		movs	r3, #0
+ 204              	.L4:
   95:.\ibuton.c    **** 	    }	
   96:.\ibuton.c    **** 	}
   97:.\ibuton.c    **** }
- 202              		.loc 1 97 0
- 203 00b6 1846     		mov	r0, r3
- 204 00b8 1037     		adds	r7, r7, #16
- 205              		.cfi_def_cfa_offset 8
- 206 00ba BD46     		mov	sp, r7
- 207              		.cfi_def_cfa_register 13
- 208              		@ sp needed
- 209 00bc 80BD     		pop	{r7, pc}
- 210              		.cfi_endproc
- 211              	.LFE63:
- 212              		.size	touch_present, .-touch_present
- 213 00be 00BF     		.section	.text.touch_write,"ax",%progbits
- 214              		.align	2
- 215              		.global	touch_write
- 216              		.thumb
- 217              		.thumb_func
- 218              		.type	touch_write, %function
- 219              	touch_write:
- 220              	.LFB64:
+ 205              		.loc 1 97 0
+ 206 00b6 1846     		mov	r0, r3
+ 207 00b8 1037     		adds	r7, r7, #16
+ 208              		.cfi_def_cfa_offset 8
+ 209 00ba BD46     		mov	sp, r7
+ 210              		.cfi_def_cfa_register 13
+ 211              		@ sp needed
+ 212 00bc 80BD     		pop	{r7, pc}
+ 213              		.cfi_endproc
+ 214              	.LFE63:
+ 215              		.size	touch_present, .-touch_present
+ 216 00be 00BF     		.section	.text.touch_write,"ax",%progbits
+ 217              		.align	2
+ 218              		.global	touch_write
+ 219              		.thumb
+ 220              		.thumb_func
+ 221              		.type	touch_write, %function
+ 222              	touch_write:
+ 223              	.LFB64:
   98:.\ibuton.c    **** 
   99:.\ibuton.c    **** /*
  100:.\ibuton.c    **** ***************************************************************************************************
@@ -352,255 +355,255 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 1
  114:.\ibuton.c    **** */
  115:.\ibuton.c    **** 
  116:.\ibuton.c    **** uint8 touch_write(uint8 ibutton, uint8 dato){
- 221              		.loc 1 116 0
- 222              		.cfi_startproc
- 223              		@ args = 0, pretend = 0, frame = 16
- 224              		@ frame_needed = 1, uses_anonymous_args = 0
- 225 0000 80B5     		push	{r7, lr}
- 226              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 7
+ 224              		.loc 1 116 0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 7
 
 
- 227              		.cfi_offset 7, -8
- 228              		.cfi_offset 14, -4
- 229 0002 84B0     		sub	sp, sp, #16
- 230              		.cfi_def_cfa_offset 24
- 231 0004 00AF     		add	r7, sp, #0
- 232              		.cfi_def_cfa_register 7
- 233 0006 0346     		mov	r3, r0
- 234 0008 0A46     		mov	r2, r1
- 235 000a FB71     		strb	r3, [r7, #7]
- 236 000c 1346     		mov	r3, r2
- 237 000e BB71     		strb	r3, [r7, #6]
+ 227              		@ frame_needed = 1, uses_anonymous_args = 0
+ 228 0000 80B5     		push	{r7, lr}
+ 229              		.cfi_def_cfa_offset 8
+ 230              		.cfi_offset 7, -8
+ 231              		.cfi_offset 14, -4
+ 232 0002 84B0     		sub	sp, sp, #16
+ 233              		.cfi_def_cfa_offset 24
+ 234 0004 00AF     		add	r7, sp, #0
+ 235              		.cfi_def_cfa_register 7
+ 236 0006 0346     		mov	r3, r0
+ 237 0008 0A46     		mov	r2, r1
+ 238 000a FB71     		strb	r3, [r7, #7]
+ 239 000c 1346     		mov	r3, r2
+ 240 000e BB71     		strb	r3, [r7, #6]
  117:.\ibuton.c    ****     uint8 i;
  118:.\ibuton.c    **** 	if(ibutton==1){
- 238              		.loc 1 118 0
- 239 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 240 0012 012B     		cmp	r3, #1
- 241 0014 3BD1     		bne	.L9
+ 241              		.loc 1 118 0
+ 242 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 243 0012 012B     		cmp	r3, #1
+ 244 0014 3BD1     		bne	.L9
  119:.\ibuton.c    **** 	    for(i=0;i<=7;i++){
- 242              		.loc 1 119 0
- 243 0016 0023     		movs	r3, #0
- 244 0018 FB73     		strb	r3, [r7, #15]
- 245 001a 33E0     		b	.L10
- 246              	.L14:
+ 245              		.loc 1 119 0
+ 246 0016 0023     		movs	r3, #0
+ 247 0018 FB73     		strb	r3, [r7, #15]
+ 248 001a 33E0     		b	.L10
+ 249              	.L14:
  120:.\ibuton.c    **** 	        IB1_Write(0); 
- 247              		.loc 1 120 0
- 248 001c 0020     		movs	r0, #0
- 249 001e FFF7FEFF 		bl	IB1_Write
+ 250              		.loc 1 120 0
+ 251 001c 0020     		movs	r0, #0
+ 252 001e FFF7FEFF 		bl	IB1_Write
  121:.\ibuton.c    **** 	        CyDelayUs(10);
- 250              		.loc 1 121 0
- 251 0022 0A20     		movs	r0, #10
- 252 0024 FFF7FEFF 		bl	CyDelayUs
+ 253              		.loc 1 121 0
+ 254 0022 0A20     		movs	r0, #10
+ 255 0024 FFF7FEFF 		bl	CyDelayUs
  122:.\ibuton.c    **** 	        if(((dato>>i)&1)){
- 253              		.loc 1 122 0
- 254 0028 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
- 255 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 256 002c 42FA03F3 		asr	r3, r2, r3
- 257 0030 03F00103 		and	r3, r3, #1
- 258 0034 002B     		cmp	r3, #0
- 259 0036 0CD0     		beq	.L11
+ 256              		.loc 1 122 0
+ 257 0028 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
+ 258 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 259 002c 42FA03F3 		asr	r3, r2, r3
+ 260 0030 03F00103 		and	r3, r3, #1
+ 261 0034 002B     		cmp	r3, #0
+ 262 0036 0CD0     		beq	.L11
  123:.\ibuton.c    **** 	           IB1_Write(1);
- 260              		.loc 1 123 0
- 261 0038 0120     		movs	r0, #1
- 262 003a FFF7FEFF 		bl	IB1_Write
+ 263              		.loc 1 123 0
+ 264 0038 0120     		movs	r0, #1
+ 265 003a FFF7FEFF 		bl	IB1_Write
  124:.\ibuton.c    **** 	           CyDelayUs(10);
- 263              		.loc 1 124 0
- 264 003e 0A20     		movs	r0, #10
- 265 0040 FFF7FEFF 		bl	CyDelayUs
+ 266              		.loc 1 124 0
+ 267 003e 0A20     		movs	r0, #10
+ 268 0040 FFF7FEFF 		bl	CyDelayUs
  125:.\ibuton.c    **** 	           if(!IB1_Read()){
- 266              		.loc 1 125 0
- 267 0044 FFF7FEFF 		bl	IB1_Read
- 268 0048 0346     		mov	r3, r0
- 269 004a 002B     		cmp	r3, #0
- 270 004c 0ED1     		bne	.L12
+ 269              		.loc 1 125 0
+ 270 0044 FFF7FEFF 		bl	IB1_Read
+ 271 0048 0346     		mov	r3, r0
+ 272 004a 002B     		cmp	r3, #0
+ 273 004c 0ED1     		bne	.L12
  126:.\ibuton.c    **** 	                return 0;                
- 271              		.loc 1 126 0
- 272 004e 0023     		movs	r3, #0
- 273 0050 58E0     		b	.L13
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 8
 
 
- 274              	.L11:
+ 274              		.loc 1 126 0
+ 275 004e 0023     		movs	r3, #0
+ 276 0050 58E0     		b	.L13
+ 277              	.L11:
  127:.\ibuton.c    **** 	           }
  128:.\ibuton.c    **** 	        }
  129:.\ibuton.c    **** 	        else{
  130:.\ibuton.c    **** 	            IB1_Write(0); 
- 275              		.loc 1 130 0
- 276 0052 0020     		movs	r0, #0
- 277 0054 FFF7FEFF 		bl	IB1_Write
+ 278              		.loc 1 130 0
+ 279 0052 0020     		movs	r0, #0
+ 280 0054 FFF7FEFF 		bl	IB1_Write
  131:.\ibuton.c    **** 	            CyDelayUs(10);
- 278              		.loc 1 131 0
- 279 0058 0A20     		movs	r0, #10
- 280 005a FFF7FEFF 		bl	CyDelayUs
+ 281              		.loc 1 131 0
+ 282 0058 0A20     		movs	r0, #10
+ 283 005a FFF7FEFF 		bl	CyDelayUs
  132:.\ibuton.c    **** 	           if(IB1_Read()){
- 281              		.loc 1 132 0
- 282 005e FFF7FEFF 		bl	IB1_Read
- 283 0062 0346     		mov	r3, r0
- 284 0064 002B     		cmp	r3, #0
- 285 0066 01D0     		beq	.L12
+ 284              		.loc 1 132 0
+ 285 005e FFF7FEFF 		bl	IB1_Read
+ 286 0062 0346     		mov	r3, r0
+ 287 0064 002B     		cmp	r3, #0
+ 288 0066 01D0     		beq	.L12
  133:.\ibuton.c    **** 	                return 0;                
- 286              		.loc 1 133 0
- 287 0068 0023     		movs	r3, #0
- 288 006a 4BE0     		b	.L13
- 289              	.L12:
+ 289              		.loc 1 133 0
+ 290 0068 0023     		movs	r3, #0
+ 291 006a 4BE0     		b	.L13
+ 292              	.L12:
  134:.\ibuton.c    **** 	           }            
  135:.\ibuton.c    **** 	        }
  136:.\ibuton.c    **** 	        CyDelayUs(50);
- 290              		.loc 1 136 0 discriminator 2
- 291 006c 3220     		movs	r0, #50
- 292 006e FFF7FEFF 		bl	CyDelayUs
+ 293              		.loc 1 136 0 discriminator 2
+ 294 006c 3220     		movs	r0, #50
+ 295 006e FFF7FEFF 		bl	CyDelayUs
  137:.\ibuton.c    **** 	        IB1_Write(1);
- 293              		.loc 1 137 0 discriminator 2
- 294 0072 0120     		movs	r0, #1
- 295 0074 FFF7FEFF 		bl	IB1_Write
+ 296              		.loc 1 137 0 discriminator 2
+ 297 0072 0120     		movs	r0, #1
+ 298 0074 FFF7FEFF 		bl	IB1_Write
  138:.\ibuton.c    **** 	        CyDelayUs(50);
- 296              		.loc 1 138 0 discriminator 2
- 297 0078 3220     		movs	r0, #50
- 298 007a FFF7FEFF 		bl	CyDelayUs
+ 299              		.loc 1 138 0 discriminator 2
+ 300 0078 3220     		movs	r0, #50
+ 301 007a FFF7FEFF 		bl	CyDelayUs
  119:.\ibuton.c    **** 	        IB1_Write(0); 
- 299              		.loc 1 119 0 discriminator 2
- 300 007e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 301 0080 0133     		adds	r3, r3, #1
- 302 0082 FB73     		strb	r3, [r7, #15]
- 303              	.L10:
+ 302              		.loc 1 119 0 discriminator 2
+ 303 007e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 304 0080 0133     		adds	r3, r3, #1
+ 305 0082 FB73     		strb	r3, [r7, #15]
+ 306              	.L10:
  119:.\ibuton.c    **** 	        IB1_Write(0); 
- 304              		.loc 1 119 0 is_stmt 0 discriminator 1
- 305 0084 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 306 0086 072B     		cmp	r3, #7
- 307 0088 C8D9     		bls	.L14
+ 307              		.loc 1 119 0 is_stmt 0 discriminator 1
+ 308 0084 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 309 0086 072B     		cmp	r3, #7
+ 310 0088 C8D9     		bls	.L14
  139:.\ibuton.c    **** 	    }
  140:.\ibuton.c    **** 	    return 1;
- 308              		.loc 1 140 0 is_stmt 1
- 309 008a 0123     		movs	r3, #1
- 310 008c 3AE0     		b	.L13
- 311              	.L9:
+ 311              		.loc 1 140 0 is_stmt 1
+ 312 008a 0123     		movs	r3, #1
+ 313 008c 3AE0     		b	.L13
+ 314              	.L9:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 9
+
+
  141:.\ibuton.c    **** 	}
  142:.\ibuton.c    **** 	else{
  143:.\ibuton.c    **** 	    for(i=0;i<=7;i++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 9
-
-
- 312              		.loc 1 143 0
- 313 008e 0023     		movs	r3, #0
- 314 0090 FB73     		strb	r3, [r7, #15]
- 315 0092 33E0     		b	.L15
- 316              	.L18:
+ 315              		.loc 1 143 0
+ 316 008e 0023     		movs	r3, #0
+ 317 0090 FB73     		strb	r3, [r7, #15]
+ 318 0092 33E0     		b	.L15
+ 319              	.L18:
  144:.\ibuton.c    **** 	        IB2_Write(0); 
- 317              		.loc 1 144 0
- 318 0094 0020     		movs	r0, #0
- 319 0096 FFF7FEFF 		bl	IB2_Write
+ 320              		.loc 1 144 0
+ 321 0094 0020     		movs	r0, #0
+ 322 0096 FFF7FEFF 		bl	IB2_Write
  145:.\ibuton.c    **** 	        CyDelayUs(10);
- 320              		.loc 1 145 0
- 321 009a 0A20     		movs	r0, #10
- 322 009c FFF7FEFF 		bl	CyDelayUs
+ 323              		.loc 1 145 0
+ 324 009a 0A20     		movs	r0, #10
+ 325 009c FFF7FEFF 		bl	CyDelayUs
  146:.\ibuton.c    **** 	        if(((dato>>i)&1)){
- 323              		.loc 1 146 0
- 324 00a0 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
- 325 00a2 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 326 00a4 42FA03F3 		asr	r3, r2, r3
- 327 00a8 03F00103 		and	r3, r3, #1
- 328 00ac 002B     		cmp	r3, #0
- 329 00ae 0CD0     		beq	.L16
+ 326              		.loc 1 146 0
+ 327 00a0 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
+ 328 00a2 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 329 00a4 42FA03F3 		asr	r3, r2, r3
+ 330 00a8 03F00103 		and	r3, r3, #1
+ 331 00ac 002B     		cmp	r3, #0
+ 332 00ae 0CD0     		beq	.L16
  147:.\ibuton.c    **** 	           IB2_Write(1);
- 330              		.loc 1 147 0
- 331 00b0 0120     		movs	r0, #1
- 332 00b2 FFF7FEFF 		bl	IB2_Write
+ 333              		.loc 1 147 0
+ 334 00b0 0120     		movs	r0, #1
+ 335 00b2 FFF7FEFF 		bl	IB2_Write
  148:.\ibuton.c    **** 	           CyDelayUs(10);
- 333              		.loc 1 148 0
- 334 00b6 0A20     		movs	r0, #10
- 335 00b8 FFF7FEFF 		bl	CyDelayUs
+ 336              		.loc 1 148 0
+ 337 00b6 0A20     		movs	r0, #10
+ 338 00b8 FFF7FEFF 		bl	CyDelayUs
  149:.\ibuton.c    **** 	           if(!IB2_Read()){
- 336              		.loc 1 149 0
- 337 00bc FFF7FEFF 		bl	IB2_Read
- 338 00c0 0346     		mov	r3, r0
- 339 00c2 002B     		cmp	r3, #0
- 340 00c4 0ED1     		bne	.L17
+ 339              		.loc 1 149 0
+ 340 00bc FFF7FEFF 		bl	IB2_Read
+ 341 00c0 0346     		mov	r3, r0
+ 342 00c2 002B     		cmp	r3, #0
+ 343 00c4 0ED1     		bne	.L17
  150:.\ibuton.c    **** 	                return 0;                
- 341              		.loc 1 150 0
- 342 00c6 0023     		movs	r3, #0
- 343 00c8 1CE0     		b	.L13
- 344              	.L16:
+ 344              		.loc 1 150 0
+ 345 00c6 0023     		movs	r3, #0
+ 346 00c8 1CE0     		b	.L13
+ 347              	.L16:
  151:.\ibuton.c    **** 	           }
  152:.\ibuton.c    **** 	        }
  153:.\ibuton.c    **** 	        else{
  154:.\ibuton.c    **** 	            IB2_Write(0); 
- 345              		.loc 1 154 0
- 346 00ca 0020     		movs	r0, #0
- 347 00cc FFF7FEFF 		bl	IB2_Write
+ 348              		.loc 1 154 0
+ 349 00ca 0020     		movs	r0, #0
+ 350 00cc FFF7FEFF 		bl	IB2_Write
  155:.\ibuton.c    **** 	            CyDelayUs(10);
- 348              		.loc 1 155 0
- 349 00d0 0A20     		movs	r0, #10
- 350 00d2 FFF7FEFF 		bl	CyDelayUs
+ 351              		.loc 1 155 0
+ 352 00d0 0A20     		movs	r0, #10
+ 353 00d2 FFF7FEFF 		bl	CyDelayUs
  156:.\ibuton.c    **** 	           if(IB2_Read()){
- 351              		.loc 1 156 0
- 352 00d6 FFF7FEFF 		bl	IB2_Read
- 353 00da 0346     		mov	r3, r0
- 354 00dc 002B     		cmp	r3, #0
- 355 00de 01D0     		beq	.L17
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 10
+ 354              		.loc 1 156 0
+ 355 00d6 FFF7FEFF 		bl	IB2_Read
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 10
 
 
+ 356 00da 0346     		mov	r3, r0
+ 357 00dc 002B     		cmp	r3, #0
+ 358 00de 01D0     		beq	.L17
  157:.\ibuton.c    **** 	                return 0;                
- 356              		.loc 1 157 0
- 357 00e0 0023     		movs	r3, #0
- 358 00e2 0FE0     		b	.L13
- 359              	.L17:
+ 359              		.loc 1 157 0
+ 360 00e0 0023     		movs	r3, #0
+ 361 00e2 0FE0     		b	.L13
+ 362              	.L17:
  158:.\ibuton.c    **** 	           }            
  159:.\ibuton.c    **** 	        }
  160:.\ibuton.c    **** 	        CyDelayUs(50);
- 360              		.loc 1 160 0 discriminator 2
- 361 00e4 3220     		movs	r0, #50
- 362 00e6 FFF7FEFF 		bl	CyDelayUs
+ 363              		.loc 1 160 0 discriminator 2
+ 364 00e4 3220     		movs	r0, #50
+ 365 00e6 FFF7FEFF 		bl	CyDelayUs
  161:.\ibuton.c    **** 	        IB2_Write(1);
- 363              		.loc 1 161 0 discriminator 2
- 364 00ea 0120     		movs	r0, #1
- 365 00ec FFF7FEFF 		bl	IB2_Write
+ 366              		.loc 1 161 0 discriminator 2
+ 367 00ea 0120     		movs	r0, #1
+ 368 00ec FFF7FEFF 		bl	IB2_Write
  162:.\ibuton.c    **** 	        CyDelayUs(50);
- 366              		.loc 1 162 0 discriminator 2
- 367 00f0 3220     		movs	r0, #50
- 368 00f2 FFF7FEFF 		bl	CyDelayUs
+ 369              		.loc 1 162 0 discriminator 2
+ 370 00f0 3220     		movs	r0, #50
+ 371 00f2 FFF7FEFF 		bl	CyDelayUs
  143:.\ibuton.c    **** 	        IB2_Write(0); 
- 369              		.loc 1 143 0 discriminator 2
- 370 00f6 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 371 00f8 0133     		adds	r3, r3, #1
- 372 00fa FB73     		strb	r3, [r7, #15]
- 373              	.L15:
+ 372              		.loc 1 143 0 discriminator 2
+ 373 00f6 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 374 00f8 0133     		adds	r3, r3, #1
+ 375 00fa FB73     		strb	r3, [r7, #15]
+ 376              	.L15:
  143:.\ibuton.c    **** 	        IB2_Write(0); 
- 374              		.loc 1 143 0 is_stmt 0 discriminator 1
- 375 00fc FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 376 00fe 072B     		cmp	r3, #7
- 377 0100 C8D9     		bls	.L18
+ 377              		.loc 1 143 0 is_stmt 0 discriminator 1
+ 378 00fc FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 379 00fe 072B     		cmp	r3, #7
+ 380 0100 C8D9     		bls	.L18
  163:.\ibuton.c    **** 	    }
  164:.\ibuton.c    **** 	    return 1;	
- 378              		.loc 1 164 0 is_stmt 1
- 379 0102 0123     		movs	r3, #1
- 380              	.L13:
+ 381              		.loc 1 164 0 is_stmt 1
+ 382 0102 0123     		movs	r3, #1
+ 383              	.L13:
  165:.\ibuton.c    **** 	}
  166:.\ibuton.c    **** }
- 381              		.loc 1 166 0
- 382 0104 1846     		mov	r0, r3
- 383 0106 1037     		adds	r7, r7, #16
- 384              		.cfi_def_cfa_offset 8
- 385 0108 BD46     		mov	sp, r7
- 386              		.cfi_def_cfa_register 13
- 387              		@ sp needed
- 388 010a 80BD     		pop	{r7, pc}
- 389              		.cfi_endproc
- 390              	.LFE64:
- 391              		.size	touch_write, .-touch_write
- 392              		.section	.text.touch_read_byte,"ax",%progbits
- 393              		.align	2
- 394              		.global	touch_read_byte
- 395              		.thumb
- 396              		.thumb_func
- 397              		.type	touch_read_byte, %function
- 398              	touch_read_byte:
- 399              	.LFB65:
+ 384              		.loc 1 166 0
+ 385 0104 1846     		mov	r0, r3
+ 386 0106 1037     		adds	r7, r7, #16
+ 387              		.cfi_def_cfa_offset 8
+ 388 0108 BD46     		mov	sp, r7
+ 389              		.cfi_def_cfa_register 13
+ 390              		@ sp needed
+ 391 010a 80BD     		pop	{r7, pc}
+ 392              		.cfi_endproc
+ 393              	.LFE64:
+ 394              		.size	touch_write, .-touch_write
+ 395              		.section	.text.touch_read_byte,"ax",%progbits
+ 396              		.align	2
+ 397              		.global	touch_read_byte
+ 398              		.thumb
+ 399              		.thumb_func
+ 400              		.type	touch_read_byte, %function
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 11
+
+
+ 401              	touch_read_byte:
+ 402              	.LFB65:
  167:.\ibuton.c    **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 11
-
-
  168:.\ibuton.c    **** /*
  169:.\ibuton.c    **** ***************************************************************************************************
  170:.\ibuton.c    **** *                                           uint8 touch_read_byte()
@@ -619,170 +622,170 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 1
  183:.\ibuton.c    **** */
  184:.\ibuton.c    **** 
  185:.\ibuton.c    **** uint8 touch_read_byte(uint8 ibutton){
- 400              		.loc 1 185 0
- 401              		.cfi_startproc
- 402              		@ args = 0, pretend = 0, frame = 16
- 403              		@ frame_needed = 1, uses_anonymous_args = 0
- 404 0000 80B5     		push	{r7, lr}
- 405              		.cfi_def_cfa_offset 8
- 406              		.cfi_offset 7, -8
- 407              		.cfi_offset 14, -4
- 408 0002 84B0     		sub	sp, sp, #16
- 409              		.cfi_def_cfa_offset 24
- 410 0004 00AF     		add	r7, sp, #0
- 411              		.cfi_def_cfa_register 7
- 412 0006 0346     		mov	r3, r0
- 413 0008 FB71     		strb	r3, [r7, #7]
+ 403              		.loc 1 185 0
+ 404              		.cfi_startproc
+ 405              		@ args = 0, pretend = 0, frame = 16
+ 406              		@ frame_needed = 1, uses_anonymous_args = 0
+ 407 0000 80B5     		push	{r7, lr}
+ 408              		.cfi_def_cfa_offset 8
+ 409              		.cfi_offset 7, -8
+ 410              		.cfi_offset 14, -4
+ 411 0002 84B0     		sub	sp, sp, #16
+ 412              		.cfi_def_cfa_offset 24
+ 413 0004 00AF     		add	r7, sp, #0
+ 414              		.cfi_def_cfa_register 7
+ 415 0006 0346     		mov	r3, r0
+ 416 0008 FB71     		strb	r3, [r7, #7]
  186:.\ibuton.c    ****     uint8 i, dato=0;
- 414              		.loc 1 186 0
- 415 000a 0023     		movs	r3, #0
- 416 000c BB73     		strb	r3, [r7, #14]
+ 417              		.loc 1 186 0
+ 418 000a 0023     		movs	r3, #0
+ 419 000c BB73     		strb	r3, [r7, #14]
  187:.\ibuton.c    **** 	if(ibutton==1){
- 417              		.loc 1 187 0
- 418 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 419 0010 012B     		cmp	r3, #1
- 420 0012 25D1     		bne	.L20
+ 420              		.loc 1 187 0
+ 421 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 422 0010 012B     		cmp	r3, #1
+ 423 0012 25D1     		bne	.L20
  188:.\ibuton.c    **** 	    for(i=0;i<=7;i++){
- 421              		.loc 1 188 0
- 422 0014 0023     		movs	r3, #0
- 423 0016 FB73     		strb	r3, [r7, #15]
- 424 0018 1DE0     		b	.L21
- 425              	.L22:
+ 424              		.loc 1 188 0
+ 425 0014 0023     		movs	r3, #0
+ 426 0016 FB73     		strb	r3, [r7, #15]
+ 427 0018 1DE0     		b	.L21
+ 428              	.L22:
  189:.\ibuton.c    **** 	        IB1_Write(0);    
- 426              		.loc 1 189 0 discriminator 3
- 427 001a 0020     		movs	r0, #0
- 428 001c FFF7FEFF 		bl	IB1_Write
+ 429              		.loc 1 189 0 discriminator 3
+ 430 001a 0020     		movs	r0, #0
+ 431 001c FFF7FEFF 		bl	IB1_Write
  190:.\ibuton.c    **** 	        CyDelayUs(14);
- 429              		.loc 1 190 0 discriminator 3
- 430 0020 0E20     		movs	r0, #14
- 431 0022 FFF7FEFF 		bl	CyDelayUs
+ 432              		.loc 1 190 0 discriminator 3
+ 433 0020 0E20     		movs	r0, #14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 12
+
+
+ 434 0022 FFF7FEFF 		bl	CyDelayUs
  191:.\ibuton.c    **** 	        IB1_Write(1);
- 432              		.loc 1 191 0 discriminator 3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 12
-
-
- 433 0026 0120     		movs	r0, #1
- 434 0028 FFF7FEFF 		bl	IB1_Write
+ 435              		.loc 1 191 0 discriminator 3
+ 436 0026 0120     		movs	r0, #1
+ 437 0028 FFF7FEFF 		bl	IB1_Write
  192:.\ibuton.c    **** 	        CyDelayUs(7);
- 435              		.loc 1 192 0 discriminator 3
- 436 002c 0720     		movs	r0, #7
- 437 002e FFF7FEFF 		bl	CyDelayUs
+ 438              		.loc 1 192 0 discriminator 3
+ 439 002c 0720     		movs	r0, #7
+ 440 002e FFF7FEFF 		bl	CyDelayUs
  193:.\ibuton.c    **** 	        dato|=(IB1_Read()<<i);
- 438              		.loc 1 193 0 discriminator 3
- 439 0032 FFF7FEFF 		bl	IB1_Read
- 440 0036 0346     		mov	r3, r0
- 441 0038 1A46     		mov	r2, r3
- 442 003a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 443 003c 02FA03F3 		lsl	r3, r2, r3
- 444 0040 DAB2     		uxtb	r2, r3
- 445 0042 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
- 446 0044 1343     		orrs	r3, r3, r2
- 447 0046 DBB2     		uxtb	r3, r3
- 448 0048 BB73     		strb	r3, [r7, #14]
+ 441              		.loc 1 193 0 discriminator 3
+ 442 0032 FFF7FEFF 		bl	IB1_Read
+ 443 0036 0346     		mov	r3, r0
+ 444 0038 1A46     		mov	r2, r3
+ 445 003a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 446 003c 02FA03F3 		lsl	r3, r2, r3
+ 447 0040 DAB2     		uxtb	r2, r3
+ 448 0042 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 449 0044 1343     		orrs	r3, r3, r2
+ 450 0046 DBB2     		uxtb	r3, r3
+ 451 0048 BB73     		strb	r3, [r7, #14]
  194:.\ibuton.c    **** 	        CyDelayUs(100);
- 449              		.loc 1 194 0 discriminator 3
- 450 004a 6420     		movs	r0, #100
- 451 004c FFF7FEFF 		bl	CyDelayUs
+ 452              		.loc 1 194 0 discriminator 3
+ 453 004a 6420     		movs	r0, #100
+ 454 004c FFF7FEFF 		bl	CyDelayUs
  188:.\ibuton.c    **** 	        IB1_Write(0);    
- 452              		.loc 1 188 0 discriminator 3
- 453 0050 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 454 0052 0133     		adds	r3, r3, #1
- 455 0054 FB73     		strb	r3, [r7, #15]
- 456              	.L21:
+ 455              		.loc 1 188 0 discriminator 3
+ 456 0050 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 457 0052 0133     		adds	r3, r3, #1
+ 458 0054 FB73     		strb	r3, [r7, #15]
+ 459              	.L21:
  188:.\ibuton.c    **** 	        IB1_Write(0);    
- 457              		.loc 1 188 0 is_stmt 0 discriminator 1
- 458 0056 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 459 0058 072B     		cmp	r3, #7
- 460 005a DED9     		bls	.L22
+ 460              		.loc 1 188 0 is_stmt 0 discriminator 1
+ 461 0056 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 462 0058 072B     		cmp	r3, #7
+ 463 005a DED9     		bls	.L22
  195:.\ibuton.c    **** 	    }
  196:.\ibuton.c    **** 	    return dato;
- 461              		.loc 1 196 0 is_stmt 1
- 462 005c BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
- 463 005e 24E0     		b	.L23
- 464              	.L20:
+ 464              		.loc 1 196 0 is_stmt 1
+ 465 005c BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 466 005e 24E0     		b	.L23
+ 467              	.L20:
  197:.\ibuton.c    **** 	}
  198:.\ibuton.c    **** 	else{
  199:.\ibuton.c    **** 	    for(i=0;i<=7;i++){
- 465              		.loc 1 199 0
- 466 0060 0023     		movs	r3, #0
- 467 0062 FB73     		strb	r3, [r7, #15]
- 468 0064 1DE0     		b	.L24
- 469              	.L25:
+ 468              		.loc 1 199 0
+ 469 0060 0023     		movs	r3, #0
+ 470 0062 FB73     		strb	r3, [r7, #15]
+ 471 0064 1DE0     		b	.L24
+ 472              	.L25:
  200:.\ibuton.c    **** 	        IB2_Write(0);    
- 470              		.loc 1 200 0 discriminator 3
- 471 0066 0020     		movs	r0, #0
- 472 0068 FFF7FEFF 		bl	IB2_Write
+ 473              		.loc 1 200 0 discriminator 3
+ 474 0066 0020     		movs	r0, #0
+ 475 0068 FFF7FEFF 		bl	IB2_Write
  201:.\ibuton.c    **** 	        CyDelayUs(14);
- 473              		.loc 1 201 0 discriminator 3
- 474 006c 0E20     		movs	r0, #14
- 475 006e FFF7FEFF 		bl	CyDelayUs
+ 476              		.loc 1 201 0 discriminator 3
+ 477 006c 0E20     		movs	r0, #14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 13
+
+
+ 478 006e FFF7FEFF 		bl	CyDelayUs
  202:.\ibuton.c    **** 	        IB2_Write(1);
- 476              		.loc 1 202 0 discriminator 3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 13
-
-
- 477 0072 0120     		movs	r0, #1
- 478 0074 FFF7FEFF 		bl	IB2_Write
+ 479              		.loc 1 202 0 discriminator 3
+ 480 0072 0120     		movs	r0, #1
+ 481 0074 FFF7FEFF 		bl	IB2_Write
  203:.\ibuton.c    **** 	        CyDelayUs(7);
- 479              		.loc 1 203 0 discriminator 3
- 480 0078 0720     		movs	r0, #7
- 481 007a FFF7FEFF 		bl	CyDelayUs
+ 482              		.loc 1 203 0 discriminator 3
+ 483 0078 0720     		movs	r0, #7
+ 484 007a FFF7FEFF 		bl	CyDelayUs
  204:.\ibuton.c    **** 	        dato|=(IB2_Read()<<i);
- 482              		.loc 1 204 0 discriminator 3
- 483 007e FFF7FEFF 		bl	IB2_Read
- 484 0082 0346     		mov	r3, r0
- 485 0084 1A46     		mov	r2, r3
- 486 0086 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 487 0088 02FA03F3 		lsl	r3, r2, r3
- 488 008c DAB2     		uxtb	r2, r3
- 489 008e BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
- 490 0090 1343     		orrs	r3, r3, r2
- 491 0092 DBB2     		uxtb	r3, r3
- 492 0094 BB73     		strb	r3, [r7, #14]
+ 485              		.loc 1 204 0 discriminator 3
+ 486 007e FFF7FEFF 		bl	IB2_Read
+ 487 0082 0346     		mov	r3, r0
+ 488 0084 1A46     		mov	r2, r3
+ 489 0086 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 490 0088 02FA03F3 		lsl	r3, r2, r3
+ 491 008c DAB2     		uxtb	r2, r3
+ 492 008e BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 493 0090 1343     		orrs	r3, r3, r2
+ 494 0092 DBB2     		uxtb	r3, r3
+ 495 0094 BB73     		strb	r3, [r7, #14]
  205:.\ibuton.c    **** 	        CyDelayUs(100);
- 493              		.loc 1 205 0 discriminator 3
- 494 0096 6420     		movs	r0, #100
- 495 0098 FFF7FEFF 		bl	CyDelayUs
+ 496              		.loc 1 205 0 discriminator 3
+ 497 0096 6420     		movs	r0, #100
+ 498 0098 FFF7FEFF 		bl	CyDelayUs
  199:.\ibuton.c    **** 	        IB2_Write(0);    
- 496              		.loc 1 199 0 discriminator 3
- 497 009c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 498 009e 0133     		adds	r3, r3, #1
- 499 00a0 FB73     		strb	r3, [r7, #15]
- 500              	.L24:
+ 499              		.loc 1 199 0 discriminator 3
+ 500 009c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 501 009e 0133     		adds	r3, r3, #1
+ 502 00a0 FB73     		strb	r3, [r7, #15]
+ 503              	.L24:
  199:.\ibuton.c    **** 	        IB2_Write(0);    
- 501              		.loc 1 199 0 is_stmt 0 discriminator 1
- 502 00a2 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 503 00a4 072B     		cmp	r3, #7
- 504 00a6 DED9     		bls	.L25
+ 504              		.loc 1 199 0 is_stmt 0 discriminator 1
+ 505 00a2 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 506 00a4 072B     		cmp	r3, #7
+ 507 00a6 DED9     		bls	.L25
  206:.\ibuton.c    **** 	    }
  207:.\ibuton.c    **** 	    return dato;	
- 505              		.loc 1 207 0 is_stmt 1
- 506 00a8 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
- 507              	.L23:
+ 508              		.loc 1 207 0 is_stmt 1
+ 509 00a8 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 510              	.L23:
  208:.\ibuton.c    **** 	}
  209:.\ibuton.c    **** } 
- 508              		.loc 1 209 0
- 509 00aa 1846     		mov	r0, r3
- 510 00ac 1037     		adds	r7, r7, #16
- 511              		.cfi_def_cfa_offset 8
- 512 00ae BD46     		mov	sp, r7
- 513              		.cfi_def_cfa_register 13
- 514              		@ sp needed
- 515 00b0 80BD     		pop	{r7, pc}
- 516              		.cfi_endproc
- 517              	.LFE65:
- 518              		.size	touch_read_byte, .-touch_read_byte
- 519 00b2 00BF     		.section	.text.crc_check,"ax",%progbits
- 520              		.align	2
- 521              		.global	crc_check
- 522              		.thumb
- 523              		.thumb_func
- 524              		.type	crc_check, %function
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 14
+ 511              		.loc 1 209 0
+ 512 00aa 1846     		mov	r0, r3
+ 513 00ac 1037     		adds	r7, r7, #16
+ 514              		.cfi_def_cfa_offset 8
+ 515 00ae BD46     		mov	sp, r7
+ 516              		.cfi_def_cfa_register 13
+ 517              		@ sp needed
+ 518 00b0 80BD     		pop	{r7, pc}
+ 519              		.cfi_endproc
+ 520              	.LFE65:
+ 521              		.size	touch_read_byte, .-touch_read_byte
+ 522 00b2 00BF     		.section	.text.crc_check,"ax",%progbits
+ 523              		.align	2
+ 524              		.global	crc_check
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 14
 
 
- 525              	crc_check:
- 526              	.LFB66:
+ 525              		.thumb
+ 526              		.thumb_func
+ 527              		.type	crc_check, %function
+ 528              	crc_check:
+ 529              	.LFB66:
  210:.\ibuton.c    **** 
  211:.\ibuton.c    **** /*
  212:.\ibuton.c    **** ***************************************************************************************************
@@ -802,2049 +805,2088 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 1
  226:.\ibuton.c    **** */
  227:.\ibuton.c    **** 
  228:.\ibuton.c    **** uint8 crc_check(uint8 crc, uint8 dato){
- 527              		.loc 1 228 0
- 528              		.cfi_startproc
- 529              		@ args = 0, pretend = 0, frame = 16
- 530              		@ frame_needed = 1, uses_anonymous_args = 0
- 531              		@ link register save eliminated.
- 532 0000 80B4     		push	{r7}
- 533              		.cfi_def_cfa_offset 4
- 534              		.cfi_offset 7, -4
- 535 0002 85B0     		sub	sp, sp, #20
- 536              		.cfi_def_cfa_offset 24
- 537 0004 00AF     		add	r7, sp, #0
- 538              		.cfi_def_cfa_register 7
- 539 0006 0346     		mov	r3, r0
- 540 0008 0A46     		mov	r2, r1
- 541 000a FB71     		strb	r3, [r7, #7]
- 542 000c 1346     		mov	r3, r2
- 543 000e BB71     		strb	r3, [r7, #6]
+ 530              		.loc 1 228 0
+ 531              		.cfi_startproc
+ 532              		@ args = 0, pretend = 0, frame = 16
+ 533              		@ frame_needed = 1, uses_anonymous_args = 0
+ 534              		@ link register save eliminated.
+ 535 0000 80B4     		push	{r7}
+ 536              		.cfi_def_cfa_offset 4
+ 537              		.cfi_offset 7, -4
+ 538 0002 85B0     		sub	sp, sp, #20
+ 539              		.cfi_def_cfa_offset 24
+ 540 0004 00AF     		add	r7, sp, #0
+ 541              		.cfi_def_cfa_register 7
+ 542 0006 0346     		mov	r3, r0
+ 543 0008 0A46     		mov	r2, r1
+ 544 000a FB71     		strb	r3, [r7, #7]
+ 545 000c 1346     		mov	r3, r2
+ 546 000e BB71     		strb	r3, [r7, #6]
  229:.\ibuton.c    ****     uint8 i;
  230:.\ibuton.c    ****     crc = crc ^ dato;
- 544              		.loc 1 230 0
- 545 0010 FA79     		ldrb	r2, [r7, #7]
- 546 0012 BB79     		ldrb	r3, [r7, #6]
- 547 0014 5340     		eors	r3, r3, r2
- 548 0016 FB71     		strb	r3, [r7, #7]
+ 547              		.loc 1 230 0
+ 548 0010 FA79     		ldrb	r2, [r7, #7]
+ 549 0012 BB79     		ldrb	r3, [r7, #6]
+ 550 0014 5340     		eors	r3, r3, r2
+ 551 0016 FB71     		strb	r3, [r7, #7]
  231:.\ibuton.c    ****     for (i = 0; i < 8; i++)
- 549              		.loc 1 231 0
- 550 0018 0023     		movs	r3, #0
- 551 001a FB73     		strb	r3, [r7, #15]
- 552 001c 12E0     		b	.L27
- 553              	.L30:
+ 552              		.loc 1 231 0
+ 553 0018 0023     		movs	r3, #0
+ 554 001a FB73     		strb	r3, [r7, #15]
+ 555 001c 12E0     		b	.L27
+ 556              	.L30:
  232:.\ibuton.c    ****     {
  233:.\ibuton.c    ****         if (crc & 0x01){
- 554              		.loc 1 233 0
- 555 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 556 0020 03F00103 		and	r3, r3, #1
- 557 0024 002B     		cmp	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 15
+ 557              		.loc 1 233 0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 15
 
 
- 558 0026 07D0     		beq	.L28
+ 558 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 559 0020 03F00103 		and	r3, r3, #1
+ 560 0024 002B     		cmp	r3, #0
+ 561 0026 07D0     		beq	.L28
  234:.\ibuton.c    ****             crc = (crc >> 1) ^ 0x8C;
- 559              		.loc 1 234 0
- 560 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 561 002a 5B08     		lsrs	r3, r3, #1
- 562 002c DBB2     		uxtb	r3, r3
- 563 002e 83F07303 		eor	r3, r3, #115
- 564 0032 DB43     		mvns	r3, r3
- 565 0034 FB71     		strb	r3, [r7, #7]
- 566 0036 02E0     		b	.L29
- 567              	.L28:
+ 562              		.loc 1 234 0
+ 563 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 564 002a 5B08     		lsrs	r3, r3, #1
+ 565 002c DBB2     		uxtb	r3, r3
+ 566 002e 83F07303 		eor	r3, r3, #115
+ 567 0032 DB43     		mvns	r3, r3
+ 568 0034 FB71     		strb	r3, [r7, #7]
+ 569 0036 02E0     		b	.L29
+ 570              	.L28:
  235:.\ibuton.c    **** 		}	
  236:.\ibuton.c    ****         else{
  237:.\ibuton.c    ****             crc >>= 1;
- 568              		.loc 1 237 0
- 569 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 570 003a 5B08     		lsrs	r3, r3, #1
- 571 003c FB71     		strb	r3, [r7, #7]
- 572              	.L29:
+ 571              		.loc 1 237 0
+ 572 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 573 003a 5B08     		lsrs	r3, r3, #1
+ 574 003c FB71     		strb	r3, [r7, #7]
+ 575              	.L29:
  231:.\ibuton.c    ****     {
- 573              		.loc 1 231 0 discriminator 2
- 574 003e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 575 0040 0133     		adds	r3, r3, #1
- 576 0042 FB73     		strb	r3, [r7, #15]
- 577              	.L27:
+ 576              		.loc 1 231 0 discriminator 2
+ 577 003e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 578 0040 0133     		adds	r3, r3, #1
+ 579 0042 FB73     		strb	r3, [r7, #15]
+ 580              	.L27:
  231:.\ibuton.c    ****     {
- 578              		.loc 1 231 0 is_stmt 0 discriminator 1
- 579 0044 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 580 0046 072B     		cmp	r3, #7
- 581 0048 E9D9     		bls	.L30
+ 581              		.loc 1 231 0 is_stmt 0 discriminator 1
+ 582 0044 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 583 0046 072B     		cmp	r3, #7
+ 584 0048 E9D9     		bls	.L30
  238:.\ibuton.c    **** 		}	
  239:.\ibuton.c    ****     }
  240:.\ibuton.c    ****     return crc;
- 582              		.loc 1 240 0 is_stmt 1
- 583 004a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 585              		.loc 1 240 0 is_stmt 1
+ 586 004a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  241:.\ibuton.c    **** }
- 584              		.loc 1 241 0
- 585 004c 1846     		mov	r0, r3
- 586 004e 1437     		adds	r7, r7, #20
- 587              		.cfi_def_cfa_offset 4
- 588 0050 BD46     		mov	sp, r7
- 589              		.cfi_def_cfa_register 13
- 590              		@ sp needed
- 591 0052 5DF8047B 		ldr	r7, [sp], #4
- 592              		.cfi_restore 7
- 593              		.cfi_def_cfa_offset 0
- 594 0056 7047     		bx	lr
- 595              		.cfi_endproc
- 596              	.LFE66:
- 597              		.size	crc_check, .-crc_check
- 598              		.text
- 599              	.Letext0:
- 600              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 601              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 602              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 603              		.file 5 ".\\VariablesG.h"
- 604              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 16
-
-
- 605              		.section	.debug_info,"",%progbits
- 606              	.Ldebug_info0:
- 607 0000 F3080000 		.4byte	0x8f3
- 608 0004 0400     		.2byte	0x4
- 609 0006 00000000 		.4byte	.Ldebug_abbrev0
- 610 000a 04       		.byte	0x4
- 611 000b 01       		.uleb128 0x1
- 612 000c 4B010000 		.4byte	.LASF105
- 613 0010 01       		.byte	0x1
- 614 0011 E2010000 		.4byte	.LASF106
- 615 0015 8F040000 		.4byte	.LASF107
- 616 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 617 001d 00000000 		.4byte	0
- 618 0021 00000000 		.4byte	.Ldebug_line0
- 619 0025 02       		.uleb128 0x2
- 620 0026 01       		.byte	0x1
- 621 0027 06       		.byte	0x6
- 622 0028 53020000 		.4byte	.LASF0
- 623 002c 02       		.uleb128 0x2
- 624 002d 01       		.byte	0x1
- 625 002e 08       		.byte	0x8
- 626 002f 2E020000 		.4byte	.LASF1
- 627 0033 02       		.uleb128 0x2
- 628 0034 02       		.byte	0x2
- 629 0035 05       		.byte	0x5
- 630 0036 7F000000 		.4byte	.LASF2
- 631 003a 02       		.uleb128 0x2
- 632 003b 02       		.byte	0x2
- 633 003c 07       		.byte	0x7
- 634 003d F3020000 		.4byte	.LASF3
- 635 0041 03       		.uleb128 0x3
- 636 0042 47030000 		.4byte	.LASF9
- 637 0046 02       		.byte	0x2
- 638 0047 3F       		.byte	0x3f
- 639 0048 4C000000 		.4byte	0x4c
- 640 004c 02       		.uleb128 0x2
- 641 004d 04       		.byte	0x4
- 642 004e 05       		.byte	0x5
- 643 004f 58040000 		.4byte	.LASF4
- 644 0053 02       		.uleb128 0x2
- 645 0054 04       		.byte	0x4
- 646 0055 07       		.byte	0x7
- 647 0056 A1030000 		.4byte	.LASF5
- 648 005a 02       		.uleb128 0x2
- 649 005b 08       		.byte	0x8
- 650 005c 05       		.byte	0x5
- 651 005d 3D010000 		.4byte	.LASF6
- 652 0061 02       		.uleb128 0x2
- 653 0062 08       		.byte	0x8
- 654 0063 07       		.byte	0x7
- 655 0064 67020000 		.4byte	.LASF7
- 656 0068 04       		.uleb128 0x4
- 657 0069 04       		.byte	0x4
- 658 006a 05       		.byte	0x5
- 659 006b 696E7400 		.ascii	"int\000"
- 660 006f 02       		.uleb128 0x2
- 661 0070 04       		.byte	0x4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 17
-
-
- 662 0071 07       		.byte	0x7
- 663 0072 9B020000 		.4byte	.LASF8
- 664 0076 03       		.uleb128 0x3
- 665 0077 31030000 		.4byte	.LASF10
- 666 007b 03       		.byte	0x3
- 667 007c 2C       		.byte	0x2c
- 668 007d 41000000 		.4byte	0x41
- 669 0081 03       		.uleb128 0x3
- 670 0082 28020000 		.4byte	.LASF11
- 671 0086 04       		.byte	0x4
- 672 0087 B4       		.byte	0xb4
- 673 0088 2C000000 		.4byte	0x2c
- 674 008c 03       		.uleb128 0x3
- 675 008d FA000000 		.4byte	.LASF12
- 676 0091 04       		.byte	0x4
- 677 0092 B5       		.byte	0xb5
- 678 0093 3A000000 		.4byte	0x3a
- 679 0097 02       		.uleb128 0x2
- 680 0098 04       		.byte	0x4
- 681 0099 04       		.byte	0x4
- 682 009a 2D010000 		.4byte	.LASF13
- 683 009e 02       		.uleb128 0x2
- 684 009f 08       		.byte	0x8
- 685 00a0 04       		.byte	0x4
- 686 00a1 3B040000 		.4byte	.LASF14
- 687 00a5 02       		.uleb128 0x2
- 688 00a6 01       		.byte	0x1
- 689 00a7 08       		.byte	0x8
- 690 00a8 1C030000 		.4byte	.LASF15
- 691 00ac 05       		.uleb128 0x5
- 692 00ad 81000000 		.4byte	0x81
- 693 00b1 05       		.uleb128 0x5
- 694 00b2 8C000000 		.4byte	0x8c
- 695 00b6 02       		.uleb128 0x2
- 696 00b7 04       		.byte	0x4
- 697 00b8 07       		.byte	0x7
- 698 00b9 D9010000 		.4byte	.LASF16
- 699 00bd 06       		.uleb128 0x6
- 700 00be 81000000 		.4byte	0x81
- 701 00c2 CD000000 		.4byte	0xcd
- 702 00c6 07       		.uleb128 0x7
- 703 00c7 B6000000 		.4byte	0xb6
- 704 00cb 03       		.byte	0x3
- 705 00cc 00       		.byte	0
- 706 00cd 08       		.uleb128 0x8
- 707 00ce 1E010000 		.4byte	.LASF21
- 708 00d2 5D       		.byte	0x5d
- 709 00d3 05       		.byte	0x5
- 710 00d4 5B       		.byte	0x5b
- 711 00d5 22010000 		.4byte	0x122
- 712 00d9 09       		.uleb128 0x9
- 713 00da 64697200 		.ascii	"dir\000"
- 714 00de 05       		.byte	0x5
- 715 00df 5C       		.byte	0x5c
- 716 00e0 AC000000 		.4byte	0xac
- 717 00e4 00       		.byte	0
- 718 00e5 0A       		.uleb128 0xa
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 18
-
-
- 719 00e6 61040000 		.4byte	.LASF17
- 720 00ea 05       		.byte	0x5
- 721 00eb 5D       		.byte	0x5d
- 722 00ec AC000000 		.4byte	0xac
- 723 00f0 01       		.byte	0x1
- 724 00f1 0A       		.uleb128 0xa
- 725 00f2 F5010000 		.4byte	.LASF18
- 726 00f6 05       		.byte	0x5
- 727 00f7 5E       		.byte	0x5e
- 728 00f8 38010000 		.4byte	0x138
- 729 00fc 02       		.byte	0x2
- 730 00fd 09       		.uleb128 0x9
- 731 00fe 70707500 		.ascii	"ppu\000"
- 732 0102 05       		.byte	0x5
- 733 0103 5F       		.byte	0x5f
- 734 0104 53010000 		.4byte	0x153
- 735 0108 4A       		.byte	0x4a
- 736 0109 0A       		.uleb128 0xa
- 737 010a 06030000 		.4byte	.LASF19
- 738 010e 05       		.byte	0x5
- 739 010f 60       		.byte	0x60
- 740 0110 6E010000 		.4byte	0x16e
- 741 0114 59       		.byte	0x59
- 742 0115 0A       		.uleb128 0xa
- 743 0116 70030000 		.4byte	.LASF20
- 744 011a 05       		.byte	0x5
- 745 011b 61       		.byte	0x61
- 746 011c AC000000 		.4byte	0xac
- 747 0120 5C       		.byte	0x5c
- 748 0121 00       		.byte	0
- 749 0122 06       		.uleb128 0x6
- 750 0123 81000000 		.4byte	0x81
- 751 0127 38010000 		.4byte	0x138
- 752 012b 07       		.uleb128 0x7
- 753 012c B6000000 		.4byte	0xb6
- 754 0130 02       		.byte	0x2
- 755 0131 07       		.uleb128 0x7
- 756 0132 B6000000 		.4byte	0xb6
- 757 0136 17       		.byte	0x17
- 758 0137 00       		.byte	0
- 759 0138 05       		.uleb128 0x5
- 760 0139 22010000 		.4byte	0x122
- 761 013d 06       		.uleb128 0x6
- 762 013e 81000000 		.4byte	0x81
- 763 0142 53010000 		.4byte	0x153
- 764 0146 07       		.uleb128 0x7
- 765 0147 B6000000 		.4byte	0xb6
- 766 014b 02       		.byte	0x2
- 767 014c 07       		.uleb128 0x7
- 768 014d B6000000 		.4byte	0xb6
- 769 0151 04       		.byte	0x4
- 770 0152 00       		.byte	0
- 771 0153 05       		.uleb128 0x5
- 772 0154 3D010000 		.4byte	0x13d
- 773 0158 06       		.uleb128 0x6
- 774 0159 81000000 		.4byte	0x81
- 775 015d 6E010000 		.4byte	0x16e
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 19
-
-
- 776 0161 07       		.uleb128 0x7
- 777 0162 B6000000 		.4byte	0xb6
- 778 0166 02       		.byte	0x2
- 779 0167 07       		.uleb128 0x7
- 780 0168 B6000000 		.4byte	0xb6
- 781 016c 00       		.byte	0
- 782 016d 00       		.byte	0
- 783 016e 05       		.uleb128 0x5
- 784 016f 58010000 		.4byte	0x158
- 785 0173 08       		.uleb128 0x8
- 786 0174 B3030000 		.4byte	.LASF22
- 787 0178 76       		.byte	0x76
- 788 0179 05       		.byte	0x5
- 789 017a 72       		.byte	0x72
- 790 017b 62020000 		.4byte	0x262
- 791 017f 0A       		.uleb128 0xa
- 792 0180 3C020000 		.4byte	.LASF23
- 793 0184 05       		.byte	0x5
- 794 0185 73       		.byte	0x73
- 795 0186 81000000 		.4byte	0x81
- 796 018a 00       		.byte	0
- 797 018b 0A       		.uleb128 0xa
- 798 018c 06030000 		.4byte	.LASF19
- 799 0190 05       		.byte	0x5
- 800 0191 74       		.byte	0x74
- 801 0192 81000000 		.4byte	0x81
- 802 0196 01       		.byte	0x1
- 803 0197 09       		.uleb128 0x9
- 804 0198 70707500 		.ascii	"ppu\000"
- 805 019c 05       		.byte	0x5
- 806 019d 75       		.byte	0x75
- 807 019e 62020000 		.4byte	0x262
- 808 01a2 02       		.byte	0x2
- 809 01a3 0A       		.uleb128 0xa
- 810 01a4 A3000000 		.4byte	.LASF24
- 811 01a8 05       		.byte	0x5
- 812 01a9 76       		.byte	0x76
- 813 01aa 72020000 		.4byte	0x272
- 814 01ae 07       		.byte	0x7
- 815 01af 0A       		.uleb128 0xa
- 816 01b0 ED010000 		.4byte	.LASF25
- 817 01b4 05       		.byte	0x5
- 818 01b5 77       		.byte	0x77
- 819 01b6 72020000 		.4byte	0x272
- 820 01ba 10       		.byte	0x10
- 821 01bb 0A       		.uleb128 0xa
- 822 01bc D2020000 		.4byte	.LASF26
- 823 01c0 05       		.byte	0x5
- 824 01c1 78       		.byte	0x78
- 825 01c2 81000000 		.4byte	0x81
- 826 01c6 19       		.byte	0x19
- 827 01c7 0A       		.uleb128 0xa
- 828 01c8 76000000 		.4byte	.LASF27
- 829 01cc 05       		.byte	0x5
- 830 01cd 79       		.byte	0x79
- 831 01ce 81000000 		.4byte	0x81
- 832 01d2 1A       		.byte	0x1a
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 20
-
-
- 833 01d3 0A       		.uleb128 0xa
- 834 01d4 E4030000 		.4byte	.LASF28
- 835 01d8 05       		.byte	0x5
- 836 01d9 7A       		.byte	0x7a
- 837 01da 82020000 		.4byte	0x282
- 838 01de 1B       		.byte	0x1b
- 839 01df 09       		.uleb128 0x9
- 840 01e0 696400   		.ascii	"id\000"
- 841 01e3 05       		.byte	0x5
- 842 01e4 7B       		.byte	0x7b
- 843 01e5 92020000 		.4byte	0x292
- 844 01e9 23       		.byte	0x23
- 845 01ea 0A       		.uleb128 0xa
- 846 01eb 7E040000 		.4byte	.LASF29
- 847 01ef 05       		.byte	0x5
- 848 01f0 7C       		.byte	0x7c
- 849 01f1 92020000 		.4byte	0x292
- 850 01f5 33       		.byte	0x33
- 851 01f6 09       		.uleb128 0x9
- 852 01f7 6B6D00   		.ascii	"km\000"
- 853 01fa 05       		.byte	0x5
- 854 01fb 7D       		.byte	0x7d
- 855 01fc A2020000 		.4byte	0x2a2
- 856 0200 43       		.byte	0x43
- 857 0201 0A       		.uleb128 0xa
- 858 0202 35040000 		.4byte	.LASF30
- 859 0206 05       		.byte	0x5
- 860 0207 7E       		.byte	0x7e
- 861 0208 72020000 		.4byte	0x272
- 862 020c 4E       		.byte	0x4e
- 863 020d 0A       		.uleb128 0xa
- 864 020e E4000000 		.4byte	.LASF31
- 865 0212 05       		.byte	0x5
- 866 0213 7F       		.byte	0x7f
- 867 0214 81000000 		.4byte	0x81
- 868 0218 57       		.byte	0x57
- 869 0219 0A       		.uleb128 0xa
- 870 021a 2A040000 		.4byte	.LASF32
- 871 021e 05       		.byte	0x5
- 872 021f 80       		.byte	0x80
- 873 0220 81000000 		.4byte	0x81
- 874 0224 58       		.byte	0x58
- 875 0225 0A       		.uleb128 0xa
- 876 0226 C0000000 		.4byte	.LASF33
- 877 022a 05       		.byte	0x5
- 878 022b 81       		.byte	0x81
- 879 022c A2020000 		.4byte	0x2a2
- 880 0230 59       		.byte	0x59
- 881 0231 0A       		.uleb128 0xa
- 882 0232 C7000000 		.4byte	.LASF34
- 883 0236 05       		.byte	0x5
- 884 0237 82       		.byte	0x82
- 885 0238 A2020000 		.4byte	0x2a2
- 886 023c 64       		.byte	0x64
- 887 023d 0A       		.uleb128 0xa
- 888 023e D0000000 		.4byte	.LASF35
- 889 0242 05       		.byte	0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 21
-
-
- 890 0243 83       		.byte	0x83
- 891 0244 81000000 		.4byte	0x81
- 892 0248 6F       		.byte	0x6f
- 893 0249 0A       		.uleb128 0xa
- 894 024a 90020000 		.4byte	.LASF36
- 895 024e 05       		.byte	0x5
- 896 024f 84       		.byte	0x84
- 897 0250 81000000 		.4byte	0x81
- 898 0254 70       		.byte	0x70
- 899 0255 0A       		.uleb128 0xa
- 900 0256 5B000000 		.4byte	.LASF37
- 901 025a 05       		.byte	0x5
- 902 025b 85       		.byte	0x85
- 903 025c 62020000 		.4byte	0x262
- 904 0260 71       		.byte	0x71
- 905 0261 00       		.byte	0
- 906 0262 06       		.uleb128 0x6
- 907 0263 81000000 		.4byte	0x81
- 908 0267 72020000 		.4byte	0x272
- 909 026b 07       		.uleb128 0x7
- 910 026c B6000000 		.4byte	0xb6
- 911 0270 04       		.byte	0x4
- 912 0271 00       		.byte	0
- 913 0272 06       		.uleb128 0x6
- 914 0273 81000000 		.4byte	0x81
- 915 0277 82020000 		.4byte	0x282
- 916 027b 07       		.uleb128 0x7
- 917 027c B6000000 		.4byte	0xb6
- 918 0280 08       		.byte	0x8
- 919 0281 00       		.byte	0
- 920 0282 06       		.uleb128 0x6
- 921 0283 81000000 		.4byte	0x81
- 922 0287 92020000 		.4byte	0x292
- 923 028b 07       		.uleb128 0x7
- 924 028c B6000000 		.4byte	0xb6
- 925 0290 07       		.byte	0x7
- 926 0291 00       		.byte	0
- 927 0292 06       		.uleb128 0x6
- 928 0293 81000000 		.4byte	0x81
- 929 0297 A2020000 		.4byte	0x2a2
- 930 029b 07       		.uleb128 0x7
- 931 029c B6000000 		.4byte	0xb6
- 932 02a0 0F       		.byte	0xf
- 933 02a1 00       		.byte	0
- 934 02a2 06       		.uleb128 0x6
- 935 02a3 81000000 		.4byte	0x81
- 936 02a7 B2020000 		.4byte	0x2b2
- 937 02ab 07       		.uleb128 0x7
- 938 02ac B6000000 		.4byte	0xb6
- 939 02b0 0A       		.byte	0xa
- 940 02b1 00       		.byte	0
- 941 02b2 0B       		.uleb128 0xb
- 942 02b3 B3020000 		.4byte	.LASF38
- 943 02b7 01       		.byte	0x1
- 944 02b8 37       		.byte	0x37
- 945 02b9 81000000 		.4byte	0x81
- 946 02bd 00000000 		.4byte	.LFB63
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 22
-
-
- 947 02c1 BE000000 		.4byte	.LFE63-.LFB63
- 948 02c5 01       		.uleb128 0x1
- 949 02c6 9C       		.byte	0x9c
- 950 02c7 E8020000 		.4byte	0x2e8
- 951 02cb 0C       		.uleb128 0xc
- 952 02cc 5F020000 		.4byte	.LASF40
- 953 02d0 01       		.byte	0x1
- 954 02d1 37       		.byte	0x37
- 955 02d2 81000000 		.4byte	0x81
- 956 02d6 02       		.uleb128 0x2
- 957 02d7 91       		.byte	0x91
- 958 02d8 6F       		.sleb128 -17
- 959 02d9 0D       		.uleb128 0xd
- 960 02da 1C040000 		.4byte	.LASF42
- 961 02de 01       		.byte	0x1
- 962 02df 38       		.byte	0x38
- 963 02e0 81000000 		.4byte	0x81
- 964 02e4 02       		.uleb128 0x2
- 965 02e5 91       		.byte	0x91
- 966 02e6 77       		.sleb128 -9
- 967 02e7 00       		.byte	0
- 968 02e8 0B       		.uleb128 0xb
- 969 02e9 0C000000 		.4byte	.LASF39
- 970 02ed 01       		.byte	0x1
- 971 02ee 74       		.byte	0x74
- 972 02ef 81000000 		.4byte	0x81
- 973 02f3 00000000 		.4byte	.LFB64
- 974 02f7 0C010000 		.4byte	.LFE64-.LFB64
- 975 02fb 01       		.uleb128 0x1
- 976 02fc 9C       		.byte	0x9c
- 977 02fd 2A030000 		.4byte	0x32a
- 978 0301 0C       		.uleb128 0xc
- 979 0302 5F020000 		.4byte	.LASF40
- 980 0306 01       		.byte	0x1
- 981 0307 74       		.byte	0x74
- 982 0308 81000000 		.4byte	0x81
- 983 030c 02       		.uleb128 0x2
- 984 030d 91       		.byte	0x91
- 985 030e 6F       		.sleb128 -17
- 986 030f 0C       		.uleb128 0xc
- 987 0310 C4030000 		.4byte	.LASF41
- 988 0314 01       		.byte	0x1
- 989 0315 74       		.byte	0x74
- 990 0316 81000000 		.4byte	0x81
- 991 031a 02       		.uleb128 0x2
- 992 031b 91       		.byte	0x91
- 993 031c 6E       		.sleb128 -18
- 994 031d 0E       		.uleb128 0xe
- 995 031e 6900     		.ascii	"i\000"
- 996 0320 01       		.byte	0x1
- 997 0321 75       		.byte	0x75
- 998 0322 81000000 		.4byte	0x81
- 999 0326 02       		.uleb128 0x2
- 1000 0327 91       		.byte	0x91
- 1001 0328 77       		.sleb128 -9
- 1002 0329 00       		.byte	0
- 1003 032a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 23
-
-
- 1004 032b 87030000 		.4byte	.LASF43
- 1005 032f 01       		.byte	0x1
- 1006 0330 B9       		.byte	0xb9
- 1007 0331 81000000 		.4byte	0x81
- 1008 0335 00000000 		.4byte	.LFB65
- 1009 0339 B2000000 		.4byte	.LFE65-.LFB65
- 1010 033d 01       		.uleb128 0x1
- 1011 033e 9C       		.byte	0x9c
- 1012 033f 6C030000 		.4byte	0x36c
- 1013 0343 0C       		.uleb128 0xc
- 1014 0344 5F020000 		.4byte	.LASF40
- 1015 0348 01       		.byte	0x1
- 1016 0349 B9       		.byte	0xb9
- 1017 034a 81000000 		.4byte	0x81
- 1018 034e 02       		.uleb128 0x2
- 1019 034f 91       		.byte	0x91
- 1020 0350 6F       		.sleb128 -17
- 1021 0351 0E       		.uleb128 0xe
- 1022 0352 6900     		.ascii	"i\000"
- 1023 0354 01       		.byte	0x1
- 1024 0355 BA       		.byte	0xba
- 1025 0356 81000000 		.4byte	0x81
- 1026 035a 02       		.uleb128 0x2
- 1027 035b 91       		.byte	0x91
- 1028 035c 77       		.sleb128 -9
- 1029 035d 0D       		.uleb128 0xd
- 1030 035e C4030000 		.4byte	.LASF41
- 1031 0362 01       		.byte	0x1
- 1032 0363 BA       		.byte	0xba
- 1033 0364 81000000 		.4byte	0x81
- 1034 0368 02       		.uleb128 0x2
- 1035 0369 91       		.byte	0x91
- 1036 036a 76       		.sleb128 -10
- 1037 036b 00       		.byte	0
- 1038 036c 0F       		.uleb128 0xf
- 1039 036d 08010000 		.4byte	.LASF44
- 1040 0371 01       		.byte	0x1
- 1041 0372 E4       		.byte	0xe4
- 1042 0373 81000000 		.4byte	0x81
- 1043 0377 00000000 		.4byte	.LFB66
- 1044 037b 58000000 		.4byte	.LFE66-.LFB66
- 1045 037f 01       		.uleb128 0x1
- 1046 0380 9C       		.byte	0x9c
- 1047 0381 AE030000 		.4byte	0x3ae
- 1048 0385 10       		.uleb128 0x10
- 1049 0386 63726300 		.ascii	"crc\000"
- 1050 038a 01       		.byte	0x1
- 1051 038b E4       		.byte	0xe4
- 1052 038c 81000000 		.4byte	0x81
- 1053 0390 02       		.uleb128 0x2
- 1054 0391 91       		.byte	0x91
- 1055 0392 6F       		.sleb128 -17
- 1056 0393 0C       		.uleb128 0xc
- 1057 0394 C4030000 		.4byte	.LASF41
- 1058 0398 01       		.byte	0x1
- 1059 0399 E4       		.byte	0xe4
- 1060 039a 81000000 		.4byte	0x81
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 24
-
-
- 1061 039e 02       		.uleb128 0x2
- 1062 039f 91       		.byte	0x91
- 1063 03a0 6E       		.sleb128 -18
- 1064 03a1 0E       		.uleb128 0xe
- 1065 03a2 6900     		.ascii	"i\000"
- 1066 03a4 01       		.byte	0x1
- 1067 03a5 E5       		.byte	0xe5
- 1068 03a6 81000000 		.4byte	0x81
- 1069 03aa 02       		.uleb128 0x2
- 1070 03ab 91       		.byte	0x91
- 1071 03ac 77       		.sleb128 -9
- 1072 03ad 00       		.byte	0
- 1073 03ae 11       		.uleb128 0x11
- 1074 03af D7030000 		.4byte	.LASF45
- 1075 03b3 06       		.byte	0x6
- 1076 03b4 2A06     		.2byte	0x62a
- 1077 03b6 BA030000 		.4byte	0x3ba
- 1078 03ba 05       		.uleb128 0x5
- 1079 03bb 76000000 		.4byte	0x76
- 1080 03bf 12       		.uleb128 0x12
- 1081 03c0 39030000 		.4byte	.LASF46
- 1082 03c4 05       		.byte	0x5
- 1083 03c5 42       		.byte	0x42
- 1084 03c6 AC000000 		.4byte	0xac
- 1085 03ca 05       		.uleb128 0x5
- 1086 03cb 03       		.byte	0x3
- 1087 03cc 00000000 		.4byte	count_teclas1
- 1088 03d0 12       		.uleb128 0x12
- 1089 03d1 C6040000 		.4byte	.LASF47
- 1090 03d5 05       		.byte	0x5
- 1091 03d6 42       		.byte	0x42
- 1092 03d7 AC000000 		.4byte	0xac
- 1093 03db 05       		.uleb128 0x5
- 1094 03dc 03       		.byte	0x3
- 1095 03dd 00000000 		.4byte	comas1
- 1096 03e1 12       		.uleb128 0x12
- 1097 03e2 CD040000 		.4byte	.LASF48
- 1098 03e6 05       		.byte	0x5
- 1099 03e7 42       		.byte	0x42
- 1100 03e8 AC000000 		.4byte	0xac
- 1101 03ec 05       		.uleb128 0x5
- 1102 03ed 03       		.byte	0x3
- 1103 03ee 00000000 		.4byte	comas2
- 1104 03f2 12       		.uleb128 0x12
- 1105 03f3 EB030000 		.4byte	.LASF49
- 1106 03f7 05       		.byte	0x5
- 1107 03f8 42       		.byte	0x42
- 1108 03f9 AC000000 		.4byte	0xac
- 1109 03fd 05       		.uleb128 0x5
- 1110 03fe 03       		.byte	0x3
- 1111 03ff 00000000 		.4byte	id_coma1
- 1112 0403 12       		.uleb128 0x12
- 1113 0404 FD030000 		.4byte	.LASF50
- 1114 0408 05       		.byte	0x5
- 1115 0409 42       		.byte	0x42
- 1116 040a AC000000 		.4byte	0xac
- 1117 040e 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 25
-
-
- 1118 040f 03       		.byte	0x3
- 1119 0410 00000000 		.4byte	id_teclado1
- 1120 0414 12       		.uleb128 0x12
- 1121 0415 24000000 		.4byte	.LASF51
- 1122 0419 05       		.byte	0x5
- 1123 041a 42       		.byte	0x42
- 1124 041b AC000000 		.4byte	0xac
- 1125 041f 05       		.uleb128 0x5
- 1126 0420 03       		.byte	0x3
- 1127 0421 00000000 		.4byte	count_teclas2
- 1128 0425 12       		.uleb128 0x12
- 1129 0426 F4030000 		.4byte	.LASF52
- 1130 042a 05       		.byte	0x5
- 1131 042b 42       		.byte	0x42
- 1132 042c AC000000 		.4byte	0xac
- 1133 0430 05       		.uleb128 0x5
- 1134 0431 03       		.byte	0x3
- 1135 0432 00000000 		.4byte	id_coma2
- 1136 0436 12       		.uleb128 0x12
- 1137 0437 09040000 		.4byte	.LASF53
- 1138 043b 05       		.byte	0x5
- 1139 043c 42       		.byte	0x42
- 1140 043d AC000000 		.4byte	0xac
- 1141 0441 05       		.uleb128 0x5
- 1142 0442 03       		.byte	0x3
- 1143 0443 00000000 		.4byte	id_teclado2
- 1144 0447 12       		.uleb128 0x12
- 1145 0448 00000000 		.4byte	.LASF54
- 1146 044c 05       		.byte	0x5
- 1147 044d 43       		.byte	0x43
- 1148 044e B1000000 		.4byte	0xb1
- 1149 0452 05       		.uleb128 0x5
- 1150 0453 03       		.byte	0x3
- 1151 0454 00000000 		.4byte	posx1
- 1152 0458 12       		.uleb128 0x12
- 1153 0459 12010000 		.4byte	.LASF55
- 1154 045d 05       		.byte	0x5
- 1155 045e 43       		.byte	0x43
- 1156 045f B1000000 		.4byte	0xb1
- 1157 0463 05       		.uleb128 0x5
- 1158 0464 03       		.byte	0x3
- 1159 0465 00000000 		.4byte	posy1
- 1160 0469 12       		.uleb128 0x12
- 1161 046a A8020000 		.4byte	.LASF56
- 1162 046e 05       		.byte	0x5
- 1163 046f 43       		.byte	0x43
- 1164 0470 B1000000 		.4byte	0xb1
- 1165 0474 05       		.uleb128 0x5
- 1166 0475 03       		.byte	0x3
- 1167 0476 00000000 		.4byte	sizeletra1
- 1168 047a 12       		.uleb128 0x12
- 1169 047b 06000000 		.4byte	.LASF57
- 1170 047f 05       		.byte	0x5
- 1171 0480 43       		.byte	0x43
- 1172 0481 B1000000 		.4byte	0xb1
- 1173 0485 05       		.uleb128 0x5
- 1174 0486 03       		.byte	0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 26
-
-
- 1175 0487 00000000 		.4byte	posx2
- 1176 048b 12       		.uleb128 0x12
- 1177 048c 18010000 		.4byte	.LASF58
- 1178 0490 05       		.byte	0x5
- 1179 0491 43       		.byte	0x43
- 1180 0492 B1000000 		.4byte	0xb1
- 1181 0496 05       		.uleb128 0x5
- 1182 0497 03       		.byte	0x3
- 1183 0498 00000000 		.4byte	posy2
- 1184 049c 12       		.uleb128 0x12
- 1185 049d 84040000 		.4byte	.LASF59
- 1186 04a1 05       		.byte	0x5
- 1187 04a2 43       		.byte	0x43
- 1188 04a3 B1000000 		.4byte	0xb1
- 1189 04a7 05       		.uleb128 0x5
- 1190 04a8 03       		.byte	0x3
- 1191 04a9 00000000 		.4byte	sizeletra2
- 1192 04ad 12       		.uleb128 0x12
- 1193 04ae 0C030000 		.4byte	.LASF60
- 1194 04b2 05       		.byte	0x5
- 1195 04b3 44       		.byte	0x44
- 1196 04b4 AC000000 		.4byte	0xac
- 1197 04b8 05       		.uleb128 0x5
- 1198 04b9 03       		.byte	0x3
- 1199 04ba 00000000 		.4byte	teclas1
- 1200 04be 12       		.uleb128 0x12
- 1201 04bf 14030000 		.4byte	.LASF61
- 1202 04c3 05       		.byte	0x5
- 1203 04c4 44       		.byte	0x44
- 1204 04c5 AC000000 		.4byte	0xac
- 1205 04c9 05       		.uleb128 0x5
- 1206 04ca 03       		.byte	0x3
- 1207 04cb 00000000 		.4byte	teclas2
- 1208 04cf 12       		.uleb128 0x12
- 1209 04d0 AA000000 		.4byte	.LASF62
- 1210 04d4 05       		.byte	0x5
- 1211 04d5 45       		.byte	0x45
- 1212 04d6 AC000000 		.4byte	0xac
- 1213 04da 05       		.uleb128 0x5
- 1214 04db 03       		.byte	0x3
- 1215 04dc 00000000 		.4byte	flujo_LCD1
- 1216 04e0 12       		.uleb128 0x12
- 1217 04e1 B5000000 		.4byte	.LASF63
- 1218 04e5 05       		.byte	0x5
- 1219 04e6 45       		.byte	0x45
- 1220 04e7 AC000000 		.4byte	0xac
- 1221 04eb 05       		.uleb128 0x5
- 1222 04ec 03       		.byte	0x3
- 1223 04ed 00000000 		.4byte	flujo_LCD2
- 1224 04f1 12       		.uleb128 0x12
- 1225 04f2 68040000 		.4byte	.LASF64
- 1226 04f6 05       		.byte	0x5
- 1227 04f7 46       		.byte	0x46
- 1228 04f8 AC000000 		.4byte	0xac
- 1229 04fc 05       		.uleb128 0x5
- 1230 04fd 03       		.byte	0x3
- 1231 04fe 00000000 		.4byte	flujo_pos1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 27
-
-
- 1232 0502 12       		.uleb128 0x12
- 1233 0503 73040000 		.4byte	.LASF65
- 1234 0507 05       		.byte	0x5
- 1235 0508 46       		.byte	0x46
- 1236 0509 AC000000 		.4byte	0xac
- 1237 050d 05       		.uleb128 0x5
- 1238 050e 03       		.byte	0x3
- 1239 050f 00000000 		.4byte	flujo_pos2
- 1240 0513 12       		.uleb128 0x12
- 1241 0514 45020000 		.4byte	.LASF66
- 1242 0518 05       		.byte	0x5
- 1243 0519 47       		.byte	0x47
- 1244 051a AC000000 		.4byte	0xac
- 1245 051e 05       		.uleb128 0x5
- 1246 051f 03       		.byte	0x3
- 1247 0520 00000000 		.4byte	seleccion_pos
- 1248 0524 12       		.uleb128 0x12
- 1249 0525 33010000 		.4byte	.LASF67
- 1250 0529 05       		.byte	0x5
- 1251 052a 48       		.byte	0x48
- 1252 052b AC000000 		.4byte	0xac
- 1253 052f 05       		.uleb128 0x5
- 1254 0530 03       		.byte	0x3
- 1255 0531 00000000 		.4byte	flujo_pos
- 1256 0535 12       		.uleb128 0x12
- 1257 0536 ED000000 		.4byte	.LASF68
- 1258 053a 05       		.byte	0x5
- 1259 053b 49       		.byte	0x49
- 1260 053c AC000000 		.4byte	0xac
- 1261 0540 05       		.uleb128 0x5
- 1262 0541 03       		.byte	0x3
- 1263 0542 00000000 		.4byte	venta_activa
- 1264 0546 12       		.uleb128 0x12
- 1265 0547 1A020000 		.4byte	.LASF69
- 1266 054b 05       		.byte	0x5
- 1267 054c 49       		.byte	0x49
- 1268 054d AC000000 		.4byte	0xac
- 1269 0551 05       		.uleb128 0x5
- 1270 0552 03       		.byte	0x3
- 1271 0553 00000000 		.4byte	venta_activa2
- 1272 0557 06       		.uleb128 0x6
- 1273 0558 81000000 		.4byte	0x81
- 1274 055c 67050000 		.4byte	0x567
- 1275 0560 07       		.uleb128 0x7
- 1276 0561 B6000000 		.4byte	0xb6
- 1277 0565 1D       		.byte	0x1d
- 1278 0566 00       		.byte	0
- 1279 0567 12       		.uleb128 0x12
- 1280 0568 DB020000 		.4byte	.LASF70
- 1281 056c 05       		.byte	0x5
- 1282 056d 4A       		.byte	0x4a
- 1283 056e 78050000 		.4byte	0x578
- 1284 0572 05       		.uleb128 0x5
- 1285 0573 03       		.byte	0x3
- 1286 0574 00000000 		.4byte	Buffer_LCD1
- 1287 0578 05       		.uleb128 0x5
- 1288 0579 57050000 		.4byte	0x557
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 28
-
-
- 1289 057d 12       		.uleb128 0x12
- 1290 057e E7020000 		.4byte	.LASF71
- 1291 0582 05       		.byte	0x5
- 1292 0583 4B       		.byte	0x4b
- 1293 0584 8E050000 		.4byte	0x58e
- 1294 0588 05       		.uleb128 0x5
- 1295 0589 03       		.byte	0x3
- 1296 058a 00000000 		.4byte	Buffer_LCD2
- 1297 058e 05       		.uleb128 0x5
- 1298 058f 57050000 		.4byte	0x557
- 1299 0593 12       		.uleb128 0x12
- 1300 0594 89000000 		.4byte	.LASF72
- 1301 0598 05       		.byte	0x5
- 1302 0599 4C       		.byte	0x4c
- 1303 059a AC000000 		.4byte	0xac
- 1304 059e 05       		.uleb128 0x5
- 1305 059f 03       		.byte	0x3
- 1306 05a0 00000000 		.4byte	count_protector
- 1307 05a4 12       		.uleb128 0x12
- 1308 05a5 09020000 		.4byte	.LASF73
- 1309 05a9 05       		.byte	0x5
- 1310 05aa 4C       		.byte	0x4c
- 1311 05ab AC000000 		.4byte	0xac
- 1312 05af 05       		.uleb128 0x5
- 1313 05b0 03       		.byte	0x3
- 1314 05b1 00000000 		.4byte	count_protector2
- 1315 05b5 12       		.uleb128 0x12
- 1316 05b6 4B040000 		.4byte	.LASF74
- 1317 05ba 05       		.byte	0x5
- 1318 05bb 4D       		.byte	0x4d
- 1319 05bc C6050000 		.4byte	0x5c6
- 1320 05c0 05       		.uleb128 0x5
- 1321 05c1 03       		.byte	0x3
- 1322 05c2 00000000 		.4byte	password_lcd
- 1323 05c6 05       		.uleb128 0x5
- 1324 05c7 72020000 		.4byte	0x272
- 1325 05cb 12       		.uleb128 0x12
- 1326 05cc 7A030000 		.4byte	.LASF75
- 1327 05d0 05       		.byte	0x5
- 1328 05d1 4E       		.byte	0x4e
- 1329 05d2 B1000000 		.4byte	0xb1
- 1330 05d6 05       		.uleb128 0x5
- 1331 05d7 03       		.byte	0x3
- 1332 05d8 00000000 		.4byte	imagen_grado
- 1333 05dc 06       		.uleb128 0x6
- 1334 05dd 8C000000 		.4byte	0x8c
- 1335 05e1 F2050000 		.4byte	0x5f2
- 1336 05e5 07       		.uleb128 0x7
- 1337 05e6 B6000000 		.4byte	0xb6
- 1338 05ea 01       		.byte	0x1
- 1339 05eb 07       		.uleb128 0x7
- 1340 05ec B6000000 		.4byte	0xb6
- 1341 05f0 01       		.byte	0x1
- 1342 05f1 00       		.byte	0
- 1343 05f2 12       		.uleb128 0x12
- 1344 05f3 99000000 		.4byte	.LASF76
- 1345 05f7 05       		.byte	0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 29
-
-
- 1346 05f8 4F       		.byte	0x4f
- 1347 05f9 03060000 		.4byte	0x603
- 1348 05fd 05       		.uleb128 0x5
- 1349 05fe 03       		.byte	0x3
- 1350 05ff 00000000 		.4byte	prox_caso
- 1351 0603 05       		.uleb128 0x5
- 1352 0604 DC050000 		.4byte	0x5dc
- 1353 0608 06       		.uleb128 0x6
- 1354 0609 81000000 		.4byte	0x81
- 1355 060d 18060000 		.4byte	0x618
- 1356 0611 07       		.uleb128 0x7
- 1357 0612 B6000000 		.4byte	0xb6
- 1358 0616 02       		.byte	0x2
- 1359 0617 00       		.byte	0
- 1360 0618 12       		.uleb128 0x12
- 1361 0619 6A000000 		.4byte	.LASF77
- 1362 061d 05       		.byte	0x5
- 1363 061e 50       		.byte	0x50
- 1364 061f 29060000 		.4byte	0x629
- 1365 0623 05       		.uleb128 0x5
- 1366 0624 03       		.byte	0x3
- 1367 0625 00000000 		.4byte	bloqueo_LCD
- 1368 0629 05       		.uleb128 0x5
- 1369 062a 08060000 		.4byte	0x608
- 1370 062e 12       		.uleb128 0x12
- 1371 062f 46000000 		.4byte	.LASF78
- 1372 0633 05       		.byte	0x5
- 1373 0634 51       		.byte	0x51
- 1374 0635 3F060000 		.4byte	0x63f
- 1375 0639 05       		.uleb128 0x5
- 1376 063a 03       		.byte	0x3
- 1377 063b 00000000 		.4byte	id_estacion
- 1378 063f 05       		.uleb128 0x5
- 1379 0640 62020000 		.4byte	0x262
- 1380 0644 12       		.uleb128 0x12
- 1381 0645 52000000 		.4byte	.LASF79
- 1382 0649 05       		.byte	0x5
- 1383 064a 52       		.byte	0x52
- 1384 064b 55060000 		.4byte	0x655
- 1385 064f 05       		.uleb128 0x5
- 1386 0650 03       		.byte	0x3
- 1387 0651 00000000 		.4byte	id_venta
- 1388 0655 05       		.uleb128 0x5
- 1389 0656 82020000 		.4byte	0x282
- 1390 065a 06       		.uleb128 0x6
- 1391 065b 81000000 		.4byte	0x81
- 1392 065f 6A060000 		.4byte	0x66a
- 1393 0663 07       		.uleb128 0x7
- 1394 0664 B6000000 		.4byte	0xb6
- 1395 0668 C7       		.byte	0xc7
- 1396 0669 00       		.byte	0
- 1397 066a 12       		.uleb128 0x12
- 1398 066b C9030000 		.4byte	.LASF80
- 1399 066f 05       		.byte	0x5
- 1400 0670 53       		.byte	0x53
- 1401 0671 7B060000 		.4byte	0x67b
- 1402 0675 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 30
-
-
- 1403 0676 03       		.byte	0x3
- 1404 0677 00000000 		.4byte	trama_totales
- 1405 067b 05       		.uleb128 0x5
- 1406 067c 5A060000 		.4byte	0x65a
- 1407 0680 12       		.uleb128 0x12
- 1408 0681 7E020000 		.4byte	.LASF81
- 1409 0685 05       		.byte	0x5
- 1410 0686 57       		.byte	0x57
- 1411 0687 AC000000 		.4byte	0xac
- 1412 068b 05       		.uleb128 0x5
- 1413 068c 03       		.byte	0x3
- 1414 068d 00000000 		.4byte	ppux10
- 1415 0691 06       		.uleb128 0x6
- 1416 0692 81000000 		.4byte	0x81
- 1417 0696 A1060000 		.4byte	0x6a1
- 1418 069a 07       		.uleb128 0x7
- 1419 069b B6000000 		.4byte	0xb6
- 1420 069f 10       		.byte	0x10
- 1421 06a0 00       		.byte	0
- 1422 06a1 12       		.uleb128 0x12
- 1423 06a2 18000000 		.4byte	.LASF82
- 1424 06a6 05       		.byte	0x5
- 1425 06a7 58       		.byte	0x58
- 1426 06a8 B2060000 		.4byte	0x6b2
- 1427 06ac 05       		.uleb128 0x5
- 1428 06ad 03       		.byte	0x3
- 1429 06ae 00000000 		.4byte	nombre_pro1
- 1430 06b2 05       		.uleb128 0x5
- 1431 06b3 91060000 		.4byte	0x691
- 1432 06b7 12       		.uleb128 0x12
- 1433 06b8 32000000 		.4byte	.LASF83
- 1434 06bc 05       		.byte	0x5
- 1435 06bd 58       		.byte	0x58
- 1436 06be C8060000 		.4byte	0x6c8
- 1437 06c2 05       		.uleb128 0x5
- 1438 06c3 03       		.byte	0x3
- 1439 06c4 00000000 		.4byte	nombre_pro2
- 1440 06c8 05       		.uleb128 0x5
- 1441 06c9 91060000 		.4byte	0x691
- 1442 06cd 12       		.uleb128 0x12
- 1443 06ce FD010000 		.4byte	.LASF84
- 1444 06d2 05       		.byte	0x5
- 1445 06d3 58       		.byte	0x58
- 1446 06d4 DE060000 		.4byte	0x6de
- 1447 06d8 05       		.uleb128 0x5
- 1448 06d9 03       		.byte	0x3
- 1449 06da 00000000 		.4byte	nombre_pro3
- 1450 06de 05       		.uleb128 0x5
- 1451 06df 91060000 		.4byte	0x691
- 1452 06e3 12       		.uleb128 0x12
- 1453 06e4 3E000000 		.4byte	.LASF85
- 1454 06e8 05       		.byte	0x5
- 1455 06e9 59       		.byte	0x59
- 1456 06ea F4060000 		.4byte	0x6f4
- 1457 06ee 05       		.uleb128 0x5
- 1458 06ef 03       		.byte	0x3
- 1459 06f0 00000000 		.4byte	version
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 31
-
-
- 1460 06f4 05       		.uleb128 0x5
- 1461 06f5 BD000000 		.4byte	0xbd
- 1462 06f9 12       		.uleb128 0x12
- 1463 06fa 27010000 		.4byte	.LASF86
- 1464 06fe 05       		.byte	0x5
- 1465 06ff 63       		.byte	0x63
- 1466 0700 CD000000 		.4byte	0xcd
- 1467 0704 05       		.uleb128 0x5
- 1468 0705 03       		.byte	0x3
- 1469 0706 00000000 		.4byte	lado1
- 1470 070a 12       		.uleb128 0x12
- 1471 070b 57030000 		.4byte	.LASF87
- 1472 070f 05       		.byte	0x5
- 1473 0710 64       		.byte	0x64
- 1474 0711 CD000000 		.4byte	0xcd
- 1475 0715 05       		.uleb128 0x5
- 1476 0716 03       		.byte	0x3
- 1477 0717 00000000 		.4byte	lado2
- 1478 071b 06       		.uleb128 0x6
- 1479 071c 81000000 		.4byte	0x81
- 1480 0720 2B070000 		.4byte	0x72b
- 1481 0724 07       		.uleb128 0x7
- 1482 0725 B6000000 		.4byte	0xb6
- 1483 0729 20       		.byte	0x20
- 1484 072a 00       		.byte	0
- 1485 072b 12       		.uleb128 0x12
- 1486 072c 01010000 		.4byte	.LASF88
- 1487 0730 05       		.byte	0x5
- 1488 0731 68       		.byte	0x68
- 1489 0732 3C070000 		.4byte	0x73c
- 1490 0736 05       		.uleb128 0x5
- 1491 0737 03       		.byte	0x3
- 1492 0738 00000000 		.4byte	nombre
- 1493 073c 05       		.uleb128 0x5
- 1494 073d 1B070000 		.4byte	0x71b
- 1495 0741 06       		.uleb128 0x6
- 1496 0742 81000000 		.4byte	0x81
- 1497 0746 51070000 		.4byte	0x751
- 1498 074a 07       		.uleb128 0x7
- 1499 074b B6000000 		.4byte	0xb6
- 1500 074f 0E       		.byte	0xe
- 1501 0750 00       		.byte	0
- 1502 0751 13       		.uleb128 0x13
- 1503 0752 6E697400 		.ascii	"nit\000"
- 1504 0756 05       		.byte	0x5
- 1505 0757 69       		.byte	0x69
- 1506 0758 62070000 		.4byte	0x762
- 1507 075c 05       		.uleb128 0x5
- 1508 075d 03       		.byte	0x3
- 1509 075e 00000000 		.4byte	nit
- 1510 0762 05       		.uleb128 0x5
- 1511 0763 41070000 		.4byte	0x741
- 1512 0767 06       		.uleb128 0x6
- 1513 0768 81000000 		.4byte	0x81
- 1514 076c 77070000 		.4byte	0x777
- 1515 0770 07       		.uleb128 0x7
- 1516 0771 B6000000 		.4byte	0xb6
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 32
-
-
- 1517 0775 13       		.byte	0x13
- 1518 0776 00       		.byte	0
- 1519 0777 12       		.uleb128 0x12
- 1520 0778 42040000 		.4byte	.LASF89
- 1521 077c 05       		.byte	0x5
- 1522 077d 6A       		.byte	0x6a
- 1523 077e 88070000 		.4byte	0x788
- 1524 0782 05       		.uleb128 0x5
- 1525 0783 03       		.byte	0x3
- 1526 0784 00000000 		.4byte	telefono
- 1527 0788 05       		.uleb128 0x5
- 1528 0789 67070000 		.4byte	0x767
- 1529 078d 12       		.uleb128 0x12
- 1530 078e 97030000 		.4byte	.LASF90
- 1531 0792 05       		.byte	0x5
- 1532 0793 6B       		.byte	0x6b
- 1533 0794 9E070000 		.4byte	0x79e
- 1534 0798 05       		.uleb128 0x5
- 1535 0799 03       		.byte	0x3
- 1536 079a 00000000 		.4byte	direccion
- 1537 079e 05       		.uleb128 0x5
- 1538 079f 1B070000 		.4byte	0x71b
- 1539 07a3 06       		.uleb128 0x6
- 1540 07a4 81000000 		.4byte	0x81
- 1541 07a8 B3070000 		.4byte	0x7b3
- 1542 07ac 07       		.uleb128 0x7
- 1543 07ad B6000000 		.4byte	0xb6
- 1544 07b1 1F       		.byte	0x1f
- 1545 07b2 00       		.byte	0
- 1546 07b3 12       		.uleb128 0x12
- 1547 07b4 C1020000 		.4byte	.LASF91
- 1548 07b8 05       		.byte	0x5
- 1549 07b9 6C       		.byte	0x6c
- 1550 07ba C4070000 		.4byte	0x7c4
- 1551 07be 05       		.uleb128 0x5
- 1552 07bf 03       		.byte	0x3
- 1553 07c0 00000000 		.4byte	lema1
- 1554 07c4 05       		.uleb128 0x5
- 1555 07c5 A3070000 		.4byte	0x7a3
- 1556 07c9 12       		.uleb128 0x12
- 1557 07ca C7020000 		.4byte	.LASF92
- 1558 07ce 05       		.byte	0x5
- 1559 07cf 6D       		.byte	0x6d
- 1560 07d0 DA070000 		.4byte	0x7da
- 1561 07d4 05       		.uleb128 0x5
- 1562 07d5 03       		.byte	0x3
- 1563 07d6 00000000 		.4byte	lema2
- 1564 07da 05       		.uleb128 0x5
- 1565 07db A3070000 		.4byte	0x7a3
- 1566 07df 06       		.uleb128 0x6
- 1567 07e0 81000000 		.4byte	0x81
- 1568 07e4 EF070000 		.4byte	0x7ef
- 1569 07e8 07       		.uleb128 0x7
- 1570 07e9 B6000000 		.4byte	0xb6
- 1571 07ed 01       		.byte	0x1
- 1572 07ee 00       		.byte	0
- 1573 07ef 12       		.uleb128 0x12
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 33
-
-
- 1574 07f0 68030000 		.4byte	.LASF93
- 1575 07f4 05       		.byte	0x5
- 1576 07f5 6E       		.byte	0x6e
- 1577 07f6 00080000 		.4byte	0x800
- 1578 07fa 05       		.uleb128 0x5
- 1579 07fb 03       		.byte	0x3
- 1580 07fc 00000000 		.4byte	id_logo
- 1581 0800 05       		.uleb128 0x5
- 1582 0801 DF070000 		.4byte	0x7df
- 1583 0805 13       		.uleb128 0x13
- 1584 0806 6B6D00   		.ascii	"km\000"
- 1585 0809 05       		.byte	0x5
- 1586 080a 6F       		.byte	0x6f
- 1587 080b 15080000 		.4byte	0x815
- 1588 080f 05       		.uleb128 0x5
- 1589 0810 03       		.byte	0x3
- 1590 0811 00000000 		.4byte	km
- 1591 0815 05       		.uleb128 0x5
- 1592 0816 DF070000 		.4byte	0x7df
- 1593 081a 12       		.uleb128 0x12
- 1594 081b 51030000 		.4byte	.LASF94
- 1595 081f 05       		.byte	0x5
- 1596 0820 70       		.byte	0x70
- 1597 0821 08060000 		.4byte	0x608
- 1598 0825 05       		.uleb128 0x5
- 1599 0826 03       		.byte	0x3
- 1600 0827 00000000 		.4byte	fecha
- 1601 082b 12       		.uleb128 0x12
- 1602 082c CD020000 		.4byte	.LASF95
- 1603 0830 05       		.byte	0x5
- 1604 0831 71       		.byte	0x71
- 1605 0832 DF070000 		.4byte	0x7df
- 1606 0836 05       		.uleb128 0x5
- 1607 0837 03       		.byte	0x3
- 1608 0838 00000000 		.4byte	hora
- 1609 083c 12       		.uleb128 0x12
- 1610 083d 21030000 		.4byte	.LASF96
- 1611 0841 05       		.byte	0x5
- 1612 0842 87       		.byte	0x87
- 1613 0843 73010000 		.4byte	0x173
- 1614 0847 05       		.uleb128 0x5
- 1615 0848 03       		.byte	0x3
- 1616 0849 00000000 		.4byte	rventa1
- 1617 084d 12       		.uleb128 0x12
- 1618 084e 29030000 		.4byte	.LASF97
- 1619 0852 05       		.byte	0x5
- 1620 0853 88       		.byte	0x88
- 1621 0854 73010000 		.4byte	0x173
- 1622 0858 05       		.uleb128 0x5
- 1623 0859 03       		.byte	0x3
- 1624 085a 00000000 		.4byte	rventa2
- 1625 085e 12       		.uleb128 0x12
- 1626 085f 24040000 		.4byte	.LASF98
- 1627 0863 05       		.byte	0x5
- 1628 0864 8D       		.byte	0x8d
- 1629 0865 81000000 		.4byte	0x81
- 1630 0869 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 34
-
-
- 1631 086a 03       		.byte	0x3
- 1632 086b 00000000 		.4byte	ok_RF
- 1633 086f 12       		.uleb128 0x12
- 1634 0870 85020000 		.4byte	.LASF99
- 1635 0874 05       		.byte	0x5
- 1636 0875 8E       		.byte	0x8e
- 1637 0876 81000000 		.4byte	0x81
- 1638 087a 05       		.uleb128 0x5
- 1639 087b 03       		.byte	0x3
- 1640 087c 00000000 		.4byte	ok_datosRF
- 1641 0880 12       		.uleb128 0x12
- 1642 0881 15040000 		.4byte	.LASF100
- 1643 0885 05       		.byte	0x5
- 1644 0886 8F       		.byte	0x8f
- 1645 0887 5A060000 		.4byte	0x65a
- 1646 088b 05       		.uleb128 0x5
- 1647 088c 03       		.byte	0x3
- 1648 088d 00000000 		.4byte	rf_mod
- 1649 0891 06       		.uleb128 0x6
- 1650 0892 81000000 		.4byte	0x81
- 1651 0896 A1080000 		.4byte	0x8a1
- 1652 089a 07       		.uleb128 0x7
- 1653 089b B6000000 		.4byte	0xb6
- 1654 089f 3F       		.byte	0x3f
- 1655 08a0 00       		.byte	0
- 1656 08a1 12       		.uleb128 0x12
- 1657 08a2 5D030000 		.4byte	.LASF101
- 1658 08a6 05       		.byte	0x5
- 1659 08a7 94       		.byte	0x94
- 1660 08a8 91080000 		.4byte	0x891
- 1661 08ac 05       		.uleb128 0x5
- 1662 08ad 03       		.byte	0x3
- 1663 08ae 00000000 		.4byte	buffer_i2c
- 1664 08b2 12       		.uleb128 0x12
- 1665 08b3 BA030000 		.4byte	.LASF102
- 1666 08b7 05       		.byte	0x5
- 1667 08b8 99       		.byte	0x99
- 1668 08b9 81000000 		.4byte	0x81
- 1669 08bd 05       		.uleb128 0x5
- 1670 08be 03       		.byte	0x3
- 1671 08bf 00000000 		.4byte	crc_total
- 1672 08c3 12       		.uleb128 0x12
- 1673 08c4 D6000000 		.4byte	.LASF103
- 1674 08c8 05       		.byte	0x5
- 1675 08c9 9D       		.byte	0x9d
- 1676 08ca DF070000 		.4byte	0x7df
- 1677 08ce 05       		.uleb128 0x5
- 1678 08cf 03       		.byte	0x3
- 1679 08d0 00000000 		.4byte	print1
- 1680 08d4 12       		.uleb128 0x12
- 1681 08d5 DD000000 		.4byte	.LASF104
- 1682 08d9 05       		.byte	0x5
- 1683 08da 9E       		.byte	0x9e
- 1684 08db DF070000 		.4byte	0x7df
- 1685 08df 05       		.uleb128 0x5
- 1686 08e0 03       		.byte	0x3
- 1687 08e1 00000000 		.4byte	print2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 35
-
-
- 1688 08e5 12       		.uleb128 0x12
- 1689 08e6 2A040000 		.4byte	.LASF32
- 1690 08ea 05       		.byte	0x5
- 1691 08eb A3       		.byte	0xa3
- 1692 08ec 81000000 		.4byte	0x81
- 1693 08f0 05       		.uleb128 0x5
- 1694 08f1 03       		.byte	0x3
- 1695 08f2 00000000 		.4byte	tipo_venta
- 1696 08f6 00       		.byte	0
- 1697              		.section	.debug_abbrev,"",%progbits
- 1698              	.Ldebug_abbrev0:
- 1699 0000 01       		.uleb128 0x1
- 1700 0001 11       		.uleb128 0x11
- 1701 0002 01       		.byte	0x1
- 1702 0003 25       		.uleb128 0x25
- 1703 0004 0E       		.uleb128 0xe
- 1704 0005 13       		.uleb128 0x13
- 1705 0006 0B       		.uleb128 0xb
- 1706 0007 03       		.uleb128 0x3
- 1707 0008 0E       		.uleb128 0xe
- 1708 0009 1B       		.uleb128 0x1b
- 1709 000a 0E       		.uleb128 0xe
- 1710 000b 55       		.uleb128 0x55
- 1711 000c 17       		.uleb128 0x17
- 1712 000d 11       		.uleb128 0x11
- 1713 000e 01       		.uleb128 0x1
- 1714 000f 10       		.uleb128 0x10
- 1715 0010 17       		.uleb128 0x17
- 1716 0011 00       		.byte	0
- 1717 0012 00       		.byte	0
- 1718 0013 02       		.uleb128 0x2
- 1719 0014 24       		.uleb128 0x24
- 1720 0015 00       		.byte	0
- 1721 0016 0B       		.uleb128 0xb
- 1722 0017 0B       		.uleb128 0xb
- 1723 0018 3E       		.uleb128 0x3e
- 1724 0019 0B       		.uleb128 0xb
- 1725 001a 03       		.uleb128 0x3
- 1726 001b 0E       		.uleb128 0xe
- 1727 001c 00       		.byte	0
- 1728 001d 00       		.byte	0
- 1729 001e 03       		.uleb128 0x3
- 1730 001f 16       		.uleb128 0x16
- 1731 0020 00       		.byte	0
- 1732 0021 03       		.uleb128 0x3
- 1733 0022 0E       		.uleb128 0xe
- 1734 0023 3A       		.uleb128 0x3a
- 1735 0024 0B       		.uleb128 0xb
- 1736 0025 3B       		.uleb128 0x3b
- 1737 0026 0B       		.uleb128 0xb
- 1738 0027 49       		.uleb128 0x49
- 1739 0028 13       		.uleb128 0x13
- 1740 0029 00       		.byte	0
- 1741 002a 00       		.byte	0
- 1742 002b 04       		.uleb128 0x4
- 1743 002c 24       		.uleb128 0x24
- 1744 002d 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 36
-
-
- 1745 002e 0B       		.uleb128 0xb
- 1746 002f 0B       		.uleb128 0xb
- 1747 0030 3E       		.uleb128 0x3e
- 1748 0031 0B       		.uleb128 0xb
- 1749 0032 03       		.uleb128 0x3
- 1750 0033 08       		.uleb128 0x8
- 1751 0034 00       		.byte	0
- 1752 0035 00       		.byte	0
- 1753 0036 05       		.uleb128 0x5
- 1754 0037 35       		.uleb128 0x35
- 1755 0038 00       		.byte	0
- 1756 0039 49       		.uleb128 0x49
- 1757 003a 13       		.uleb128 0x13
- 1758 003b 00       		.byte	0
- 1759 003c 00       		.byte	0
- 1760 003d 06       		.uleb128 0x6
- 1761 003e 01       		.uleb128 0x1
- 1762 003f 01       		.byte	0x1
- 1763 0040 49       		.uleb128 0x49
- 1764 0041 13       		.uleb128 0x13
- 1765 0042 01       		.uleb128 0x1
- 1766 0043 13       		.uleb128 0x13
- 1767 0044 00       		.byte	0
- 1768 0045 00       		.byte	0
- 1769 0046 07       		.uleb128 0x7
- 1770 0047 21       		.uleb128 0x21
- 1771 0048 00       		.byte	0
- 1772 0049 49       		.uleb128 0x49
- 1773 004a 13       		.uleb128 0x13
- 1774 004b 2F       		.uleb128 0x2f
- 1775 004c 0B       		.uleb128 0xb
- 1776 004d 00       		.byte	0
- 1777 004e 00       		.byte	0
- 1778 004f 08       		.uleb128 0x8
- 1779 0050 13       		.uleb128 0x13
- 1780 0051 01       		.byte	0x1
- 1781 0052 03       		.uleb128 0x3
- 1782 0053 0E       		.uleb128 0xe
- 1783 0054 0B       		.uleb128 0xb
- 1784 0055 0B       		.uleb128 0xb
- 1785 0056 3A       		.uleb128 0x3a
- 1786 0057 0B       		.uleb128 0xb
- 1787 0058 3B       		.uleb128 0x3b
- 1788 0059 0B       		.uleb128 0xb
- 1789 005a 01       		.uleb128 0x1
- 1790 005b 13       		.uleb128 0x13
- 1791 005c 00       		.byte	0
- 1792 005d 00       		.byte	0
- 1793 005e 09       		.uleb128 0x9
- 1794 005f 0D       		.uleb128 0xd
- 1795 0060 00       		.byte	0
- 1796 0061 03       		.uleb128 0x3
- 1797 0062 08       		.uleb128 0x8
- 1798 0063 3A       		.uleb128 0x3a
- 1799 0064 0B       		.uleb128 0xb
- 1800 0065 3B       		.uleb128 0x3b
- 1801 0066 0B       		.uleb128 0xb
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 37
-
-
- 1802 0067 49       		.uleb128 0x49
- 1803 0068 13       		.uleb128 0x13
- 1804 0069 38       		.uleb128 0x38
- 1805 006a 0B       		.uleb128 0xb
- 1806 006b 00       		.byte	0
- 1807 006c 00       		.byte	0
- 1808 006d 0A       		.uleb128 0xa
- 1809 006e 0D       		.uleb128 0xd
- 1810 006f 00       		.byte	0
- 1811 0070 03       		.uleb128 0x3
- 1812 0071 0E       		.uleb128 0xe
- 1813 0072 3A       		.uleb128 0x3a
- 1814 0073 0B       		.uleb128 0xb
- 1815 0074 3B       		.uleb128 0x3b
- 1816 0075 0B       		.uleb128 0xb
- 1817 0076 49       		.uleb128 0x49
- 1818 0077 13       		.uleb128 0x13
- 1819 0078 38       		.uleb128 0x38
- 1820 0079 0B       		.uleb128 0xb
- 1821 007a 00       		.byte	0
- 1822 007b 00       		.byte	0
- 1823 007c 0B       		.uleb128 0xb
- 1824 007d 2E       		.uleb128 0x2e
- 1825 007e 01       		.byte	0x1
- 1826 007f 3F       		.uleb128 0x3f
- 1827 0080 19       		.uleb128 0x19
- 1828 0081 03       		.uleb128 0x3
- 1829 0082 0E       		.uleb128 0xe
- 1830 0083 3A       		.uleb128 0x3a
- 1831 0084 0B       		.uleb128 0xb
- 1832 0085 3B       		.uleb128 0x3b
- 1833 0086 0B       		.uleb128 0xb
- 1834 0087 27       		.uleb128 0x27
- 1835 0088 19       		.uleb128 0x19
- 1836 0089 49       		.uleb128 0x49
- 1837 008a 13       		.uleb128 0x13
- 1838 008b 11       		.uleb128 0x11
- 1839 008c 01       		.uleb128 0x1
- 1840 008d 12       		.uleb128 0x12
- 1841 008e 06       		.uleb128 0x6
- 1842 008f 40       		.uleb128 0x40
- 1843 0090 18       		.uleb128 0x18
- 1844 0091 9642     		.uleb128 0x2116
- 1845 0093 19       		.uleb128 0x19
- 1846 0094 01       		.uleb128 0x1
- 1847 0095 13       		.uleb128 0x13
- 1848 0096 00       		.byte	0
- 1849 0097 00       		.byte	0
- 1850 0098 0C       		.uleb128 0xc
- 1851 0099 05       		.uleb128 0x5
- 1852 009a 00       		.byte	0
- 1853 009b 03       		.uleb128 0x3
- 1854 009c 0E       		.uleb128 0xe
- 1855 009d 3A       		.uleb128 0x3a
- 1856 009e 0B       		.uleb128 0xb
- 1857 009f 3B       		.uleb128 0x3b
- 1858 00a0 0B       		.uleb128 0xb
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 38
-
-
- 1859 00a1 49       		.uleb128 0x49
- 1860 00a2 13       		.uleb128 0x13
- 1861 00a3 02       		.uleb128 0x2
- 1862 00a4 18       		.uleb128 0x18
- 1863 00a5 00       		.byte	0
- 1864 00a6 00       		.byte	0
- 1865 00a7 0D       		.uleb128 0xd
- 1866 00a8 34       		.uleb128 0x34
- 1867 00a9 00       		.byte	0
- 1868 00aa 03       		.uleb128 0x3
- 1869 00ab 0E       		.uleb128 0xe
- 1870 00ac 3A       		.uleb128 0x3a
- 1871 00ad 0B       		.uleb128 0xb
- 1872 00ae 3B       		.uleb128 0x3b
- 1873 00af 0B       		.uleb128 0xb
- 1874 00b0 49       		.uleb128 0x49
- 1875 00b1 13       		.uleb128 0x13
- 1876 00b2 02       		.uleb128 0x2
- 1877 00b3 18       		.uleb128 0x18
- 1878 00b4 00       		.byte	0
- 1879 00b5 00       		.byte	0
- 1880 00b6 0E       		.uleb128 0xe
- 1881 00b7 34       		.uleb128 0x34
- 1882 00b8 00       		.byte	0
- 1883 00b9 03       		.uleb128 0x3
- 1884 00ba 08       		.uleb128 0x8
- 1885 00bb 3A       		.uleb128 0x3a
- 1886 00bc 0B       		.uleb128 0xb
- 1887 00bd 3B       		.uleb128 0x3b
- 1888 00be 0B       		.uleb128 0xb
- 1889 00bf 49       		.uleb128 0x49
- 1890 00c0 13       		.uleb128 0x13
- 1891 00c1 02       		.uleb128 0x2
- 1892 00c2 18       		.uleb128 0x18
- 1893 00c3 00       		.byte	0
- 1894 00c4 00       		.byte	0
- 1895 00c5 0F       		.uleb128 0xf
- 1896 00c6 2E       		.uleb128 0x2e
- 1897 00c7 01       		.byte	0x1
- 1898 00c8 3F       		.uleb128 0x3f
- 1899 00c9 19       		.uleb128 0x19
- 1900 00ca 03       		.uleb128 0x3
- 1901 00cb 0E       		.uleb128 0xe
- 1902 00cc 3A       		.uleb128 0x3a
- 1903 00cd 0B       		.uleb128 0xb
- 1904 00ce 3B       		.uleb128 0x3b
- 1905 00cf 0B       		.uleb128 0xb
- 1906 00d0 27       		.uleb128 0x27
- 1907 00d1 19       		.uleb128 0x19
- 1908 00d2 49       		.uleb128 0x49
- 1909 00d3 13       		.uleb128 0x13
- 1910 00d4 11       		.uleb128 0x11
- 1911 00d5 01       		.uleb128 0x1
- 1912 00d6 12       		.uleb128 0x12
- 1913 00d7 06       		.uleb128 0x6
- 1914 00d8 40       		.uleb128 0x40
- 1915 00d9 18       		.uleb128 0x18
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 39
-
-
- 1916 00da 9742     		.uleb128 0x2117
- 1917 00dc 19       		.uleb128 0x19
- 1918 00dd 01       		.uleb128 0x1
- 1919 00de 13       		.uleb128 0x13
- 1920 00df 00       		.byte	0
- 1921 00e0 00       		.byte	0
- 1922 00e1 10       		.uleb128 0x10
- 1923 00e2 05       		.uleb128 0x5
- 1924 00e3 00       		.byte	0
- 1925 00e4 03       		.uleb128 0x3
- 1926 00e5 08       		.uleb128 0x8
- 1927 00e6 3A       		.uleb128 0x3a
- 1928 00e7 0B       		.uleb128 0xb
- 1929 00e8 3B       		.uleb128 0x3b
- 1930 00e9 0B       		.uleb128 0xb
- 1931 00ea 49       		.uleb128 0x49
- 1932 00eb 13       		.uleb128 0x13
- 1933 00ec 02       		.uleb128 0x2
- 1934 00ed 18       		.uleb128 0x18
- 1935 00ee 00       		.byte	0
- 1936 00ef 00       		.byte	0
- 1937 00f0 11       		.uleb128 0x11
- 1938 00f1 34       		.uleb128 0x34
- 1939 00f2 00       		.byte	0
- 1940 00f3 03       		.uleb128 0x3
- 1941 00f4 0E       		.uleb128 0xe
- 1942 00f5 3A       		.uleb128 0x3a
- 1943 00f6 0B       		.uleb128 0xb
- 1944 00f7 3B       		.uleb128 0x3b
- 1945 00f8 05       		.uleb128 0x5
- 1946 00f9 49       		.uleb128 0x49
- 1947 00fa 13       		.uleb128 0x13
- 1948 00fb 3F       		.uleb128 0x3f
- 1949 00fc 19       		.uleb128 0x19
- 1950 00fd 3C       		.uleb128 0x3c
- 1951 00fe 19       		.uleb128 0x19
- 1952 00ff 00       		.byte	0
- 1953 0100 00       		.byte	0
- 1954 0101 12       		.uleb128 0x12
- 1955 0102 34       		.uleb128 0x34
- 1956 0103 00       		.byte	0
- 1957 0104 03       		.uleb128 0x3
- 1958 0105 0E       		.uleb128 0xe
- 1959 0106 3A       		.uleb128 0x3a
- 1960 0107 0B       		.uleb128 0xb
- 1961 0108 3B       		.uleb128 0x3b
- 1962 0109 0B       		.uleb128 0xb
- 1963 010a 49       		.uleb128 0x49
- 1964 010b 13       		.uleb128 0x13
- 1965 010c 3F       		.uleb128 0x3f
- 1966 010d 19       		.uleb128 0x19
- 1967 010e 02       		.uleb128 0x2
- 1968 010f 18       		.uleb128 0x18
- 1969 0110 00       		.byte	0
- 1970 0111 00       		.byte	0
- 1971 0112 13       		.uleb128 0x13
- 1972 0113 34       		.uleb128 0x34
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 40
-
-
- 1973 0114 00       		.byte	0
- 1974 0115 03       		.uleb128 0x3
- 1975 0116 08       		.uleb128 0x8
- 1976 0117 3A       		.uleb128 0x3a
- 1977 0118 0B       		.uleb128 0xb
- 1978 0119 3B       		.uleb128 0x3b
- 1979 011a 0B       		.uleb128 0xb
- 1980 011b 49       		.uleb128 0x49
- 1981 011c 13       		.uleb128 0x13
- 1982 011d 3F       		.uleb128 0x3f
- 1983 011e 19       		.uleb128 0x19
- 1984 011f 02       		.uleb128 0x2
- 1985 0120 18       		.uleb128 0x18
- 1986 0121 00       		.byte	0
- 1987 0122 00       		.byte	0
- 1988 0123 00       		.byte	0
- 1989              		.section	.debug_aranges,"",%progbits
- 1990 0000 34000000 		.4byte	0x34
- 1991 0004 0200     		.2byte	0x2
- 1992 0006 00000000 		.4byte	.Ldebug_info0
- 1993 000a 04       		.byte	0x4
- 1994 000b 00       		.byte	0
- 1995 000c 0000     		.2byte	0
- 1996 000e 0000     		.2byte	0
- 1997 0010 00000000 		.4byte	.LFB63
- 1998 0014 BE000000 		.4byte	.LFE63-.LFB63
- 1999 0018 00000000 		.4byte	.LFB64
- 2000 001c 0C010000 		.4byte	.LFE64-.LFB64
- 2001 0020 00000000 		.4byte	.LFB65
- 2002 0024 B2000000 		.4byte	.LFE65-.LFB65
- 2003 0028 00000000 		.4byte	.LFB66
- 2004 002c 58000000 		.4byte	.LFE66-.LFB66
- 2005 0030 00000000 		.4byte	0
- 2006 0034 00000000 		.4byte	0
- 2007              		.section	.debug_ranges,"",%progbits
- 2008              	.Ldebug_ranges0:
- 2009 0000 00000000 		.4byte	.LFB63
- 2010 0004 BE000000 		.4byte	.LFE63
- 2011 0008 00000000 		.4byte	.LFB64
- 2012 000c 0C010000 		.4byte	.LFE64
- 2013 0010 00000000 		.4byte	.LFB65
- 2014 0014 B2000000 		.4byte	.LFE65
- 2015 0018 00000000 		.4byte	.LFB66
- 2016 001c 58000000 		.4byte	.LFE66
- 2017 0020 00000000 		.4byte	0
- 2018 0024 00000000 		.4byte	0
- 2019              		.section	.debug_line,"",%progbits
- 2020              	.Ldebug_line0:
- 2021 0000 8C020000 		.section	.debug_str,"MS",%progbits,1
- 2021      02005D01 
- 2021      00000201 
- 2021      FB0E0D00 
- 2021      01010101 
- 2022              	.LASF54:
- 2023 0000 706F7378 		.ascii	"posx1\000"
- 2023      3100
- 2024              	.LASF57:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 41
-
-
- 2025 0006 706F7378 		.ascii	"posx2\000"
- 2025      3200
- 2026              	.LASF39:
- 2027 000c 746F7563 		.ascii	"touch_write\000"
- 2027      685F7772 
- 2027      69746500 
- 2028              	.LASF82:
- 2029 0018 6E6F6D62 		.ascii	"nombre_pro1\000"
- 2029      72655F70 
- 2029      726F3100 
- 2030              	.LASF51:
- 2031 0024 636F756E 		.ascii	"count_teclas2\000"
- 2031      745F7465 
- 2031      636C6173 
- 2031      3200
- 2032              	.LASF83:
- 2033 0032 6E6F6D62 		.ascii	"nombre_pro2\000"
- 2033      72655F70 
- 2033      726F3200 
- 2034              	.LASF85:
- 2035 003e 76657273 		.ascii	"version\000"
- 2035      696F6E00 
- 2036              	.LASF78:
- 2037 0046 69645F65 		.ascii	"id_estacion\000"
- 2037      73746163 
- 2037      696F6E00 
- 2038              	.LASF79:
- 2039 0052 69645F76 		.ascii	"id_venta\000"
- 2039      656E7461 
- 2039      00
- 2040              	.LASF37:
- 2041 005b 70617373 		.ascii	"password_local\000"
- 2041      776F7264 
- 2041      5F6C6F63 
- 2041      616C00
- 2042              	.LASF77:
- 2043 006a 626C6F71 		.ascii	"bloqueo_LCD\000"
- 2043      75656F5F 
- 2043      4C434400 
- 2044              	.LASF27:
- 2045 0076 6D616E67 		.ascii	"manguera\000"
- 2045      75657261 
- 2045      00
- 2046              	.LASF2:
- 2047 007f 73686F72 		.ascii	"short int\000"
- 2047      7420696E 
- 2047      7400
- 2048              	.LASF72:
- 2049 0089 636F756E 		.ascii	"count_protector\000"
- 2049      745F7072 
- 2049      6F746563 
- 2049      746F7200 
- 2050              	.LASF76:
- 2051 0099 70726F78 		.ascii	"prox_caso\000"
- 2051      5F636173 
- 2051      6F00
- 2052              	.LASF24:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 42
-
-
- 2053 00a3 64696E65 		.ascii	"dinero\000"
- 2053      726F00
- 2054              	.LASF62:
- 2055 00aa 666C756A 		.ascii	"flujo_LCD1\000"
- 2055      6F5F4C43 
- 2055      443100
- 2056              	.LASF63:
- 2057 00b5 666C756A 		.ascii	"flujo_LCD2\000"
- 2057      6F5F4C43 
- 2057      443200
- 2058              	.LASF33:
- 2059 00c0 63656475 		.ascii	"cedula\000"
- 2059      6C6100
- 2060              	.LASF34:
- 2061 00c7 70617373 		.ascii	"password\000"
- 2061      776F7264 
- 2061      00
- 2062              	.LASF35:
- 2063 00d0 7475726E 		.ascii	"turno\000"
- 2063      6F00
- 2064              	.LASF103:
- 2065 00d6 7072696E 		.ascii	"print1\000"
- 2065      743100
- 2066              	.LASF104:
- 2067 00dd 7072696E 		.ascii	"print2\000"
- 2067      743200
- 2068              	.LASF31:
- 2069 00e4 696D7072 		.ascii	"imprimir\000"
- 2069      696D6972 
- 2069      00
- 2070              	.LASF68:
- 2071 00ed 76656E74 		.ascii	"venta_activa\000"
- 2071      615F6163 
- 2071      74697661 
- 2071      00
- 2072              	.LASF12:
- 2073 00fa 75696E74 		.ascii	"uint16\000"
- 2073      313600
- 2074              	.LASF88:
- 2075 0101 6E6F6D62 		.ascii	"nombre\000"
- 2075      726500
- 2076              	.LASF44:
- 2077 0108 6372635F 		.ascii	"crc_check\000"
- 2077      63686563 
- 2077      6B00
- 2078              	.LASF55:
- 2079 0112 706F7379 		.ascii	"posy1\000"
- 2079      3100
- 2080              	.LASF58:
- 2081 0118 706F7379 		.ascii	"posy2\000"
- 2081      3200
- 2082              	.LASF21:
- 2083 011e 73757274 		.ascii	"surtidor\000"
- 2083      69646F72 
- 2083      00
- 2084              	.LASF86:
- 2085 0127 6C61646F 		.ascii	"lado1\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 43
-
-
- 2085      3100
- 2086              	.LASF13:
- 2087 012d 666C6F61 		.ascii	"float\000"
- 2087      7400
- 2088              	.LASF67:
- 2089 0133 666C756A 		.ascii	"flujo_pos\000"
- 2089      6F5F706F 
- 2089      7300
- 2090              	.LASF6:
- 2091 013d 6C6F6E67 		.ascii	"long long int\000"
- 2091      206C6F6E 
- 2091      6720696E 
- 2091      7400
- 2092              	.LASF105:
- 2093 014b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2093      4320342E 
- 2093      392E3320 
- 2093      32303135 
- 2093      30333033 
- 2094 017e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 2094      20726576 
- 2094      6973696F 
- 2094      6E203232 
- 2094      31323230 
- 2095 01b1 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 2095      66756E63 
- 2095      74696F6E 
- 2095      2D736563 
- 2095      74696F6E 
- 2096              	.LASF16:
- 2097 01d9 73697A65 		.ascii	"sizetype\000"
- 2097      74797065 
- 2097      00
- 2098              	.LASF106:
- 2099 01e2 2E5C6962 		.ascii	".\\ibuton.c\000"
- 2099      75746F6E 
- 2099      2E6300
- 2100              	.LASF25:
- 2101 01ed 766F6C75 		.ascii	"volumen\000"
- 2101      6D656E00 
- 2102              	.LASF18:
- 2103 01f5 746F7461 		.ascii	"totales\000"
- 2103      6C657300 
- 2104              	.LASF84:
- 2105 01fd 6E6F6D62 		.ascii	"nombre_pro3\000"
- 2105      72655F70 
- 2105      726F3300 
- 2106              	.LASF73:
- 2107 0209 636F756E 		.ascii	"count_protector2\000"
- 2107      745F7072 
- 2107      6F746563 
- 2107      746F7232 
- 2107      00
- 2108              	.LASF69:
- 2109 021a 76656E74 		.ascii	"venta_activa2\000"
- 2109      615F6163 
- 2109      74697661 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 44
-
-
- 2109      3200
- 2110              	.LASF11:
- 2111 0228 75696E74 		.ascii	"uint8\000"
- 2111      3800
- 2112              	.LASF1:
- 2113 022e 756E7369 		.ascii	"unsigned char\000"
- 2113      676E6564 
- 2113      20636861 
- 2113      7200
- 2114              	.LASF23:
- 2115 023c 706F7369 		.ascii	"posicion\000"
- 2115      63696F6E 
- 2115      00
- 2116              	.LASF66:
- 2117 0245 73656C65 		.ascii	"seleccion_pos\000"
- 2117      6363696F 
- 2117      6E5F706F 
- 2117      7300
- 2118              	.LASF0:
- 2119 0253 7369676E 		.ascii	"signed char\000"
- 2119      65642063 
- 2119      68617200 
- 2120              	.LASF40:
- 2121 025f 69627574 		.ascii	"ibutton\000"
- 2121      746F6E00 
- 2122              	.LASF7:
- 2123 0267 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2123      206C6F6E 
- 2123      6720756E 
- 2123      7369676E 
- 2123      65642069 
- 2124              	.LASF81:
- 2125 027e 70707578 		.ascii	"ppux10\000"
- 2125      313000
- 2126              	.LASF99:
- 2127 0285 6F6B5F64 		.ascii	"ok_datosRF\000"
- 2127      61746F73 
- 2127      524600
- 2128              	.LASF36:
- 2129 0290 6175746F 		.ascii	"autorizado\000"
- 2129      72697A61 
- 2129      646F00
- 2130              	.LASF8:
- 2131 029b 756E7369 		.ascii	"unsigned int\000"
- 2131      676E6564 
- 2131      20696E74 
- 2131      00
- 2132              	.LASF56:
- 2133 02a8 73697A65 		.ascii	"sizeletra1\000"
- 2133      6C657472 
- 2133      613100
- 2134              	.LASF38:
- 2135 02b3 746F7563 		.ascii	"touch_present\000"
- 2135      685F7072 
- 2135      6573656E 
- 2135      7400
- 2136              	.LASF91:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 45
-
-
- 2137 02c1 6C656D61 		.ascii	"lema1\000"
- 2137      3100
- 2138              	.LASF92:
- 2139 02c7 6C656D61 		.ascii	"lema2\000"
- 2139      3200
- 2140              	.LASF95:
- 2141 02cd 686F7261 		.ascii	"hora\000"
- 2141      00
- 2142              	.LASF26:
- 2143 02d2 70726F64 		.ascii	"producto\000"
- 2143      7563746F 
- 2143      00
- 2144              	.LASF70:
- 2145 02db 42756666 		.ascii	"Buffer_LCD1\000"
- 2145      65725F4C 
- 2145      43443100 
- 2146              	.LASF71:
- 2147 02e7 42756666 		.ascii	"Buffer_LCD2\000"
- 2147      65725F4C 
- 2147      43443200 
- 2148              	.LASF3:
- 2149 02f3 73686F72 		.ascii	"short unsigned int\000"
- 2149      7420756E 
- 2149      7369676E 
- 2149      65642069 
- 2149      6E7400
- 2150              	.LASF19:
- 2151 0306 67726164 		.ascii	"grado\000"
- 2151      6F00
- 2152              	.LASF60:
- 2153 030c 7465636C 		.ascii	"teclas1\000"
- 2153      61733100 
- 2154              	.LASF61:
- 2155 0314 7465636C 		.ascii	"teclas2\000"
- 2155      61733200 
- 2156              	.LASF15:
- 2157 031c 63686172 		.ascii	"char\000"
- 2157      00
- 2158              	.LASF96:
- 2159 0321 7276656E 		.ascii	"rventa1\000"
- 2159      74613100 
- 2160              	.LASF97:
- 2161 0329 7276656E 		.ascii	"rventa2\000"
- 2161      74613200 
- 2162              	.LASF10:
- 2163 0331 696E7433 		.ascii	"int32_t\000"
- 2163      325F7400 
- 2164              	.LASF46:
- 2165 0339 636F756E 		.ascii	"count_teclas1\000"
- 2165      745F7465 
- 2165      636C6173 
- 2165      3100
- 2166              	.LASF9:
- 2167 0347 5F5F696E 		.ascii	"__int32_t\000"
- 2167      7433325F 
- 2167      7400
- 2168              	.LASF94:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 46
-
-
- 2169 0351 66656368 		.ascii	"fecha\000"
- 2169      6100
- 2170              	.LASF87:
- 2171 0357 6C61646F 		.ascii	"lado2\000"
- 2171      3200
- 2172              	.LASF101:
- 2173 035d 62756666 		.ascii	"buffer_i2c\000"
- 2173      65725F69 
- 2173      326300
- 2174              	.LASF93:
- 2175 0368 69645F6C 		.ascii	"id_logo\000"
- 2175      6F676F00 
- 2176              	.LASF20:
- 2177 0370 6D616E67 		.ascii	"mangueras\000"
- 2177      75657261 
- 2177      7300
- 2178              	.LASF75:
- 2179 037a 696D6167 		.ascii	"imagen_grado\000"
- 2179      656E5F67 
- 2179      7261646F 
- 2179      00
- 2180              	.LASF43:
- 2181 0387 746F7563 		.ascii	"touch_read_byte\000"
- 2181      685F7265 
- 2181      61645F62 
- 2181      79746500 
- 2182              	.LASF90:
- 2183 0397 64697265 		.ascii	"direccion\000"
- 2183      6363696F 
- 2183      6E00
- 2184              	.LASF5:
- 2185 03a1 6C6F6E67 		.ascii	"long unsigned int\000"
- 2185      20756E73 
- 2185      69676E65 
- 2185      6420696E 
- 2185      7400
- 2186              	.LASF22:
- 2187 03b3 72656369 		.ascii	"recibo\000"
- 2187      626F00
- 2188              	.LASF102:
- 2189 03ba 6372635F 		.ascii	"crc_total\000"
- 2189      746F7461 
- 2189      6C00
- 2190              	.LASF41:
- 2191 03c4 6461746F 		.ascii	"dato\000"
- 2191      00
- 2192              	.LASF80:
- 2193 03c9 7472616D 		.ascii	"trama_totales\000"
- 2193      615F746F 
- 2193      74616C65 
- 2193      7300
- 2194              	.LASF45:
- 2195 03d7 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2195      52784275 
- 2195      66666572 
- 2195      00
- 2196              	.LASF28:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 47
-
-
- 2197 03e4 70726573 		.ascii	"preset\000"
- 2197      657400
- 2198              	.LASF49:
- 2199 03eb 69645F63 		.ascii	"id_coma1\000"
- 2199      6F6D6131 
- 2199      00
- 2200              	.LASF52:
- 2201 03f4 69645F63 		.ascii	"id_coma2\000"
- 2201      6F6D6132 
- 2201      00
- 2202              	.LASF50:
- 2203 03fd 69645F74 		.ascii	"id_teclado1\000"
- 2203      65636C61 
- 2203      646F3100 
- 2204              	.LASF53:
- 2205 0409 69645F74 		.ascii	"id_teclado2\000"
- 2205      65636C61 
- 2205      646F3200 
- 2206              	.LASF100:
- 2207 0415 72665F6D 		.ascii	"rf_mod\000"
- 2207      6F6400
- 2208              	.LASF42:
- 2209 041c 70726573 		.ascii	"present\000"
- 2209      656E7400 
- 2210              	.LASF98:
- 2211 0424 6F6B5F52 		.ascii	"ok_RF\000"
- 2211      4600
- 2212              	.LASF32:
- 2213 042a 7469706F 		.ascii	"tipo_venta\000"
- 2213      5F76656E 
- 2213      746100
- 2214              	.LASF30:
- 2215 0435 706C6163 		.ascii	"placa\000"
- 2215      6100
- 2216              	.LASF14:
- 2217 043b 646F7562 		.ascii	"double\000"
- 2217      6C6500
- 2218              	.LASF89:
- 2219 0442 74656C65 		.ascii	"telefono\000"
- 2219      666F6E6F 
- 2219      00
- 2220              	.LASF74:
- 2221 044b 70617373 		.ascii	"password_lcd\000"
- 2221      776F7264 
- 2221      5F6C6364 
- 2221      00
- 2222              	.LASF4:
- 2223 0458 6C6F6E67 		.ascii	"long int\000"
- 2223      20696E74 
- 2223      00
- 2224              	.LASF17:
- 2225 0461 65737461 		.ascii	"estado\000"
- 2225      646F00
- 2226              	.LASF64:
- 2227 0468 666C756A 		.ascii	"flujo_pos1\000"
- 2227      6F5F706F 
- 2227      733100
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxn3EDK.s 			page 48
-
-
- 2228              	.LASF65:
- 2229 0473 666C756A 		.ascii	"flujo_pos2\000"
- 2229      6F5F706F 
- 2229      733200
- 2230              	.LASF29:
- 2231 047e 69645F65 		.ascii	"id_ef\000"
- 2231      6600
- 2232              	.LASF59:
- 2233 0484 73697A65 		.ascii	"sizeletra2\000"
- 2233      6C657472 
- 2233      613200
- 2234              	.LASF107:
- 2235 048f 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prueba_GRPFleet\\B"
- 2235      73657273 
- 2235      5C526563 
- 2235      65706369 
- 2235      6F6E5C44 
- 2236 04bd 42422E63 		.ascii	"BB.cydsn\000"
- 2236      7964736E 
- 2236      00
- 2237              	.LASF47:
- 2238 04c6 636F6D61 		.ascii	"comas1\000"
- 2238      733100
- 2239              	.LASF48:
- 2240 04cd 636F6D61 		.ascii	"comas2\000"
- 2240      733200
- 2241              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 587              		.loc 1 241 0
+ 588 004c 1846     		mov	r0, r3
+ 589 004e 1437     		adds	r7, r7, #20
+ 590              		.cfi_def_cfa_offset 4
+ 591 0050 BD46     		mov	sp, r7
+ 592              		.cfi_def_cfa_register 13
+ 593              		@ sp needed
+ 594 0052 5DF8047B 		ldr	r7, [sp], #4
+ 595              		.cfi_restore 7
+ 596              		.cfi_def_cfa_offset 0
+ 597 0056 7047     		bx	lr
+ 598              		.cfi_endproc
+ 599              	.LFE66:
+ 600              		.size	crc_check, .-crc_check
+ 601              		.text
+ 602              	.Letext0:
+ 603              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 604              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 16
+
+
+ 605              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 606              		.file 5 ".\\VariablesG.h"
+ 607              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 608              		.section	.debug_info,"",%progbits
+ 609              	.Ldebug_info0:
+ 610 0000 26090000 		.4byte	0x926
+ 611 0004 0400     		.2byte	0x4
+ 612 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 613 000a 04       		.byte	0x4
+ 614 000b 01       		.uleb128 0x1
+ 615 000c 54010000 		.4byte	.LASF108
+ 616 0010 01       		.byte	0x1
+ 617 0011 EB010000 		.4byte	.LASF109
+ 618 0015 AB040000 		.4byte	.LASF110
+ 619 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 620 001d 00000000 		.4byte	0
+ 621 0021 00000000 		.4byte	.Ldebug_line0
+ 622 0025 02       		.uleb128 0x2
+ 623 0026 01       		.byte	0x1
+ 624 0027 06       		.byte	0x6
+ 625 0028 6A020000 		.4byte	.LASF0
+ 626 002c 02       		.uleb128 0x2
+ 627 002d 01       		.byte	0x1
+ 628 002e 08       		.byte	0x8
+ 629 002f 45020000 		.4byte	.LASF1
+ 630 0033 02       		.uleb128 0x2
+ 631 0034 02       		.byte	0x2
+ 632 0035 05       		.byte	0x5
+ 633 0036 7F000000 		.4byte	.LASF2
+ 634 003a 02       		.uleb128 0x2
+ 635 003b 02       		.byte	0x2
+ 636 003c 07       		.byte	0x7
+ 637 003d 0A030000 		.4byte	.LASF3
+ 638 0041 03       		.uleb128 0x3
+ 639 0042 5E030000 		.4byte	.LASF9
+ 640 0046 02       		.byte	0x2
+ 641 0047 3F       		.byte	0x3f
+ 642 0048 4C000000 		.4byte	0x4c
+ 643 004c 02       		.uleb128 0x2
+ 644 004d 04       		.byte	0x4
+ 645 004e 05       		.byte	0x5
+ 646 004f 74040000 		.4byte	.LASF4
+ 647 0053 02       		.uleb128 0x2
+ 648 0054 04       		.byte	0x4
+ 649 0055 07       		.byte	0x7
+ 650 0056 C2030000 		.4byte	.LASF5
+ 651 005a 02       		.uleb128 0x2
+ 652 005b 08       		.byte	0x8
+ 653 005c 05       		.byte	0x5
+ 654 005d 46010000 		.4byte	.LASF6
+ 655 0061 02       		.uleb128 0x2
+ 656 0062 08       		.byte	0x8
+ 657 0063 07       		.byte	0x7
+ 658 0064 7E020000 		.4byte	.LASF7
+ 659 0068 04       		.uleb128 0x4
+ 660 0069 04       		.byte	0x4
+ 661 006a 05       		.byte	0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 17
+
+
+ 662 006b 696E7400 		.ascii	"int\000"
+ 663 006f 02       		.uleb128 0x2
+ 664 0070 04       		.byte	0x4
+ 665 0071 07       		.byte	0x7
+ 666 0072 B2020000 		.4byte	.LASF8
+ 667 0076 03       		.uleb128 0x3
+ 668 0077 48030000 		.4byte	.LASF10
+ 669 007b 03       		.byte	0x3
+ 670 007c 2C       		.byte	0x2c
+ 671 007d 41000000 		.4byte	0x41
+ 672 0081 03       		.uleb128 0x3
+ 673 0082 3F020000 		.4byte	.LASF11
+ 674 0086 04       		.byte	0x4
+ 675 0087 B4       		.byte	0xb4
+ 676 0088 2C000000 		.4byte	0x2c
+ 677 008c 03       		.uleb128 0x3
+ 678 008d 03010000 		.4byte	.LASF12
+ 679 0091 04       		.byte	0x4
+ 680 0092 B5       		.byte	0xb5
+ 681 0093 3A000000 		.4byte	0x3a
+ 682 0097 02       		.uleb128 0x2
+ 683 0098 04       		.byte	0x4
+ 684 0099 04       		.byte	0x4
+ 685 009a 36010000 		.4byte	.LASF13
+ 686 009e 02       		.uleb128 0x2
+ 687 009f 08       		.byte	0x8
+ 688 00a0 04       		.byte	0x4
+ 689 00a1 57040000 		.4byte	.LASF14
+ 690 00a5 02       		.uleb128 0x2
+ 691 00a6 01       		.byte	0x1
+ 692 00a7 08       		.byte	0x8
+ 693 00a8 33030000 		.4byte	.LASF15
+ 694 00ac 05       		.uleb128 0x5
+ 695 00ad 81000000 		.4byte	0x81
+ 696 00b1 05       		.uleb128 0x5
+ 697 00b2 8C000000 		.4byte	0x8c
+ 698 00b6 02       		.uleb128 0x2
+ 699 00b7 04       		.byte	0x4
+ 700 00b8 07       		.byte	0x7
+ 701 00b9 E2010000 		.4byte	.LASF16
+ 702 00bd 06       		.uleb128 0x6
+ 703 00be 81000000 		.4byte	0x81
+ 704 00c2 CD000000 		.4byte	0xcd
+ 705 00c6 07       		.uleb128 0x7
+ 706 00c7 B6000000 		.4byte	0xb6
+ 707 00cb 03       		.byte	0x3
+ 708 00cc 00       		.byte	0
+ 709 00cd 08       		.uleb128 0x8
+ 710 00ce 27010000 		.4byte	.LASF21
+ 711 00d2 5D       		.byte	0x5d
+ 712 00d3 05       		.byte	0x5
+ 713 00d4 5D       		.byte	0x5d
+ 714 00d5 22010000 		.4byte	0x122
+ 715 00d9 09       		.uleb128 0x9
+ 716 00da 64697200 		.ascii	"dir\000"
+ 717 00de 05       		.byte	0x5
+ 718 00df 5E       		.byte	0x5e
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 18
+
+
+ 719 00e0 AC000000 		.4byte	0xac
+ 720 00e4 00       		.byte	0
+ 721 00e5 0A       		.uleb128 0xa
+ 722 00e6 7D040000 		.4byte	.LASF17
+ 723 00ea 05       		.byte	0x5
+ 724 00eb 5F       		.byte	0x5f
+ 725 00ec AC000000 		.4byte	0xac
+ 726 00f0 01       		.byte	0x1
+ 727 00f1 0A       		.uleb128 0xa
+ 728 00f2 FE010000 		.4byte	.LASF18
+ 729 00f6 05       		.byte	0x5
+ 730 00f7 60       		.byte	0x60
+ 731 00f8 38010000 		.4byte	0x138
+ 732 00fc 02       		.byte	0x2
+ 733 00fd 09       		.uleb128 0x9
+ 734 00fe 70707500 		.ascii	"ppu\000"
+ 735 0102 05       		.byte	0x5
+ 736 0103 61       		.byte	0x61
+ 737 0104 53010000 		.4byte	0x153
+ 738 0108 4A       		.byte	0x4a
+ 739 0109 0A       		.uleb128 0xa
+ 740 010a 1D030000 		.4byte	.LASF19
+ 741 010e 05       		.byte	0x5
+ 742 010f 62       		.byte	0x62
+ 743 0110 6E010000 		.4byte	0x16e
+ 744 0114 59       		.byte	0x59
+ 745 0115 0A       		.uleb128 0xa
+ 746 0116 87030000 		.4byte	.LASF20
+ 747 011a 05       		.byte	0x5
+ 748 011b 63       		.byte	0x63
+ 749 011c AC000000 		.4byte	0xac
+ 750 0120 5C       		.byte	0x5c
+ 751 0121 00       		.byte	0
+ 752 0122 06       		.uleb128 0x6
+ 753 0123 81000000 		.4byte	0x81
+ 754 0127 38010000 		.4byte	0x138
+ 755 012b 07       		.uleb128 0x7
+ 756 012c B6000000 		.4byte	0xb6
+ 757 0130 02       		.byte	0x2
+ 758 0131 07       		.uleb128 0x7
+ 759 0132 B6000000 		.4byte	0xb6
+ 760 0136 17       		.byte	0x17
+ 761 0137 00       		.byte	0
+ 762 0138 05       		.uleb128 0x5
+ 763 0139 22010000 		.4byte	0x122
+ 764 013d 06       		.uleb128 0x6
+ 765 013e 81000000 		.4byte	0x81
+ 766 0142 53010000 		.4byte	0x153
+ 767 0146 07       		.uleb128 0x7
+ 768 0147 B6000000 		.4byte	0xb6
+ 769 014b 02       		.byte	0x2
+ 770 014c 07       		.uleb128 0x7
+ 771 014d B6000000 		.4byte	0xb6
+ 772 0151 04       		.byte	0x4
+ 773 0152 00       		.byte	0
+ 774 0153 05       		.uleb128 0x5
+ 775 0154 3D010000 		.4byte	0x13d
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 19
+
+
+ 776 0158 06       		.uleb128 0x6
+ 777 0159 81000000 		.4byte	0x81
+ 778 015d 6E010000 		.4byte	0x16e
+ 779 0161 07       		.uleb128 0x7
+ 780 0162 B6000000 		.4byte	0xb6
+ 781 0166 02       		.byte	0x2
+ 782 0167 07       		.uleb128 0x7
+ 783 0168 B6000000 		.4byte	0xb6
+ 784 016c 00       		.byte	0
+ 785 016d 00       		.byte	0
+ 786 016e 05       		.uleb128 0x5
+ 787 016f 58010000 		.4byte	0x158
+ 788 0173 08       		.uleb128 0x8
+ 789 0174 D4030000 		.4byte	.LASF22
+ 790 0178 76       		.byte	0x76
+ 791 0179 05       		.byte	0x5
+ 792 017a 74       		.byte	0x74
+ 793 017b 62020000 		.4byte	0x262
+ 794 017f 0A       		.uleb128 0xa
+ 795 0180 53020000 		.4byte	.LASF23
+ 796 0184 05       		.byte	0x5
+ 797 0185 75       		.byte	0x75
+ 798 0186 81000000 		.4byte	0x81
+ 799 018a 00       		.byte	0
+ 800 018b 0A       		.uleb128 0xa
+ 801 018c 1D030000 		.4byte	.LASF19
+ 802 0190 05       		.byte	0x5
+ 803 0191 76       		.byte	0x76
+ 804 0192 81000000 		.4byte	0x81
+ 805 0196 01       		.byte	0x1
+ 806 0197 09       		.uleb128 0x9
+ 807 0198 70707500 		.ascii	"ppu\000"
+ 808 019c 05       		.byte	0x5
+ 809 019d 77       		.byte	0x77
+ 810 019e 62020000 		.4byte	0x262
+ 811 01a2 02       		.byte	0x2
+ 812 01a3 0A       		.uleb128 0xa
+ 813 01a4 AC000000 		.4byte	.LASF24
+ 814 01a8 05       		.byte	0x5
+ 815 01a9 78       		.byte	0x78
+ 816 01aa 72020000 		.4byte	0x272
+ 817 01ae 07       		.byte	0x7
+ 818 01af 0A       		.uleb128 0xa
+ 819 01b0 F6010000 		.4byte	.LASF25
+ 820 01b4 05       		.byte	0x5
+ 821 01b5 79       		.byte	0x79
+ 822 01b6 72020000 		.4byte	0x272
+ 823 01ba 10       		.byte	0x10
+ 824 01bb 0A       		.uleb128 0xa
+ 825 01bc E9020000 		.4byte	.LASF26
+ 826 01c0 05       		.byte	0x5
+ 827 01c1 7A       		.byte	0x7a
+ 828 01c2 81000000 		.4byte	0x81
+ 829 01c6 19       		.byte	0x19
+ 830 01c7 0A       		.uleb128 0xa
+ 831 01c8 76000000 		.4byte	.LASF27
+ 832 01cc 05       		.byte	0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 20
+
+
+ 833 01cd 7B       		.byte	0x7b
+ 834 01ce 81000000 		.4byte	0x81
+ 835 01d2 1A       		.byte	0x1a
+ 836 01d3 0A       		.uleb128 0xa
+ 837 01d4 00040000 		.4byte	.LASF28
+ 838 01d8 05       		.byte	0x5
+ 839 01d9 7C       		.byte	0x7c
+ 840 01da 82020000 		.4byte	0x282
+ 841 01de 1B       		.byte	0x1b
+ 842 01df 09       		.uleb128 0x9
+ 843 01e0 696400   		.ascii	"id\000"
+ 844 01e3 05       		.byte	0x5
+ 845 01e4 7D       		.byte	0x7d
+ 846 01e5 92020000 		.4byte	0x292
+ 847 01e9 23       		.byte	0x23
+ 848 01ea 0A       		.uleb128 0xa
+ 849 01eb 9A040000 		.4byte	.LASF29
+ 850 01ef 05       		.byte	0x5
+ 851 01f0 7E       		.byte	0x7e
+ 852 01f1 92020000 		.4byte	0x292
+ 853 01f5 33       		.byte	0x33
+ 854 01f6 09       		.uleb128 0x9
+ 855 01f7 6B6D00   		.ascii	"km\000"
+ 856 01fa 05       		.byte	0x5
+ 857 01fb 7F       		.byte	0x7f
+ 858 01fc A2020000 		.4byte	0x2a2
+ 859 0200 43       		.byte	0x43
+ 860 0201 0A       		.uleb128 0xa
+ 861 0202 51040000 		.4byte	.LASF30
+ 862 0206 05       		.byte	0x5
+ 863 0207 80       		.byte	0x80
+ 864 0208 72020000 		.4byte	0x272
+ 865 020c 4E       		.byte	0x4e
+ 866 020d 0A       		.uleb128 0xa
+ 867 020e ED000000 		.4byte	.LASF31
+ 868 0212 05       		.byte	0x5
+ 869 0213 81       		.byte	0x81
+ 870 0214 81000000 		.4byte	0x81
+ 871 0218 57       		.byte	0x57
+ 872 0219 0A       		.uleb128 0xa
+ 873 021a 46040000 		.4byte	.LASF32
+ 874 021e 05       		.byte	0x5
+ 875 021f 82       		.byte	0x82
+ 876 0220 81000000 		.4byte	0x81
+ 877 0224 58       		.byte	0x58
+ 878 0225 0A       		.uleb128 0xa
+ 879 0226 C9000000 		.4byte	.LASF33
+ 880 022a 05       		.byte	0x5
+ 881 022b 83       		.byte	0x83
+ 882 022c A2020000 		.4byte	0x2a2
+ 883 0230 59       		.byte	0x59
+ 884 0231 0A       		.uleb128 0xa
+ 885 0232 D0000000 		.4byte	.LASF34
+ 886 0236 05       		.byte	0x5
+ 887 0237 84       		.byte	0x84
+ 888 0238 A2020000 		.4byte	0x2a2
+ 889 023c 64       		.byte	0x64
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 21
+
+
+ 890 023d 0A       		.uleb128 0xa
+ 891 023e D9000000 		.4byte	.LASF35
+ 892 0242 05       		.byte	0x5
+ 893 0243 85       		.byte	0x85
+ 894 0244 81000000 		.4byte	0x81
+ 895 0248 6F       		.byte	0x6f
+ 896 0249 0A       		.uleb128 0xa
+ 897 024a A7020000 		.4byte	.LASF36
+ 898 024e 05       		.byte	0x5
+ 899 024f 86       		.byte	0x86
+ 900 0250 81000000 		.4byte	0x81
+ 901 0254 70       		.byte	0x70
+ 902 0255 0A       		.uleb128 0xa
+ 903 0256 5B000000 		.4byte	.LASF37
+ 904 025a 05       		.byte	0x5
+ 905 025b 87       		.byte	0x87
+ 906 025c 62020000 		.4byte	0x262
+ 907 0260 71       		.byte	0x71
+ 908 0261 00       		.byte	0
+ 909 0262 06       		.uleb128 0x6
+ 910 0263 81000000 		.4byte	0x81
+ 911 0267 72020000 		.4byte	0x272
+ 912 026b 07       		.uleb128 0x7
+ 913 026c B6000000 		.4byte	0xb6
+ 914 0270 04       		.byte	0x4
+ 915 0271 00       		.byte	0
+ 916 0272 06       		.uleb128 0x6
+ 917 0273 81000000 		.4byte	0x81
+ 918 0277 82020000 		.4byte	0x282
+ 919 027b 07       		.uleb128 0x7
+ 920 027c B6000000 		.4byte	0xb6
+ 921 0280 08       		.byte	0x8
+ 922 0281 00       		.byte	0
+ 923 0282 06       		.uleb128 0x6
+ 924 0283 81000000 		.4byte	0x81
+ 925 0287 92020000 		.4byte	0x292
+ 926 028b 07       		.uleb128 0x7
+ 927 028c B6000000 		.4byte	0xb6
+ 928 0290 07       		.byte	0x7
+ 929 0291 00       		.byte	0
+ 930 0292 06       		.uleb128 0x6
+ 931 0293 81000000 		.4byte	0x81
+ 932 0297 A2020000 		.4byte	0x2a2
+ 933 029b 07       		.uleb128 0x7
+ 934 029c B6000000 		.4byte	0xb6
+ 935 02a0 0F       		.byte	0xf
+ 936 02a1 00       		.byte	0
+ 937 02a2 06       		.uleb128 0x6
+ 938 02a3 81000000 		.4byte	0x81
+ 939 02a7 B2020000 		.4byte	0x2b2
+ 940 02ab 07       		.uleb128 0x7
+ 941 02ac B6000000 		.4byte	0xb6
+ 942 02b0 0A       		.byte	0xa
+ 943 02b1 00       		.byte	0
+ 944 02b2 0B       		.uleb128 0xb
+ 945 02b3 CA020000 		.4byte	.LASF38
+ 946 02b7 01       		.byte	0x1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 22
+
+
+ 947 02b8 37       		.byte	0x37
+ 948 02b9 81000000 		.4byte	0x81
+ 949 02bd 00000000 		.4byte	.LFB63
+ 950 02c1 BE000000 		.4byte	.LFE63-.LFB63
+ 951 02c5 01       		.uleb128 0x1
+ 952 02c6 9C       		.byte	0x9c
+ 953 02c7 E8020000 		.4byte	0x2e8
+ 954 02cb 0C       		.uleb128 0xc
+ 955 02cc 76020000 		.4byte	.LASF40
+ 956 02d0 01       		.byte	0x1
+ 957 02d1 37       		.byte	0x37
+ 958 02d2 81000000 		.4byte	0x81
+ 959 02d6 02       		.uleb128 0x2
+ 960 02d7 91       		.byte	0x91
+ 961 02d8 6F       		.sleb128 -17
+ 962 02d9 0D       		.uleb128 0xd
+ 963 02da 38040000 		.4byte	.LASF42
+ 964 02de 01       		.byte	0x1
+ 965 02df 38       		.byte	0x38
+ 966 02e0 81000000 		.4byte	0x81
+ 967 02e4 02       		.uleb128 0x2
+ 968 02e5 91       		.byte	0x91
+ 969 02e6 77       		.sleb128 -9
+ 970 02e7 00       		.byte	0
+ 971 02e8 0B       		.uleb128 0xb
+ 972 02e9 0C000000 		.4byte	.LASF39
+ 973 02ed 01       		.byte	0x1
+ 974 02ee 74       		.byte	0x74
+ 975 02ef 81000000 		.4byte	0x81
+ 976 02f3 00000000 		.4byte	.LFB64
+ 977 02f7 0C010000 		.4byte	.LFE64-.LFB64
+ 978 02fb 01       		.uleb128 0x1
+ 979 02fc 9C       		.byte	0x9c
+ 980 02fd 2A030000 		.4byte	0x32a
+ 981 0301 0C       		.uleb128 0xc
+ 982 0302 76020000 		.4byte	.LASF40
+ 983 0306 01       		.byte	0x1
+ 984 0307 74       		.byte	0x74
+ 985 0308 81000000 		.4byte	0x81
+ 986 030c 02       		.uleb128 0x2
+ 987 030d 91       		.byte	0x91
+ 988 030e 6F       		.sleb128 -17
+ 989 030f 0C       		.uleb128 0xc
+ 990 0310 E5030000 		.4byte	.LASF41
+ 991 0314 01       		.byte	0x1
+ 992 0315 74       		.byte	0x74
+ 993 0316 81000000 		.4byte	0x81
+ 994 031a 02       		.uleb128 0x2
+ 995 031b 91       		.byte	0x91
+ 996 031c 6E       		.sleb128 -18
+ 997 031d 0E       		.uleb128 0xe
+ 998 031e 6900     		.ascii	"i\000"
+ 999 0320 01       		.byte	0x1
+ 1000 0321 75       		.byte	0x75
+ 1001 0322 81000000 		.4byte	0x81
+ 1002 0326 02       		.uleb128 0x2
+ 1003 0327 91       		.byte	0x91
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 23
+
+
+ 1004 0328 77       		.sleb128 -9
+ 1005 0329 00       		.byte	0
+ 1006 032a 0B       		.uleb128 0xb
+ 1007 032b A8030000 		.4byte	.LASF43
+ 1008 032f 01       		.byte	0x1
+ 1009 0330 B9       		.byte	0xb9
+ 1010 0331 81000000 		.4byte	0x81
+ 1011 0335 00000000 		.4byte	.LFB65
+ 1012 0339 B2000000 		.4byte	.LFE65-.LFB65
+ 1013 033d 01       		.uleb128 0x1
+ 1014 033e 9C       		.byte	0x9c
+ 1015 033f 6C030000 		.4byte	0x36c
+ 1016 0343 0C       		.uleb128 0xc
+ 1017 0344 76020000 		.4byte	.LASF40
+ 1018 0348 01       		.byte	0x1
+ 1019 0349 B9       		.byte	0xb9
+ 1020 034a 81000000 		.4byte	0x81
+ 1021 034e 02       		.uleb128 0x2
+ 1022 034f 91       		.byte	0x91
+ 1023 0350 6F       		.sleb128 -17
+ 1024 0351 0E       		.uleb128 0xe
+ 1025 0352 6900     		.ascii	"i\000"
+ 1026 0354 01       		.byte	0x1
+ 1027 0355 BA       		.byte	0xba
+ 1028 0356 81000000 		.4byte	0x81
+ 1029 035a 02       		.uleb128 0x2
+ 1030 035b 91       		.byte	0x91
+ 1031 035c 77       		.sleb128 -9
+ 1032 035d 0D       		.uleb128 0xd
+ 1033 035e E5030000 		.4byte	.LASF41
+ 1034 0362 01       		.byte	0x1
+ 1035 0363 BA       		.byte	0xba
+ 1036 0364 81000000 		.4byte	0x81
+ 1037 0368 02       		.uleb128 0x2
+ 1038 0369 91       		.byte	0x91
+ 1039 036a 76       		.sleb128 -10
+ 1040 036b 00       		.byte	0
+ 1041 036c 0F       		.uleb128 0xf
+ 1042 036d 11010000 		.4byte	.LASF44
+ 1043 0371 01       		.byte	0x1
+ 1044 0372 E4       		.byte	0xe4
+ 1045 0373 81000000 		.4byte	0x81
+ 1046 0377 00000000 		.4byte	.LFB66
+ 1047 037b 58000000 		.4byte	.LFE66-.LFB66
+ 1048 037f 01       		.uleb128 0x1
+ 1049 0380 9C       		.byte	0x9c
+ 1050 0381 AE030000 		.4byte	0x3ae
+ 1051 0385 10       		.uleb128 0x10
+ 1052 0386 63726300 		.ascii	"crc\000"
+ 1053 038a 01       		.byte	0x1
+ 1054 038b E4       		.byte	0xe4
+ 1055 038c 81000000 		.4byte	0x81
+ 1056 0390 02       		.uleb128 0x2
+ 1057 0391 91       		.byte	0x91
+ 1058 0392 6F       		.sleb128 -17
+ 1059 0393 0C       		.uleb128 0xc
+ 1060 0394 E5030000 		.4byte	.LASF41
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 24
+
+
+ 1061 0398 01       		.byte	0x1
+ 1062 0399 E4       		.byte	0xe4
+ 1063 039a 81000000 		.4byte	0x81
+ 1064 039e 02       		.uleb128 0x2
+ 1065 039f 91       		.byte	0x91
+ 1066 03a0 6E       		.sleb128 -18
+ 1067 03a1 0E       		.uleb128 0xe
+ 1068 03a2 6900     		.ascii	"i\000"
+ 1069 03a4 01       		.byte	0x1
+ 1070 03a5 E5       		.byte	0xe5
+ 1071 03a6 81000000 		.4byte	0x81
+ 1072 03aa 02       		.uleb128 0x2
+ 1073 03ab 91       		.byte	0x91
+ 1074 03ac 77       		.sleb128 -9
+ 1075 03ad 00       		.byte	0
+ 1076 03ae 11       		.uleb128 0x11
+ 1077 03af F3030000 		.4byte	.LASF45
+ 1078 03b3 06       		.byte	0x6
+ 1079 03b4 2A06     		.2byte	0x62a
+ 1080 03b6 BA030000 		.4byte	0x3ba
+ 1081 03ba 05       		.uleb128 0x5
+ 1082 03bb 76000000 		.4byte	0x76
+ 1083 03bf 12       		.uleb128 0x12
+ 1084 03c0 50030000 		.4byte	.LASF46
+ 1085 03c4 05       		.byte	0x5
+ 1086 03c5 43       		.byte	0x43
+ 1087 03c6 AC000000 		.4byte	0xac
+ 1088 03ca 05       		.uleb128 0x5
+ 1089 03cb 03       		.byte	0x3
+ 1090 03cc 00000000 		.4byte	count_teclas1
+ 1091 03d0 12       		.uleb128 0x12
+ 1092 03d1 E2040000 		.4byte	.LASF47
+ 1093 03d5 05       		.byte	0x5
+ 1094 03d6 43       		.byte	0x43
+ 1095 03d7 AC000000 		.4byte	0xac
+ 1096 03db 05       		.uleb128 0x5
+ 1097 03dc 03       		.byte	0x3
+ 1098 03dd 00000000 		.4byte	comas1
+ 1099 03e1 12       		.uleb128 0x12
+ 1100 03e2 E9040000 		.4byte	.LASF48
+ 1101 03e6 05       		.byte	0x5
+ 1102 03e7 43       		.byte	0x43
+ 1103 03e8 AC000000 		.4byte	0xac
+ 1104 03ec 05       		.uleb128 0x5
+ 1105 03ed 03       		.byte	0x3
+ 1106 03ee 00000000 		.4byte	comas2
+ 1107 03f2 12       		.uleb128 0x12
+ 1108 03f3 07040000 		.4byte	.LASF49
+ 1109 03f7 05       		.byte	0x5
+ 1110 03f8 43       		.byte	0x43
+ 1111 03f9 AC000000 		.4byte	0xac
+ 1112 03fd 05       		.uleb128 0x5
+ 1113 03fe 03       		.byte	0x3
+ 1114 03ff 00000000 		.4byte	id_coma1
+ 1115 0403 12       		.uleb128 0x12
+ 1116 0404 19040000 		.4byte	.LASF50
+ 1117 0408 05       		.byte	0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 25
+
+
+ 1118 0409 43       		.byte	0x43
+ 1119 040a AC000000 		.4byte	0xac
+ 1120 040e 05       		.uleb128 0x5
+ 1121 040f 03       		.byte	0x3
+ 1122 0410 00000000 		.4byte	id_teclado1
+ 1123 0414 12       		.uleb128 0x12
+ 1124 0415 24000000 		.4byte	.LASF51
+ 1125 0419 05       		.byte	0x5
+ 1126 041a 43       		.byte	0x43
+ 1127 041b AC000000 		.4byte	0xac
+ 1128 041f 05       		.uleb128 0x5
+ 1129 0420 03       		.byte	0x3
+ 1130 0421 00000000 		.4byte	count_teclas2
+ 1131 0425 12       		.uleb128 0x12
+ 1132 0426 10040000 		.4byte	.LASF52
+ 1133 042a 05       		.byte	0x5
+ 1134 042b 43       		.byte	0x43
+ 1135 042c AC000000 		.4byte	0xac
+ 1136 0430 05       		.uleb128 0x5
+ 1137 0431 03       		.byte	0x3
+ 1138 0432 00000000 		.4byte	id_coma2
+ 1139 0436 12       		.uleb128 0x12
+ 1140 0437 25040000 		.4byte	.LASF53
+ 1141 043b 05       		.byte	0x5
+ 1142 043c 43       		.byte	0x43
+ 1143 043d AC000000 		.4byte	0xac
+ 1144 0441 05       		.uleb128 0x5
+ 1145 0442 03       		.byte	0x3
+ 1146 0443 00000000 		.4byte	id_teclado2
+ 1147 0447 12       		.uleb128 0x12
+ 1148 0448 00000000 		.4byte	.LASF54
+ 1149 044c 05       		.byte	0x5
+ 1150 044d 44       		.byte	0x44
+ 1151 044e B1000000 		.4byte	0xb1
+ 1152 0452 05       		.uleb128 0x5
+ 1153 0453 03       		.byte	0x3
+ 1154 0454 00000000 		.4byte	posx1
+ 1155 0458 12       		.uleb128 0x12
+ 1156 0459 1B010000 		.4byte	.LASF55
+ 1157 045d 05       		.byte	0x5
+ 1158 045e 44       		.byte	0x44
+ 1159 045f B1000000 		.4byte	0xb1
+ 1160 0463 05       		.uleb128 0x5
+ 1161 0464 03       		.byte	0x3
+ 1162 0465 00000000 		.4byte	posy1
+ 1163 0469 12       		.uleb128 0x12
+ 1164 046a BF020000 		.4byte	.LASF56
+ 1165 046e 05       		.byte	0x5
+ 1166 046f 44       		.byte	0x44
+ 1167 0470 B1000000 		.4byte	0xb1
+ 1168 0474 05       		.uleb128 0x5
+ 1169 0475 03       		.byte	0x3
+ 1170 0476 00000000 		.4byte	sizeletra1
+ 1171 047a 12       		.uleb128 0x12
+ 1172 047b 06000000 		.4byte	.LASF57
+ 1173 047f 05       		.byte	0x5
+ 1174 0480 44       		.byte	0x44
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 26
+
+
+ 1175 0481 B1000000 		.4byte	0xb1
+ 1176 0485 05       		.uleb128 0x5
+ 1177 0486 03       		.byte	0x3
+ 1178 0487 00000000 		.4byte	posx2
+ 1179 048b 12       		.uleb128 0x12
+ 1180 048c 21010000 		.4byte	.LASF58
+ 1181 0490 05       		.byte	0x5
+ 1182 0491 44       		.byte	0x44
+ 1183 0492 B1000000 		.4byte	0xb1
+ 1184 0496 05       		.uleb128 0x5
+ 1185 0497 03       		.byte	0x3
+ 1186 0498 00000000 		.4byte	posy2
+ 1187 049c 12       		.uleb128 0x12
+ 1188 049d A0040000 		.4byte	.LASF59
+ 1189 04a1 05       		.byte	0x5
+ 1190 04a2 44       		.byte	0x44
+ 1191 04a3 B1000000 		.4byte	0xb1
+ 1192 04a7 05       		.uleb128 0x5
+ 1193 04a8 03       		.byte	0x3
+ 1194 04a9 00000000 		.4byte	sizeletra2
+ 1195 04ad 12       		.uleb128 0x12
+ 1196 04ae 23030000 		.4byte	.LASF60
+ 1197 04b2 05       		.byte	0x5
+ 1198 04b3 45       		.byte	0x45
+ 1199 04b4 AC000000 		.4byte	0xac
+ 1200 04b8 05       		.uleb128 0x5
+ 1201 04b9 03       		.byte	0x3
+ 1202 04ba 00000000 		.4byte	teclas1
+ 1203 04be 12       		.uleb128 0x12
+ 1204 04bf 2B030000 		.4byte	.LASF61
+ 1205 04c3 05       		.byte	0x5
+ 1206 04c4 45       		.byte	0x45
+ 1207 04c5 AC000000 		.4byte	0xac
+ 1208 04c9 05       		.uleb128 0x5
+ 1209 04ca 03       		.byte	0x3
+ 1210 04cb 00000000 		.4byte	teclas2
+ 1211 04cf 12       		.uleb128 0x12
+ 1212 04d0 B3000000 		.4byte	.LASF62
+ 1213 04d4 05       		.byte	0x5
+ 1214 04d5 46       		.byte	0x46
+ 1215 04d6 AC000000 		.4byte	0xac
+ 1216 04da 05       		.uleb128 0x5
+ 1217 04db 03       		.byte	0x3
+ 1218 04dc 00000000 		.4byte	flujo_LCD1
+ 1219 04e0 12       		.uleb128 0x12
+ 1220 04e1 BE000000 		.4byte	.LASF63
+ 1221 04e5 05       		.byte	0x5
+ 1222 04e6 46       		.byte	0x46
+ 1223 04e7 AC000000 		.4byte	0xac
+ 1224 04eb 05       		.uleb128 0x5
+ 1225 04ec 03       		.byte	0x3
+ 1226 04ed 00000000 		.4byte	flujo_LCD2
+ 1227 04f1 12       		.uleb128 0x12
+ 1228 04f2 84040000 		.4byte	.LASF64
+ 1229 04f6 05       		.byte	0x5
+ 1230 04f7 47       		.byte	0x47
+ 1231 04f8 AC000000 		.4byte	0xac
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 27
+
+
+ 1232 04fc 05       		.uleb128 0x5
+ 1233 04fd 03       		.byte	0x3
+ 1234 04fe 00000000 		.4byte	flujo_pos1
+ 1235 0502 12       		.uleb128 0x12
+ 1236 0503 8F040000 		.4byte	.LASF65
+ 1237 0507 05       		.byte	0x5
+ 1238 0508 47       		.byte	0x47
+ 1239 0509 AC000000 		.4byte	0xac
+ 1240 050d 05       		.uleb128 0x5
+ 1241 050e 03       		.byte	0x3
+ 1242 050f 00000000 		.4byte	flujo_pos2
+ 1243 0513 12       		.uleb128 0x12
+ 1244 0514 5C020000 		.4byte	.LASF66
+ 1245 0518 05       		.byte	0x5
+ 1246 0519 48       		.byte	0x48
+ 1247 051a AC000000 		.4byte	0xac
+ 1248 051e 05       		.uleb128 0x5
+ 1249 051f 03       		.byte	0x3
+ 1250 0520 00000000 		.4byte	seleccion_pos
+ 1251 0524 12       		.uleb128 0x12
+ 1252 0525 3C010000 		.4byte	.LASF67
+ 1253 0529 05       		.byte	0x5
+ 1254 052a 49       		.byte	0x49
+ 1255 052b AC000000 		.4byte	0xac
+ 1256 052f 05       		.uleb128 0x5
+ 1257 0530 03       		.byte	0x3
+ 1258 0531 00000000 		.4byte	flujo_pos
+ 1259 0535 12       		.uleb128 0x12
+ 1260 0536 F6000000 		.4byte	.LASF68
+ 1261 053a 05       		.byte	0x5
+ 1262 053b 4A       		.byte	0x4a
+ 1263 053c AC000000 		.4byte	0xac
+ 1264 0540 05       		.uleb128 0x5
+ 1265 0541 03       		.byte	0x3
+ 1266 0542 00000000 		.4byte	venta_activa
+ 1267 0546 12       		.uleb128 0x12
+ 1268 0547 31020000 		.4byte	.LASF69
+ 1269 054b 05       		.byte	0x5
+ 1270 054c 4A       		.byte	0x4a
+ 1271 054d AC000000 		.4byte	0xac
+ 1272 0551 05       		.uleb128 0x5
+ 1273 0552 03       		.byte	0x3
+ 1274 0553 00000000 		.4byte	venta_activa2
+ 1275 0557 06       		.uleb128 0x6
+ 1276 0558 81000000 		.4byte	0x81
+ 1277 055c 67050000 		.4byte	0x567
+ 1278 0560 07       		.uleb128 0x7
+ 1279 0561 B6000000 		.4byte	0xb6
+ 1280 0565 1D       		.byte	0x1d
+ 1281 0566 00       		.byte	0
+ 1282 0567 12       		.uleb128 0x12
+ 1283 0568 F2020000 		.4byte	.LASF70
+ 1284 056c 05       		.byte	0x5
+ 1285 056d 4B       		.byte	0x4b
+ 1286 056e 78050000 		.4byte	0x578
+ 1287 0572 05       		.uleb128 0x5
+ 1288 0573 03       		.byte	0x3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 28
+
+
+ 1289 0574 00000000 		.4byte	Buffer_LCD1
+ 1290 0578 05       		.uleb128 0x5
+ 1291 0579 57050000 		.4byte	0x557
+ 1292 057d 12       		.uleb128 0x12
+ 1293 057e FE020000 		.4byte	.LASF71
+ 1294 0582 05       		.byte	0x5
+ 1295 0583 4C       		.byte	0x4c
+ 1296 0584 8E050000 		.4byte	0x58e
+ 1297 0588 05       		.uleb128 0x5
+ 1298 0589 03       		.byte	0x3
+ 1299 058a 00000000 		.4byte	Buffer_LCD2
+ 1300 058e 05       		.uleb128 0x5
+ 1301 058f 57050000 		.4byte	0x557
+ 1302 0593 12       		.uleb128 0x12
+ 1303 0594 89000000 		.4byte	.LASF72
+ 1304 0598 05       		.byte	0x5
+ 1305 0599 4D       		.byte	0x4d
+ 1306 059a AC000000 		.4byte	0xac
+ 1307 059e 05       		.uleb128 0x5
+ 1308 059f 03       		.byte	0x3
+ 1309 05a0 00000000 		.4byte	count_protector
+ 1310 05a4 12       		.uleb128 0x12
+ 1311 05a5 20020000 		.4byte	.LASF73
+ 1312 05a9 05       		.byte	0x5
+ 1313 05aa 4D       		.byte	0x4d
+ 1314 05ab AC000000 		.4byte	0xac
+ 1315 05af 05       		.uleb128 0x5
+ 1316 05b0 03       		.byte	0x3
+ 1317 05b1 00000000 		.4byte	count_protector2
+ 1318 05b5 12       		.uleb128 0x12
+ 1319 05b6 67040000 		.4byte	.LASF74
+ 1320 05ba 05       		.byte	0x5
+ 1321 05bb 4E       		.byte	0x4e
+ 1322 05bc C6050000 		.4byte	0x5c6
+ 1323 05c0 05       		.uleb128 0x5
+ 1324 05c1 03       		.byte	0x3
+ 1325 05c2 00000000 		.4byte	password_lcd
+ 1326 05c6 05       		.uleb128 0x5
+ 1327 05c7 72020000 		.4byte	0x272
+ 1328 05cb 12       		.uleb128 0x12
+ 1329 05cc 9B030000 		.4byte	.LASF75
+ 1330 05d0 05       		.byte	0x5
+ 1331 05d1 4F       		.byte	0x4f
+ 1332 05d2 B1000000 		.4byte	0xb1
+ 1333 05d6 05       		.uleb128 0x5
+ 1334 05d7 03       		.byte	0x3
+ 1335 05d8 00000000 		.4byte	imagen_grado
+ 1336 05dc 06       		.uleb128 0x6
+ 1337 05dd 8C000000 		.4byte	0x8c
+ 1338 05e1 F2050000 		.4byte	0x5f2
+ 1339 05e5 07       		.uleb128 0x7
+ 1340 05e6 B6000000 		.4byte	0xb6
+ 1341 05ea 01       		.byte	0x1
+ 1342 05eb 07       		.uleb128 0x7
+ 1343 05ec B6000000 		.4byte	0xb6
+ 1344 05f0 01       		.byte	0x1
+ 1345 05f1 00       		.byte	0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 29
+
+
+ 1346 05f2 12       		.uleb128 0x12
+ 1347 05f3 A2000000 		.4byte	.LASF76
+ 1348 05f7 05       		.byte	0x5
+ 1349 05f8 50       		.byte	0x50
+ 1350 05f9 03060000 		.4byte	0x603
+ 1351 05fd 05       		.uleb128 0x5
+ 1352 05fe 03       		.byte	0x3
+ 1353 05ff 00000000 		.4byte	prox_caso
+ 1354 0603 05       		.uleb128 0x5
+ 1355 0604 DC050000 		.4byte	0x5dc
+ 1356 0608 06       		.uleb128 0x6
+ 1357 0609 81000000 		.4byte	0x81
+ 1358 060d 18060000 		.4byte	0x618
+ 1359 0611 07       		.uleb128 0x7
+ 1360 0612 B6000000 		.4byte	0xb6
+ 1361 0616 02       		.byte	0x2
+ 1362 0617 00       		.byte	0
+ 1363 0618 12       		.uleb128 0x12
+ 1364 0619 6A000000 		.4byte	.LASF77
+ 1365 061d 05       		.byte	0x5
+ 1366 061e 51       		.byte	0x51
+ 1367 061f 29060000 		.4byte	0x629
+ 1368 0623 05       		.uleb128 0x5
+ 1369 0624 03       		.byte	0x3
+ 1370 0625 00000000 		.4byte	bloqueo_LCD
+ 1371 0629 05       		.uleb128 0x5
+ 1372 062a 08060000 		.4byte	0x608
+ 1373 062e 12       		.uleb128 0x12
+ 1374 062f 46000000 		.4byte	.LASF78
+ 1375 0633 05       		.byte	0x5
+ 1376 0634 52       		.byte	0x52
+ 1377 0635 3F060000 		.4byte	0x63f
+ 1378 0639 05       		.uleb128 0x5
+ 1379 063a 03       		.byte	0x3
+ 1380 063b 00000000 		.4byte	id_estacion
+ 1381 063f 05       		.uleb128 0x5
+ 1382 0640 62020000 		.4byte	0x262
+ 1383 0644 12       		.uleb128 0x12
+ 1384 0645 52000000 		.4byte	.LASF79
+ 1385 0649 05       		.byte	0x5
+ 1386 064a 53       		.byte	0x53
+ 1387 064b 55060000 		.4byte	0x655
+ 1388 064f 05       		.uleb128 0x5
+ 1389 0650 03       		.byte	0x3
+ 1390 0651 00000000 		.4byte	id_venta
+ 1391 0655 05       		.uleb128 0x5
+ 1392 0656 82020000 		.4byte	0x282
+ 1393 065a 06       		.uleb128 0x6
+ 1394 065b 81000000 		.4byte	0x81
+ 1395 065f 6A060000 		.4byte	0x66a
+ 1396 0663 07       		.uleb128 0x7
+ 1397 0664 B6000000 		.4byte	0xb6
+ 1398 0668 C7       		.byte	0xc7
+ 1399 0669 00       		.byte	0
+ 1400 066a 12       		.uleb128 0x12
+ 1401 066b 12020000 		.4byte	.LASF80
+ 1402 066f 05       		.byte	0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 30
+
+
+ 1403 0670 54       		.byte	0x54
+ 1404 0671 7B060000 		.4byte	0x67b
+ 1405 0675 05       		.uleb128 0x5
+ 1406 0676 03       		.byte	0x3
+ 1407 0677 00000000 		.4byte	trama_totales
+ 1408 067b 05       		.uleb128 0x5
+ 1409 067c 5A060000 		.4byte	0x65a
+ 1410 0680 12       		.uleb128 0x12
+ 1411 0681 95020000 		.4byte	.LASF81
+ 1412 0685 05       		.byte	0x5
+ 1413 0686 58       		.byte	0x58
+ 1414 0687 AC000000 		.4byte	0xac
+ 1415 068b 05       		.uleb128 0x5
+ 1416 068c 03       		.byte	0x3
+ 1417 068d 00000000 		.4byte	ppux10
+ 1418 0691 06       		.uleb128 0x6
+ 1419 0692 81000000 		.4byte	0x81
+ 1420 0696 A1060000 		.4byte	0x6a1
+ 1421 069a 07       		.uleb128 0x7
+ 1422 069b B6000000 		.4byte	0xb6
+ 1423 069f 10       		.byte	0x10
+ 1424 06a0 00       		.byte	0
+ 1425 06a1 12       		.uleb128 0x12
+ 1426 06a2 18000000 		.4byte	.LASF82
+ 1427 06a6 05       		.byte	0x5
+ 1428 06a7 59       		.byte	0x59
+ 1429 06a8 B2060000 		.4byte	0x6b2
+ 1430 06ac 05       		.uleb128 0x5
+ 1431 06ad 03       		.byte	0x3
+ 1432 06ae 00000000 		.4byte	nombre_pro1
+ 1433 06b2 05       		.uleb128 0x5
+ 1434 06b3 91060000 		.4byte	0x691
+ 1435 06b7 12       		.uleb128 0x12
+ 1436 06b8 32000000 		.4byte	.LASF83
+ 1437 06bc 05       		.byte	0x5
+ 1438 06bd 59       		.byte	0x59
+ 1439 06be C8060000 		.4byte	0x6c8
+ 1440 06c2 05       		.uleb128 0x5
+ 1441 06c3 03       		.byte	0x3
+ 1442 06c4 00000000 		.4byte	nombre_pro2
+ 1443 06c8 05       		.uleb128 0x5
+ 1444 06c9 91060000 		.4byte	0x691
+ 1445 06cd 12       		.uleb128 0x12
+ 1446 06ce 06020000 		.4byte	.LASF84
+ 1447 06d2 05       		.byte	0x5
+ 1448 06d3 59       		.byte	0x59
+ 1449 06d4 DE060000 		.4byte	0x6de
+ 1450 06d8 05       		.uleb128 0x5
+ 1451 06d9 03       		.byte	0x3
+ 1452 06da 00000000 		.4byte	nombre_pro3
+ 1453 06de 05       		.uleb128 0x5
+ 1454 06df 91060000 		.4byte	0x691
+ 1455 06e3 12       		.uleb128 0x12
+ 1456 06e4 3E000000 		.4byte	.LASF85
+ 1457 06e8 05       		.byte	0x5
+ 1458 06e9 5A       		.byte	0x5a
+ 1459 06ea F4060000 		.4byte	0x6f4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 31
+
+
+ 1460 06ee 05       		.uleb128 0x5
+ 1461 06ef 03       		.byte	0x3
+ 1462 06f0 00000000 		.4byte	version
+ 1463 06f4 05       		.uleb128 0x5
+ 1464 06f5 BD000000 		.4byte	0xbd
+ 1465 06f9 12       		.uleb128 0x12
+ 1466 06fa EA030000 		.4byte	.LASF86
+ 1467 06fe 05       		.byte	0x5
+ 1468 06ff 5B       		.byte	0x5b
+ 1469 0700 AC000000 		.4byte	0xac
+ 1470 0704 05       		.uleb128 0x5
+ 1471 0705 03       		.byte	0x3
+ 1472 0706 00000000 		.4byte	kmscreen
+ 1473 070a 12       		.uleb128 0x12
+ 1474 070b 91030000 		.4byte	.LASF87
+ 1475 070f 05       		.byte	0x5
+ 1476 0710 5B       		.byte	0x5b
+ 1477 0711 AC000000 		.4byte	0xac
+ 1478 0715 05       		.uleb128 0x5
+ 1479 0716 03       		.byte	0x3
+ 1480 0717 00000000 		.4byte	pantallas
+ 1481 071b 12       		.uleb128 0x12
+ 1482 071c 99000000 		.4byte	.LASF88
+ 1483 0720 05       		.byte	0x5
+ 1484 0721 5B       		.byte	0x5b
+ 1485 0722 AC000000 		.4byte	0xac
+ 1486 0726 05       		.uleb128 0x5
+ 1487 0727 03       		.byte	0x3
+ 1488 0728 00000000 		.4byte	efectivo
+ 1489 072c 12       		.uleb128 0x12
+ 1490 072d 30010000 		.4byte	.LASF89
+ 1491 0731 05       		.byte	0x5
+ 1492 0732 65       		.byte	0x65
+ 1493 0733 CD000000 		.4byte	0xcd
+ 1494 0737 05       		.uleb128 0x5
+ 1495 0738 03       		.byte	0x3
+ 1496 0739 00000000 		.4byte	lado1
+ 1497 073d 12       		.uleb128 0x12
+ 1498 073e 6E030000 		.4byte	.LASF90
+ 1499 0742 05       		.byte	0x5
+ 1500 0743 66       		.byte	0x66
+ 1501 0744 CD000000 		.4byte	0xcd
+ 1502 0748 05       		.uleb128 0x5
+ 1503 0749 03       		.byte	0x3
+ 1504 074a 00000000 		.4byte	lado2
+ 1505 074e 06       		.uleb128 0x6
+ 1506 074f 81000000 		.4byte	0x81
+ 1507 0753 5E070000 		.4byte	0x75e
+ 1508 0757 07       		.uleb128 0x7
+ 1509 0758 B6000000 		.4byte	0xb6
+ 1510 075c 20       		.byte	0x20
+ 1511 075d 00       		.byte	0
+ 1512 075e 12       		.uleb128 0x12
+ 1513 075f 0A010000 		.4byte	.LASF91
+ 1514 0763 05       		.byte	0x5
+ 1515 0764 6A       		.byte	0x6a
+ 1516 0765 6F070000 		.4byte	0x76f
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 32
+
+
+ 1517 0769 05       		.uleb128 0x5
+ 1518 076a 03       		.byte	0x3
+ 1519 076b 00000000 		.4byte	nombre
+ 1520 076f 05       		.uleb128 0x5
+ 1521 0770 4E070000 		.4byte	0x74e
+ 1522 0774 06       		.uleb128 0x6
+ 1523 0775 81000000 		.4byte	0x81
+ 1524 0779 84070000 		.4byte	0x784
+ 1525 077d 07       		.uleb128 0x7
+ 1526 077e B6000000 		.4byte	0xb6
+ 1527 0782 0E       		.byte	0xe
+ 1528 0783 00       		.byte	0
+ 1529 0784 13       		.uleb128 0x13
+ 1530 0785 6E697400 		.ascii	"nit\000"
+ 1531 0789 05       		.byte	0x5
+ 1532 078a 6B       		.byte	0x6b
+ 1533 078b 95070000 		.4byte	0x795
+ 1534 078f 05       		.uleb128 0x5
+ 1535 0790 03       		.byte	0x3
+ 1536 0791 00000000 		.4byte	nit
+ 1537 0795 05       		.uleb128 0x5
+ 1538 0796 74070000 		.4byte	0x774
+ 1539 079a 06       		.uleb128 0x6
+ 1540 079b 81000000 		.4byte	0x81
+ 1541 079f AA070000 		.4byte	0x7aa
+ 1542 07a3 07       		.uleb128 0x7
+ 1543 07a4 B6000000 		.4byte	0xb6
+ 1544 07a8 13       		.byte	0x13
+ 1545 07a9 00       		.byte	0
+ 1546 07aa 12       		.uleb128 0x12
+ 1547 07ab 5E040000 		.4byte	.LASF92
+ 1548 07af 05       		.byte	0x5
+ 1549 07b0 6C       		.byte	0x6c
+ 1550 07b1 BB070000 		.4byte	0x7bb
+ 1551 07b5 05       		.uleb128 0x5
+ 1552 07b6 03       		.byte	0x3
+ 1553 07b7 00000000 		.4byte	telefono
+ 1554 07bb 05       		.uleb128 0x5
+ 1555 07bc 9A070000 		.4byte	0x79a
+ 1556 07c0 12       		.uleb128 0x12
+ 1557 07c1 B8030000 		.4byte	.LASF93
+ 1558 07c5 05       		.byte	0x5
+ 1559 07c6 6D       		.byte	0x6d
+ 1560 07c7 D1070000 		.4byte	0x7d1
+ 1561 07cb 05       		.uleb128 0x5
+ 1562 07cc 03       		.byte	0x3
+ 1563 07cd 00000000 		.4byte	direccion
+ 1564 07d1 05       		.uleb128 0x5
+ 1565 07d2 4E070000 		.4byte	0x74e
+ 1566 07d6 06       		.uleb128 0x6
+ 1567 07d7 81000000 		.4byte	0x81
+ 1568 07db E6070000 		.4byte	0x7e6
+ 1569 07df 07       		.uleb128 0x7
+ 1570 07e0 B6000000 		.4byte	0xb6
+ 1571 07e4 1F       		.byte	0x1f
+ 1572 07e5 00       		.byte	0
+ 1573 07e6 12       		.uleb128 0x12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 33
+
+
+ 1574 07e7 D8020000 		.4byte	.LASF94
+ 1575 07eb 05       		.byte	0x5
+ 1576 07ec 6E       		.byte	0x6e
+ 1577 07ed F7070000 		.4byte	0x7f7
+ 1578 07f1 05       		.uleb128 0x5
+ 1579 07f2 03       		.byte	0x3
+ 1580 07f3 00000000 		.4byte	lema1
+ 1581 07f7 05       		.uleb128 0x5
+ 1582 07f8 D6070000 		.4byte	0x7d6
+ 1583 07fc 12       		.uleb128 0x12
+ 1584 07fd DE020000 		.4byte	.LASF95
+ 1585 0801 05       		.byte	0x5
+ 1586 0802 6F       		.byte	0x6f
+ 1587 0803 0D080000 		.4byte	0x80d
+ 1588 0807 05       		.uleb128 0x5
+ 1589 0808 03       		.byte	0x3
+ 1590 0809 00000000 		.4byte	lema2
+ 1591 080d 05       		.uleb128 0x5
+ 1592 080e D6070000 		.4byte	0x7d6
+ 1593 0812 06       		.uleb128 0x6
+ 1594 0813 81000000 		.4byte	0x81
+ 1595 0817 22080000 		.4byte	0x822
+ 1596 081b 07       		.uleb128 0x7
+ 1597 081c B6000000 		.4byte	0xb6
+ 1598 0820 01       		.byte	0x1
+ 1599 0821 00       		.byte	0
+ 1600 0822 12       		.uleb128 0x12
+ 1601 0823 7F030000 		.4byte	.LASF96
+ 1602 0827 05       		.byte	0x5
+ 1603 0828 70       		.byte	0x70
+ 1604 0829 33080000 		.4byte	0x833
+ 1605 082d 05       		.uleb128 0x5
+ 1606 082e 03       		.byte	0x3
+ 1607 082f 00000000 		.4byte	id_logo
+ 1608 0833 05       		.uleb128 0x5
+ 1609 0834 12080000 		.4byte	0x812
+ 1610 0838 13       		.uleb128 0x13
+ 1611 0839 6B6D00   		.ascii	"km\000"
+ 1612 083c 05       		.byte	0x5
+ 1613 083d 71       		.byte	0x71
+ 1614 083e 48080000 		.4byte	0x848
+ 1615 0842 05       		.uleb128 0x5
+ 1616 0843 03       		.byte	0x3
+ 1617 0844 00000000 		.4byte	km
+ 1618 0848 05       		.uleb128 0x5
+ 1619 0849 12080000 		.4byte	0x812
+ 1620 084d 12       		.uleb128 0x12
+ 1621 084e 68030000 		.4byte	.LASF97
+ 1622 0852 05       		.byte	0x5
+ 1623 0853 72       		.byte	0x72
+ 1624 0854 08060000 		.4byte	0x608
+ 1625 0858 05       		.uleb128 0x5
+ 1626 0859 03       		.byte	0x3
+ 1627 085a 00000000 		.4byte	fecha
+ 1628 085e 12       		.uleb128 0x12
+ 1629 085f E4020000 		.4byte	.LASF98
+ 1630 0863 05       		.byte	0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 34
+
+
+ 1631 0864 73       		.byte	0x73
+ 1632 0865 12080000 		.4byte	0x812
+ 1633 0869 05       		.uleb128 0x5
+ 1634 086a 03       		.byte	0x3
+ 1635 086b 00000000 		.4byte	hora
+ 1636 086f 12       		.uleb128 0x12
+ 1637 0870 38030000 		.4byte	.LASF99
+ 1638 0874 05       		.byte	0x5
+ 1639 0875 89       		.byte	0x89
+ 1640 0876 73010000 		.4byte	0x173
+ 1641 087a 05       		.uleb128 0x5
+ 1642 087b 03       		.byte	0x3
+ 1643 087c 00000000 		.4byte	rventa1
+ 1644 0880 12       		.uleb128 0x12
+ 1645 0881 40030000 		.4byte	.LASF100
+ 1646 0885 05       		.byte	0x5
+ 1647 0886 8A       		.byte	0x8a
+ 1648 0887 73010000 		.4byte	0x173
+ 1649 088b 05       		.uleb128 0x5
+ 1650 088c 03       		.byte	0x3
+ 1651 088d 00000000 		.4byte	rventa2
+ 1652 0891 12       		.uleb128 0x12
+ 1653 0892 40040000 		.4byte	.LASF101
+ 1654 0896 05       		.byte	0x5
+ 1655 0897 8F       		.byte	0x8f
+ 1656 0898 81000000 		.4byte	0x81
+ 1657 089c 05       		.uleb128 0x5
+ 1658 089d 03       		.byte	0x3
+ 1659 089e 00000000 		.4byte	ok_RF
+ 1660 08a2 12       		.uleb128 0x12
+ 1661 08a3 9C020000 		.4byte	.LASF102
+ 1662 08a7 05       		.byte	0x5
+ 1663 08a8 90       		.byte	0x90
+ 1664 08a9 81000000 		.4byte	0x81
+ 1665 08ad 05       		.uleb128 0x5
+ 1666 08ae 03       		.byte	0x3
+ 1667 08af 00000000 		.4byte	ok_datosRF
+ 1668 08b3 12       		.uleb128 0x12
+ 1669 08b4 31040000 		.4byte	.LASF103
+ 1670 08b8 05       		.byte	0x5
+ 1671 08b9 91       		.byte	0x91
+ 1672 08ba 5A060000 		.4byte	0x65a
+ 1673 08be 05       		.uleb128 0x5
+ 1674 08bf 03       		.byte	0x3
+ 1675 08c0 00000000 		.4byte	rf_mod
+ 1676 08c4 06       		.uleb128 0x6
+ 1677 08c5 81000000 		.4byte	0x81
+ 1678 08c9 D4080000 		.4byte	0x8d4
+ 1679 08cd 07       		.uleb128 0x7
+ 1680 08ce B6000000 		.4byte	0xb6
+ 1681 08d2 3F       		.byte	0x3f
+ 1682 08d3 00       		.byte	0
+ 1683 08d4 12       		.uleb128 0x12
+ 1684 08d5 74030000 		.4byte	.LASF104
+ 1685 08d9 05       		.byte	0x5
+ 1686 08da 96       		.byte	0x96
+ 1687 08db C4080000 		.4byte	0x8c4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 35
+
+
+ 1688 08df 05       		.uleb128 0x5
+ 1689 08e0 03       		.byte	0x3
+ 1690 08e1 00000000 		.4byte	buffer_i2c
+ 1691 08e5 12       		.uleb128 0x12
+ 1692 08e6 DB030000 		.4byte	.LASF105
+ 1693 08ea 05       		.byte	0x5
+ 1694 08eb 9B       		.byte	0x9b
+ 1695 08ec 81000000 		.4byte	0x81
+ 1696 08f0 05       		.uleb128 0x5
+ 1697 08f1 03       		.byte	0x3
+ 1698 08f2 00000000 		.4byte	crc_total
+ 1699 08f6 12       		.uleb128 0x12
+ 1700 08f7 DF000000 		.4byte	.LASF106
+ 1701 08fb 05       		.byte	0x5
+ 1702 08fc 9F       		.byte	0x9f
+ 1703 08fd 12080000 		.4byte	0x812
+ 1704 0901 05       		.uleb128 0x5
+ 1705 0902 03       		.byte	0x3
+ 1706 0903 00000000 		.4byte	print1
+ 1707 0907 12       		.uleb128 0x12
+ 1708 0908 E6000000 		.4byte	.LASF107
+ 1709 090c 05       		.byte	0x5
+ 1710 090d A0       		.byte	0xa0
+ 1711 090e 12080000 		.4byte	0x812
+ 1712 0912 05       		.uleb128 0x5
+ 1713 0913 03       		.byte	0x3
+ 1714 0914 00000000 		.4byte	print2
+ 1715 0918 12       		.uleb128 0x12
+ 1716 0919 46040000 		.4byte	.LASF32
+ 1717 091d 05       		.byte	0x5
+ 1718 091e A5       		.byte	0xa5
+ 1719 091f 81000000 		.4byte	0x81
+ 1720 0923 05       		.uleb128 0x5
+ 1721 0924 03       		.byte	0x3
+ 1722 0925 00000000 		.4byte	tipo_venta
+ 1723 0929 00       		.byte	0
+ 1724              		.section	.debug_abbrev,"",%progbits
+ 1725              	.Ldebug_abbrev0:
+ 1726 0000 01       		.uleb128 0x1
+ 1727 0001 11       		.uleb128 0x11
+ 1728 0002 01       		.byte	0x1
+ 1729 0003 25       		.uleb128 0x25
+ 1730 0004 0E       		.uleb128 0xe
+ 1731 0005 13       		.uleb128 0x13
+ 1732 0006 0B       		.uleb128 0xb
+ 1733 0007 03       		.uleb128 0x3
+ 1734 0008 0E       		.uleb128 0xe
+ 1735 0009 1B       		.uleb128 0x1b
+ 1736 000a 0E       		.uleb128 0xe
+ 1737 000b 55       		.uleb128 0x55
+ 1738 000c 17       		.uleb128 0x17
+ 1739 000d 11       		.uleb128 0x11
+ 1740 000e 01       		.uleb128 0x1
+ 1741 000f 10       		.uleb128 0x10
+ 1742 0010 17       		.uleb128 0x17
+ 1743 0011 00       		.byte	0
+ 1744 0012 00       		.byte	0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 36
+
+
+ 1745 0013 02       		.uleb128 0x2
+ 1746 0014 24       		.uleb128 0x24
+ 1747 0015 00       		.byte	0
+ 1748 0016 0B       		.uleb128 0xb
+ 1749 0017 0B       		.uleb128 0xb
+ 1750 0018 3E       		.uleb128 0x3e
+ 1751 0019 0B       		.uleb128 0xb
+ 1752 001a 03       		.uleb128 0x3
+ 1753 001b 0E       		.uleb128 0xe
+ 1754 001c 00       		.byte	0
+ 1755 001d 00       		.byte	0
+ 1756 001e 03       		.uleb128 0x3
+ 1757 001f 16       		.uleb128 0x16
+ 1758 0020 00       		.byte	0
+ 1759 0021 03       		.uleb128 0x3
+ 1760 0022 0E       		.uleb128 0xe
+ 1761 0023 3A       		.uleb128 0x3a
+ 1762 0024 0B       		.uleb128 0xb
+ 1763 0025 3B       		.uleb128 0x3b
+ 1764 0026 0B       		.uleb128 0xb
+ 1765 0027 49       		.uleb128 0x49
+ 1766 0028 13       		.uleb128 0x13
+ 1767 0029 00       		.byte	0
+ 1768 002a 00       		.byte	0
+ 1769 002b 04       		.uleb128 0x4
+ 1770 002c 24       		.uleb128 0x24
+ 1771 002d 00       		.byte	0
+ 1772 002e 0B       		.uleb128 0xb
+ 1773 002f 0B       		.uleb128 0xb
+ 1774 0030 3E       		.uleb128 0x3e
+ 1775 0031 0B       		.uleb128 0xb
+ 1776 0032 03       		.uleb128 0x3
+ 1777 0033 08       		.uleb128 0x8
+ 1778 0034 00       		.byte	0
+ 1779 0035 00       		.byte	0
+ 1780 0036 05       		.uleb128 0x5
+ 1781 0037 35       		.uleb128 0x35
+ 1782 0038 00       		.byte	0
+ 1783 0039 49       		.uleb128 0x49
+ 1784 003a 13       		.uleb128 0x13
+ 1785 003b 00       		.byte	0
+ 1786 003c 00       		.byte	0
+ 1787 003d 06       		.uleb128 0x6
+ 1788 003e 01       		.uleb128 0x1
+ 1789 003f 01       		.byte	0x1
+ 1790 0040 49       		.uleb128 0x49
+ 1791 0041 13       		.uleb128 0x13
+ 1792 0042 01       		.uleb128 0x1
+ 1793 0043 13       		.uleb128 0x13
+ 1794 0044 00       		.byte	0
+ 1795 0045 00       		.byte	0
+ 1796 0046 07       		.uleb128 0x7
+ 1797 0047 21       		.uleb128 0x21
+ 1798 0048 00       		.byte	0
+ 1799 0049 49       		.uleb128 0x49
+ 1800 004a 13       		.uleb128 0x13
+ 1801 004b 2F       		.uleb128 0x2f
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 37
+
+
+ 1802 004c 0B       		.uleb128 0xb
+ 1803 004d 00       		.byte	0
+ 1804 004e 00       		.byte	0
+ 1805 004f 08       		.uleb128 0x8
+ 1806 0050 13       		.uleb128 0x13
+ 1807 0051 01       		.byte	0x1
+ 1808 0052 03       		.uleb128 0x3
+ 1809 0053 0E       		.uleb128 0xe
+ 1810 0054 0B       		.uleb128 0xb
+ 1811 0055 0B       		.uleb128 0xb
+ 1812 0056 3A       		.uleb128 0x3a
+ 1813 0057 0B       		.uleb128 0xb
+ 1814 0058 3B       		.uleb128 0x3b
+ 1815 0059 0B       		.uleb128 0xb
+ 1816 005a 01       		.uleb128 0x1
+ 1817 005b 13       		.uleb128 0x13
+ 1818 005c 00       		.byte	0
+ 1819 005d 00       		.byte	0
+ 1820 005e 09       		.uleb128 0x9
+ 1821 005f 0D       		.uleb128 0xd
+ 1822 0060 00       		.byte	0
+ 1823 0061 03       		.uleb128 0x3
+ 1824 0062 08       		.uleb128 0x8
+ 1825 0063 3A       		.uleb128 0x3a
+ 1826 0064 0B       		.uleb128 0xb
+ 1827 0065 3B       		.uleb128 0x3b
+ 1828 0066 0B       		.uleb128 0xb
+ 1829 0067 49       		.uleb128 0x49
+ 1830 0068 13       		.uleb128 0x13
+ 1831 0069 38       		.uleb128 0x38
+ 1832 006a 0B       		.uleb128 0xb
+ 1833 006b 00       		.byte	0
+ 1834 006c 00       		.byte	0
+ 1835 006d 0A       		.uleb128 0xa
+ 1836 006e 0D       		.uleb128 0xd
+ 1837 006f 00       		.byte	0
+ 1838 0070 03       		.uleb128 0x3
+ 1839 0071 0E       		.uleb128 0xe
+ 1840 0072 3A       		.uleb128 0x3a
+ 1841 0073 0B       		.uleb128 0xb
+ 1842 0074 3B       		.uleb128 0x3b
+ 1843 0075 0B       		.uleb128 0xb
+ 1844 0076 49       		.uleb128 0x49
+ 1845 0077 13       		.uleb128 0x13
+ 1846 0078 38       		.uleb128 0x38
+ 1847 0079 0B       		.uleb128 0xb
+ 1848 007a 00       		.byte	0
+ 1849 007b 00       		.byte	0
+ 1850 007c 0B       		.uleb128 0xb
+ 1851 007d 2E       		.uleb128 0x2e
+ 1852 007e 01       		.byte	0x1
+ 1853 007f 3F       		.uleb128 0x3f
+ 1854 0080 19       		.uleb128 0x19
+ 1855 0081 03       		.uleb128 0x3
+ 1856 0082 0E       		.uleb128 0xe
+ 1857 0083 3A       		.uleb128 0x3a
+ 1858 0084 0B       		.uleb128 0xb
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 38
+
+
+ 1859 0085 3B       		.uleb128 0x3b
+ 1860 0086 0B       		.uleb128 0xb
+ 1861 0087 27       		.uleb128 0x27
+ 1862 0088 19       		.uleb128 0x19
+ 1863 0089 49       		.uleb128 0x49
+ 1864 008a 13       		.uleb128 0x13
+ 1865 008b 11       		.uleb128 0x11
+ 1866 008c 01       		.uleb128 0x1
+ 1867 008d 12       		.uleb128 0x12
+ 1868 008e 06       		.uleb128 0x6
+ 1869 008f 40       		.uleb128 0x40
+ 1870 0090 18       		.uleb128 0x18
+ 1871 0091 9642     		.uleb128 0x2116
+ 1872 0093 19       		.uleb128 0x19
+ 1873 0094 01       		.uleb128 0x1
+ 1874 0095 13       		.uleb128 0x13
+ 1875 0096 00       		.byte	0
+ 1876 0097 00       		.byte	0
+ 1877 0098 0C       		.uleb128 0xc
+ 1878 0099 05       		.uleb128 0x5
+ 1879 009a 00       		.byte	0
+ 1880 009b 03       		.uleb128 0x3
+ 1881 009c 0E       		.uleb128 0xe
+ 1882 009d 3A       		.uleb128 0x3a
+ 1883 009e 0B       		.uleb128 0xb
+ 1884 009f 3B       		.uleb128 0x3b
+ 1885 00a0 0B       		.uleb128 0xb
+ 1886 00a1 49       		.uleb128 0x49
+ 1887 00a2 13       		.uleb128 0x13
+ 1888 00a3 02       		.uleb128 0x2
+ 1889 00a4 18       		.uleb128 0x18
+ 1890 00a5 00       		.byte	0
+ 1891 00a6 00       		.byte	0
+ 1892 00a7 0D       		.uleb128 0xd
+ 1893 00a8 34       		.uleb128 0x34
+ 1894 00a9 00       		.byte	0
+ 1895 00aa 03       		.uleb128 0x3
+ 1896 00ab 0E       		.uleb128 0xe
+ 1897 00ac 3A       		.uleb128 0x3a
+ 1898 00ad 0B       		.uleb128 0xb
+ 1899 00ae 3B       		.uleb128 0x3b
+ 1900 00af 0B       		.uleb128 0xb
+ 1901 00b0 49       		.uleb128 0x49
+ 1902 00b1 13       		.uleb128 0x13
+ 1903 00b2 02       		.uleb128 0x2
+ 1904 00b3 18       		.uleb128 0x18
+ 1905 00b4 00       		.byte	0
+ 1906 00b5 00       		.byte	0
+ 1907 00b6 0E       		.uleb128 0xe
+ 1908 00b7 34       		.uleb128 0x34
+ 1909 00b8 00       		.byte	0
+ 1910 00b9 03       		.uleb128 0x3
+ 1911 00ba 08       		.uleb128 0x8
+ 1912 00bb 3A       		.uleb128 0x3a
+ 1913 00bc 0B       		.uleb128 0xb
+ 1914 00bd 3B       		.uleb128 0x3b
+ 1915 00be 0B       		.uleb128 0xb
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 39
+
+
+ 1916 00bf 49       		.uleb128 0x49
+ 1917 00c0 13       		.uleb128 0x13
+ 1918 00c1 02       		.uleb128 0x2
+ 1919 00c2 18       		.uleb128 0x18
+ 1920 00c3 00       		.byte	0
+ 1921 00c4 00       		.byte	0
+ 1922 00c5 0F       		.uleb128 0xf
+ 1923 00c6 2E       		.uleb128 0x2e
+ 1924 00c7 01       		.byte	0x1
+ 1925 00c8 3F       		.uleb128 0x3f
+ 1926 00c9 19       		.uleb128 0x19
+ 1927 00ca 03       		.uleb128 0x3
+ 1928 00cb 0E       		.uleb128 0xe
+ 1929 00cc 3A       		.uleb128 0x3a
+ 1930 00cd 0B       		.uleb128 0xb
+ 1931 00ce 3B       		.uleb128 0x3b
+ 1932 00cf 0B       		.uleb128 0xb
+ 1933 00d0 27       		.uleb128 0x27
+ 1934 00d1 19       		.uleb128 0x19
+ 1935 00d2 49       		.uleb128 0x49
+ 1936 00d3 13       		.uleb128 0x13
+ 1937 00d4 11       		.uleb128 0x11
+ 1938 00d5 01       		.uleb128 0x1
+ 1939 00d6 12       		.uleb128 0x12
+ 1940 00d7 06       		.uleb128 0x6
+ 1941 00d8 40       		.uleb128 0x40
+ 1942 00d9 18       		.uleb128 0x18
+ 1943 00da 9742     		.uleb128 0x2117
+ 1944 00dc 19       		.uleb128 0x19
+ 1945 00dd 01       		.uleb128 0x1
+ 1946 00de 13       		.uleb128 0x13
+ 1947 00df 00       		.byte	0
+ 1948 00e0 00       		.byte	0
+ 1949 00e1 10       		.uleb128 0x10
+ 1950 00e2 05       		.uleb128 0x5
+ 1951 00e3 00       		.byte	0
+ 1952 00e4 03       		.uleb128 0x3
+ 1953 00e5 08       		.uleb128 0x8
+ 1954 00e6 3A       		.uleb128 0x3a
+ 1955 00e7 0B       		.uleb128 0xb
+ 1956 00e8 3B       		.uleb128 0x3b
+ 1957 00e9 0B       		.uleb128 0xb
+ 1958 00ea 49       		.uleb128 0x49
+ 1959 00eb 13       		.uleb128 0x13
+ 1960 00ec 02       		.uleb128 0x2
+ 1961 00ed 18       		.uleb128 0x18
+ 1962 00ee 00       		.byte	0
+ 1963 00ef 00       		.byte	0
+ 1964 00f0 11       		.uleb128 0x11
+ 1965 00f1 34       		.uleb128 0x34
+ 1966 00f2 00       		.byte	0
+ 1967 00f3 03       		.uleb128 0x3
+ 1968 00f4 0E       		.uleb128 0xe
+ 1969 00f5 3A       		.uleb128 0x3a
+ 1970 00f6 0B       		.uleb128 0xb
+ 1971 00f7 3B       		.uleb128 0x3b
+ 1972 00f8 05       		.uleb128 0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 40
+
+
+ 1973 00f9 49       		.uleb128 0x49
+ 1974 00fa 13       		.uleb128 0x13
+ 1975 00fb 3F       		.uleb128 0x3f
+ 1976 00fc 19       		.uleb128 0x19
+ 1977 00fd 3C       		.uleb128 0x3c
+ 1978 00fe 19       		.uleb128 0x19
+ 1979 00ff 00       		.byte	0
+ 1980 0100 00       		.byte	0
+ 1981 0101 12       		.uleb128 0x12
+ 1982 0102 34       		.uleb128 0x34
+ 1983 0103 00       		.byte	0
+ 1984 0104 03       		.uleb128 0x3
+ 1985 0105 0E       		.uleb128 0xe
+ 1986 0106 3A       		.uleb128 0x3a
+ 1987 0107 0B       		.uleb128 0xb
+ 1988 0108 3B       		.uleb128 0x3b
+ 1989 0109 0B       		.uleb128 0xb
+ 1990 010a 49       		.uleb128 0x49
+ 1991 010b 13       		.uleb128 0x13
+ 1992 010c 3F       		.uleb128 0x3f
+ 1993 010d 19       		.uleb128 0x19
+ 1994 010e 02       		.uleb128 0x2
+ 1995 010f 18       		.uleb128 0x18
+ 1996 0110 00       		.byte	0
+ 1997 0111 00       		.byte	0
+ 1998 0112 13       		.uleb128 0x13
+ 1999 0113 34       		.uleb128 0x34
+ 2000 0114 00       		.byte	0
+ 2001 0115 03       		.uleb128 0x3
+ 2002 0116 08       		.uleb128 0x8
+ 2003 0117 3A       		.uleb128 0x3a
+ 2004 0118 0B       		.uleb128 0xb
+ 2005 0119 3B       		.uleb128 0x3b
+ 2006 011a 0B       		.uleb128 0xb
+ 2007 011b 49       		.uleb128 0x49
+ 2008 011c 13       		.uleb128 0x13
+ 2009 011d 3F       		.uleb128 0x3f
+ 2010 011e 19       		.uleb128 0x19
+ 2011 011f 02       		.uleb128 0x2
+ 2012 0120 18       		.uleb128 0x18
+ 2013 0121 00       		.byte	0
+ 2014 0122 00       		.byte	0
+ 2015 0123 00       		.byte	0
+ 2016              		.section	.debug_aranges,"",%progbits
+ 2017 0000 34000000 		.4byte	0x34
+ 2018 0004 0200     		.2byte	0x2
+ 2019 0006 00000000 		.4byte	.Ldebug_info0
+ 2020 000a 04       		.byte	0x4
+ 2021 000b 00       		.byte	0
+ 2022 000c 0000     		.2byte	0
+ 2023 000e 0000     		.2byte	0
+ 2024 0010 00000000 		.4byte	.LFB63
+ 2025 0014 BE000000 		.4byte	.LFE63-.LFB63
+ 2026 0018 00000000 		.4byte	.LFB64
+ 2027 001c 0C010000 		.4byte	.LFE64-.LFB64
+ 2028 0020 00000000 		.4byte	.LFB65
+ 2029 0024 B2000000 		.4byte	.LFE65-.LFB65
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 41
+
+
+ 2030 0028 00000000 		.4byte	.LFB66
+ 2031 002c 58000000 		.4byte	.LFE66-.LFB66
+ 2032 0030 00000000 		.4byte	0
+ 2033 0034 00000000 		.4byte	0
+ 2034              		.section	.debug_ranges,"",%progbits
+ 2035              	.Ldebug_ranges0:
+ 2036 0000 00000000 		.4byte	.LFB63
+ 2037 0004 BE000000 		.4byte	.LFE63
+ 2038 0008 00000000 		.4byte	.LFB64
+ 2039 000c 0C010000 		.4byte	.LFE64
+ 2040 0010 00000000 		.4byte	.LFB65
+ 2041 0014 B2000000 		.4byte	.LFE65
+ 2042 0018 00000000 		.4byte	.LFB66
+ 2043 001c 58000000 		.4byte	.LFE66
+ 2044 0020 00000000 		.4byte	0
+ 2045 0024 00000000 		.4byte	0
+ 2046              		.section	.debug_line,"",%progbits
+ 2047              	.Ldebug_line0:
+ 2048 0000 8C020000 		.section	.debug_str,"MS",%progbits,1
+ 2048      02005D01 
+ 2048      00000201 
+ 2048      FB0E0D00 
+ 2048      01010101 
+ 2049              	.LASF54:
+ 2050 0000 706F7378 		.ascii	"posx1\000"
+ 2050      3100
+ 2051              	.LASF57:
+ 2052 0006 706F7378 		.ascii	"posx2\000"
+ 2052      3200
+ 2053              	.LASF39:
+ 2054 000c 746F7563 		.ascii	"touch_write\000"
+ 2054      685F7772 
+ 2054      69746500 
+ 2055              	.LASF82:
+ 2056 0018 6E6F6D62 		.ascii	"nombre_pro1\000"
+ 2056      72655F70 
+ 2056      726F3100 
+ 2057              	.LASF51:
+ 2058 0024 636F756E 		.ascii	"count_teclas2\000"
+ 2058      745F7465 
+ 2058      636C6173 
+ 2058      3200
+ 2059              	.LASF83:
+ 2060 0032 6E6F6D62 		.ascii	"nombre_pro2\000"
+ 2060      72655F70 
+ 2060      726F3200 
+ 2061              	.LASF85:
+ 2062 003e 76657273 		.ascii	"version\000"
+ 2062      696F6E00 
+ 2063              	.LASF78:
+ 2064 0046 69645F65 		.ascii	"id_estacion\000"
+ 2064      73746163 
+ 2064      696F6E00 
+ 2065              	.LASF79:
+ 2066 0052 69645F76 		.ascii	"id_venta\000"
+ 2066      656E7461 
+ 2066      00
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 42
+
+
+ 2067              	.LASF37:
+ 2068 005b 70617373 		.ascii	"password_local\000"
+ 2068      776F7264 
+ 2068      5F6C6F63 
+ 2068      616C00
+ 2069              	.LASF77:
+ 2070 006a 626C6F71 		.ascii	"bloqueo_LCD\000"
+ 2070      75656F5F 
+ 2070      4C434400 
+ 2071              	.LASF27:
+ 2072 0076 6D616E67 		.ascii	"manguera\000"
+ 2072      75657261 
+ 2072      00
+ 2073              	.LASF2:
+ 2074 007f 73686F72 		.ascii	"short int\000"
+ 2074      7420696E 
+ 2074      7400
+ 2075              	.LASF72:
+ 2076 0089 636F756E 		.ascii	"count_protector\000"
+ 2076      745F7072 
+ 2076      6F746563 
+ 2076      746F7200 
+ 2077              	.LASF88:
+ 2078 0099 65666563 		.ascii	"efectivo\000"
+ 2078      7469766F 
+ 2078      00
+ 2079              	.LASF76:
+ 2080 00a2 70726F78 		.ascii	"prox_caso\000"
+ 2080      5F636173 
+ 2080      6F00
+ 2081              	.LASF24:
+ 2082 00ac 64696E65 		.ascii	"dinero\000"
+ 2082      726F00
+ 2083              	.LASF62:
+ 2084 00b3 666C756A 		.ascii	"flujo_LCD1\000"
+ 2084      6F5F4C43 
+ 2084      443100
+ 2085              	.LASF63:
+ 2086 00be 666C756A 		.ascii	"flujo_LCD2\000"
+ 2086      6F5F4C43 
+ 2086      443200
+ 2087              	.LASF33:
+ 2088 00c9 63656475 		.ascii	"cedula\000"
+ 2088      6C6100
+ 2089              	.LASF34:
+ 2090 00d0 70617373 		.ascii	"password\000"
+ 2090      776F7264 
+ 2090      00
+ 2091              	.LASF35:
+ 2092 00d9 7475726E 		.ascii	"turno\000"
+ 2092      6F00
+ 2093              	.LASF106:
+ 2094 00df 7072696E 		.ascii	"print1\000"
+ 2094      743100
+ 2095              	.LASF107:
+ 2096 00e6 7072696E 		.ascii	"print2\000"
+ 2096      743200
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 43
+
+
+ 2097              	.LASF31:
+ 2098 00ed 696D7072 		.ascii	"imprimir\000"
+ 2098      696D6972 
+ 2098      00
+ 2099              	.LASF68:
+ 2100 00f6 76656E74 		.ascii	"venta_activa\000"
+ 2100      615F6163 
+ 2100      74697661 
+ 2100      00
+ 2101              	.LASF12:
+ 2102 0103 75696E74 		.ascii	"uint16\000"
+ 2102      313600
+ 2103              	.LASF91:
+ 2104 010a 6E6F6D62 		.ascii	"nombre\000"
+ 2104      726500
+ 2105              	.LASF44:
+ 2106 0111 6372635F 		.ascii	"crc_check\000"
+ 2106      63686563 
+ 2106      6B00
+ 2107              	.LASF55:
+ 2108 011b 706F7379 		.ascii	"posy1\000"
+ 2108      3100
+ 2109              	.LASF58:
+ 2110 0121 706F7379 		.ascii	"posy2\000"
+ 2110      3200
+ 2111              	.LASF21:
+ 2112 0127 73757274 		.ascii	"surtidor\000"
+ 2112      69646F72 
+ 2112      00
+ 2113              	.LASF89:
+ 2114 0130 6C61646F 		.ascii	"lado1\000"
+ 2114      3100
+ 2115              	.LASF13:
+ 2116 0136 666C6F61 		.ascii	"float\000"
+ 2116      7400
+ 2117              	.LASF67:
+ 2118 013c 666C756A 		.ascii	"flujo_pos\000"
+ 2118      6F5F706F 
+ 2118      7300
+ 2119              	.LASF6:
+ 2120 0146 6C6F6E67 		.ascii	"long long int\000"
+ 2120      206C6F6E 
+ 2120      6720696E 
+ 2120      7400
+ 2121              	.LASF108:
+ 2122 0154 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2122      4320342E 
+ 2122      392E3320 
+ 2122      32303135 
+ 2122      30333033 
+ 2123 0187 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2123      20726576 
+ 2123      6973696F 
+ 2123      6E203232 
+ 2123      31323230 
+ 2124 01ba 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2124      66756E63 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 44
+
+
+ 2124      74696F6E 
+ 2124      2D736563 
+ 2124      74696F6E 
+ 2125              	.LASF16:
+ 2126 01e2 73697A65 		.ascii	"sizetype\000"
+ 2126      74797065 
+ 2126      00
+ 2127              	.LASF109:
+ 2128 01eb 2E5C6962 		.ascii	".\\ibuton.c\000"
+ 2128      75746F6E 
+ 2128      2E6300
+ 2129              	.LASF25:
+ 2130 01f6 766F6C75 		.ascii	"volumen\000"
+ 2130      6D656E00 
+ 2131              	.LASF18:
+ 2132 01fe 746F7461 		.ascii	"totales\000"
+ 2132      6C657300 
+ 2133              	.LASF84:
+ 2134 0206 6E6F6D62 		.ascii	"nombre_pro3\000"
+ 2134      72655F70 
+ 2134      726F3300 
+ 2135              	.LASF80:
+ 2136 0212 7472616D 		.ascii	"trama_totales\000"
+ 2136      615F746F 
+ 2136      74616C65 
+ 2136      7300
+ 2137              	.LASF73:
+ 2138 0220 636F756E 		.ascii	"count_protector2\000"
+ 2138      745F7072 
+ 2138      6F746563 
+ 2138      746F7232 
+ 2138      00
+ 2139              	.LASF69:
+ 2140 0231 76656E74 		.ascii	"venta_activa2\000"
+ 2140      615F6163 
+ 2140      74697661 
+ 2140      3200
+ 2141              	.LASF11:
+ 2142 023f 75696E74 		.ascii	"uint8\000"
+ 2142      3800
+ 2143              	.LASF1:
+ 2144 0245 756E7369 		.ascii	"unsigned char\000"
+ 2144      676E6564 
+ 2144      20636861 
+ 2144      7200
+ 2145              	.LASF23:
+ 2146 0253 706F7369 		.ascii	"posicion\000"
+ 2146      63696F6E 
+ 2146      00
+ 2147              	.LASF66:
+ 2148 025c 73656C65 		.ascii	"seleccion_pos\000"
+ 2148      6363696F 
+ 2148      6E5F706F 
+ 2148      7300
+ 2149              	.LASF0:
+ 2150 026a 7369676E 		.ascii	"signed char\000"
+ 2150      65642063 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 45
+
+
+ 2150      68617200 
+ 2151              	.LASF40:
+ 2152 0276 69627574 		.ascii	"ibutton\000"
+ 2152      746F6E00 
+ 2153              	.LASF7:
+ 2154 027e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2154      206C6F6E 
+ 2154      6720756E 
+ 2154      7369676E 
+ 2154      65642069 
+ 2155              	.LASF81:
+ 2156 0295 70707578 		.ascii	"ppux10\000"
+ 2156      313000
+ 2157              	.LASF102:
+ 2158 029c 6F6B5F64 		.ascii	"ok_datosRF\000"
+ 2158      61746F73 
+ 2158      524600
+ 2159              	.LASF36:
+ 2160 02a7 6175746F 		.ascii	"autorizado\000"
+ 2160      72697A61 
+ 2160      646F00
+ 2161              	.LASF8:
+ 2162 02b2 756E7369 		.ascii	"unsigned int\000"
+ 2162      676E6564 
+ 2162      20696E74 
+ 2162      00
+ 2163              	.LASF56:
+ 2164 02bf 73697A65 		.ascii	"sizeletra1\000"
+ 2164      6C657472 
+ 2164      613100
+ 2165              	.LASF38:
+ 2166 02ca 746F7563 		.ascii	"touch_present\000"
+ 2166      685F7072 
+ 2166      6573656E 
+ 2166      7400
+ 2167              	.LASF94:
+ 2168 02d8 6C656D61 		.ascii	"lema1\000"
+ 2168      3100
+ 2169              	.LASF95:
+ 2170 02de 6C656D61 		.ascii	"lema2\000"
+ 2170      3200
+ 2171              	.LASF98:
+ 2172 02e4 686F7261 		.ascii	"hora\000"
+ 2172      00
+ 2173              	.LASF26:
+ 2174 02e9 70726F64 		.ascii	"producto\000"
+ 2174      7563746F 
+ 2174      00
+ 2175              	.LASF70:
+ 2176 02f2 42756666 		.ascii	"Buffer_LCD1\000"
+ 2176      65725F4C 
+ 2176      43443100 
+ 2177              	.LASF71:
+ 2178 02fe 42756666 		.ascii	"Buffer_LCD2\000"
+ 2178      65725F4C 
+ 2178      43443200 
+ 2179              	.LASF3:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 46
+
+
+ 2180 030a 73686F72 		.ascii	"short unsigned int\000"
+ 2180      7420756E 
+ 2180      7369676E 
+ 2180      65642069 
+ 2180      6E7400
+ 2181              	.LASF19:
+ 2182 031d 67726164 		.ascii	"grado\000"
+ 2182      6F00
+ 2183              	.LASF60:
+ 2184 0323 7465636C 		.ascii	"teclas1\000"
+ 2184      61733100 
+ 2185              	.LASF61:
+ 2186 032b 7465636C 		.ascii	"teclas2\000"
+ 2186      61733200 
+ 2187              	.LASF15:
+ 2188 0333 63686172 		.ascii	"char\000"
+ 2188      00
+ 2189              	.LASF99:
+ 2190 0338 7276656E 		.ascii	"rventa1\000"
+ 2190      74613100 
+ 2191              	.LASF100:
+ 2192 0340 7276656E 		.ascii	"rventa2\000"
+ 2192      74613200 
+ 2193              	.LASF10:
+ 2194 0348 696E7433 		.ascii	"int32_t\000"
+ 2194      325F7400 
+ 2195              	.LASF46:
+ 2196 0350 636F756E 		.ascii	"count_teclas1\000"
+ 2196      745F7465 
+ 2196      636C6173 
+ 2196      3100
+ 2197              	.LASF9:
+ 2198 035e 5F5F696E 		.ascii	"__int32_t\000"
+ 2198      7433325F 
+ 2198      7400
+ 2199              	.LASF97:
+ 2200 0368 66656368 		.ascii	"fecha\000"
+ 2200      6100
+ 2201              	.LASF90:
+ 2202 036e 6C61646F 		.ascii	"lado2\000"
+ 2202      3200
+ 2203              	.LASF104:
+ 2204 0374 62756666 		.ascii	"buffer_i2c\000"
+ 2204      65725F69 
+ 2204      326300
+ 2205              	.LASF96:
+ 2206 037f 69645F6C 		.ascii	"id_logo\000"
+ 2206      6F676F00 
+ 2207              	.LASF20:
+ 2208 0387 6D616E67 		.ascii	"mangueras\000"
+ 2208      75657261 
+ 2208      7300
+ 2209              	.LASF87:
+ 2210 0391 70616E74 		.ascii	"pantallas\000"
+ 2210      616C6C61 
+ 2210      7300
+ 2211              	.LASF75:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 47
+
+
+ 2212 039b 696D6167 		.ascii	"imagen_grado\000"
+ 2212      656E5F67 
+ 2212      7261646F 
+ 2212      00
+ 2213              	.LASF43:
+ 2214 03a8 746F7563 		.ascii	"touch_read_byte\000"
+ 2214      685F7265 
+ 2214      61645F62 
+ 2214      79746500 
+ 2215              	.LASF93:
+ 2216 03b8 64697265 		.ascii	"direccion\000"
+ 2216      6363696F 
+ 2216      6E00
+ 2217              	.LASF5:
+ 2218 03c2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2218      20756E73 
+ 2218      69676E65 
+ 2218      6420696E 
+ 2218      7400
+ 2219              	.LASF22:
+ 2220 03d4 72656369 		.ascii	"recibo\000"
+ 2220      626F00
+ 2221              	.LASF105:
+ 2222 03db 6372635F 		.ascii	"crc_total\000"
+ 2222      746F7461 
+ 2222      6C00
+ 2223              	.LASF41:
+ 2224 03e5 6461746F 		.ascii	"dato\000"
+ 2224      00
+ 2225              	.LASF86:
+ 2226 03ea 6B6D7363 		.ascii	"kmscreen\000"
+ 2226      7265656E 
+ 2226      00
+ 2227              	.LASF45:
+ 2228 03f3 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2228      52784275 
+ 2228      66666572 
+ 2228      00
+ 2229              	.LASF28:
+ 2230 0400 70726573 		.ascii	"preset\000"
+ 2230      657400
+ 2231              	.LASF49:
+ 2232 0407 69645F63 		.ascii	"id_coma1\000"
+ 2232      6F6D6131 
+ 2232      00
+ 2233              	.LASF52:
+ 2234 0410 69645F63 		.ascii	"id_coma2\000"
+ 2234      6F6D6132 
+ 2234      00
+ 2235              	.LASF50:
+ 2236 0419 69645F74 		.ascii	"id_teclado1\000"
+ 2236      65636C61 
+ 2236      646F3100 
+ 2237              	.LASF53:
+ 2238 0425 69645F74 		.ascii	"id_teclado2\000"
+ 2238      65636C61 
+ 2238      646F3200 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 48
+
+
+ 2239              	.LASF103:
+ 2240 0431 72665F6D 		.ascii	"rf_mod\000"
+ 2240      6F6400
+ 2241              	.LASF42:
+ 2242 0438 70726573 		.ascii	"present\000"
+ 2242      656E7400 
+ 2243              	.LASF101:
+ 2244 0440 6F6B5F52 		.ascii	"ok_RF\000"
+ 2244      4600
+ 2245              	.LASF32:
+ 2246 0446 7469706F 		.ascii	"tipo_venta\000"
+ 2246      5F76656E 
+ 2246      746100
+ 2247              	.LASF30:
+ 2248 0451 706C6163 		.ascii	"placa\000"
+ 2248      6100
+ 2249              	.LASF14:
+ 2250 0457 646F7562 		.ascii	"double\000"
+ 2250      6C6500
+ 2251              	.LASF92:
+ 2252 045e 74656C65 		.ascii	"telefono\000"
+ 2252      666F6E6F 
+ 2252      00
+ 2253              	.LASF74:
+ 2254 0467 70617373 		.ascii	"password_lcd\000"
+ 2254      776F7264 
+ 2254      5F6C6364 
+ 2254      00
+ 2255              	.LASF4:
+ 2256 0474 6C6F6E67 		.ascii	"long int\000"
+ 2256      20696E74 
+ 2256      00
+ 2257              	.LASF17:
+ 2258 047d 65737461 		.ascii	"estado\000"
+ 2258      646F00
+ 2259              	.LASF64:
+ 2260 0484 666C756A 		.ascii	"flujo_pos1\000"
+ 2260      6F5F706F 
+ 2260      733100
+ 2261              	.LASF65:
+ 2262 048f 666C756A 		.ascii	"flujo_pos2\000"
+ 2262      6F5F706F 
+ 2262      733200
+ 2263              	.LASF29:
+ 2264 049a 69645F65 		.ascii	"id_ef\000"
+ 2264      6600
+ 2265              	.LASF59:
+ 2266 04a0 73697A65 		.ascii	"sizeletra2\000"
+ 2266      6C657472 
+ 2266      613200
+ 2267              	.LASF110:
+ 2268 04ab 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prueba_GRPFleet\\B"
+ 2268      73657273 
+ 2268      5C526563 
+ 2268      65706369 
+ 2268      6F6E5C44 
+ 2269 04d9 42422E63 		.ascii	"BB.cydsn\000"
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccjMkSvt.s 			page 49
+
+
+ 2269      7964736E 
+ 2269      00
+ 2270              	.LASF47:
+ 2271 04e2 636F6D61 		.ascii	"comas1\000"
+ 2271      733100
+ 2272              	.LASF48:
+ 2273 04e9 636F6D61 		.ascii	"comas2\000"
+ 2273      733200
+ 2274              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

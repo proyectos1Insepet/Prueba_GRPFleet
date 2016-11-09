@@ -55,7 +55,8 @@
 /***************Comandos Modulo**********************/
 #define	cautorizar	        0x30
 #define cimprimir	        0x31
-#define cbluetooth	        0x32	
+#define cbluetooth	        0x32
+#define cconfigurar         0x33
 #define creset		        0x45
 #define totales_elec        0x46
 //#define ok_totales          0x47    
@@ -87,6 +88,7 @@ volatile uint8	trama_totales[200];
 volatile uint8 	ppux10;
 volatile uint8 	nombre_pro1[17],nombre_pro2[17],nombre_pro3[17];	//Nombre de cada producto
 volatile uint8 	version[4];											//1 version - 2 Decimal Dinero - 3 Decimal Volumen
+volatile uint8  kmscreen, pantallas, efectivo;
 
 struct surtidor{
     volatile uint8 dir;
