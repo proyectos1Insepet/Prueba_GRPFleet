@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BBB\BBB\Source Files\Protocolo.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BBB\BBB\TopDesign">
 <ExpandedNodeIds>
 <v>BBB</v>
 <v>BBB\BBB</v>
@@ -396,6 +396,7 @@
 <name v=".\BBB.cydsn\main.c" />
 <name v=".\BBB.cydsn\Protocolo.c" />
 <name v=".\BBB.cydsn\Generated_Source\PSoC5\LCD_2_INT.c" />
+<name v=".\BBB.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

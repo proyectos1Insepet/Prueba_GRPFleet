@@ -1213,11 +1213,14 @@ void polling_LCD1(void){
     		rventa1.manguera=estado_ex(lado1.dir);
     		if(rventa1.manguera!=0){			 
                 CyDelay(20);            
-    		    if(get_estado(lado1.dir)==7){     			    
+    		    if(get_estado(lado1.dir)==7){   
+                    isr_3_StartEx(animacion);  
+	                Timer_Animacion_Start(); 
+                    count_protector=0;
                     timeout_autorizacion=0;
     			    lado1.estado=listo;
                     set_imagen(1,57);                                
-                    flujo_LCD1 = 9;
+                    flujo_LCD1 = 9; 
     		    }
     		}
         }
@@ -1226,11 +1229,14 @@ void polling_LCD1(void){
     		rventa2.manguera=estado_ex(lado2.dir);
     		if(rventa2.manguera!=0){			 
                 CyDelay(20);            
-    		    if(get_estado(lado2.dir)==7){     			    
+    		    if(get_estado(lado2.dir)==7){
+                    isr_3_StartEx(animacion);  
+	                Timer_Animacion_Start(); 
+                    count_protector=0;
                     timeout_autorizacion=0;
     			    lado2.estado=listo;
                     set_imagen(1,57);                                
-                    flujo_LCD1 = 9;
+                    flujo_LCD1 = 9;                    
     		    }
     		}
         }
@@ -1503,6 +1509,23 @@ void polling_LCD1(void){
 		    }	            
 			CyDelay(350);			
             PC_ClearTxBuffer();
+            if(count_protector>15){ 
+                //parar timer
+                isr_3_Stop(); 
+                Timer_Animacion_Stop(); 			
+    		    count_protector=0;
+			    flujo_LCD1=0;
+                lado1.estado=libre;  
+                if(pantallas == 1 || pantallas == 4){
+                    set_imagen(1,44);
+                    CyDelay(500);
+                    set_imagen(1,46);
+                }else{
+                    set_imagen(1,21);
+                    set_imagen(1,44);
+                    CyDelay(500);
+                }
+            }
 		break;
             
         
@@ -2500,7 +2523,7 @@ void polling_LCD1(void){
     						   PC_PutChar(rf_mod[x]);
     					    }
                             CyDelay(150);
-                            if(pantallas == 1){
+                            if(pantallas == 1 || pantallas == 4){
                                 set_imagen(1,46);
                             }else{
                                 set_imagen(1,21);
