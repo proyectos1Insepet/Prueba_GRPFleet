@@ -1,6 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
+<<<<<<< HEAD
  (DATE "2016-10-11T12:49:15Z")
+=======
+ (DATE "2016-11-08T15:02:48Z")
+>>>>>>> FleetSimplificado
  (DESIGN "BBB")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")

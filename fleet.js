@@ -731,20 +731,34 @@ function imprimir_venta(){
 						printport.write('     '+dir+ '\n\n');
 						var f = new Date();
 						printport.write('Fecha:' + String(f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes()) + '\n\n');                                                      
+<<<<<<< HEAD
 						printport.write('Cuenta: ');
 						printport.write(ncuenta+'\n');
 						printport.write('Serial: ');
+=======
+						printport.write('Cuenta:\n');
+						printport.write(ncuenta+'\n');
+						printport.write('Serial:\n');
+>>>>>>> FleetSimplificado
 						printport.write(serial + '\n');
 						printport.write('Placa: ' + placa +'\n');
 						printport.write('Km   : ' + parseInt(km,10) +'\n');
 						printport.write('Posicion: ' + cara + '\n');
 						printport.write('Producto: ' +nombre_producto+ '\n');
+<<<<<<< HEAD
 						var precio1 = parseFloat(precio);
+=======
+						var precio1 = parseFloat(precio/100);
+>>>>>>> FleetSimplificado
 						printport.write('PPU     : $ ' + String(precio1) + '\n');
 						volumen[3]=46;
 						var volumen1 = parseFloat(volumen);
 						printport.write('Volumen : ' + volumen1 +' Lts.'+ '\n');
+<<<<<<< HEAD
 						var dinero1 = parseFloat(dinero);
+=======
+						var dinero1 = parseFloat(dinero/100);
+>>>>>>> FleetSimplificado
 						printport.write('Dinero  : $ ' + String(dinero1) + '\n\n\n');
 						printport.write('Firma :'+ '\n\n');
 						printport.write('       --------------------'+ '\n\n');
@@ -848,7 +862,11 @@ function autorizaMux(){
     console.log("Id Producto: "+idproducto);
     console.log("Precio: ");                                   //Precio
     console.log(">>Cambio:"+ cambio_precio1);
+<<<<<<< HEAD
     if(cambio_precio1 == 0 && serial != '1111111111111111'){
+=======
+    if(cambio_precio1 == 1 && serial != '1111111111111111'){
+>>>>>>> FleetSimplificado
         precio_cambio();
         for(var i=0; i<=4; i++){
             muxport.write(revprecio[i]);

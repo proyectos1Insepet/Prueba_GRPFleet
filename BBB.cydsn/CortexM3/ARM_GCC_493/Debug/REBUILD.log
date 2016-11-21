@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 --------------- Rebuild Started: 10/11/2016 07:48:59 Project: BBB, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+=======
+--------------- Rebuild Started: 11/08/2016 10:02:30 Project: BBB, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+>>>>>>> FleetSimplificado
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\main.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\Protocolo.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\Print.o"
@@ -90,6 +94,7 @@ API Generation ...
 Dependency Generation ...
 Clean Temporary Files ...
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\main.c -o .\CortexM3\ARM_GCC_493\Debug\main.o
+<<<<<<< HEAD
 .\main.c: In function 'polling_LCD1':
 .\main.c:827:37: warning: unused variable 'xaux' [-Wunused-variable]
      uint8 x,y,aux[10],precio[5],x_1,xaux;
@@ -98,6 +103,8 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\P
 .\main.c:3026:9: warning: unused variable 'x' [-Wunused-variable]
      int x;    
          ^
+=======
+>>>>>>> FleetSimplificado
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/Protocolo.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Protocolo.c -o .\CortexM3\ARM_GCC_493\Debug\Protocolo.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/Print.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Print.c -o .\CortexM3\ARM_GCC_493\Debug\Print.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/LCD.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\LCD.c -o .\CortexM3\ARM_GCC_493\Debug\LCD.o
@@ -163,6 +170,12 @@ arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\BBB.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\BBB.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\Protocolo.o .\CortexM3\ARM_GCC_493\Debug\Print.o .\CortexM3\ARM_GCC_493\Debug\LCD.o .\CortexM3\ARM_GCC_493\Debug\ibuton.o .\CortexM3\ARM_GCC_493\Debug\I2C.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\BBB.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -O0 -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/BBB.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
 cyelftool.exe -C C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\CortexM3\ARM_GCC_493\Debug\BBB.elf --flash_row_size 256 --flash_size 262144
 cyelftool.exe -S C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\CortexM3\ARM_GCC_493\Debug\BBB.elf
+<<<<<<< HEAD
 Flash used: 54784 of 262144 bytes (20,9 %).
 SRAM used: 24397 of 65536 bytes (37,2 %). Stack: 16384 bytes. Heap: 4096 bytes.
 --------------- Rebuild Succeeded: 10/11/2016 07:49:31 ---------------
+=======
+Flash used: 53760 of 262144 bytes (20.5 %).
+SRAM used: 24397 of 65536 bytes (37.2 %). Stack: 16384 bytes. Heap: 4096 bytes.
+--------------- Rebuild Succeeded: 11/08/2016 10:03:06 ---------------
+>>>>>>> FleetSimplificado

@@ -132,21 +132,22 @@ void init(void){
 	version[3]=EEPROM_ReadByte(32);
 		 
 	lado1.dir=EEPROM_ReadByte(26);							//Lado A
-
 	lado2.dir=EEPROM_ReadByte(28);							//Lado B
 
+    pantallas =EEPROM_ReadByte(33);
+    kmscreen  =EEPROM_ReadByte(34);
+    efectivo  =EEPROM_ReadByte(35);
+    
     lado1.estado=libre;
     lado2.estado=libre;
     estado_tanqueando=0;
-	//ppux10=1;//1 estacion autogas prueba version de digitos 6
-	lado1.mangueras=3;
-//	lado1.grado[0][0]=2;				//1 Diesel 2 Corriente 3 Extra 4 Supreme Diesel
-//	lado1.grado[1][0]=3;
-//	lado1.grado[2][0]=0;
-    //version[1]=6;
 	version[2]=0;
 	version[3]=3;
+<<<<<<< HEAD
     flujo_LCD1 = 0;
+=======
+    flujo_LCD1=0;
+>>>>>>> FleetSimplificado
     CyDelay(5);	
     
 }
@@ -227,7 +228,7 @@ void error_op(uint8 lcd, uint16 imagen){
 *********************************************************************************************************
 *                                         init_surt( void )
 *
-* Description : Busca las posiciones del surtidor y las graba en lado.a.dir y lado.b.dir
+* Description : Busca las posiciones del surtidor y las graba en lado.lado1.dir y lado.lado2.dir
 *               
 *
 * Argument(s) : none
@@ -289,7 +290,8 @@ void init_surt(void){
 				break;
 				
 				case 0x08:
-			     	flujo_LCD1=11;
+			     	flujo_LCD1=8;
+                    seleccion_pos = 1;
 					ok++;
 				break;
 					
@@ -338,7 +340,8 @@ void init_surt(void){
 				break;
 				
 				case 0x08:
-			     	flujo_LCD2=11;
+			     	flujo_LCD2=8;
+                    seleccion_pos =2;
 				 	set_imagen(2,8);
 					ok++;
 				break;
@@ -389,7 +392,7 @@ void polling_rf(void){
 	uint16 status1, status2,size,x,t_preset;
 	uint8  precio[5],preset[8];
     
-	if(PC_GetRxBufferSize()>=3){
+	if(PC_GetRxBufferSize()>=6){
 		status1=PC_GetRxBufferSize();
 		CyDelay(10);
 		status2=PC_GetRxBufferSize();
@@ -398,6 +401,7 @@ void polling_rf(void){
 				ok_datosRF=0;   
 				switch(PC_rxBuffer[3]){
 					case cautorizar:
+                    if(PC_rxBuffer[4]=='1'){
                     PC_rxBuffer[3] = 0;
 						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor		
 							error_op((PC_rxBuffer[4] & 0x0F),28);
@@ -521,6 +525,131 @@ void polling_rf(void){
 							size=8;
 							ok_datosRF=1;							
 						}
+                    }else{                        
+                        PC_rxBuffer[3] = 0;
+    						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor		
+    							error_op((PC_rxBuffer[4] & 0x0F),28);
+    							break;
+    						}
+    						if(PC_rxBuffer[10]=='F'){		//Cambia precio
+                                precio[0]=lado2.ppu[rventa2.manguera-1][0]&0x0f;	
+        						precio[1]=lado2.ppu[rventa2.manguera-1][1]&0x0f;
+        						precio[2]=lado2.ppu[rventa2.manguera-1][2]&0x0f;
+        						precio[3]=lado2.ppu[rventa2.manguera-1][3]&0x0f;
+        						precio[4]=lado2.ppu[rventa2.manguera-1][4]&0x0f;
+                            	if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
+    								rf_mod[0]='M';
+    								rf_mod[1]='U';
+    								rf_mod[2]='X';
+    								rf_mod[3]=creset;
+    								rf_mod[4]=cautorizar;
+    								rf_mod[5]=PC_rxBuffer[4];
+    								rf_mod[6]='1';
+    								rf_mod[7]='*';
+    								size=8;
+    								ok_datosRF=1;
+    								break;
+    							}                                                      
+      						}
+                            else{
+    							totales(lado2.dir, lado2.mangueras);
+                                if(ppux10==1){
+        							precio[4]=PC_rxBuffer[9];	
+        							precio[3]=PC_rxBuffer[8];
+        							precio[2]=PC_rxBuffer[7];
+        							precio[1]=PC_rxBuffer[6];
+        							precio[0]=0;			
+                                }
+                                if(ppux10==0){
+        							precio[4]=PC_rxBuffer[10];	
+        							precio[3]=PC_rxBuffer[9];
+        							precio[2]=PC_rxBuffer[8];
+        							precio[1]=PC_rxBuffer[7];
+        							precio[0]=PC_rxBuffer[6];                            
+                                }
+    							if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
+    								rf_mod[0]='M';
+    								rf_mod[1]='U';
+    								rf_mod[2]='X';
+    								rf_mod[3]=creset;
+    								rf_mod[4]=cautorizar;
+    								rf_mod[5]=PC_rxBuffer[4];
+    								rf_mod[6]='1';
+    								rf_mod[7]='*';
+    								size=8;
+    								ok_datosRF=1;
+    								break;
+    							}
+                            }
+    						preset[1]=PC_rxBuffer[17];				//Preset
+    						if(PC_rxBuffer[17]!=','){
+    							preset[1]=PC_rxBuffer[17] & 0x0F;
+    						}
+    						preset[2]=PC_rxBuffer[16];
+    						if(PC_rxBuffer[16]!=','){
+    							preset[2]=PC_rxBuffer[16] & 0x0F;
+    						}
+    						preset[3]=PC_rxBuffer[15];
+    						if(PC_rxBuffer[15]!=','){
+    							preset[3]=PC_rxBuffer[15] & 0x0F;
+    						}
+    						preset[4]=PC_rxBuffer[14];
+    						if(PC_rxBuffer[14]!=','){
+    							preset[4]=PC_rxBuffer[14] & 0x0F;
+    						}
+    						preset[5]=PC_rxBuffer[13];
+    						if(PC_rxBuffer[13]!=','){
+    							preset[5]=PC_rxBuffer[13] & 0x0F;
+    						}
+    						preset[6]=PC_rxBuffer[12];
+    						if(PC_rxBuffer[12]!=','){
+    							preset[6]=PC_rxBuffer[12] & 0x0F;
+    						}
+    						preset[7]=PC_rxBuffer[11];
+    						if(PC_rxBuffer[11]!=','){
+    							preset[7]=PC_rxBuffer[11] & 0x0F;
+    						}
+    						t_preset=PC_rxBuffer[18];
+    						if(t_preset=='1'){
+    							t_preset=2;
+    						}
+    						else{
+    							t_preset=1;
+    						}
+    						if(programar((lado2.dir & 0x0F),rventa2.manguera,preset,t_preset)==1){		//Programar
+                                if(ppuinicial==0){                          
+    //                                for(x=0;x<=4;x++){
+    //                            	    precio[x]=lado1.ppu[0][x];	    
+    //                                }
+    //                                cambiar_precio(lado1.dir,precio,1);    
+    //                                for(x=0;x<=4;x++){
+    //                            	    precio[x]=lado1.ppu[1][x];	    
+    //                                }    
+    //                                cambiar_precio(lado1.dir,precio,2);
+    //                                for(x=0;x<=4;x++){
+    //                            	    precio[x]=lado1.ppu[2][x];	    
+    //                                }
+    //                                cambiar_precio(lado1.dir,precio,3);       
+                                }
+                                CyDelay(10);
+    							Surtidor_PutChar(0x10|(lado2.dir & 0x0F));							
+    							lado2.estado=tanqueo;
+    							flujo_LCD1=8;
+    							set_imagen(1,8);
+    						}
+    						else{
+    							rf_mod[0]='M';
+    							rf_mod[1]='U';
+    							rf_mod[2]='X';
+    							rf_mod[3]=creset;
+    							rf_mod[4]=cautorizar;
+    							rf_mod[5]=PC_rxBuffer[4];
+    							rf_mod[6]='2';
+    							rf_mod[7]='*';
+    							size=8;
+    							ok_datosRF=1;							
+    						}                    
+                    }
 					break;
 					
 					case cimprimir:
@@ -559,6 +688,43 @@ void polling_rf(void){
     								
     						}                        
 					break;
+                    case cconfigurar:
+                        lado1.mangueras   = PC_rxBuffer[4]-48; //Numero de mangueras
+                        lado1.grado[0][0] = PC_rxBuffer[5]-48;
+                        lado1.grado[1][0] = PC_rxBuffer[6]-48; //Grados
+                        lado1.grado[2][0] = PC_rxBuffer[7]-48;
+                        lado2.mangueras   = PC_rxBuffer[8]-48;
+                        lado2.grado[0][0] = PC_rxBuffer[9]-48;
+                        lado2.grado[1][0] = PC_rxBuffer[10]-48;
+                        lado2.grado[2][0] = PC_rxBuffer[11]-48;
+                        version[1]    = PC_rxBuffer[12]-48;	//Version surtidor
+                    	version[2]    = PC_rxBuffer[13]-48; //Decimales dinero
+                    	version[3]    = PC_rxBuffer[14]-48; //Decimales volumen
+                        ppux10        = PC_rxBuffer[15]-48; //ppux10  
+                        pantallas     = PC_rxBuffer[16]-48; //pantallas por pos  
+                        kmscreen      = PC_rxBuffer[17]-48; //solicita pantalla de kilometraje   
+                        efectivo      = PC_rxBuffer[18]-48; //solicita pantalla de kilometraje   
+                        
+                        EEPROM_WriteByte(lado1.mangueras,15);  //Almacena configuraciones en MUX
+                        EEPROM_WriteByte(lado1.grado[0][0],16);
+                        EEPROM_WriteByte(lado1.grado[1][0],17);
+                        EEPROM_WriteByte(lado1.grado[2][0],18);
+                        EEPROM_WriteByte(lado2.mangueras,19);
+                        EEPROM_WriteByte(lado2.grado[0][0],20);
+                        EEPROM_WriteByte(lado2.grado[1][0],21);
+                        EEPROM_WriteByte(lado2.grado[2][0],22);
+                        EEPROM_WriteByte(ppux10,23);
+                        EEPROM_WriteByte(version[1],30);
+                        EEPROM_WriteByte(version[2],31);
+                        EEPROM_WriteByte(version[3],32);
+                        EEPROM_WriteByte(pantallas,33);
+                        EEPROM_WriteByte(kmscreen,34);
+                        EEPROM_WriteByte(efectivo,35);
+                        set_imagen(1,60); 
+                        CyDelay(500);
+                        init();
+                        flujo_LCD1 = 0;                        
+                    break;
 				}
 				if(ok_datosRF==1){
 				    for(x=0;x<size;x++){
@@ -575,6 +741,7 @@ void polling_rf(void){
 }
 
 
+<<<<<<< HEAD
 
 /*
 *********************************************************************************************************
@@ -782,6 +949,8 @@ void polling_rf2(void){
 }
 
 
+=======
+>>>>>>> FleetSimplificado
 /*
 *********************************************************************************************************
 *                                         uint8 polling_surt(void)
@@ -824,7 +993,7 @@ void polling_surt(void){
 */
 
 void polling_LCD1(void){
-    uint8 x,y,aux[10],precio[5],x_1,xaux;
+    uint8 x,y,aux[10],precio[5],x_1;
 	char numero[8];
 	double num_decimal;   
     switch(flujo_LCD1){
@@ -832,7 +1001,51 @@ void polling_LCD1(void){
          isr_3_StartEx(animacion); 
          Timer_Animacion_Start();
          count_protector=0;
-         flujo_LCD1=1;	       
+         flujo_LCD1=21;	       
+        break;
+        
+        case 21:
+//            set_imagen(1,27);                 //Pasa a pantalla de tipo de venta viejo:5
+//            tipo_venta = 0;
+//            id_teclado1 = 8;
+//            flujo_LCD1 = 11;             
+                if(touch_present(1)==1){
+                    if(touch_write(1,0x33)){
+    	                for(x=0;x<=7;x++){
+    	                    rventa1.id[x]=touch_read_byte(1);
+                            rventa2.id[x]=rventa1.id[x];
+    	                }
+    				    crc_total=0;
+    				    for(x=0;x<7;x++){
+    				 	    crc_total=crc_check(crc_total,rventa1.id[x]);
+    				    }					
+    				    if(crc_total==rventa1.id[7]){
+    		                set_imagen(1,19);
+    		                CyDelay(500);					 				 
+    					    count_teclas1=0;							//Inicia el contador de teclas						    
+    					    teclas1=10;
+    					    posx1=2;
+    					    posy1=3;
+    					    sizeletra1=1;	 
+                            flujo_LCD1 = 20;
+                            set_imagen(1,46);
+    					    	
+    				    }
+                    }
+                }  
+                   
+            
+            if(LCD_1_GetRxBufferSize()==8){
+                if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
+                    switch(LCD_1_rxBuffer[3]){
+                        case 0x3B:
+                            flujo_LCD1=0; 
+                        break; 
+                    }
+                }
+                CyDelay(100);            
+                LCD_1_ClearRxBuffer();            
+        }
         break;
         
         case 1:
@@ -851,6 +1064,7 @@ void polling_LCD1(void){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){                    
                 switch(LCD_1_rxBuffer[3]){
 			        case 0x56:						        //POS A                                                                                                                                           
+<<<<<<< HEAD
                         set_imagen(1,99);           //Inicio opciones GRP 700 POS A
                         seleccion_pos = 1;
                         flujo_LCD1  = 2;                                                
@@ -860,6 +1074,25 @@ void polling_LCD1(void){
                         set_imagen(1,99);           //Inicio opciones GRP 700
 				        seleccion_pos = 2;
                         flujo_LCD1 = 2;                                                                                
+=======
+                        set_imagen(1,36);           //Inicio opciones GRP 700 POS A
+                        seleccion_pos = 1;
+                        flujo_LCD1    = 12;  
+                        id_teclado1   = 8;
+				    break;
+                        		       
+				    case 0x57:  				            //POS B                                                                                             
+                        set_imagen(1,36);           //Inicio opciones GRP 700
+				        seleccion_pos = 2;
+                        flujo_LCD1    = 12;  
+                        id_teclado1   = 8;
+				    break;
+                    
+                    case 0x94:  				            //POS B                                                                                             
+                        set_imagen(1,114);
+                        seleccion_pos = 1;
+                        flujo_LCD1 = 15;
+>>>>>>> FleetSimplificado
 				    break;
                                                
 			    }                                                            
@@ -1206,11 +1439,22 @@ void polling_LCD1(void){
     		rventa1.manguera=estado_ex(lado1.dir);
     		if(rventa1.manguera!=0){			 
                 CyDelay(20);            
+<<<<<<< HEAD
     		    if(get_estado(lado1.dir)==7){     			    
                     timeout_autorizacion=0;
     			    lado1.estado=listo;
                     set_imagen(1,57);                                
                     flujo_LCD1 = 9;
+=======
+    		    if(get_estado(lado1.dir)==7){   
+                    isr_3_StartEx(animacion);  
+	                Timer_Animacion_Start(); 
+                    count_protector=0;
+                    timeout_autorizacion=0;
+    			    lado1.estado=listo;
+                    set_imagen(1,57);                                
+                    flujo_LCD1 = 9; 
+>>>>>>> FleetSimplificado
     		    }
     		}
         }
@@ -1219,11 +1463,22 @@ void polling_LCD1(void){
     		rventa2.manguera=estado_ex(lado2.dir);
     		if(rventa2.manguera!=0){			 
                 CyDelay(20);            
+<<<<<<< HEAD
     		    if(get_estado(lado2.dir)==7){     			    
                     timeout_autorizacion=0;
     			    lado2.estado=listo;
                     set_imagen(1,57);                                
                     flujo_LCD1 = 9;
+=======
+    		    if(get_estado(lado2.dir)==7){
+                    isr_3_StartEx(animacion);  
+	                Timer_Animacion_Start(); 
+                    count_protector=0;
+                    timeout_autorizacion=0;
+    			    lado2.estado=listo;
+                    set_imagen(1,57);                                
+                    flujo_LCD1 = 9;                    
+>>>>>>> FleetSimplificado
     		    }
     		}
         }
@@ -1399,6 +1654,10 @@ void polling_LCD1(void){
     			for(x=0;x<=6;x++){
     				rf_mod[38+x]=rventa1.km[x+1] + 48;
     			}
+<<<<<<< HEAD
+=======
+                rf_mod[45]=0x31;
+>>>>>>> FleetSimplificado
             }
             
             if(seleccion_pos == 2){
@@ -1486,8 +1745,13 @@ void polling_LCD1(void){
     			for(x=0;x<=6;x++){
     				rf_mod[38+x]=rventa2.km[x+1] + 48;
     			}
+<<<<<<< HEAD
             }
 			rf_mod[45]=0x31;
+=======
+                rf_mod[45]=0x32;    
+            }			
+>>>>>>> FleetSimplificado
 			rf_mod[46]='*';
 			PC_ClearRxBuffer();				
 		    for(x=0;x<=46;x++){
@@ -1495,6 +1759,23 @@ void polling_LCD1(void){
 		    }	            
 			CyDelay(350);			
             PC_ClearTxBuffer();
+            if(count_protector>15){ 
+                //parar timer
+                isr_3_Stop(); 
+                Timer_Animacion_Stop(); 			
+    		    count_protector=0;
+			    flujo_LCD1=0;
+                lado1.estado=libre;  
+                if(pantallas == 1 || pantallas == 4){
+                    set_imagen(1,44);
+                    CyDelay(500);
+                    set_imagen(1,46);
+                }else{
+                    set_imagen(1,21);
+                    set_imagen(1,44);
+                    CyDelay(500);
+                }
+            }
 		break;
             
         
@@ -1517,7 +1798,12 @@ void polling_LCD1(void){
     					    teclas1=10;
     					    posx1=2;
     					    posy1=3;
+<<<<<<< HEAD
     					    sizeletra1=1;	                        
+=======
+    					    sizeletra1=1;	
+                            count_protector = 0;
+>>>>>>> FleetSimplificado
                             if(id_teclado1 ==10){
                                 set_imagen(1,19);
                                 flujo_LCD1 = 19;
@@ -1860,7 +2146,12 @@ void polling_LCD1(void){
          }
         }
         
+<<<<<<< HEAD
         if(seleccion_pos == 2){
+=======
+        case 12: 
+        if(seleccion_pos == 1){
+>>>>>>> FleetSimplificado
          if(LCD_1_GetRxBufferSize()==8){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
 				count_protector=0;
@@ -1950,7 +2241,11 @@ void polling_LCD1(void){
 									}
 								}
 								num_decimal=atof(numero);
+<<<<<<< HEAD
 								if(((rventa2.preset[0]==1)&&(num_decimal>=5))||((rventa2.preset[0]==2)&&(num_decimal<=5)&&(num_decimal>0))){
+=======
+								if(((rventa1.preset[0]==1)&&(num_decimal>=5))||((rventa1.preset[0]==2)&&(num_decimal<=5)&&(num_decimal>0))){
+>>>>>>> FleetSimplificado
 									for(x=count_teclas1;x>=1;x--){
 										rventa2.preset[x]=Buffer_LCD1[(count_teclas1-x)+1];
 									}
@@ -1960,16 +2255,33 @@ void polling_LCD1(void){
 								}
 							}
 						break;
-						case 2:	
-                            set_imagen(1,5);
+						case 2:	                            
                             for(x=0;x<=10;x++){
                               rventa2.km[x]=0;
                             }
 							for(x=count_teclas1;x>=1;x--){
+<<<<<<< HEAD
 								rventa2.km[x]=Buffer_LCD1[(count_teclas1-x)+1];
 							}
 	                        flujo_LCD1=4;		                        
+=======
+								rventa1.km[x]=Buffer_LCD1[(count_teclas1-x)+1];
+							}	                                                    
+                            if(seleccion_pos == 1){
+            					for(x=0;x<=7;x++){
+            					 	rventa1.preset[x]=0;
+            					}
+                                rventa1.preset[0]=3;					
+            					for(x=5;x<=7;x++){
+            						rventa1.preset[x]=9;		
+            					}								                                     
+            		            set_imagen(1,7);
+            					lado1.estado=espera;
+                                flujo_LCD1 = 6;  
+                            }                                                      
+>>>>>>> FleetSimplificado
 						break;
+                            
 						case 3:
 							for(x=count_teclas1;x>=1;x--){
 								rventa2.cedula[x]=Buffer_LCD1[(count_teclas1-x)+1]+48;
@@ -2117,6 +2429,7 @@ void polling_LCD1(void){
                             }
                     		for(x=8;x<=12;x++){	
                     			EEPROM_WriteByte(id_estacion[x-8], x);
+<<<<<<< HEAD
                     		}   
                         	flujo_LCD1 = 12;	//viejo: 0
                             id_teclado1 = 2;
@@ -2124,6 +2437,23 @@ void polling_LCD1(void){
                             CyDelay(200);
                             count_teclas1 = 0;
 							lado2.estado=libre;                                    
+=======
+                    		}
+                            if(kmscreen ==1){
+                                flujo_LCD1 = 12;	//viejo: 0
+                                id_teclado1 = 2;
+                            	set_imagen(1,14); //viejo: 60
+                                CyDelay(200);
+                                count_teclas1 = 0;
+    							lado1.estado=libre; 
+                            }
+                            if (kmscreen == 0){
+                                flujo_LCD1 = 6;
+                                set_imagen(1,7);
+            					lado1.estado=espera;                                
+                            }
+                        	                                   
+>>>>>>> FleetSimplificado
                         break;
 					}					
                 }
@@ -2132,6 +2462,291 @@ void polling_LCD1(void){
          }
         }
         
+<<<<<<< HEAD
+=======
+        if(seleccion_pos == 2){
+         if(LCD_1_GetRxBufferSize()==8){
+            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
+				count_protector=0;
+                if(count_teclas1<teclas1){									
+                    if(LCD_1_rxBuffer[3]<=9){								//Numero de 1-9
+                        count_teclas1++;
+                        Buffer_LCD1[count_teclas1]=LCD_1_rxBuffer[3];
+                        write_LCD(1,(LCD_1_rxBuffer[3]+0x30), posy1, ((count_teclas1*(sizeletra1+1))+posx1), sizeletra1);
+                    }
+                    if(LCD_1_rxBuffer[3]==0x0A){            				//Comando de 0
+						if((id_teclado1==1)&&(count_teclas1==1)&&(Buffer_LCD1[1]==0)){
+						}
+						else{
+	                        count_teclas1++;
+	                        Buffer_LCD1[count_teclas1]=0;
+							write_LCD(1,0x30, posy1, ((count_teclas1*(sizeletra1+1))+posx1), sizeletra1);
+						}
+                    }  
+                    if(LCD_1_rxBuffer[3]==0x51){            	 			//Comando de Coma
+                        if(count_teclas1>=1 && comas1==0){
+                            count_teclas1++;
+                            Buffer_LCD1[count_teclas1]=id_coma1;
+							write_LCD(1,id_coma1, posy1, ((count_teclas1*(sizeletra1+1))+posx1), sizeletra1);
+                            comas1=1;
+                        }
+                    }                    
+                }                                
+                if(LCD_1_rxBuffer[3]==0x0B){								//Cancel
+                    if(count_teclas1==0){
+						switch(id_teclado1){
+							case 1:
+							set_imagen(1,5);
+							flujo_LCD1=4;
+							break;
+							case 2:
+	                        flujo_LCD1=0;	
+							break;
+							case 3:
+							set_imagen(1,0);
+							flujo_LCD1=0;
+							lado2.estado=libre;
+							break;
+							case 4:
+							set_imagen(1,0);
+							flujo_LCD1=0;
+							lado2.estado=libre;
+							break;
+                            case 5:
+							set_imagen(1,0);
+							flujo_LCD1=0;
+							lado2.estado=libre;                            
+                            break;
+                            case 6:
+							set_imagen(1,0);
+							flujo_LCD1=0;
+							lado2.estado=libre;                            
+                            break;  
+                            case 8:
+							set_imagen(1,0);
+							flujo_LCD1 = 0;
+							lado2.estado=libre;                            
+                            break;                             
+						}
+                    }
+                    else{
+						write_LCD(1,0x20, posy1, ((count_teclas1*(sizeletra1+1))+posx1), sizeletra1);
+                        if(Buffer_LCD1[count_teclas1]==id_coma1){
+                            comas1=0;
+                        }
+						Buffer_LCD1[count_teclas1]=0;
+                        count_teclas1--;
+                    }
+                }
+                if(LCD_1_rxBuffer[3]==0x0C){								//Enter
+					switch(id_teclado1){
+						case 1:
+							for(x=0;x<=7;x++){
+								numero[x]=0;
+							}						
+							if((count_teclas1>=1)&&(Buffer_LCD1[count_teclas1]!=',')){
+								for(x=1;x<=count_teclas1;x++){
+									if(Buffer_LCD1[x]!=','){
+										numero[x-1]=Buffer_LCD1[x]+48;
+									}
+									else{
+										numero[x-1]=Buffer_LCD1[x];
+									}
+								}
+								num_decimal=atof(numero);
+								if(((rventa2.preset[0]==1)&&(num_decimal>=5))||((rventa2.preset[0]==2)&&(num_decimal<=5)&&(num_decimal>0))){
+									for(x=count_teclas1;x>=1;x--){
+										rventa2.preset[x]=Buffer_LCD1[(count_teclas1-x)+1];
+									}
+									flujo_LCD1=5;								
+                         			lado2.estado=espera;
+						            set_imagen(1,7);
+								}
+							}
+						break;
+						case 2:	
+                            for(x=0;x<=10;x++){
+                              rventa2.km[x]=0;
+                            }
+							for(x=count_teclas1;x>=1;x--){
+								rventa2.km[x]=Buffer_LCD1[(count_teclas1-x)+1];
+							}	                                                    
+                            if(seleccion_pos == 2){
+            					for(x=0;x<=7;x++){
+            					 	rventa2.preset[x]=0;
+            					}
+                                rventa2.preset[0]=3;					
+            					for(x=5;x<=7;x++){
+            						rventa2.preset[x]=9;		
+            					}								                                     
+            		            set_imagen(1,7);
+            					lado2.estado=espera;
+                                flujo_LCD1 = 6;  
+                            }    		                        
+						break;
+						case 3:
+							for(x=count_teclas1;x>=1;x--){
+								rventa2.cedula[x]=Buffer_LCD1[(count_teclas1-x)+1]+48;
+							}
+                        	flujo_LCD1=2;	
+                        	set_imagen(1,5);
+							count_teclas1=0;
+							id_teclado1=4;
+							teclas1=10;
+							posx1=2;
+							posy1=3;
+							sizeletra1=1;								
+						break;
+						case 4:
+							for(x=count_teclas1;x>=1;x--){
+								rventa2.password[x]=Buffer_LCD1[(count_teclas1-x)+1]+48;
+							}
+                        	flujo_LCD1=102;	
+                        	set_imagen(1,57);
+							lado2.estado=16;
+						break;	
+                        case 5:
+							for(x=count_teclas1;x>=1;x--){
+								rventa1.password_local[x]=Buffer_LCD1[(count_teclas1-x)+1]+48;
+							}
+                            if(clave_local[0]==rventa1.password_local[4] && clave_local[1]==rventa1.password_local[3] && clave_local[2]==rventa1.password_local[2] && clave_local[3]==rventa1.password_local[1]){                        	    	
+                        	    set_imagen(1,38); 
+                                CyDelay(200);
+							    set_imagen(1,70);  
+                                flujo_LCD1 = 16;
+                            }else{
+                        	    flujo_LCD1=0;	
+                        	    set_imagen(1,39); 
+							    lado2.estado=libre;                                 
+                                CyDelay(200);
+							    set_imagen(1,0);                                 
+                            }
+                        break; 
+                        case 6:                        
+						    EEPROM_WriteByte(Buffer_LCD1[count_teclas1],30);
+                        	flujo_LCD1 = 0;	
+                        	set_imagen(1,60);
+                            CyDelay(200);
+							lado2.estado=libre;                                                     
+                        break;   
+                        case 7:
+                            flujo_LCD1=18;
+                            set_imagen(1,88);
+                            switch(Producto){
+                                case 1:// 1=diesel, siempre para Autogas, 
+                                    Productos[0]=Buffer_LCD1[1]+48;//para la estacion seria el digitado por ellos
+                                    switch(Productos[0]){
+                                        case '1':
+                                        lado2.grado[0][0]=1;                                        
+                                        break;
+                                        case '2':
+                                        lado2.grado[1][0]=1;                                        
+                                        break;
+                                        case '3':
+                                        lado2.grado[2][0]=1;                                        
+                                        break;                    
+                                        default:
+                                        producto1 = 0;
+                                        break;
+                                    }                                   
+                                break;
+                                case 2:// 2=corriente, siempre para Autogas,
+                                    Productos[1]=Buffer_LCD1[1]+48;
+                                    switch(Productos[1]){
+                                        case '1':
+                                        lado2.grado[0][0]=2;                                        
+                                        break;
+                                        case '2':
+                                        lado2.grado[1][0]=2;                                        
+                                        break;
+                                        case '3':
+                                        lado2.grado[2][0]=2;                                        
+                                        break; 
+                                        default:
+                                        producto2=0;
+                                        break;                                        
+                                    }                                      
+                                break;
+                                case 3:// 3=extra, siempre para Autogas,
+                                    Productos[2]=Buffer_LCD1[1]+48;
+                                    switch(Productos[2]){
+                                        case '1':
+                                        lado2.grado[0][0]=3;                                        
+                                        break;
+                                        case '2':
+                                        lado2.grado[1][0]=3;                                        
+                                        break;
+                                        case '3':
+                                        lado2.grado[2][0]=3;                                        
+                                        break; 
+                                        default:
+                                        producto3=0;
+                                        break;                                        
+                                    }                                      
+                                break;
+                                case 4:// 4=supreme diesel, siempre para Autogas,
+                                    Productos[3]=Buffer_LCD1[1]+48;
+                                    switch(Productos[3]){
+                                        case '1':
+                                        lado2.grado[0][0]=4;                                        
+                                        break;
+                                        case '2':
+                                        lado2.grado[1][0]=4;                                        
+                                        break;
+                                        case '3':
+                                        lado2.grado[2][0]=4;                                        
+                                        break;
+                                        default:
+                                        producto4=0;
+                                        break;                                      
+                                    }                                      
+                                break;                                    
+                            }
+                            write_LCD(1,Productos[0], 7, 44, 1);
+                            write_LCD(1,Productos[1], 14, 44, 1); 
+                            write_LCD(1,Productos[2], 19, 44, 1);
+                            write_LCD(1,Productos[3], 25, 44, 1); 
+							lado1.estado=libre;                                 
+                            CyDelay(200);                             
+                        break;          
+                        case 8:
+                            for(x=1;x<=4;x++){
+                              id_estacion[x]=0;
+                            }
+                            id_estacion[0]=4;
+							for(x=count_teclas1;x>=1;x--){
+								id_estacion[x]=Buffer_LCD1[(count_teclas1-x)+1]+0X30;
+							}                            
+                            if(id_estacion[1]>=0x30 && id_estacion[2]<0x30 && id_estacion[3]<0x30 && id_estacion[4]<0x30){
+                                id_estacion[2]='0';
+                                id_estacion[3]='0';
+                                id_estacion[4]='0';                                
+                            }
+                            if(id_estacion[1]>=0x30 && id_estacion[2]>=0x30 && id_estacion[3]<0x30 && id_estacion[4]<0x30){
+                                id_estacion[3]='0';
+                                id_estacion[4]='0';                             
+                            }  
+                            if(id_estacion[1]>=0x30 && id_estacion[2]>=0x30 && id_estacion[3]>=0x30 && id_estacion[4]<0x30){
+                                id_estacion[4]='0';                              
+                            }
+                    		for(x=8;x<=12;x++){	
+                    			EEPROM_WriteByte(id_estacion[x-8], x);
+                    		}   
+                        	flujo_LCD1 = 12;	//viejo: 0
+                            id_teclado1 = 2;
+                        	set_imagen(1,14); //viejo: 60
+                            CyDelay(200);
+                            count_teclas1 = 0;
+							lado2.estado=libre;                                     
+                        break;
+					}					
+                }
+            }                      
+            LCD_1_ClearRxBuffer();
+         }
+        }
+        
+>>>>>>> FleetSimplificado
         break;	
             
         case 13:  
@@ -2244,7 +2859,11 @@ void polling_LCD1(void){
 			rf_mod[1]='U';
 			rf_mod[2]='X';
 			rf_mod[3]='1';
+<<<<<<< HEAD
 			rf_mod[4]=1 + 48;								//Cara
+=======
+			rf_mod[4]=2 + 48;								//Cara
+>>>>>>> FleetSimplificado
 			rf_mod[5]=(lado2.grado[rventa2.producto-1][0] + 48);	//Id Producto	
 			rf_mod[6]=rventa2.volumen[5] + 48;						//Volumen
 			rf_mod[7]=rventa2.volumen[4] + 48;
@@ -2450,23 +3069,89 @@ void polling_LCD1(void){
 	            if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
 	                switch(LCD_1_rxBuffer[3]){
                         case 0x7F:      //configurar productos                            
-                            set_imagen(1,88);                            
-                            flujo_LCD1 = 18;
+//                            set_imagen(1,88);                            
+//                            flujo_LCD1 = 18;
+                            rf_mod[0]='M';
+    		                rf_mod[1]='U';
+    		                rf_mod[2]='X';
+    		                rf_mod[3]='6';
+                            rf_mod[4]='*';
+    						PC_ClearRxBuffer();				
+    					    for(x=0;x<=4;x++){
+    						   PC_PutChar(rf_mod[x]);
+    					    }
+                            CyDelay(150);
+                            if(pantallas == 1 || pantallas == 4){
+                                set_imagen(1,46);
+                            }else{
+                                set_imagen(1,21);
+                            }
+    						flujo_LCD1=0;
+                            if(seleccion_pos == 1){
+    						    lado1.estado=libre;     //Fin de reimpresion  
+                            }
+                            if(seleccion_pos == 2){
+    						    lado2.estado=libre;     //Fin de reimpresion  
+                            }
                         break;
                         case 0x80:      //configurar version de digitos                             
-                            set_imagen(1,100);
-                            id_teclado1 = 6;
-					        count_teclas1 = 0;							    //Inicia el contador de teclas	
-					        id_coma1=',';	
-                            teclas1=1;              						//cantidad de teclas q puede digitar                      comas1=0;									
-					        posx1=4;
-					        posy1=3;
-					        sizeletra1=1;  
-                            flujo_LCD1 = 12;
+//                            set_imagen(1,100);
+//                            id_teclado1 = 6;
+//					        count_teclas1 = 0;							    //Inicia el contador de teclas	
+//					        id_coma1=',';	
+//                            teclas1=1;              						//cantidad de teclas q puede digitar                      comas1=0;									
+//					        posx1=4;
+//					        posy1=3;
+//					        sizeletra1=1;  
+//                            flujo_LCD1 = 12;
+                            rf_mod[0]='M';
+    		                rf_mod[1]='U';
+    		                rf_mod[2]='X';
+    		                rf_mod[3]='6';
+                            rf_mod[4]='*';
+    						PC_ClearRxBuffer();				
+    					    for(x=0;x<=4;x++){
+    						   PC_PutChar(rf_mod[x]);
+    					    }
+                            CyDelay(150);
+                            if(pantallas == 1){
+                                set_imagen(1,46);
+                            }else{
+                                set_imagen(1,21);
+                            }
+    						flujo_LCD1=0;
+                            if(seleccion_pos == 1){
+    						    lado1.estado=libre;     //Fin de reimpresion  
+                            }
+                            if(seleccion_pos == 2){
+    						    lado2.estado=libre;     //Fin de reimpresion  
+                            }
                         break;
                         case 0x81:      //configurar ppux10,ppux1
-                            flujo_LCD1 = 17;
-                            set_imagen(1,109);                        
+//                            flujo_LCD1 = 17;
+//                            set_imagen(1,109); 
+                            rf_mod[0]='M';
+    		                rf_mod[1]='U';
+    		                rf_mod[2]='X';
+    		                rf_mod[3]='6';
+                            rf_mod[4]='*';
+    						PC_ClearRxBuffer();				
+    					    for(x=0;x<=4;x++){
+    						   PC_PutChar(rf_mod[x]);
+    					    }
+                            CyDelay(150);
+                            if(pantallas == 1){
+                                set_imagen(1,46);
+                            }else{
+                                set_imagen(1,21);
+                            }
+    						flujo_LCD1=0;
+                            if(seleccion_pos == 1){
+    						    lado1.estado=libre;     //Fin de reimpresion  
+                            }
+                            if(seleccion_pos == 2){
+    						    lado2.estado=libre;     //Fin de reimpresion  
+                            }
                         break;
                         case 0xC2:      //id estacion   ahora datos ibutton                         
                             set_imagen(1,110);                                
@@ -2515,6 +3200,7 @@ void polling_LCD1(void){
 	            LCD_1_ClearRxBuffer();
             }              
         break;    
+<<<<<<< HEAD
           
         case 18:
             if(seleccion_pos == 1){							   
@@ -2798,6 +3484,9 @@ void polling_LCD1(void){
                 }   
             }
         break;
+=======
+                  
+>>>>>>> FleetSimplificado
             
         case 19:
 			rf_mod[0]='M';
@@ -3023,7 +3712,7 @@ CY_ISR(modo_mux){
 void insert_ppuInit(void){
     
     //uint8 precio_mod[5];    
-    int x;    
+    //int x;    
     
   uint8 precio_mod[5];    
 	precio_mod[0]=0;	
@@ -3060,6 +3749,7 @@ int main(){
          //sin el sistema Mux Advance              		
     		CyWdtClear();        
            	polling_LCD1();
+<<<<<<< HEAD
     		CyWdtClear();  
             if(seleccion_pos ==1 || seleccion_pos ==0){                
                 polling_rf();
@@ -3068,6 +3758,10 @@ int main(){
                 polling_rf2();
             }
          
+=======
+    		CyWdtClear();              
+            polling_rf();                                 
+>>>>>>> FleetSimplificado
     }
 
 }

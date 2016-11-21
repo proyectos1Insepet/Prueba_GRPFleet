@@ -1,5 +1,9 @@
 # BBB
+<<<<<<< HEAD
 # 2016-10-11 12:49:10Z
+=======
+# 2016-11-08 15:02:44Z
+>>>>>>> FleetSimplificado
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0

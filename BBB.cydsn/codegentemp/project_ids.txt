@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\BBB.cyprj|77967230-d779-4c02-88ff-7ce2efa3ccfa
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d3648018-10b2-47ea-b580-5b024f7fb0a9
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|4c9a31cd-8bb9-46c5-83d9-bdcd0d0afcb7
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9e67e5ee-5630-45cb-8691-c777edc7f470
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cda822ed-b375-42f0-bc4f-0f1a6244b516
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c95bf07d-f349-446e-871d-215cd4f43e7a
+=======
+C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\BBB.cyprj|1e29922c-a1f1-4e88-ac20-aeb96eb26792
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4c51faa3-44d9-4d0c-80c7-0f94eea67713
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|97414bbe-035d-480f-9d19-e301a919e382
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|5ff3cf2c-ec1e-4ec4-8571-26f4a4db1ff7
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a7737e73-5ca3-4a26-851c-1b48decf6dd3
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4d20ff93-6f6c-4dab-a4c8-a7cb5d667ee3
+>>>>>>> FleetSimplificado
