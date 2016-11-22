@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 1
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 1
 
 
    1              		.syntax unified
@@ -62,11 +58,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
   29:.\Generated_Source\PSoC5/Surtidor_INT.c ****     ********************************************************************************
   30:.\Generated_Source\PSoC5/Surtidor_INT.c ****     *
   31:.\Generated_Source\PSoC5/Surtidor_INT.c ****     * Summary:
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 2
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 2
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/Surtidor_INT.c ****     *  Interrupt Service Routine for RX portion of the UART
@@ -126,11 +118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
   70:.\Generated_Source\PSoC5/Surtidor_INT.c ****         Surtidor_RXISR_EntryCallback();
   71:.\Generated_Source\PSoC5/Surtidor_INT.c ****     #endif /* Surtidor_RXISR_ENTRY_CALLBACK */
   72:.\Generated_Source\PSoC5/Surtidor_INT.c **** 
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 3
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 3
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 3
 
 
   73:.\Generated_Source\PSoC5/Surtidor_INT.c ****         /* User code required at start of ISR */
@@ -190,11 +178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  100:.\Generated_Source\PSoC5/Surtidor_INT.c ****                                                             Surtidor_RX_STS_STOP_ERROR | 
  101:.\Generated_Source\PSoC5/Surtidor_INT.c ****                                                             Surtidor_RX_STS_OVERRUN);
  102:.\Generated_Source\PSoC5/Surtidor_INT.c ****                 /* `#START Surtidor_RXISR_ERROR` */
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 4
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 4
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 4
 
 
  103:.\Generated_Source\PSoC5/Surtidor_INT.c **** 
@@ -254,11 +238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
   84 0050 7B79     		ldrb	r3, [r7, #5]
   85 0052 5354     		strb	r3, [r2, r1]
  142:.\Generated_Source\PSoC5/Surtidor_INT.c ****                 increment_pointer = 1u;
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 5
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 5
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 5
 
 
   86              		.loc 1 142 0
@@ -318,11 +298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  160:.\Generated_Source\PSoC5/Surtidor_INT.c **** 
  161:.\Generated_Source\PSoC5/Surtidor_INT.c ****                     /* Detect pre-overload condition and set flag */
  162:.\Generated_Source\PSoC5/Surtidor_INT.c ****                     if(Surtidor_rxBufferWrite == Surtidor_rxBufferRead)
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 6
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 6
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 6
 
 
  123              		.loc 1 162 0
@@ -382,11 +358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  150              		.cfi_def_cfa_offset 0
  151 00b4 7047     		bx	lr
  152              	.L8:
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 7
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 7
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 7
 
 
  153 00b6 00BF     		.align	2
@@ -446,11 +418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  207 004b 4E000000 		.4byte	.LASF5
  208 004f 02       		.uleb128 0x2
  209 0050 08       		.byte	0x8
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 8
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 8
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 8
 
 
  210 0051 05       		.byte	0x5
@@ -510,11 +478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  264 00be D8000000 		.4byte	.LFE0-.LFB0
  265 00c2 01       		.uleb128 0x1
  266 00c3 9C       		.byte	0x9c
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 9
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 9
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 9
 
 
  267 00c4 F3000000 		.4byte	0xf3
@@ -574,11 +538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  321 0134 A7000000 		.4byte	0xa7
  322 0138 09       		.uleb128 0x9
  323 0139 F2000000 		.4byte	.LASF23
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 10
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 10
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 10
 
 
  324 013d 03       		.byte	0x3
@@ -638,11 +598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  378 002b 00       		.byte	0
  379 002c 03       		.uleb128 0x3
  380 002d 0E       		.uleb128 0xe
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 11
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 11
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 11
 
 
  381 002e 3A       		.uleb128 0x3a
@@ -702,11 +658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  435 0065 34       		.uleb128 0x34
  436 0066 00       		.byte	0
  437 0067 03       		.uleb128 0x3
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 12
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 12
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 12
 
 
  438 0068 0E       		.uleb128 0xe
@@ -766,11 +718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  492 000e 0000     		.2byte	0
  493 0010 00000000 		.4byte	.LFB0
  494 0014 D8000000 		.4byte	.LFE0-.LFB0
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 13
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 13
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 13
 
 
  495 0018 00000000 		.4byte	0
@@ -830,11 +778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  521      65642069 
  522              	.LASF26:
  523 0077 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Surtidor_INT.c\000"
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 14
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 14
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 14
 
 
  523      6E657261 
@@ -894,11 +838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 1
  545              	.LASF20:
  546 0159 53757274 		.ascii	"Surtidor_rxBuffer\000"
  546      69646F72 
-<<<<<<< HEAD
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccgqU9OG.s 			page 15
-=======
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cclo9xPT.s 			page 15
->>>>>>> FleetSimplificado
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg2pYFJ.s 			page 15
 
 
  546      5F727842 

@@ -1,9 +1,5 @@
 -- Project:   BBB
-<<<<<<< HEAD
--- Generated: 10/11/2016 07:49:06
-=======
--- Generated: 11/08/2016 10:02:39
->>>>>>> FleetSimplificado
+-- Generated: 11/21/2016 10:54:23
 -- PSoC Creator  3.3 SP1
 
 ENTITY BBB IS
