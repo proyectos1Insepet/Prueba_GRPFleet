@@ -30,7 +30,7 @@ var config_port_mux   = {baudrate: 9600, parser: sp.parsers.readline("*")};
 var muxport           = new sp.SerialPort(port_mux,config_port_mux,abrir);
 
 var port_print        = '/dev/ttyO1';
-var config_port_print = {baudrate: 115200, parser: sp2.parsers.readline("*")};// 115200
+var config_port_print = {baudrate: 9600, parser: sp2.parsers.readline("*")};// 115200
 var printport           = new sp2.SerialPort(port_print,config_port_print, printer);
      
 var conString         = "postgrest://db_admin:12345@localhost:5432/grpfleet";
@@ -39,13 +39,13 @@ var conString         = "postgrest://db_admin:12345@localhost:5432/grpfleet";
 var man1;
 var man2;
 var man3;
+var man1b;
+var man2b;
+var man3b;
 var nombre_producto;
 var cambio_precio1;
-var cambio_precio2;
-var cambio_precio3;
-var nproducto1;
-var nproducto2;
-var nproducto3;
+
+
 
 /**************Variables para la venta*****************************/
 var nombreoperario;
@@ -77,6 +77,8 @@ var suma;
 var vol_vendido;
 var dinero_vendido;
 var operario;
+var almacenaVenta;
+var kmprint;
 
 /********************Arreglos**************************************/            
 var serial      = Buffer(16); /*global serial*/
@@ -94,18 +96,39 @@ var producto3       = new Buffer(12);
 
 /**************Variables para la autorizacion***********************/
 var cantidadAutorizada;
-var codigoRetorno;
 var idproducto;
 var cara;
-var numeroAutorizacion;
 var retorno;
 var tipoConvenio;
 var tipoRetorno;
 var trama;
 var valorConvenio;
 var fecha;
-var error_local;
-var imp;
+
+
+/**************Variables para configuración del equipo***********************/
+
+var cantidadMangueras;
+var Pmanguera1;
+var Pmanguera2;
+var Pmanguera3;
+var cantidadManguerasb;
+var Pmanguera1b;
+var Pmanguera2b;
+var Pmanguera3b;
+var VersionEquipo;
+var decDinero;
+var decVolumen;
+var ppux10;
+var Npantallas;
+var SolKm;
+var efectivo;
+var nproducto1;
+var nproducto2;
+var nproducto3;
+var nproducto1b;
+var nproducto2b;
+var nproducto3b;
 
 /*
 *********************************************************************************************************
@@ -119,8 +142,6 @@ var imp;
 function reinicio(error){
     
     cambio_precio1 = 0;
-    cambio_precio2 = 0;
-    cambio_precio3 = 0;
      if (error){
        console.log(error);
      }else{
@@ -144,35 +165,53 @@ function reinicio(error){
                     }
                 });
                 //Ingresar c?digo para  reinicio de mux, caso de los productos
-                client.query("SELECT man1, man2, man3 FROM mangueras; ",function(err,result){
+                client.query("SELECT p1 , p2 , p3 , p1b , p2b , p3b FROM configuracion; ",function(err,result){
                     done();
                     if(err){
                     return console.error('Error de conexion', err);
                     }else{
-                        
-                        if (result.rows[0].man1==undefined || result.rows[0].man1== null){
+                        console.log(result.rows[0]);
+                        if (result.rows[0].p1==undefined || result.rows[0].p1== null){
                             man1 = "SIN PRODUCTO";  //Carga identificadores de manguera    
                         }
-                        if (result.rows[0].man2==undefined || result.rows[0].man1== null){
+                        if (result.rows[0].p2==undefined || result.rows[0].p2== null){
                             man2 = "SIN PRODUCTO";  //Carga identificadores de manguera    
                         }
-                        if (result.rows[0].man3==undefined ||result.rows[0].man1== null){
+                        if (result.rows[0].p3==undefined ||result.rows[0].p3== null){
                             man3 = "SIN PRODUCTO";  //Carga identificadores de manguera    
                         }
-                        if (result.rows[0].man1!=undefined ){
-                            man1 = result.rows[0].man1;   
+                        if (result.rows[0].p1b==undefined || result.rows[0].p1b== null){
+                            man1 = "SIN PRODUCTO";  //Carga identificadores de manguera    
                         }
-                        if (result.rows[0].man2!=undefined ){
-                            man2 = result.rows[0].man2;   
+                        if (result.rows[0].p2b==undefined || result.rows[0].p2b== null){
+                            man2 = "SIN PRODUCTO";  //Carga identificadores de manguera    
                         }
-                        if (result.rows[0].man3!=undefined ){
-                            man3 = result.rows[0].man3; 
+                        if (result.rows[0].p3b==undefined ||result.rows[0].p3b== null){
+                            man3 = "SIN PRODUCTO";  //Carga identificadores de manguera    
+                        }
+                        if (result.rows[0].p1!=undefined ){
+                            man1 = result.rows[0].p1;   
+                        }
+                        if (result.rows[0].p2!=undefined ){
+                            man2 = result.rows[0].p2;   
+                        }
+                        if (result.rows[0].p3!=undefined ){
+                            man3 = result.rows[0].p3; 
+                        }
+                        if (result.rows[0].p1b!=undefined ){
+                            man1b = result.rows[0].p1b;   
+                        }
+                        if (result.rows[0].p2b!=undefined ){
+                            man2b = result.rows[0].p2b;   
+                        }
+                        if (result.rows[0].p3b!=undefined ){
+                            man3b = result.rows[0].p3b; 
                         }
                         
                         client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man1 ),function(err,result){
                             done();
                                 if(err){
-                                return console.error('Error de conexion', err);
+                                return console.error('Error de nombre p1', err);
                                 }else{
                                     console.log(result.rows[0].descripcion);
                                     nproducto1 = result.rows[0].descripcion;  //Carga nombre de producto primera manguera
@@ -182,7 +221,7 @@ function reinicio(error){
                         client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man2 ),function(err,result){
                             done();
                             if(err){
-                                return console.error('Error de conexion', err);
+                                return console.error('Error de nombre p2', err);
                             }else{
                                 console.log(result.rows[0].descripcion);
                                 nproducto2 = result.rows[0].descripcion;  //Carga nombre de producto segunda manguera
@@ -196,6 +235,36 @@ function reinicio(error){
                             }else{
                                 console.log(result.rows[0].descripcion);
                                 nproducto3 = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
+                            }
+                        });
+                        
+                        client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man1b ),function(err,result){
+                            done();
+                            if(err){
+                                return console.error('Error de conexion', err);
+                            }else{
+                                console.log(result.rows[0].descripcion);
+                                nproducto1b = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
+                            }
+                        });
+                        
+                        client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man2b ),function(err,result){
+                            done();
+                            if(err){
+                                return console.error('Error de conexion', err);
+                            }else{
+                                console.log(result.rows[0].descripcion);
+                                nproducto2b = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
+                            }
+                        });
+                        
+                        client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man3b ),function(err,result){
+                            done();
+                            if(err){
+                                return console.error('Error de conexion', err);
+                            }else{
+                                console.log(result.rows[0].descripcion);
+                                nproducto3b = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
                             }
                         });
                     }
@@ -282,13 +351,14 @@ function rx_data_mux(data){
                 cara = data[45];
                 console.log('Cara: '+cara);
                 consulta_dato();
+                almacenaVenta = 0;
             break; 
             
              case '1':                                                           //Caso Guardar Venta   
                 muxport.write('BBB');
                 muxport.write('E');
                 muxport.write(String(cara));
-                muxport.write('2');                         //Gracias por su compra
+                muxport.write('2');                                             //Gracias por su compra
                 muxport.write('*');
                 cara = data[4];                                                 //Cara
                 console.log('Cara: '+cara);
@@ -348,74 +418,39 @@ function rx_data_mux(data){
             break;
             
             
-            case '4':
-                man1 = data[4];
-                man2 = data[5];
-                man3 = data[6];
-                pg.connect(conString, function(err, client, done){
-                    if(err){
-                        return console.error('Error de conexion 1', err);
-                    }else{
-                        client.query(sprintf("UPDATE mangueras SET man1='%1$s', man2 = '%2$s', man3 = '%3$s'", man1,man2,man3 ),function(err,result){
-                            done();
-                            if(err){
-                                return console.error('Error de conexion', err);
-                            }else{
-                                console.log("Dato Insertado");
-                                client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man1 ),function(err,result){
-                                    done();
-                                    if(err){
-                                        return console.error('Error de conexion', err);
-                                    }else{
-                                        console.log(result.rows[0].descripcion);
-                                        nproducto1 = result.rows[0].descripcion;  //Carga nombre de producto primera manguera
-                                    }
-                                });
-                                
-                                client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man2 ),function(err,result){
-                                    done();
-                                    if(err){
-                                        return console.error('Error de conexion', err);
-                                    }else{
-                                        console.log(result.rows[0].descripcion);
-                                        nproducto2 = result.rows[0].descripcion;  //Carga nombre de producto segunda manguera
-                                    }
-                                });
-                                
-                                client.query(sprintf("SELECT descripcion FROM producto WHERE id_producto = '%1$s' ",man3 ),function(err,result){
-                                    done();
-                                    if(err){
-                                        return console.error('Error de conexion', err);
-                                    }else{
-                                        console.log(result.rows[0].descripcion);
-                                        nproducto3 = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
-                                    }
-                                });
-                                
-                            } 
-                        });
-                    }
-                });
-                
-                
-            break;
-            
             case '5':
                 for(i=19; i>=4; i--){                                       //Serial
                     serial[19-i] = data.charCodeAt(i); 
                 }
                 console.log('Serial: '+serial); 
-                printport.write("PARA INSERTAR EL VEHICULO\n");
-                printport.write("EN UNA CUENTA, DIGITE\n");
-                printport.write("EL SERIAL NUMERO:\n");
-                printport.write(serial+"\n");
-                printport.write("EN EL CAMPO INDICADO:\n\n\n\n\n\n\n");
-                var corte = new Buffer(3);
-				corte [0] =0x1D;
-				corte [1] =0x56;
-				corte [2] =0x31;
-				printport.write(corte);
+                pg.connect(conString, function(err, client, done){
+                    if(err){
+                        return console.error('Error de conexion 1', err);
+                    }else{
+                        client.query(sprintf("INSERT INTO identificadores (ibutton) VALUES ('%1$s');",serial ),function(err,result){
+                            done();
+                            if(err){
+                                return console.error('Error de conexion', err);
+                            }else{
+                                printport.write("PARA INSERTAR EL VEHICULO\n");
+                                printport.write("EN UNA CUENTA,\n");
+                                printport.write("INGRESE A LA WEB.\n");              
+                                printport.write("ID CREADO PARA SU USO:\n\n\n\n\n\n\n");    
+                                var corteprint = new Buffer(3);
+                				corteprint [0] =0x1D;
+                				corteprint [1] =0x56;
+                				corteprint [2] =0x31;
+                				printport.write(corteprint);
+                				console.log("Boton insertado");
+                            }
+                        });
+                    }
+                });
+            break;
             
+            case '6':
+                configuracion_inicial();
+                console.log("Configuraciones");
             break;
             
             case 'E':
@@ -438,6 +473,72 @@ function rx_data_mux(data){
         
     }
 }
+/*
+*********************************************************************************************************
+*                                function configuracion_inicial()
+*
+* Description : Configuración del dispensador según paámetros en la Web
+*               
+*********************************************************************************************************
+*/
+
+function configuracion_inicial(){
+     pg.connect(conString, function(err, client, done){
+        if(err){
+            return console.error('Error de conexion', err);
+        }else{
+            client.query("SELECT mangueras,p1,p2,p3,mangueras2,p1b,p2b,p3b,versions,ddinero,dvolumen,ppux10,pantallas,solkm,efectivo FROM configuracion;", function(err,result){        //consulto maximo id de venta
+                done();
+                if(err){
+                    return console.error('error de conexion', err);
+                }else{
+                    cantidadMangueras  = result.rows[0].mangueras;
+                    Pmanguera1         = result.rows[0].p1;
+                    Pmanguera2         = result.rows[0].p2;
+                    Pmanguera3         = result.rows[0].p3;
+                    cantidadManguerasb = result.rows[0].mangueras2;
+                    Pmanguera1b        = result.rows[0].p1b;
+                    Pmanguera2b        = result.rows[0].p2b;
+                    Pmanguera3b        = result.rows[0].p3b;
+                    VersionEquipo      = result.rows[0].versions;
+                    decDinero          = result.rows[0].ddinero;
+                    decVolumen         = result.rows[0].dvolumen;
+                    ppux10             = result.rows[0].ppux10;
+                    Npantallas         = result.rows[0].pantallas;
+                    SolKm              = result.rows[0].solkm;
+                    efectivo           = result.rows[0].efectivo;
+                    
+                    console.log("Datos surtidor");
+                    console.log(cantidadMangueras);
+                    console.log(VersionEquipo);
+                    console.log(ppux10);
+                    console.log(Npantallas);
+                    console.log("Fin surtidor");
+                    
+                    muxport.write('BBB');
+                    muxport.write('3');
+                    muxport.write(String(cantidadMangueras));
+                    muxport.write(String(Pmanguera1));
+                    muxport.write(String(Pmanguera2));
+                    muxport.write(String(Pmanguera3));
+                    muxport.write(String(cantidadManguerasb));
+                    muxport.write(String(Pmanguera1b));
+                    muxport.write(String(Pmanguera2b));
+                    muxport.write(String(Pmanguera3b));
+                    muxport.write(String(VersionEquipo));
+                    muxport.write(String(decDinero));
+                    muxport.write(String(decVolumen));
+                    muxport.write(String(ppux10));
+                    muxport.write(String(Npantallas));
+                    muxport.write(String(SolKm));
+                    muxport.write(String(efectivo));
+                    muxport.write('*'); 
+                }
+            });
+        }
+     });
+    
+}
 
 
 /*
@@ -457,9 +558,11 @@ function consulta_dato(){
 			console.log("Identificador Vehiculo:" + idestacion);
             var idvehiculo = parseInt(idestacion,10);
             console.log("Identificador modificado:" + idvehiculo);
+            if(isNaN(idvehiculo)){
+                idvehiculo = 0;
+            }
             console.log("Serial AUTO:" + serial);
 			if(idvehiculo == 0){
-				
 				client.query(sprintf("select v.estado_bloqueo,v.id_cliente, c.estado_cuenta, c.id_cliente from vehiculo v inner join cuenta c on v.id_cliente = c.id_cliente where serial = '%1$s'",serial), function(err,result){        //consulto maximo id de venta
                 done();
                 if(err){
@@ -493,8 +596,8 @@ function consulta_dato(){
 				
 			}
 			
-			if(idvehiculo != 0){
-				client.query(sprintf("select v.estado_bloqueo,v.id_cliente, c.estado_cuenta, c.id_cliente from vehiculo v inner join cuenta c on v.id_cliente = c.id_cliente where serial = '%1$s'",idestacion), function(err,result){        //consulto maximo id de venta
+			if(idvehiculo != 0 ){
+				client.query(sprintf("select v.estado_bloqueo,v.id_cliente, c.estado_cuenta, c.id_cliente from vehiculo v inner join cuenta c on v.id_cliente = c.id_cliente where idvehiculo = '%1$s'",idestacion), function(err,result){        //consulto maximo id de venta
                 done();
                 if(err){
                     return console.error('error de conexion', err);
@@ -545,136 +648,145 @@ function consulta_dato(){
 *********************************************************************************************************
 */
 function guardar_venta(){
-    var f = new Date();
-    fecha = f.getDate() + "-" + (f.getMonth() +1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes();
-    pg.connect(conString, function(err, client, done){
-        if(err){
-            return console.error('Error de conexion', err);
-        }else{
-            client.query("SELECT MAX(id) FROM venta;", function(err,result){        //consulto maximo id de venta
-                done();
-                if(err){
-                    return console.error('error de conexion', err);
-                }else{
-					var idvehiculo = parseInt(idestacion,10);
-					console.log("Identificador modificado:" + idvehiculo);
-					console.log("Serial AUTO:" + serial);
-                    if(result.rows[0].max ==null){
-                        var last_id = 0;
+    if(almacenaVenta == 0){
+        almacenaVenta = 1;
+        var f = new Date();
+        fecha = f.getDate() + "-" + (f.getMonth() +1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes();
+        pg.connect(conString, function(err, client, done){
+            if(err){
+                return console.error('Error de conexion', err);
+            }else{
+                client.query("SELECT MAX(id) FROM venta;", function(err,result){        //consulto maximo id de venta
+                    done();
+                    if(err){
+                        return console.error('error de conexion', err);
                     }else{
-                        last_id = result.rows[0].max;    
+    					var idvehiculo = parseInt(idestacion,10);
+    					console.log("Identificador modificado:" + idvehiculo);
+    					console.log("Serial AUTO:" + serial);
+    					
+                        if(result.rows[0].max ==null){
+                            var last_id = 0;
+                        }else{
+                            last_id = result.rows[0].max;    
+                        }
+                        if(isNaN(idvehiculo)){
+                            idvehiculo = 0;
+                        }
+                        console.log('Ultima venta:'+result.rows[0].max);
+                        if(idvehiculo == 0){
+    						client.query(sprintf("SELECT id_cliente, placa,idvehiculo from vehiculo WHERE serial = '%1$s'", serial), function(err, result) {
+    							done();
+    							if(err){
+    								 return console.error('error de conexion', err);
+    							}else{
+    								var id_cliente = result.rows[0].id_cliente;
+    								placa = result.rows[0].placa;
+    								var numvehiculo = result.rows[0].idvehiculo;
+    								console.log('MAX:'+last_id);
+    								client.query(sprintf("SELECT tipo_transaccion from cuenta WHERE id_cliente = '%1$s'",id_cliente), function(err, result) {
+    									done();
+    									if(err){
+    										return console.error('Error de conexion', err);
+    									}else{
+    										var transaccion = result.rows[0].tipo_transaccion;
+    										client.query(sprintf("INSERT INTO venta (id_cliente,tipo_transaccion,dinero,volumen) VALUES('%1$s','%2$s','%3$s','%4$s')",id_cliente, transaccion,(dinero_vendido/100).toFixed(2),vol_vendido ),function(err,result){
+    											done();
+    											if(err){
+    												return console.error('Error de conexion', err);
+    											}else{
+    												console.log('Venta guardada');
+    												client.query("SELECT MAX(pk_id_corte) FROM corte;", function(err,result){        //consulto maximo id de venta
+    													done();
+    														if(err){
+    															return console.error('error de conexion', err);
+    														}else{
+    															if(result.rows[0].max ==null){
+    																var last_corte = 0;
+    															}else{
+    																last_corte = result.rows[0].max;    
+    															}	
+    															console.log("Ultimo corte: " + last_corte);
+    															client.query(sprintf("INSERT INTO venta_detalle VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s','%7$s','%8$s','%9$s','%10$s','%11$s')", (last_id+1),placa,km, idproducto,(precio/100).toFixed(2),cara,idproducto,last_corte,(dinero_vendido/100).toFixed(2),vol_vendido,numvehiculo),function(err,result){
+    																done();
+    																if(err){
+    																	return console.error('Error de conexion', err);
+    																}else{
+    																	console.log('Venta guardada');
+    																	imprimir_venta();
+    																}
+    															});	
+    														}
+    												});											
+    											}
+    										});
+    									}		
+    								 });                                                                                                                                        
+    							} 
+    						});
+    					
+    					}
+    					
+    					if(idvehiculo != 0){
+    						client.query(sprintf("SELECT id_cliente, placa from vehiculo WHERE idvehiculo = '%1$s'", idvehiculo), function(err, result) {
+    							done();
+    							if(err){
+    								 return console.error('error de conexion', err);
+    							}else{
+    								var id_cliente = result.rows[0].id_cliente;
+    								placa = result.rows[0].placa;
+    								console.log('MAX:'+last_id);
+    								client.query(sprintf("SELECT tipo_transaccion from cuenta WHERE id_cliente = '%1$s'",id_cliente), function(err, result) {
+    									done();
+    									if(err){
+    										return console.error('Error de conexion', err);
+    									}else{
+    										var transaccion = result.rows[0].tipo_transaccion;
+    										client.query(sprintf("INSERT INTO venta (id_cliente,tipo_transaccion,dinero,volumen) VALUES('%1$s','%2$s','%3$s','%4$s')", id_cliente,transaccion,(dinero_vendido/100).toFixed(2),vol_vendido ),function(err,result){
+    											done();
+    											if(err){
+    												return console.error('Error de conexion', err);
+    											}else{
+    												console.log('Venta guardada');
+    												client.query("SELECT MAX(pk_id_corte) FROM corte;", function(err,result){        //consulto maximo id de venta
+    													done();
+    														if(err){
+    															return console.error('error de conexion', err);
+    														}else{
+    															if(result.rows[0].max ==null){
+    																var last_corte = 0;
+    															}else{
+    																last_corte = result.rows[0].max;    
+    															}	
+    															console.log("Ultimo corte: " + last_corte);
+    															var precioaj =
+    															client.query(sprintf("INSERT INTO venta_detalle VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s','%7$s','%8$s','%9$s','%10$s')", (last_id+1),placa,km, idproducto,(precio/100).toFixed(2),cara,idproducto,last_corte,(dinero_vendido/100).toFixed(2),vol_vendido),function(err,result){
+    																done();
+    																if(err){
+    																	return console.error('Error de conexion', err);
+    																}else{
+    																	console.log('Venta guardada');
+    																	imprimir_venta();
+    																}
+    															});	
+    														}
+    												});											
+    											}
+    										});
+    									}		
+    								 });                                                                                                                                        
+    							} 
+    						});
+    					
+    					}													
+    					
                     }
-                    console.log('Ultima venta:'+result.rows[0].max);
-                    if(idvehiculo == 0){
-						client.query(sprintf("SELECT id_cliente, placa from vehiculo WHERE serial = '%1$s'", serial), function(err, result) {
-							done();
-							if(err){
-								 return console.error('error de conexion', err);
-							}else{
-								var id_cliente = result.rows[0].id_cliente;
-								placa = result.rows[0].placa;
-								console.log('MAX:'+last_id);
-								client.query(sprintf("SELECT tipo_transaccion from cuenta WHERE id_cliente = '%1$s'",id_cliente), function(err, result) {
-									done();
-									if(err){
-										return console.error('Error de conexion', err);
-									}else{
-										var transaccion = result.rows[0].tipo_transaccion;
-										client.query(sprintf("INSERT INTO venta VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s')", (last_id+1),id_cliente,fecha, transaccion,(dinero_vendido/100).toFixed(2),vol_vendido ),function(err,result){
-											done();
-											if(err){
-												return console.error('Error de conexion', err);
-											}else{
-												console.log('Venta guardada');
-												client.query("SELECT MAX(pk_id_corte) FROM corte;", function(err,result){        //consulto maximo id de venta
-													done();
-														if(err){
-															return console.error('error de conexion', err);
-														}else{
-															if(result.rows[0].max ==null){
-																var last_corte = 0;
-															}else{
-																last_corte = result.rows[0].max;    
-															}	
-															console.log("Ultimo corte: " + last_corte);
-															client.query(sprintf("INSERT INTO venta_detalle VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s','%7$s','%8$s','%9$s','%10$s')", (last_id+1),placa,km, idproducto,(precio/100).toFixed(2),cara,idproducto,last_corte,(dinero_vendido/100).toFixed(2),vol_vendido),function(err,result){
-																done();
-																if(err){
-																	return console.error('Error de conexion', err);
-																}else{
-																	console.log('Venta guardada');
-																	imprimir_venta();
-																}
-															});	
-														}
-												});											
-											}
-										});
-									}		
-								 });                                                                                                                                        
-							} 
-						});
-					
-					}
-					
-					if(idvehiculo != 0){
-						client.query(sprintf("SELECT id_cliente, placa from vehiculo WHERE serial = '%1$s'", idvehiculo), function(err, result) {
-							done();
-							if(err){
-								 return console.error('error de conexion', err);
-							}else{
-								var id_cliente = result.rows[0].id_cliente;
-								placa = result.rows[0].placa;
-								console.log('MAX:'+last_id);
-								client.query(sprintf("SELECT tipo_transaccion from cuenta WHERE id_cliente = '%1$s'",id_cliente), function(err, result) {
-									done();
-									if(err){
-										return console.error('Error de conexion', err);
-									}else{
-										var transaccion = result.rows[0].tipo_transaccion;
-										client.query(sprintf("INSERT INTO venta VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s')", (last_id+1),id_cliente,fecha, transaccion,(dinero_vendido/100).toFixed(2),vol_vendido ),function(err,result){
-											done();
-											if(err){
-												return console.error('Error de conexion', err);
-											}else{
-												console.log('Venta guardada');
-												client.query("SELECT MAX(pk_id_corte) FROM corte;", function(err,result){        //consulto maximo id de venta
-													done();
-														if(err){
-															return console.error('error de conexion', err);
-														}else{
-															if(result.rows[0].max ==null){
-																var last_corte = 0;
-															}else{
-																last_corte = result.rows[0].max;    
-															}	
-															console.log("Ultimo corte: " + last_corte);
-															var precioaj =
-															client.query(sprintf("INSERT INTO venta_detalle VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s','%7$s','%8$s','%9$s','%10$s')", (last_id+1),placa,km, idproducto,(precio/100).toFixed(2),cara,idproducto,last_corte,(dinero_vendido/100).toFixed(2),vol_vendido),function(err,result){
-																done();
-																if(err){
-																	return console.error('Error de conexion', err);
-																}else{
-																	console.log('Venta guardada');
-																	imprimir_venta();
-																}
-															});	
-														}
-												});											
-											}
-										});
-									}		
-								 });                                                                                                                                        
-							} 
-						});
-					
-					}													
-					
-                }
-            });                                     
-             
-        }
-    });    
+                });                                     
+                 
+            }
+        });    
+    }else{
+    }
 }
 
 /*
@@ -702,7 +814,9 @@ function imprimir_venta(){
                     nombre_producto = result.rows[0].descripcion;
                     console.log(">>"+nombre_producto);
                     var ncuenta;
-					
+					if(isNaN(idvehiculo)){
+                        idvehiculo = 0;
+                    }
 					if(idvehiculo == 0){
 						client.query(sprintf("SELECT c.nombre FROM cuenta c INNER JOIN vehiculo v ON v.id_cliente = c.id_cliente WHERE v.serial = '%1$s';",serial), function(err,result){ 
                         done();
@@ -712,56 +826,66 @@ function imprimir_venta(){
                             ncuenta = result.rows[0].nombre;
                             console.log("Cuenta"+ncuenta);
                         }                                                                                                                            
-						
-						console.log("IMPRIMIENDO");
-						/*var logo = new Buffer(5);
-						logo [0]  = 0x1c;
-						logo [1]  = 0x70;
-						logo [2]  = 0x01;
-						logo [3]  = 0x00;
-						logo [4]  = 0x10;
-						printport.write(logo);
-						printport.write('\n');
-						printport.write('\n');
-						printport.write('\n'); */
-						printport.write('   '+linea1 +'\n');
-						printport.write('      '+linea2 +'\n');
-						printport.write('       '+id_tax+'\n');
-						printport.write('   Tel: '+tel+'\n');
-						printport.write('     '+dir+ '\n\n');
-						var f = new Date();
-						printport.write('Fecha:' + String(f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes()) + '\n\n');                                                      
-						printport.write('Cuenta:\n');
-						printport.write(ncuenta+'\n');
-						printport.write('Serial:\n');
-						printport.write(serial + '\n');
-						printport.write('Placa: ' + placa +'\n');
-						printport.write('Km   : ' + parseInt(km,10) +'\n');
-						printport.write('Posicion: ' + cara + '\n');
-						printport.write('Producto: ' +nombre_producto+ '\n');
-						var precio1 = parseFloat(precio/100);
-						printport.write('PPU     : $ ' + String(precio1) + '\n');
-						volumen[3]=46;
-						var volumen1 = parseFloat(volumen);
-						printport.write('Volumen : ' + volumen1 +' Lts.'+ '\n');
-						var dinero1 = parseFloat(dinero/100);
-						printport.write('Dinero  : $ ' + String(dinero1) + '\n\n\n');
-						printport.write('Firma :'+ '\n\n');
-						printport.write('       --------------------'+ '\n\n');
-						printport.write('Cedula:' + '\n');
-						printport.write('       --------------------'+ '\n\n');
-						printport.write(footer+ '\n');
-						printport.write('\n\n\n\n\n\n');  
-						var corte = new Buffer(3);
-						corte [0] =0x1D;
-						corte [1] =0x56;
-						corte [2] =0x31;
-						printport.write(corte);            
+						client.query("SELECT solkm FROM configuracion;", function(err,result){
+						    done();
+                            if(err){
+                                return console.error('Error toma pantalla km', err);
+                            }else{
+                                kmprint = result.rows[0].solkm;
+                                console.log("Sol. KM"+kmprint);
+        						console.log("IMPRIMIENDO");
+        						/*var logo = new Buffer(5);
+        						logo [0]  = 0x1c;
+        						logo [1]  = 0x70;
+        						logo [2]  = 0x01;
+        						logo [3]  = 0x00;
+        						logo [4]  = 0x10;
+        						printport.write(logo);
+        						printport.write('\n');
+        						printport.write('\n');
+        						printport.write('\n'); */
+        						printport.write('   '+linea1 +'\n');
+        						printport.write('      '+linea2 +'\n');
+        						printport.write('       '+id_tax+'\n');
+        						printport.write('   Tel: '+tel+'\n');
+        						printport.write('     '+dir+ '\n\n');
+        						var f = new Date();
+        						printport.write('Fecha:' + String(f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes()) + '\n\n');                                                      
+        						printport.write('Cuenta: ');
+        						printport.write(ncuenta+'\n');
+        						printport.write('Serial: ');
+        						printport.write(serial + '\n');
+        						printport.write('Placa: ' + placa +'\n');
+        						if(kmprint == '1'){
+        						    printport.write('Km   : ' + parseInt(km,10) +'\n');
+        						}
+        						printport.write('Posicion: ' + cara + '\n');
+        						printport.write('Producto: ' +nombre_producto+ '\n');
+        						var precio1 = parseFloat(precio);
+        						printport.write('PPU     : $ ' + String(precio1) + '\n');
+        						volumen[3]=46;
+        						var volumen1 = parseFloat(volumen);
+        						printport.write('Volumen : ' + volumen1 +' Lts.'+ '\n');
+        						var dinero1 = parseFloat(dinero);
+        						printport.write('Dinero  : $ ' + String(dinero1) + '\n\n\n');
+        						printport.write('Firma :'+ '\n\n');
+        						printport.write('       --------------------'+ '\n\n');
+        						printport.write('Cedula:' + '\n');
+        						printport.write('       --------------------'+ '\n\n');
+        						printport.write(footer+ '\n');
+        						printport.write('\n\n\n\n\n\n');  
+        						var corte = new Buffer(3);
+        						corte [0] =0x1D;
+        						corte [1] =0x56;
+        						corte [2] =0x31;
+        						printport.write(corte);  
+                                }
+						});
                     });
 					}
 					
 					if(idvehiculo != 0){
-						client.query(sprintf("SELECT c.nombre FROM cuenta c INNER JOIN vehiculo v ON v.id_cliente = c.id_cliente WHERE v.serial = '%1$s';",idvehiculo), function(err,result){ 
+						client.query(sprintf("SELECT c.nombre FROM cuenta c INNER JOIN vehiculo v ON v.id_cliente = c.id_cliente WHERE v.idvehiculo = '%1$s';",idvehiculo), function(err,result){ 
                         done();
                         if(err){
                             return console.error('Error cuenta', err);
@@ -769,7 +893,13 @@ function imprimir_venta(){
                             ncuenta = result.rows[0].nombre;
                             console.log("Cuenta"+ncuenta);
                         }                                                                                                                            
-						
+						client.query("SELECT solkm FROM configuracion;", function(err,result){
+						    done();
+                            if(err){
+                                return console.error('Error toma pantalla km', err);
+                            }else{
+                                kmprint = result.rows[0].solkm;
+                                console.log("Sol. KM"+kmprint);
 						console.log("IMPRIMIENDO");
 						/*var logo = new Buffer(5);
 						logo [0]  = 0x1c;
@@ -799,7 +929,9 @@ function imprimir_venta(){
         						printport.write('Cuenta: ' + ncuenta +'\n');
         						printport.write('ID vehiculo:'+idvehiculo + '\n');
         						printport.write('Placa: ' + placa +'\n');
-        						printport.write('Km   : ' + parseInt(km,10) +'\n');
+        						if(kmprint == '1'){
+						            printport.write('Km   : ' + parseInt(km,10) +'\n');
+						        }
         						printport.write('Posicion: ' + cara + '\n');
         						printport.write('Producto: ' +nombre_producto+ '\n');
         						var precio1 = parseFloat(precio/100);
@@ -818,7 +950,9 @@ function imprimir_venta(){
         						corte [1] =0x56;
         						corte [2] =0x31;
         						printport.write(corte);        
-						    }  
+						    }
+						});
+                            }
 						});
                     });
 					}
@@ -848,7 +982,7 @@ function autorizaMux(){
     console.log("Id Producto: "+idproducto);
     console.log("Precio: ");                                   //Precio
     console.log(">>Cambio:"+ cambio_precio1);
-    if(cambio_precio1 == 1 && serial != '1111111111111111'){
+    if(cambio_precio1 == 0 && serial != '1111111111111111'){
         precio_cambio();
         for(var i=0; i<=4; i++){
             muxport.write(revprecio[i]);
@@ -890,6 +1024,9 @@ function restricciones(){
 		    return console.error('error de conexion 1', err);                                
         }else{
 			var idvehiculo = parseInt(idestacion,10);
+			if(isNaN(idvehiculo)){
+			    idvehiculo = 0;
+			}
             console.log("Identificador modificado:" + idvehiculo);
             console.log("Serial AUTO:" + serial);
 			
@@ -933,7 +1070,7 @@ function restricciones(){
                 if(err){
                     return console.error('error de conexion 2', err);                            
                 }else{
-                    nombreoperario = result.rows[0];
+                    nombreoperario = result.rows[0].nombre;
 					if(nombreoperario==null || nombreoperario==undefined){
                             printport.write("Usuario no autorizado\n");
                             printport.write("Actualice operarios\n\n");
@@ -947,9 +1084,7 @@ function restricciones(){
 						    muxport.write('*');
 						    printport.write("Usuario no permitido\n\n");
                     }else{
-                    
-                    
-        				client.query(sprintf("SELECT r.id_producto FROM restricciones r INNER JOIN vehiculo v ON v.id_vehiculo = r.id_vehiculo WHERE serial= '%1$s'",idestacion), function(err,result){
+        				client.query(sprintf("SELECT r.id_producto FROM restricciones r INNER JOIN vehiculo v ON v.id_vehiculo = r.id_vehiculo WHERE idvehiculo= '%1$s'",idvehiculo), function(err,result){
                         done();
                         if(err){
                             return console.error('error de conexion 2', err);                            
@@ -1021,7 +1156,9 @@ function precio_cambio(){
 			var idvehiculo = parseInt(idestacion,10);
             console.log("Identificador modificado:" + idvehiculo);
             console.log("Serial AUTO:" + serial);
-			
+			if(isNaN(idvehiculo)){
+			    idvehiculo = 0;
+			}
 			if(idvehiculo == 0){
 				client.query(sprintf("SELECT r.ppu FROM restricciones r INNER JOIN vehiculo v on v.id_vehiculo = r.id_vehiculo WHERE v.serial ='%1$s'",serial), function(err,result){
                 done();
@@ -1037,7 +1174,7 @@ function precio_cambio(){
 			}
 			
 			if(idvehiculo != 0){
-				client.query(sprintf("SELECT r.ppu FROM restricciones r INNER JOIN vehiculo v on v.id_vehiculo = r.id_vehiculo WHERE v.serial ='%1$s'",idvehiculo), function(err,result){
+				client.query(sprintf("SELECT r.ppu FROM restricciones r INNER JOIN vehiculo v on v.id_vehiculo = r.id_vehiculo WHERE v.idvehiculo ='%1$s'",idvehiculo), function(err,result){
                 done();
                 if(err){
                     return console.error('error de conexion 2', err);                            
