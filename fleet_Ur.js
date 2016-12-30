@@ -139,8 +139,7 @@ var nproducto3b;
 *********************************************************************************************************
 */
     
-function reinicio(error){
-    
+function reinicio(error){    
     cambio_precio1 = 0;
      if (error){
        console.log(error);
@@ -164,7 +163,7 @@ function reinicio(error){
                         footer  = result.rows[0].footer;
                     }
                 });
-                //Ingresar c?digo para  reinicio de mux, caso de los productos
+                //Ingresar codigo para  reinicio de mux, caso de los productos
                 client.query("SELECT p1 , p2 , p3 , p1b , p2b , p3b FROM configuracion; ",function(err,result){
                     done();
                     if(err){
@@ -477,7 +476,7 @@ function rx_data_mux(data){
 *********************************************************************************************************
 *                                function configuracion_inicial()
 *
-* Description : Configuración del dispensador según paámetros en la Web
+* Description : Configuración del dispensador según parámetros en la Web
 *               
 *********************************************************************************************************
 */
@@ -643,7 +642,7 @@ function consulta_dato(){
 *********************************************************************************************************
 *                                function guardar_venta()
 *
-* Description : LLama el servicio Web para pedir la autorizacion de una venta
+* Description : Almacenamiento de ventas en la base de datos
 *               
 *********************************************************************************************************
 */
@@ -793,7 +792,7 @@ function guardar_venta(){
 *********************************************************************************************************
 *                                function imprimir_venta()
 *
-* Description : LLama el servicio Web para pedir la autorizacion de una venta
+* Description : Impresion de venta
 *               
 *********************************************************************************************************
 */
@@ -1014,7 +1013,7 @@ function autorizaMux(){
 *********************************************************************************************************
 *                                function restricciones()
 *
-* Description : Revisa los estados del Beagle para realizar reintentos o peticiones al MUX
+* Description : Revisa  las restricciones del vehiculo
 *               
 *********************************************************************************************************
 */
@@ -1143,7 +1142,7 @@ function restricciones(){
 *********************************************************************************************************
 *                                function precio()
 *
-* Description : Revisa los estados del Beagle para realizar reintentos o peticiones al MUX
+* Description : Formatea el precio para enviarlo al surtidor
 *               
 *********************************************************************************************************
 */
@@ -1197,7 +1196,7 @@ function precio_cambio(){
 *********************************************************************************************************
 *                                function corte()
 *
-* Description : Revisa los estados del Beagle para realizar reintentos o peticiones al MUX
+* Description : Realiza corte de ventas
 *               
 *********************************************************************************************************
 */
