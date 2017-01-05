@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BBB\BBB\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BBB\BBB\Source Files\Protocolo.c">
 <ExpandedNodeIds>
 <v>BBB</v>
 <v>BBB\BBB</v>
@@ -187,37 +187,7 @@
 <v>BBB\BBB\Generated_Source\PSoC5\cymetadata.c</v>
 <v>BBB\BBB\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>BBB</v>
-<v>BBB\BBB</v>
-<v>BBB\BBB\TopDesign</v>
-<v>BBB\BBB\BBB.cydwr</v>
-<v>BBB\BBB\Documentacion</v>
-<v>BBB\BBB\Documentacion\Abstac.txt</v>
-<v>BBB\BBB\Header Files</v>
-<v>BBB\BBB\Header Files\Corriente.h</v>
-<v>BBB\BBB\Header Files\device.h</v>
-<v>BBB\BBB\Header Files\Diesel.h</v>
-<v>BBB\BBB\Header Files\Extra.h</v>
-<v>BBB\BBB\Header Files\I2C.h</v>
-<v>BBB\BBB\Header Files\ibutton.h</v>
-<v>BBB\BBB\Header Files\LCD.h</v>
-<v>BBB\BBB\Header Files\Logos.h</v>
-<v>BBB\BBB\Header Files\Print.h</v>
-<v>BBB\BBB\Header Files\Protocolo.h</v>
-<v>BBB\BBB\Header Files\VariablesG.h</v>
-<v>BBB\BBB\Source Files</v>
-<v>BBB\BBB\Source Files\I2C.c</v>
-<v>BBB\BBB\Source Files\ibuton.c</v>
-<v>BBB\BBB\Source Files\LCD.c</v>
-<v>BBB\BBB\Source Files\main.c</v>
-<v>BBB\BBB\Source Files\Print.c</v>
-<v>BBB\BBB\Source Files\Protocolo.c</v>
-<v>BBB\BBB\Generated_Source</v>
-<v>BBB\BBB\Generated_Source\PSoC5</v>
-<v>BBB\BBB\Generated_Source\PSoC5\Clock_1</v>
-<v>BBB\BBB\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -226,12 +196,7 @@
 <v>BBB\BBB\TopDesign</v>
 <v>BBB\BBB\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>BBB</v>
-<v>BBB\BBB</v>
-<v>BBB\BBB\TopDesign</v>
-<v>BBB\BBB\TopDesign\TopDesign.cysch</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -309,10 +274,7 @@
 <v>BBB\BBB\BBB.rpt</v>
 <v>BBB\BBB\BBB_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>BBB</v>
-<v>BBB\BBB</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -342,28 +304,7 @@
 <v>BBB\BBB\ZeroTerminal</v>
 <v>BBB\BBB\ZeroTerminal\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>BBB</v>
-<v>BBB\BBB</v>
-<v>BBB\BBB\PSoC 5 Architecture TRM</v>
-<v>BBB\BBB\CY8C58LP Family Datasheet</v>
-<v>BBB\BBB\System Reference Guides</v>
-<v>BBB\BBB\System Reference Guides\cy_boot_v5_10</v>
-<v>BBB\BBB\cy_clock_v2_20</v>
-<v>BBB\BBB\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>BBB\BBB\cy_isr_v1_70</v>
-<v>BBB\BBB\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>BBB\BBB\cy_pins_v2_10</v>
-<v>BBB\BBB\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>BBB\BBB\EEPROM_v3_0.pdf</v>
-<v>BBB\BBB\I2C_v3_50.pdf</v>
-<v>BBB\BBB\Timer_v2_70</v>
-<v>BBB\BBB\Timer_v2_70\Timer_v2_70.pdf</v>
-<v>BBB\BBB\UART_v2_50</v>
-<v>BBB\BBB\UART_v2_50\UART_v2_50.pdf</v>
-<v>BBB\BBB\ZeroTerminal</v>
-<v>BBB\BBB\ZeroTerminal\ZeroTerminal.pdf</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
@@ -374,6 +315,9 @@
 <OpenDocs>
 <name v=".\BBB.cydsn\main.c" />
 <name v=".\BBB.cydsn\BBB.cydwr" />
+<name v=".\BBB.cydsn\VariablesG.h" />
+<name v=".\BBB.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\BBB.cydsn\Protocolo.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

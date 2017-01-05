@@ -100,6 +100,8 @@ struct surtidor{
 };
 struct surtidor lado1;
 struct surtidor lado2;
+struct surtidor lado3;
+struct surtidor lado4;
 /****************************************************************************************************************
 								Variables para manejo de recibo
 ****************************************************************************************************************/

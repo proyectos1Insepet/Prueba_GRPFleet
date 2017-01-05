@@ -68,7 +68,7 @@ uint8  ppuinicial=0;
 uint8  Producto;
 uint8  Productos[4];// el buffer es para guardar los tipos de combustible
 uint8  producto1=1,producto2=1,producto3=1,producto4=1;
-uint8 status1LP,status2LP,status1st,status2st; 
+uint8  status1LP,status2LP,status1st,status2st; 
 
 
 /*
@@ -126,14 +126,16 @@ void init(void){
 	lado2.grado[2][0]=EEPROM_ReadByte(22);	
 	
 	ppux10=EEPROM_ReadByte(23);								//PPU X10
+    
+    lado1.dir=EEPROM_ReadByte(26);							//Lado A
+	lado2.dir=EEPROM_ReadByte(28);							//Lado B
+    lado3.dir=EEPROM_ReadByte(27);							//Lado C
+    lado4.dir=EEPROM_ReadByte(29);							//Lado D
 
 	version[1]=EEPROM_ReadByte(30);							//Version de digitos y decimales
 	version[2]=EEPROM_ReadByte(31);
 	version[3]=EEPROM_ReadByte(32);
-		 
-	lado1.dir=EEPROM_ReadByte(26);							//Lado A
-	lado2.dir=EEPROM_ReadByte(28);							//Lado B
-
+		 	
     pantallas =EEPROM_ReadByte(33);
     kmscreen  =EEPROM_ReadByte(34);
     efectivo  =EEPROM_ReadByte(35);
@@ -203,7 +205,7 @@ uint8 verificar_check(uint8 *datos, uint16 size){
 ************************************************************************************************************
 */
 void error_op(uint8 lcd, uint16 imagen){
-	if(lcd==1){
+	if(lcd== 1 || lcd == 3){
 	   set_imagen(1,imagen);
 	   flujo_LCD1=100;
 	   count_protector=1;
@@ -211,7 +213,7 @@ void error_op(uint8 lcd, uint16 imagen){
 	   isr_3_StartEx(animacion);  
 	   Timer_Animacion_Start();
 	}
-	else{
+	if(lcd== 2 || lcd == 4){
 	    set_imagen(2,imagen);
 	    flujo_LCD2=100;
 		count_protector2=1;
@@ -699,7 +701,7 @@ void polling_rf(void){
                         ppux10        = PC_rxBuffer[15]-48; //ppux10  
                         pantallas     = PC_rxBuffer[16]-48; //pantallas por pos  
                         kmscreen      = PC_rxBuffer[17]-48; //solicita pantalla de kilometraje   
-                        efectivo      = PC_rxBuffer[18]-48; //solicita pantalla de kilometraje   
+                        efectivo      = PC_rxBuffer[18]-48; //solicita pantalla de efectivo   
                         
                         EEPROM_WriteByte(lado1.mangueras,15);  //Almacena configuraciones en MUX
                         EEPROM_WriteByte(lado1.grado[0][0],16);
@@ -1501,7 +1503,7 @@ void polling_LCD1(void){
     			for(x=0;x<=6;x++){
     				rf_mod[38+x]=rventa2.km[x+1] + 48;
     			}
- rf_mod[45]=0x32;    
+            rf_mod[45]=0x32;    
             }			
 			rf_mod[46]='*';
 			PC_ClearRxBuffer();				
@@ -1522,14 +1524,14 @@ void polling_LCD1(void){
                     CyDelay(500);
                     set_imagen(1,46);
                 }else{
-                    set_imagen(1,21);
                     set_imagen(1,44);
                     CyDelay(500);
+                    set_imagen(1,21);
+                                        
                 }
             }
         break;
-            
-        
+                    
             
         case 11:    
             if(seleccion_pos == 1){
