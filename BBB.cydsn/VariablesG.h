@@ -88,7 +88,7 @@ volatile uint8	trama_totales[200];
 volatile uint8 	ppux10;
 volatile uint8 	nombre_pro1[17],nombre_pro2[17],nombre_pro3[17];	//Nombre de cada producto
 volatile uint8 	version[4];											//1 version - 2 Decimal Dinero - 3 Decimal Volumen
-volatile uint8  kmscreen, pantallas, efectivo;
+volatile uint8  kmscreen, pantallas, efectivo,flota;
 
 struct surtidor{
     volatile uint8 dir;

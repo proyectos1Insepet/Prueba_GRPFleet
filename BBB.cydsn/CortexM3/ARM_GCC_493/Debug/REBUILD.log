@@ -1,4 +1,4 @@
---------------- Rebuild Started: 11/08/2016 10:02:30 Project: BBB, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Rebuild Started: 01/06/2017 11:17:34 Project: BBB, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\main.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\Protocolo.o"
 Deleting file ".\CortexM3\ARM_GCC_493\Debug\Print.o"
@@ -155,6 +155,6 @@ arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\BBB.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\BBB.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\Protocolo.o .\CortexM3\ARM_GCC_493\Debug\Print.o .\CortexM3\ARM_GCC_493\Debug\LCD.o .\CortexM3\ARM_GCC_493\Debug\ibuton.o .\CortexM3\ARM_GCC_493\Debug\I2C.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\BBB.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -O0 -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/BBB.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
 cyelftool.exe -C C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\CortexM3\ARM_GCC_493\Debug\BBB.elf --flash_row_size 256 --flash_size 262144
 cyelftool.exe -S C:\Users\Recepcion\Documents\Prueba_GRPFleet\BBB.cydsn\CortexM3\ARM_GCC_493\Debug\BBB.elf
-Flash used: 53760 of 262144 bytes (20.5 %).
+Flash used: 54272 of 262144 bytes (20.7 %).
 SRAM used: 24397 of 65536 bytes (37.2 %). Stack: 16384 bytes. Heap: 4096 bytes.
---------------- Rebuild Succeeded: 11/08/2016 10:03:06 ---------------
+--------------- Rebuild Succeeded: 01/06/2017 11:18:19 ---------------

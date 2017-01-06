@@ -137,7 +137,7 @@ void init(void){
     pantallas =EEPROM_ReadByte(33);
     kmscreen  =EEPROM_ReadByte(34);
     efectivo  =EEPROM_ReadByte(35);
-    
+    flota     =EEPROM_ReadByte(36);
     lado1.estado=libre;
     lado2.estado=libre;
     estado_tanqueando=0;
@@ -398,60 +398,62 @@ void polling_rf(void){
 				switch(PC_rxBuffer[3]){
 					case cautorizar:
                     if(PC_rxBuffer[4]=='1'){
-                    PC_rxBuffer[3] = 0;
+						PC_rxBuffer[3] = 0;
 						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor		
 							error_op((PC_rxBuffer[4] & 0x0F),28);
 							break;
 						}
-						if(PC_rxBuffer[10]=='F'){		//Cambia precio
-                            precio[0]=lado1.ppu[rventa1.manguera-1][0]&0x0f;	
-    						precio[1]=lado1.ppu[rventa1.manguera-1][1]&0x0f;
-    						precio[2]=lado1.ppu[rventa1.manguera-1][2]&0x0f;
-    						precio[3]=lado1.ppu[rventa1.manguera-1][3]&0x0f;
-    						precio[4]=lado1.ppu[rventa1.manguera-1][4]&0x0f;
-                        	if(cambiar_precio((lado1.dir & 0x0F),precio,rventa1.manguera)==0){
-								rf_mod[0]='M';
-								rf_mod[1]='U';
-								rf_mod[2]='X';
-								rf_mod[3]=creset;
-								rf_mod[4]=cautorizar;
-								rf_mod[5]=PC_rxBuffer[4];
-								rf_mod[6]='1';
-								rf_mod[7]='*';
-								size=8;
-								ok_datosRF=1;
-								break;
-							}                                                      
-  						}
-                        else{
-							totales(lado1.dir, lado1.mangueras);
-                            if(ppux10==1){
-    							precio[4]=PC_rxBuffer[9];	
-    							precio[3]=PC_rxBuffer[8];
-    							precio[2]=PC_rxBuffer[7];
-    							precio[1]=PC_rxBuffer[6];
-    							precio[0]=0;			
+                        if(flota == 0){
+    						if(PC_rxBuffer[10]=='F'){		//Cambia precio
+                                precio[0]=lado1.ppu[rventa1.manguera-1][0]&0x0f;	
+        						precio[1]=lado1.ppu[rventa1.manguera-1][1]&0x0f;
+        						precio[2]=lado1.ppu[rventa1.manguera-1][2]&0x0f;
+        						precio[3]=lado1.ppu[rventa1.manguera-1][3]&0x0f;
+        						precio[4]=lado1.ppu[rventa1.manguera-1][4]&0x0f;
+                            	if(cambiar_precio((lado1.dir & 0x0F),precio,rventa1.manguera)==0){
+    								rf_mod[0]='M';
+    								rf_mod[1]='U';
+    								rf_mod[2]='X';
+    								rf_mod[3]=creset;
+    								rf_mod[4]=cautorizar;
+    								rf_mod[5]=PC_rxBuffer[4];
+    								rf_mod[6]='1';
+    								rf_mod[7]='*';
+    								size=8;
+    								ok_datosRF=1;
+    								break;
+    							}                                                      
+      						}
+                            else{
+    							totales(lado1.dir, lado1.mangueras);
+                                if(ppux10==1){
+        							precio[4]=PC_rxBuffer[9];	
+        							precio[3]=PC_rxBuffer[8];
+        							precio[2]=PC_rxBuffer[7];
+        							precio[1]=PC_rxBuffer[6];
+        							precio[0]=0;			
+                                }
+                                if(ppux10==0){
+        							precio[4]=PC_rxBuffer[10];	
+        							precio[3]=PC_rxBuffer[9];
+        							precio[2]=PC_rxBuffer[8];
+        							precio[1]=PC_rxBuffer[7];
+        							precio[0]=PC_rxBuffer[6];                            
+                                }
+    							if(cambiar_precio((lado1.dir & 0x0F),precio,rventa1.manguera)==0){
+    								rf_mod[0]='M';
+    								rf_mod[1]='U';
+    								rf_mod[2]='X';
+    								rf_mod[3]=creset;
+    								rf_mod[4]=cautorizar;
+    								rf_mod[5]=PC_rxBuffer[4];
+    								rf_mod[6]='1';
+    								rf_mod[7]='*';
+    								size=8;
+    								ok_datosRF=1;
+    								break;
+    							}
                             }
-                            if(ppux10==0){
-    							precio[4]=PC_rxBuffer[10];	
-    							precio[3]=PC_rxBuffer[9];
-    							precio[2]=PC_rxBuffer[8];
-    							precio[1]=PC_rxBuffer[7];
-    							precio[0]=PC_rxBuffer[6];                            
-                            }
-							if(cambiar_precio((lado1.dir & 0x0F),precio,rventa1.manguera)==0){
-								rf_mod[0]='M';
-								rf_mod[1]='U';
-								rf_mod[2]='X';
-								rf_mod[3]=creset;
-								rf_mod[4]=cautorizar;
-								rf_mod[5]=PC_rxBuffer[4];
-								rf_mod[6]='1';
-								rf_mod[7]='*';
-								size=8;
-								ok_datosRF=1;
-								break;
-							}
                         }
 						preset[1]=PC_rxBuffer[17];				//Preset
 						if(PC_rxBuffer[17]!=','){
@@ -490,18 +492,18 @@ void polling_rf(void){
 						}
 						if(programar((lado1.dir & 0x0F),rventa1.manguera,preset,t_preset)==1){		//Programar
                             if(ppuinicial==0){                          
-//                                for(x=0;x<=4;x++){
-//                            	    precio[x]=lado1.ppu[0][x];	    
-//                                }
-//                                cambiar_precio(lado1.dir,precio,1);    
-//                                for(x=0;x<=4;x++){
-//                            	    precio[x]=lado1.ppu[1][x];	    
-//                                }    
-//                                cambiar_precio(lado1.dir,precio,2);
-//                                for(x=0;x<=4;x++){
-//                            	    precio[x]=lado1.ppu[2][x];	    
-//                                }
-//                                cambiar_precio(lado1.dir,precio,3);       
+								//for(x=0;x<=4;x++){
+								//	precio[x]=lado1.ppu[0][x];	    
+								//}
+								//cambiar_precio(lado1.dir,precio,1);    
+								//for(x=0;x<=4;x++){
+								//  precio[x]=lado1.ppu[1][x];	    
+								//}    
+								//cambiar_precio(lado1.dir,precio,2);
+								//for(x=0;x<=4;x++){
+								//  precio[x]=lado1.ppu[2][x];	    
+								//}
+								//cambiar_precio(lado1.dir,precio,3);       
                             }
                             CyDelay(10);
 							Surtidor_PutChar(0x10|(lado1.dir & 0x0F));							
@@ -523,60 +525,66 @@ void polling_rf(void){
 						}
                     }else{                        
                         PC_rxBuffer[3] = 0;
-    						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor		
-    							error_op((PC_rxBuffer[4] & 0x0F),28);
+    						if(PC_rxBuffer[5]=='N'){			//No autorizo el servidor	
+                                if(pantallas == 1){
+                                    error_op(1,28);
+                                }else{
+                                    error_op((PC_rxBuffer[4] & 0x0F),28);
+                                }
+    							
     							break;
     						}
-    						if(PC_rxBuffer[10]=='F'){		//Cambia precio
-                                precio[0]=lado2.ppu[rventa2.manguera-1][0]&0x0f;	
-        						precio[1]=lado2.ppu[rventa2.manguera-1][1]&0x0f;
-        						precio[2]=lado2.ppu[rventa2.manguera-1][2]&0x0f;
-        						precio[3]=lado2.ppu[rventa2.manguera-1][3]&0x0f;
-        						precio[4]=lado2.ppu[rventa2.manguera-1][4]&0x0f;
-                            	if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
-    								rf_mod[0]='M';
-    								rf_mod[1]='U';
-    								rf_mod[2]='X';
-    								rf_mod[3]=creset;
-    								rf_mod[4]=cautorizar;
-    								rf_mod[5]=PC_rxBuffer[4];
-    								rf_mod[6]='1';
-    								rf_mod[7]='*';
-    								size=8;
-    								ok_datosRF=1;
-    								break;
-    							}                                                      
-      						}
-                            else{
-    							totales(lado2.dir, lado2.mangueras);
-                                if(ppux10==1){
-        							precio[4]=PC_rxBuffer[9];	
-        							precio[3]=PC_rxBuffer[8];
-        							precio[2]=PC_rxBuffer[7];
-        							precio[1]=PC_rxBuffer[6];
-        							precio[0]=0;			
-                                }
-                                if(ppux10==0){
-        							precio[4]=PC_rxBuffer[10];	
-        							precio[3]=PC_rxBuffer[9];
-        							precio[2]=PC_rxBuffer[8];
-        							precio[1]=PC_rxBuffer[7];
-        							precio[0]=PC_rxBuffer[6];                            
-                                }
-    							if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
-    								rf_mod[0]='M';
-    								rf_mod[1]='U';
-    								rf_mod[2]='X';
-    								rf_mod[3]=creset;
-    								rf_mod[4]=cautorizar;
-    								rf_mod[5]=PC_rxBuffer[4];
-    								rf_mod[6]='1';
-    								rf_mod[7]='*';
-    								size=8;
-    								ok_datosRF=1;
-    								break;
-    							}
-                            }
+							if(flota == 0){
+								if(PC_rxBuffer[10]=='F'){		//Cambia precio
+									precio[0]=lado2.ppu[rventa2.manguera-1][0]&0x0f;	
+									precio[1]=lado2.ppu[rventa2.manguera-1][1]&0x0f;
+									precio[2]=lado2.ppu[rventa2.manguera-1][2]&0x0f;
+									precio[3]=lado2.ppu[rventa2.manguera-1][3]&0x0f;
+									precio[4]=lado2.ppu[rventa2.manguera-1][4]&0x0f;
+									if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
+										rf_mod[0]='M';
+										rf_mod[1]='U';
+										rf_mod[2]='X';
+										rf_mod[3]=creset;
+										rf_mod[4]=cautorizar;
+										rf_mod[5]=PC_rxBuffer[4];
+										rf_mod[6]='1';
+										rf_mod[7]='*';
+										size=8;
+										ok_datosRF=1;
+										break;
+									}                                                      
+								}else{
+									totales(lado2.dir, lado2.mangueras);
+									if(ppux10==1){
+										precio[4]=PC_rxBuffer[9];	
+										precio[3]=PC_rxBuffer[8];
+										precio[2]=PC_rxBuffer[7];
+										precio[1]=PC_rxBuffer[6];
+										precio[0]=0;			
+									}
+									if(ppux10==0){
+										precio[4]=PC_rxBuffer[10];	
+										precio[3]=PC_rxBuffer[9];
+										precio[2]=PC_rxBuffer[8];
+										precio[1]=PC_rxBuffer[7];
+										precio[0]=PC_rxBuffer[6];                            
+									}
+									if(cambiar_precio((lado2.dir & 0x0F),precio,rventa2.manguera)==0){
+										rf_mod[0]='M';
+										rf_mod[1]='U';
+										rf_mod[2]='X';
+										rf_mod[3]=creset;
+										rf_mod[4]=cautorizar;
+										rf_mod[5]=PC_rxBuffer[4];
+										rf_mod[6]='1';
+										rf_mod[7]='*';
+										size=8;
+										ok_datosRF=1;
+										break;
+									}
+								}
+							}
     						preset[1]=PC_rxBuffer[17];				//Preset
     						if(PC_rxBuffer[17]!=','){
     							preset[1]=PC_rxBuffer[17] & 0x0F;
@@ -614,18 +622,18 @@ void polling_rf(void){
     						}
     						if(programar((lado2.dir & 0x0F),rventa2.manguera,preset,t_preset)==1){		//Programar
                                 if(ppuinicial==0){                          
-    //                                for(x=0;x<=4;x++){
-    //                            	    precio[x]=lado1.ppu[0][x];	    
-    //                                }
-    //                                cambiar_precio(lado1.dir,precio,1);    
-    //                                for(x=0;x<=4;x++){
-    //                            	    precio[x]=lado1.ppu[1][x];	    
-    //                                }    
-    //                                cambiar_precio(lado1.dir,precio,2);
-    //                                for(x=0;x<=4;x++){
-    //                            	    precio[x]=lado1.ppu[2][x];	    
-    //                                }
-    //                                cambiar_precio(lado1.dir,precio,3);       
+									//for(x=0;x<=4;x++){
+									//  precio[x]=lado1.ppu[0][x];	    
+									//}
+									//cambiar_precio(lado1.dir,precio,1);    
+									//for(x=0;x<=4;x++){
+									//  precio[x]=lado1.ppu[1][x];	    
+									//}    
+									//cambiar_precio(lado1.dir,precio,2);
+									//for(x=0;x<=4;x++){
+									//   precio[x]=lado1.ppu[2][x];	    
+									//}
+									//cambiar_precio(lado1.dir,precio,3);       
                                 }
                                 CyDelay(10);
     							Surtidor_PutChar(0x10|(lado2.dir & 0x0F));							
@@ -699,7 +707,8 @@ void polling_rf(void){
                         ppux10        = PC_rxBuffer[15]-48; //ppux10  
                         pantallas     = PC_rxBuffer[16]-48; //pantallas por pos  
                         kmscreen      = PC_rxBuffer[17]-48; //solicita pantalla de kilometraje   
-                        efectivo      = PC_rxBuffer[18]-48; //solicita pantalla de kilometraje   
+                        efectivo      = PC_rxBuffer[18]-48; //permite venta efectivo
+                        flota         = PC_rxBuffer[19]-48; //modo flota
                         
                         EEPROM_WriteByte(lado1.mangueras,15);  //Almacena configuraciones en MUX
                         EEPROM_WriteByte(lado1.grado[0][0],16);
@@ -716,6 +725,7 @@ void polling_rf(void){
                         EEPROM_WriteByte(pantallas,33);
                         EEPROM_WriteByte(kmscreen,34);
                         EEPROM_WriteByte(efectivo,35);
+                        EEPROM_WriteByte(flota,36);
                         set_imagen(1,60); 
                         CyDelay(500);
                         init();
@@ -2298,7 +2308,9 @@ void polling_LCD1(void){
 			precio[2]=lado1.ppu[rventa1.producto-1][2];
 			precio[3]=lado1.ppu[rventa1.producto-1][3];
 			precio[4]=lado1.ppu[rventa1.producto-1][4];
-			cambiar_precio(lado1.dir,precio,rventa1.producto);
+            if(flota == 0){
+			    cambiar_precio(lado1.dir,precio,rventa1.producto);
+            }
         }
         if(seleccion_pos == 2){
 			rf_mod[0]='M';
@@ -2402,7 +2414,9 @@ void polling_LCD1(void){
 			precio[2]=lado1.ppu[rventa2.producto-1][2];
 			precio[3]=lado1.ppu[rventa2.producto-1][3];
 			precio[4]=lado1.ppu[rventa2.producto-1][4];
-			cambiar_precio(lado2.dir,precio,rventa2.producto);
+            if(flota == 0){
+			    cambiar_precio(lado2.dir,precio,rventa2.producto);
+            }
         }
   
 		break;
@@ -2898,7 +2912,8 @@ void insert_ppuInit(void){
 int main(){ 
     
     init();
-    init_surt();    
+    init_surt();  
+    insert_ppuInit();
     CyWdtStart(CYWDT_1024_TICKS,CYWDT_LPMODE_NOCHANGE);    
     //insert_ppuInit();// 
     for(;;){

@@ -106,7 +106,7 @@ var valorConvenio;
 var fecha;
 
 
-/**************Variables para configuraci髇 del equipo***********************/
+/**************Variables para configuraci贸n del equipo***********************/
 
 var cantidadMangueras;
 var Pmanguera1;
@@ -123,6 +123,7 @@ var ppux10;
 var Npantallas;
 var SolKm;
 var efectivo;
+var flota;
 var nproducto1;
 var nproducto2;
 var nproducto3;
@@ -132,7 +133,7 @@ var nproducto3b;
 
 /*
 *********************************************************************************************************
-*                                     INICIALIZACI覰 DEL M覦ULO                                         *
+*                                     INICIALIZACI脫N DEL M脫DULO                                         *
 *                                                                                                       *
 *   Lee la base de datos para determinar si hay ventas sin cerrar e inicializar los nombres de los      *
 *   productos seg?n la ?ltima configuraci?n y ultima venta                                              *
@@ -413,7 +414,7 @@ function rx_data_mux(data){
             break;  
             
             case '3':
-                printport.write('   ******* Copia *******   \n'); /// impresi髇 de copia de venta
+                printport.write('   ******* Copia *******   \n'); /// impresi贸n de copia de venta
                 imprimir_venta();
             break;
             
@@ -477,7 +478,7 @@ function rx_data_mux(data){
 *********************************************************************************************************
 *                                function configuracion_inicial()
 *
-* Description : Configuraci髇 del dispensador seg鷑 pa醡etros en la Web
+* Description : Configuraci贸n del dispensador seg煤n pa谩metros en la Web
 *               
 *********************************************************************************************************
 */
@@ -552,7 +553,6 @@ function configuracion_inicial(){
         }
      });   
 }
-
 
 
 /*
@@ -1085,7 +1085,8 @@ function restricciones(){
                     return console.error('error de conexion 2', err);                            
                 }else{
                     nombreoperario = result.rows[0].nombre;
-					if(nombreoperario==null || nombreoperario==undefined){
+                    console.log(result.rows[0].nombre);
+					if(result.rows[0].nombre == null || result.rows[0].nombre == undefined){
                             printport.write("Usuario no autorizado\n");
                             printport.write("Actualice operarios\n\n");
                             nombreoperario = "NO EXISTE";
@@ -1113,6 +1114,7 @@ function restricciones(){
                                 if(producto_seleccionado != 0){
                                     console.log(">>"+producto_seleccionado);
                                     console.log(">>"+idproducto);
+                                    console.log("Combustible no permitido");
                                     muxport.write('BBB');                                       //Encabezado
                                     muxport.write('0');
                                     muxport.write(String(cara));
@@ -1252,7 +1254,7 @@ function corte_aux(){
                     if (last_id == null || last_id == undefined){
                         last_id = 0;
                     }
-                    // Lee el 鷏timo volumen electr髇ico del equipo en la DB y hace la resta con el valor enviado por el equipo
+                    // Lee el 煤ltimo volumen electr贸nico del equipo en la DB y hace la resta con el valor enviado por el equipo
                     client.query(sprintf("SELECT MAX(volventat) FROM corte;"),function(err,result){
 						        done();
 						        if(err){
@@ -1320,7 +1322,7 @@ function corte_aux(){
                                         last_id = 0;
                                     }
                                     console.log("Ultima venta"+result.rows[0].max);
-                                    //<!--inserta identificador de corte y 鷏timos totales>
+                                    //<!--inserta identificador de corte y 煤ltimos totales>
                                     client.query(sprintf("INSERT INTO corte (ultima_venta,volventat,t_electronico,volventat2,volventat3) VALUES ('%1$s','%2$s','%3$s','%4$s','%5$s');",last_id,parseFloat(producto1)/100,suma,producto2,producto3), function(err,result){
                                         done();
                                         if(err){
