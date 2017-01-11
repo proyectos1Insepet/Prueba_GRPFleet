@@ -57,6 +57,7 @@
 #define cimprimir	        0x31
 #define cbluetooth	        0x32
 #define cconfigurar         0x33
+#define ccorte              0x34    
 #define creset		        0x45
 #define totales_elec        0x46
 //#define ok_totales          0x47    

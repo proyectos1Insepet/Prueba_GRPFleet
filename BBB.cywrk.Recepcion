@@ -394,13 +394,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\BBB.cydsn\main.c" />
-<name v=".\BBB.cydsn\Protocolo.c" />
-<name v=".\BBB.cydsn\Generated_Source\PSoC5\LCD_2_INT.c" />
-<name v=".\BBB.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\BBB.cydsn\Generated_Source\PSoC5\Surtidor.c" />
-<name v=".\BBB.cydsn\Generated_Source\PSoC5\Surtidor_INT.c" />
 <name v=".\BBB.cydsn\VariablesG.h" />
-<name v=".\BBB.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

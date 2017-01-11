@@ -71,13 +71,12 @@ var id_tax;
 var tel;
 var dir;
 var footer;
-var sim_vol;
-var moneda;
 var suma;
 var vol_vendido;
 var dinero_vendido;
 var operario;
 var almacenaVenta;
+var almacenaCorte;
 var kmprint;
 
 /********************Arreglos**************************************/            
@@ -124,6 +123,8 @@ var Npantallas;
 var SolKm;
 var efectivo;
 var flota;
+var sim_vol;
+var moneda;
 var nproducto1;
 var nproducto2;
 var nproducto3;
@@ -141,7 +142,7 @@ var nproducto3b;
 */
     
 function reinicio(error){
-    
+    almacenaCorte = 0;
     cambio_precio1 = 0;
      if (error){
        console.log(error);
@@ -319,6 +320,7 @@ function printer(error){
 */
 
 function rx_data_mux(data){
+    clearInterval(watch);
     if((data[0]==='M') && (data[1]==='U') && (data[2]==='X')){
         console.log('>>'+data);
         console.log('>>'+data.length);
@@ -387,10 +389,12 @@ function rx_data_mux(data){
                 }  
                 console.log('Km: '+km); 
                 cambio_precio1 = 0;
-                guardar_venta();                
+                guardar_venta(); 
+                setInterval(watchful, 10000);
             break;
             
             case '2':                                                           //Caso corte manual
+                cara = data[75];
                 for(i=15; i>=3; i--){                                       //Primer producto
                     producto1[15-i] = data.charCodeAt(i); 
                 }
@@ -484,6 +488,7 @@ function rx_data_mux(data){
 */
 
 function configuracion_inicial(){
+    clearInterval(watch);
      pg.connect(conString, function(err, client, done){
         if(err){
             return console.error('Error de conexion', err);
@@ -551,7 +556,8 @@ function configuracion_inicial(){
                 }
             });
         }
-     });   
+     });
+    
 }
 
 
@@ -565,6 +571,7 @@ function configuracion_inicial(){
 */
 
 function consulta_dato(){
+    clearInterval(watch);
     pg.connect(conString, function(err, client, done){
         if(err){
             return console.error('Error de conexion', err);
@@ -662,6 +669,7 @@ function consulta_dato(){
 *********************************************************************************************************
 */
 function guardar_venta(){
+    clearInterval(watch);
     if(almacenaVenta == 0){
         almacenaVenta = 1;
         var f = new Date();
@@ -704,7 +712,7 @@ function guardar_venta(){
     										return console.error('Error de conexion', err);
     									}else{
     										var transaccion = result.rows[0].tipo_transaccion;
-    										client.query(sprintf("INSERT INTO venta (id_cliente,tipo_transaccion,dinero,volumen) VALUES('%1$s','%2$s','%3$s','%4$s')",id_cliente, transaccion,(dinero_vendido/100).toFixed(2),vol_vendido ),function(err,result){
+    										client.query(sprintf("INSERT INTO venta (id_cliente,tipo_transaccion,dinero,volumen,cara) VALUES('%1$s','%2$s','%3$s','%4$s','%5$s')",id_cliente, transaccion,(dinero_vendido/100).toFixed(2),vol_vendido,cara ),function(err,result){
     											done();
     											if(err){
     												return console.error('Error de conexion', err);
@@ -773,7 +781,6 @@ function guardar_venta(){
     																last_corte = result.rows[0].max;    
     															}	
     															console.log("Ultimo corte: " + last_corte);
-    															var precioaj =
     															client.query(sprintf("INSERT INTO venta_detalle VALUES('%1$s','%2$s','%3$s','%4$s','%5$s','%6$s','%7$s','%8$s','%9$s','%10$s')", (last_id+1),placa,km, idproducto,(precio/100).toFixed(2),cara,idproducto,last_corte,(dinero_vendido/100).toFixed(2),vol_vendido),function(err,result){
     																done();
     																if(err){
@@ -814,7 +821,7 @@ function guardar_venta(){
 
 
 function imprimir_venta(){
-    
+    clearInterval(watch);
      pg.connect(conString, function(err, client, done){
         if(err){
             return console.error('Error de conexion', err);
@@ -975,6 +982,7 @@ function imprimir_venta(){
             });
         }
     });
+    watch    = setInterval(watchful, 15000); 
 }
 /*
 *********************************************************************************************************
@@ -985,6 +993,7 @@ function imprimir_venta(){
 *********************************************************************************************************
 */
 function autorizaMux(){
+    clearInterval(watch);
     console.log('Entra a autorizar');
     muxport.write('BBB');                                       //Encabezado
     console.log("BBB");
@@ -1033,6 +1042,7 @@ function autorizaMux(){
 *********************************************************************************************************
 */
 function restricciones(){
+    clearInterval(watch);
     pg.connect(conString, function(err, client, done){
         if(err){
 		    return console.error('error de conexion 1', err);                                
@@ -1131,24 +1141,12 @@ function restricciones(){
         				}
         				});
         				/*FIN REVISION RESTRICCIONES*/
-        				
-        				
                     }
     				
                 }
 			    });
 				
 			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 		}
     });
              
@@ -1164,6 +1162,7 @@ function restricciones(){
 *********************************************************************************************************
 */
 function precio_cambio(){
+    clearInterval(watch);
     pg.connect(conString, function(err, client, done){
         if(err){
 		    return console.error('error de conexion 1', err);                                
@@ -1188,7 +1187,6 @@ function precio_cambio(){
 				}
 			});			
 			}
-			
 			if(idvehiculo != 0){
 				client.query(sprintf("SELECT r.ppu FROM restricciones r INNER JOIN vehiculo v on v.id_vehiculo = r.id_vehiculo WHERE v.idvehiculo ='%1$s'",idvehiculo), function(err,result){
                 done();
@@ -1202,8 +1200,6 @@ function precio_cambio(){
 				}
 			});		
 			}
-			
-			
 		}
     });
              
@@ -1218,9 +1214,12 @@ function precio_cambio(){
 *********************************************************************************************************
 */
 function corte_aux(){
-    pg.connect(conString, function(err, client, done){
+    clearInterval(watch);
+    if(almacenaCorte <= 1){
+        almacenaCorte = almacenaCorte+1;
+        pg.connect(conString, function(err, client, done){
         if(err){
-            return console.error('error de conexion 1', err);
+            return console.error('error de conexion a base de datos', err);
         }else{
             console.log('Entro a corte');
             client.query("SELECT MAX(pk_id_corte) FROM corte;", function(err,result){
@@ -1229,7 +1228,6 @@ function corte_aux(){
                     return console.error('error de conexion', err);
                 }else{
                     var last_corte = result.rows[0].max;
-                   
                     printport.write('  '+linea1 +'\n');
                     printport.write('   '+linea2 +'\n');
                     printport.write('      '+id_tax+'\n');
@@ -1240,104 +1238,212 @@ function corte_aux(){
                     var f = new Date();
 					printport.write('Fecha:' + String(f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear() + ' ' + f.getHours() + ':' + f.getMinutes()) + '\n\n');                                                      
                         
-                    }
-                
-                
-            });
-            client.query("SELECT MAX(ultima_venta) FROM corte;", function(err,result){
-                done();
-                if(err){
-                    return console.error('error de conexion', err);
-                }else{
-                    var last_id = result.rows[0].max;
-                    console.log('Resultado: '+result.rows[0].max);
-                    if (last_id == null || last_id == undefined){
-                        last_id = 0;
-                    }
-                    // Lee el último volumen electrónico del equipo en la DB y hace la resta con el valor enviado por el equipo
-                    client.query(sprintf("SELECT MAX(volventat) FROM corte;"),function(err,result){
-						        done();
-						        if(err){
-							        return console.error('error de conexion 2',err);
-						        }else{
-						            total_vol_p1 = parseFloat(producto1)/100 - (result.rows[0].max)/100; /*global producto1*/
-						            console.log(total_vol_p1);
-						        }
-						    });
-			        client.query(sprintf("SELECT MAX(volventat2) FROM corte;"),function(err,result){
-						        done();
-						        if(err){
-							        return console.error('error de conexion 2',err);
-						        }else{
-						            total_vol_p2 = parseFloat(producto2)/100 - (result.rows[0].max)/100; /*global producto2*/
-						            console.log(total_vol_p2);
-						        }
-						    });	
-						    client.query(sprintf("SELECT MAX(volventat3) FROM corte;"),function(err,result){
-						        done();
-						        if(err){
-							        return console.error('error de conexion 2',err);
-						        }else{
-						            total_vol_p3 = parseFloat(producto3)/100 - result.rows[0].max/100; /*global producto3*/
-						            console.log(total_vol_p3);
-						        }
-						    });
-                    
-                    
-                    //<!--Sumatoria de dinero de las ventas realizadas por Beagle-->
-                    client.query(sprintf("SELECT SUM(dinero), COUNT(dinero) FROM venta WHERE id>%1$s ; ", last_id), function(err,result){
-						done();
-						if(err){
-							return console.error('error de conexion 2',err);
-						}else{
-						    suma = result.rows[0].sum;
-						    console.log("Primer producto");
-						    console.log('Cuenta'+result.rows[0].count);
-						    printport.write('Ventas ' +':' + String(result.rows[0].count) + '\n'); 
-                            if(result.rows[0].sum==null){
-                                result.rows[0].sum=0;
-                            }
-							printport.write('Total '+' $ :' + String((result.rows[0].sum)/100) + '\n');
-							printport.write('Total '+' L :' +String(total_vol_p1.toFixed(2)) + '\n');
-							printport.write('Vol. Final: ' +parseFloat(producto1)/100 + '\n\n');
-							printport.write('**** Fin de corte ****\n');
-                            printport.write(footer+ '\n');
-                            printport.write('\n\n\n\n'); 
-                            var corte = new Buffer(3);
-				            corte [0] =0x1D;
-				            corte [1] =0x56;
-				            corte [2] =0x31;
-				            printport.write(corte);
+                    }                               
+            });  
+			if(cara == '1'){
+				client.query("SELECT MAX(ultima_venta) FROM corte WHERE cara ='1';", function(err,result){
+					done();
+					if(err){
+						return console.error('error de conexion', err);
+					}else{
+						var last_id = result.rows[0].max;
+						console.log('Resultado: '+result.rows[0].max);
+						if (last_id == null || last_id == undefined){
+							last_id = 0;
 						}
-					});
-					
-					client.query("SELECT MAX(id) FROM venta;", function(err,result){
-                                done();
-                                if(err){
-                                    return console.error('error de conexion', err);
-                                }else{
-                                    printport.write('\n\n\n');
-                                    var last_id = result.rows[0].max;
-                                    if (last_id == null || last_id == undefined){
-                                        last_id = 0;
-                                    }
-                                    console.log("Ultima venta"+result.rows[0].max);
-                                    //<!--inserta identificador de corte y últimos totales>
-                                    client.query(sprintf("INSERT INTO corte (ultima_venta,volventat,t_electronico,volventat2,volventat3) VALUES ('%1$s','%2$s','%3$s','%4$s','%5$s');",last_id,parseFloat(producto1)/100,suma,producto2,producto3), function(err,result){
-                                        done();
-                                        if(err){
-                                            return console.error('error de conexion', err); 
-                                        }
-                                    });
-                                }                 
-                            }); 
-				        }
-                   });
-                }
-          });
-          
-        
+						console.log("Last id: "+ last_id);
+						// Lee el último volumen electrónico del equipo en la DB y hace la resta con el valor enviado por el equipo
+						client.query(sprintf("SELECT MAX(t_electronico) FROM corte where cara =1;"),function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								total_vol_p1 = parseFloat(producto1)/100 - (result.rows[0].max)/100; /*global producto1*/
+								console.log(total_vol_p1);
+							}
+						});
+						client.query(sprintf("SELECT MAX(t_electronico2) FROM corte where cara =1;"),function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								total_vol_p2 = parseFloat(producto2)/100 - (result.rows[0].max)/100; /*global producto2*/
+								console.log(total_vol_p2);
+							}
+						});	
+						client.query(sprintf("SELECT MAX(t_electronico3) FROM corte where cara =1;"),function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								total_vol_p3 = parseFloat(producto3)/100 - result.rows[0].max/100; /*global producto3*/
+								console.log(total_vol_p3);
+							}
+						});                                        
+						//<!--Sumatoria de dinero de las ventas realizadas por Beagle-->
+						client.query(sprintf("SELECT SUM(dinero), COUNT(dinero) FROM venta WHERE id>%1$s AND cara ='1'; ", last_id), function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								suma = result.rows[0].sum;
+								console.log("Primer producto");
+								console.log('Cuenta'+result.rows[0].count);
+								printport.write('Ventas ' +':' + String(result.rows[0].count) + '\n'); 
+								if(result.rows[0].sum==null){
+									result.rows[0].sum=0;
+								}
+								printport.write('Total '+' $ :' + String((result.rows[0].sum)/100) + '\n');
+								printport.write('Total '+' L :' +String(total_vol_p1.toFixed(2)) + '\n');
+								printport.write('Vol. Final: ' +parseFloat(producto1)/100 + '\n\n');
+								printport.write('**** Fin de corte ****\n');
+								printport.write(footer+ '\n');
+								printport.write('\n\n\n\n'); 
+								var corte = new Buffer(3);
+								corte [0] =0x1D;
+								corte [1] =0x56;
+								corte [2] =0x31;
+								printport.write(corte);
+								
+								client.query("SELECT MAX(id) FROM venta WHERE cara ='1';", function(err,result){
+									done();
+									if(err){
+										return console.error('error de conexion', err);
+									}else{
+										printport.write('\n\n\n');
+										var last_id = result.rows[0].max;
+										if (last_id == null || last_id == undefined){
+											last_id = 0;
+										}
+										
+										console.log("Ultima venta "+result.rows[0].max);
+										console.log("Volumen total "+parseFloat(producto1)/100);
+										console.log("Suma "+suma);
+										console.log("Prod 2 "+parseFloat(producto2)/100);
+										console.log("Prod 3 "+parseFloat(producto3)/100);
+										//<!--inserta identificador de corte y últimos totales>
+										client.query(sprintf("INSERT INTO corte (ultima_venta,t_electronico,t_electronico2,t_electronico3,volventat,volventat2,volventat3,cara) VALUES ('%1$s','%2$s','%3$s',%4$s,'%5$s','%6$s','%7$s','%8$s');",last_id,producto1,producto2,producto3,total_vol_p1.toFixed(2),total_vol_p2.toFixed(2),total_vol_p3.toFixed(2),cara), function(err,result){
+											done();
+											if(err){
+												return console.error('error de insercion corte', err); 
+											}
+										});
+									}                 
+								});
+							}
+						});					        				
+					}
+				});
+			}else{
+			
+			
+			
+			
+			
+				client.query("SELECT MAX(ultima_venta) FROM corte WHERE cara = 2;", function(err,result){
+					done();
+					if(err){
+						return console.error('error de conexion', err);
+					}else{
+						var last_id = result.rows[0].max;
+						console.log('Resultado: '+result.rows[0].max);
+						if (last_id == null || last_id == undefined){
+							last_id = 0;
+						}
+						console.log("Last id: "+ last_id);
+						// Lee el último volumen electrónico del equipo en la DB y hace la resta con el valor enviado por el equipo
+						client.query(sprintf("SELECT MAX(t_electronico) FROM corte WHERE cara =2;"),function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								total_vol_p1 = parseFloat(producto1)/100 - (result.rows[0].max)/100; /*global producto1*/
+								console.log(total_vol_p1);
+							}
+						});
+						client.query(sprintf("SELECT MAX(t_electronico2) FROM corte WHERE cara =2;"),function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								total_vol_p2 = parseFloat(producto2)/100 - (result.rows[0].max)/100; /*global producto2*/
+								console.log(total_vol_p2);
+							}
+						});	
+						client.query(sprintf("SELECT MAX(t_electronico3) FROM corte WHERE cara =2;"),function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								total_vol_p3 = parseFloat(producto3)/100 - result.rows[0].max/100; /*global producto3*/
+								console.log(total_vol_p3);
+							}
+						});                                        
+						//<!--Sumatoria de dinero de las ventas realizadas por Beagle-->
+						client.query(sprintf("SELECT SUM(dinero), COUNT(dinero) FROM venta WHERE id>%1$s AND cara ='2' ; ", last_id), function(err,result){
+							done();
+							if(err){
+								return console.error('error de conexion 2',err);
+							}else{
+								suma = result.rows[0].sum;
+								console.log("Primer producto");
+								console.log('Cuenta'+result.rows[0].count);
+								printport.write('Ventas ' +':' + String(result.rows[0].count) + '\n'); 
+								if(result.rows[0].sum==null){
+									result.rows[0].sum=0;
+								}
+								printport.write('Total '+' $ :' + String((result.rows[0].sum)/100) + '\n');
+								printport.write('Total '+' L :' +String(total_vol_p1.toFixed(2)) + '\n');
+								printport.write('Vol. Final: ' +parseFloat(producto1)/100 + '\n\n');
+								printport.write('**** Fin de corte ****\n');
+								printport.write(footer+ '\n');
+								printport.write('\n\n\n\n'); 
+								var corte = new Buffer(3);
+								corte [0] =0x1D;
+								corte [1] =0x56;
+								corte [2] =0x31;
+								printport.write(corte);
+								
+								client.query("SELECT MAX(id) FROM venta;", function(err,result){
+									done();
+									if(err){
+										return console.error('error de conexion', err);
+									}else{
+										printport.write('\n\n\n');
+										var last_id = result.rows[0].max;
+										if (last_id == null || last_id == undefined){
+											last_id = 0;
+										}
+										
+										console.log("Ultima venta "+result.rows[0].max);
+										console.log("Volumen total "+parseFloat(producto1)/100);
+										console.log("Suma "+suma);
+										console.log("Prod 2 "+parseFloat(producto2)/100);
+										console.log("Prod 3 "+parseFloat(producto3)/100);
+										//<!--inserta identificador de corte y últimos totales>
+										client.query(sprintf("INSERT INTO corte (ultima_venta,t_electronico,t_electronico2,t_electronico3,volventat,volventat2,volventat3,cara) VALUES ('%1$s','%2$s','%3$s',%4$s,'%5$s','%6$s','%7$s','%8$s');",last_id,producto1,producto2,producto3,total_vol_p1.toFixed(2),total_vol_p2.toFixed(2),total_vol_p3.toFixed(2),cara), function(err,result){
+											done();
+											if(err){
+												return console.error('error de insercion corte', err); 
+											}else{
+											    almacenaCorte = 0;
+											}
+										});
+									}                 
+								});
+							}
+						});					        				
+					}
+				});
+			}
+		}
+    });                 
     }
+    watch    = setInterval(watchful, 15000);
+}
+
+
+
 
 
 
@@ -1351,8 +1457,70 @@ function corte_aux(){
 */
 function watchful(){
     console.log("Vigilando");
+    var f = new Date();
+    if((f.getHours()=='5')&&(f.getMinutes()=='58')&&almacenaCorte ==0){
+        muxport.write('BBB');
+        muxport.write('4');
+        muxport.write('1');
+        muxport.write('*');
+        printport.write('MOMENTO DE CORTE\n');
+        printport.write('REALICE CIERRE DE TURNO\n');
+        printport.write('PARA INICIAR VENTA\n\n\n\n\n\n');              //A la hora programada se ejecuta la funcion para obligar a corte
+        printport.write('*** CORTE PROGRAMADO***\n');
+        console.log('Pregunta');
+    }
+    if((f.getHours()=='21')&&(f.getMinutes()=='58')&&almacenaCorte ==0){
+        muxport.write('BBB');
+        muxport.write('4');
+        muxport.write('1');
+        muxport.write('*');
+        printport.write('MOMENTO DE CORTE\n');
+        printport.write('REALICE CIERRE DE TURNO\n');
+        printport.write('PARA INICIAR VENTA\n\n\n\n\n\n');              //A la hora programada se ejecuta la funcion para obligar a corte
+        printport.write('*** CORTE PROGRAMADO***\n');
+        console.log('Pregunta');
+    }
+    enviaCorte();
+    if(almacenaCorte > 2){
+        almacenaCorte = 0;
+    }
 }
 
+/*
+*********************************************************************************************************
+*                                function watchful()
+*
+* Description : Revisa los estados del Beagle para realizar reintentos o peticiones al MUX
+*               
+*********************************************************************************************************
+*/
+function enviaCorte(){
+    console.log("Vigilando corte");
+    console.log(almacenaCorte);
+    var f = new Date();
+    if((f.getHours()=='5')&&(f.getMinutes()=='59')&&almacenaCorte ==1){
+        muxport.write('BBB');
+        muxport.write('4');
+        muxport.write('2');
+        muxport.write('*');
+        printport.write('MOMENTO DE CORTE\n');
+        printport.write('REALICE CIERRE DE TURNO\n');
+        printport.write('PARA INICIAR VENTA\n\n\n\n\n\n');              //A la hora programada se ejecuta la funcion para obligar a corte
+        printport.write('*** CORTE PROGRAMADO***\n');
+        console.log('Pregunta');
+    }
+    if((f.getHours()=='21')&&(f.getMinutes()=='59')&&almacenaCorte ==1){
+        muxport.write('BBB');
+        muxport.write('4');
+        muxport.write('2');
+        muxport.write('*');
+        printport.write('MOMENTO DE CORTE\n');
+        printport.write('REALICE CIERRE DE TURNO\n');
+        printport.write('PARA INICIAR VENTA\n\n\n\n\n\n');              //A la hora programada se ejecuta la funcion para obligar a corte
+        printport.write('*** CORTE PROGRAMADO***\n');
+        console.log('Pregunta');
+    }
+}
 
 
 /*
@@ -1360,4 +1528,4 @@ function watchful(){
 *                                    Metodos Principales
 *********************************************************************************************************
 */
-//setInterval(watchful, 50);           //Revisa el estado de las banderas
+var watch     = setInterval(watchful, 15000); 

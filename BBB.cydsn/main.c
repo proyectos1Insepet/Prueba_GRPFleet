@@ -386,7 +386,7 @@ void init_surt(void){
 */
 void polling_rf(void){
 	uint16 status1, status2,size,x,t_preset;
-	uint8  precio[5],preset[8];
+	uint8  precio[5],preset[8],x_1;
     
 	if(PC_GetRxBufferSize()>=6){
 		status1=PC_GetRxBufferSize();
@@ -730,6 +730,96 @@ void polling_rf(void){
                         CyDelay(500);
                         init();
                         flujo_LCD1 = 0;                        
+                    break;
+                    
+                    case ccorte:
+                        rf_mod[0]='M';
+						rf_mod[1]='U';
+						rf_mod[2]='X';
+						rf_mod[3]='2';
+                        if(PC_rxBuffer[4]=='1'){
+                            totales(lado1.dir, lado1.mangueras);
+                            CyDelay(50);  
+                            x_1=4;
+                            for(x=0;x<=11;x++){     //volumen_pro1 
+                                rf_mod[x_1]=(lado1.totales[0][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            for(x=12;x<=23;x++){    //dinero_pro1
+                                rf_mod[x_1]=(lado1.totales[0][x]&0X0F)+48;
+                                x_1++;
+                            }           
+                            for(x=0;x<=11;x++){     //volumen_pro2     
+                                rf_mod[x_1]=(lado1.totales[1][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            for(x=12;x<=23;x++){    //dinero_pro2    
+                                rf_mod[x_1]=(lado1.totales[1][x]&0X0F)+48;
+                                x_1++;
+                            }           
+                            for(x=0;x<=11;x++){     //volumen_pro3   
+                                rf_mod[x_1]=(lado1.totales[2][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            for(x=12;x<=23;x++){    //dinero_pro3    
+                                rf_mod[x_1]=(lado1.totales[2][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            rf_mod[75]='1';                            
+                            rf_mod[76]='*';                            
+                            PC_ClearRxBuffer();
+						    for(x=0;x<=76;x++){
+							   PC_PutChar(rf_mod[x]);
+						    }                                 
+							CyDelay(250);                
+							if(PC_GetRxBufferSize()>=2){
+						        set_imagen(1,74);
+						        flujo_LCD1=0;
+						        lado1.estado=libre;     //Fin de reimpresion                                                              
+						    }
+                        }
+                		if(PC_rxBuffer[4]=='2'){
+                            totales(lado2.dir, lado2.mangueras);
+                            CyDelay(50);  
+                            x_1=4;
+                            for(x=0;x<=11;x++){     //volumen_pro1 
+                                rf_mod[x_1]=(lado2.totales[0][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            for(x=12;x<=23;x++){    //dinero_pro1
+                                rf_mod[x_1]=(lado2.totales[0][x]&0X0F)+48;
+                                x_1++;
+                            }           
+                            for(x=0;x<=11;x++){     //volumen_pro2     
+                                rf_mod[x_1]=(lado2.totales[1][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            for(x=12;x<=23;x++){    //dinero_pro2    
+                                rf_mod[x_1]=(lado2.totales[1][x]&0X0F)+48;
+                                x_1++;
+                            }           
+                            for(x=0;x<=11;x++){     //volumen_pro3   
+                                rf_mod[x_1]=(lado2.totales[2][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            for(x=12;x<=23;x++){    //dinero_pro3    
+                                rf_mod[x_1]=(lado2.totales[2][x]&0X0F)+48;
+                                x_1++;
+                            }
+                            rf_mod[75]='2';
+                            rf_mod[76]='*';                            
+                            PC_ClearRxBuffer();
+						    for(x=0;x<=76;x++){
+							   PC_PutChar(rf_mod[x]);
+						    }                                 
+							CyDelay(250);                
+							if(PC_GetRxBufferSize()>=2){
+						        set_imagen(1,74);
+						        flujo_LCD1=0;
+						        lado2.estado=libre;     //Fin de reimpresion                                                              
+						    }
+                        }                			                                
+					    PC_ClearRxBuffer();    
                     break;
 				}
 				if(ok_datosRF==1){
