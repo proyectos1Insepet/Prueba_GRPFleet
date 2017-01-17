@@ -767,7 +767,7 @@ void polling_rf(void){
                             }
                             rf_mod[75]='1';                            
                             rf_mod[76]='*';                            
-                            PC_ClearRxBuffer();
+                            //PC_ClearRxBuffer();
 						    for(x=0;x<=76;x++){
 							   PC_PutChar(rf_mod[x]);
 						    }                                 
@@ -808,7 +808,7 @@ void polling_rf(void){
                             }
                             rf_mod[75]='2';
                             rf_mod[76]='*';                            
-                            PC_ClearRxBuffer();
+                            //PC_ClearRxBuffer();
 						    for(x=0;x<=76;x++){
 							   PC_PutChar(rf_mod[x]);
 						    }                                 
@@ -818,8 +818,7 @@ void polling_rf(void){
 						        flujo_LCD1=0;
 						        lado2.estado=libre;     //Fin de reimpresion                                                              
 						    }
-                        }                			                                
-					    PC_ClearRxBuffer();    
+                        }                			                                					        
                     break;
 				}
 				if(ok_datosRF==1){
@@ -3003,9 +3002,8 @@ int main(){
     
     init();
     init_surt();  
-    insert_ppuInit();
-    CyWdtStart(CYWDT_1024_TICKS,CYWDT_LPMODE_NOCHANGE);    
-    //insert_ppuInit();// 
+    //insert_ppuInit();
+    CyWdtStart(CYWDT_1024_TICKS,CYWDT_LPMODE_NOCHANGE);        
     for(;;){
          //sin el sistema Mux Advance              		
     		CyWdtClear();        

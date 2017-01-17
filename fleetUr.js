@@ -764,7 +764,7 @@ function guardar_venta(){
     										return console.error('Error de conexion', err);
     									}else{
     										var transaccion = result.rows[0].tipo_transaccion;
-    										client.query(sprintf("INSERT INTO venta (id_cliente,tipo_transaccion,dinero,volumen) VALUES('%1$s','%2$s','%3$s','%4$s')", id_cliente,transaccion,(dinero_vendido/100).toFixed(2),vol_vendido ),function(err,result){
+    										client.query(sprintf("INSERT INTO venta (id_cliente,tipo_transaccion,dinero,volumen,cara) VALUES('%1$s','%2$s','%3$s','%4$s','%5$s')", id_cliente,transaccion,(dinero_vendido/100).toFixed(2),vol_vendido,cara ),function(err,result){
     											done();
     											if(err){
     												return console.error('Error de conexion', err);
@@ -1458,7 +1458,7 @@ function corte_aux(){
 function watchful(){
     console.log("Vigilando");
     var f = new Date();
-    if((f.getHours()=='5')&&(f.getMinutes()=='58')&&almacenaCorte ==0){
+    if((f.getHours()=='5')&&(f.getMinutes()=='57')&&almacenaCorte ==0){
         muxport.write('BBB');
         muxport.write('4');
         muxport.write('1');
@@ -1469,7 +1469,7 @@ function watchful(){
         printport.write('*** CORTE PROGRAMADO***\n');
         console.log('Pregunta');
     }
-    if((f.getHours()=='21')&&(f.getMinutes()=='58')&&almacenaCorte ==0){
+    if((f.getHours()=='21')&&(f.getMinutes()=='57')&&almacenaCorte ==0){
         muxport.write('BBB');
         muxport.write('4');
         muxport.write('1');

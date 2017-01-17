@@ -395,6 +395,7 @@
 <OpenDocs>
 <name v=".\BBB.cydsn\main.c" />
 <name v=".\BBB.cydsn\VariablesG.h" />
+<name v=".\BBB.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
