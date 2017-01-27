@@ -1253,7 +1253,7 @@ function corte_aux(){
 						}
 						console.log("Last id: "+ last_id);
 						// Lee el último volumen electrónico del equipo en la DB y hace la resta con el valor enviado por el equipo
-						client.query(sprintf("SELECT MAX(t_electronico) FROM corte where cara =1;"),function(err,result){
+						client.query(sprintf("SELECT MAX(t_electronico) FROM corte where cara ='1';"),function(err,result){
 							done();
 							if(err){
 								return console.error('error de conexion 2',err);
@@ -1262,7 +1262,7 @@ function corte_aux(){
 								console.log(total_vol_p1);
 							}
 						});
-						client.query(sprintf("SELECT MAX(t_electronico2) FROM corte where cara =1;"),function(err,result){
+						client.query(sprintf("SELECT MAX(t_electronico2) FROM corte where cara ='1';"),function(err,result){
 							done();
 							if(err){
 								return console.error('error de conexion 2',err);
@@ -1271,7 +1271,7 @@ function corte_aux(){
 								console.log(total_vol_p2);
 							}
 						});	
-						client.query(sprintf("SELECT MAX(t_electronico3) FROM corte where cara =1;"),function(err,result){
+						client.query(sprintf("SELECT MAX(t_electronico3) FROM corte where cara ='1';"),function(err,result){
 							done();
 							if(err){
 								return console.error('error de conexion 2',err);
@@ -1340,7 +1340,7 @@ function corte_aux(){
 			
 			
 			
-				client.query("SELECT MAX(ultima_venta) FROM corte WHERE cara = 2;", function(err,result){
+				client.query("SELECT MAX(ultima_venta) FROM corte WHERE cara = '2';", function(err,result){
 					done();
 					if(err){
 						return console.error('error de conexion', err);
@@ -1352,7 +1352,7 @@ function corte_aux(){
 						}
 						console.log("Last id: "+ last_id);
 						// Lee el último volumen electrónico del equipo en la DB y hace la resta con el valor enviado por el equipo
-						client.query(sprintf("SELECT MAX(t_electronico) FROM corte WHERE cara =2;"),function(err,result){
+						client.query(sprintf("SELECT MAX(t_electronico) FROM corte WHERE cara ='2';"),function(err,result){
 							done();
 							if(err){
 								return console.error('error de conexion 2',err);
@@ -1361,7 +1361,7 @@ function corte_aux(){
 								console.log(total_vol_p1);
 							}
 						});
-						client.query(sprintf("SELECT MAX(t_electronico2) FROM corte WHERE cara =2;"),function(err,result){
+						client.query(sprintf("SELECT MAX(t_electronico2) FROM corte WHERE cara ='2';"),function(err,result){
 							done();
 							if(err){
 								return console.error('error de conexion 2',err);
@@ -1370,7 +1370,7 @@ function corte_aux(){
 								console.log(total_vol_p2);
 							}
 						});	
-						client.query(sprintf("SELECT MAX(t_electronico3) FROM corte WHERE cara =2;"),function(err,result){
+						client.query(sprintf("SELECT MAX(t_electronico3) FROM corte WHERE cara ='2';"),function(err,result){
 							done();
 							if(err){
 								return console.error('error de conexion 2',err);
