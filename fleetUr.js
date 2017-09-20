@@ -172,7 +172,7 @@ function reinicio(error){
                     if(err){
                     return console.error('Error de conexion', err);
                     }else{
-                        console.log(result.rows[0]);
+                        //console.log(result.rows[0]);
                         if (result.rows[0].p1==undefined || result.rows[0].p1== null){
                             man1 = "SIN PRODUCTO";  //Carga identificadores de manguera    
                         }
@@ -215,7 +215,7 @@ function reinicio(error){
                                 if(err){
                                 return console.error('Error de nombre p1', err);
                                 }else{
-                                    console.log(result.rows[0].descripcion);
+                                    //console.log(result.rows[0].descripcion);
                                     nproducto1 = result.rows[0].descripcion;  //Carga nombre de producto primera manguera
                                 }
                         });
@@ -225,7 +225,7 @@ function reinicio(error){
                             if(err){
                                 return console.error('Error de nombre p2', err);
                             }else{
-                                console.log(result.rows[0].descripcion);
+                                //console.log(result.rows[0].descripcion);
                                 nproducto2 = result.rows[0].descripcion;  //Carga nombre de producto segunda manguera
                              }
                         });
@@ -235,7 +235,7 @@ function reinicio(error){
                             if(err){
                                 return console.error('Error de conexion', err);
                             }else{
-                                console.log(result.rows[0].descripcion);
+                                //console.log(result.rows[0].descripcion);
                                 nproducto3 = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
                             }
                         });
@@ -245,7 +245,7 @@ function reinicio(error){
                             if(err){
                                 return console.error('Error de conexion', err);
                             }else{
-                                console.log(result.rows[0].descripcion);
+                                //console.log(result.rows[0].descripcion);
                                 nproducto1b = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
                             }
                         });
@@ -255,7 +255,7 @@ function reinicio(error){
                             if(err){
                                 return console.error('Error de conexion', err);
                             }else{
-                                console.log(result.rows[0].descripcion);
+                                //console.log(result.rows[0].descripcion);
                                 nproducto2b = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
                             }
                         });
@@ -265,7 +265,7 @@ function reinicio(error){
                             if(err){
                                 return console.error('Error de conexion', err);
                             }else{
-                                console.log(result.rows[0].descripcion);
+                               // console.log(result.rows[0].descripcion);
                                 nproducto3b = result.rows[0].descripcion;  //Carga nombre de producto tercera manguera
                             }
                         });
@@ -322,37 +322,37 @@ function printer(error){
 function rx_data_mux(data){
     clearInterval(watch);
     if((data[0]==='M') && (data[1]==='U') && (data[2]==='X')){
-        console.log('>>'+data);
-        console.log('>>'+data.length);
+        //console.log('>>'+data);
+        //console.log('>>'+data.length);
         caso    = data[3];  /*global caso*/
         switch(caso){
             case '0':
                 for(var i=19; i>=4; i--){                                       //Serial
                     serial[19-i] = data.charCodeAt(i); 
                 }
-                console.log('Serial: '+serial); 
+                //console.log('Serial: '+serial); 
                 idproducto = data[20];                                          //Id Producto
-                console.log('Id Producto: '+idproducto);
+                //console.log('Id Producto: '+idproducto);
                 for(i=21; i<25; i++){                                           //Id Estacion
                     idestacion[i-21] = data.charCodeAt(i); 
                 }
-                console.log('Id Vehiculo: '+idestacion);
+                //console.log('Id Vehiculo: '+idestacion);
                 for(i=25; i<30; i++){                                           //Precio
                     precio[i-25] = data.charCodeAt(i); 
                 }  
-                console.log('Precio: '+precio);
+                //console.log('Precio: '+precio);
                 tipopreset = data[30];                                          /*global tipopreset*/             //Tipo preset
-                console.log('Tipo Preset: '+tipopreset);
+                //console.log('Tipo Preset: '+tipopreset);
                 for(i=31; i<38; i++){                                           //Preset
                     preset[i-31] = data.charCodeAt(i); 
                 }  
-                console.log('Preset: '+preset);  
+                //console.log('Preset: '+preset);  
                 for(i=44; i>=38; i--){                                          //km
                     km[44-i] = data.charCodeAt(i); 
                 } 
-                console.log('Km: '+km);                 
+                //console.log('Km: '+km);                 
                 cara = data[45];
-                console.log('Cara: '+cara);
+                //console.log('Cara: '+cara);
                 consulta_dato();
                 almacenaVenta = 0;
             break; 
@@ -364,30 +364,30 @@ function rx_data_mux(data){
                 muxport.write('2');                                             //Gracias por su compra
                 muxport.write('*');
                 cara = data[4];                                                 //Cara
-                console.log('Cara: '+cara);
+                //console.log('Cara: '+cara);
                 idproducto = data[5];                                           //Id Producto
-                console.log('Id Producto: '+idproducto); 
+                //console.log('Id Producto: '+idproducto); 
                 for(i=6; i<13; i++){                                            //Volumen
                     volumen[i-6] = data.charCodeAt(i);
                 }
                 volumen[3]=46;
                 vol_vendido = parseFloat(volumen);
-                console.log('Volumen: '+volumen);
-                console.log('Volumen F:'+vol_vendido);
+                //console.log('Volumen: '+volumen);
+                //console.log('Volumen F:'+vol_vendido);
                 for(i=13; i<20; i++){                                           //Dinero
                     dinero[i-13] = data.charCodeAt(i); 
                 }  
                 dinero_vendido = parseFloat(dinero);
-                console.log('Dinero: '+dinero);
-                console.log('Dinero F:'+dinero_vendido);
+                //console.log('Dinero: '+dinero);
+                //console.log('Dinero F:'+dinero_vendido);
                 for(i=20; i<25; i++){                                           //Precio
                     precio[i-20] = data.charCodeAt(i); 
                 }  
-                console.log('Precio: '+precio); 
+                //console.log('Precio: '+precio); 
                 for(i=58; i>=52; i--){                                          //km
                     km[58-i] = data.charCodeAt(i); 
                 }  
-                console.log('Km: '+km); 
+                //console.log('Km: '+km); 
                 cambio_precio1 = 0;
                 guardar_venta(); 
                 setInterval(watchful, 10000);
@@ -398,23 +398,23 @@ function rx_data_mux(data){
                 for(i=15; i>=3; i--){                                       //Primer producto
                     producto1[15-i] = data.charCodeAt(i); 
                 }
-                console.log('Producto 1: '+producto1);
+                //console.log('Producto 1: '+producto1);
                 
                 for(i=39; i>27; i--){                                       //Segundo producto
                     producto2[39-i] = data.charCodeAt(i); 
                 }
-                console.log('Producto 2: '+producto2);
+                //console.log('Producto 2: '+producto2);
                 for(i=63; i>=52; i--){                                       //Tercer producto
                     producto3[63-i] = data.charCodeAt(i); 
                 }  
-                console.log('Producto 3: '+producto3);
+                //console.log('Producto 3: '+producto3);
                 corte_aux();
                 muxport.write('BBB');
                 muxport.write('E');
                 muxport.write(String(cara));
                 muxport.write('2');                         //Gracias por su compra
                 muxport.write('*');
-                console.log('OK'); 
+                //console.log('OK'); 
             break;  
             
             case '3':
@@ -427,7 +427,7 @@ function rx_data_mux(data){
                 for(i=19; i>=4; i--){                                       //Serial
                     serial[19-i] = data.charCodeAt(i); 
                 }
-                console.log('Serial: '+serial); 
+                //console.log('Serial: '+serial); 
                 pg.connect(conString, function(err, client, done){
                     if(err){
                         return console.error('Error de conexion 1', err);
@@ -446,7 +446,7 @@ function rx_data_mux(data){
                 				corteprint [1] =0x56;
                 				corteprint [2] =0x31;
                 				printport.write(corteprint);
-                				console.log("Boton insertado");
+                				//console.log("Boton insertado");
                             }
                         });
                     }
@@ -455,7 +455,7 @@ function rx_data_mux(data){
             
             case '6':
                 configuracion_inicial();
-                console.log("Configuraciones");
+                //console.log("Configuraciones");
             break;
             
             case 'E':
@@ -464,9 +464,9 @@ function rx_data_mux(data){
                     muxport.write('1');
                     muxport.write(cara);
                     if(data[5] == '1'){
-                        console.log('\n\nEl Equipo no cambio precio.\nerror: 1.\n');            //No cambio el precio
+                        //console.log('\n\nEl Equipo no cambio precio.\nerror: 1.\n');            //No cambio el precio
                     }else if(data[5] == '2'){
-                        console.log('\n\nEl Equipo no recibio preset.\nerror: 2.\n');           //No recibio el preset
+                       // console.log('\n\nEl Equipo no recibio preset.\nerror: 2.\n');           //No recibio el preset
                     }
                     muxport.write('*'); 
                 }
@@ -535,7 +535,7 @@ function configuracion_inicial(){
                     muxport.write(String(flota));
                     muxport.write('*'); 
                     
-                    console.log("Datos surtidor");
+                    /*console.log("Datos surtidor");
                     console.log(cantidadMangueras);
                     console.log(Pmanguera1);
                     console.log(Pmanguera2);
@@ -552,7 +552,7 @@ function configuracion_inicial(){
                     console.log(SolKm);
                     console.log(efectivo);
                     console.log(flota);
-                    console.log("Fin surtidor");
+                    console.log("Fin surtidor");*/
                 }
             });
         }
@@ -576,13 +576,13 @@ function consulta_dato(){
         if(err){
             return console.error('Error de conexion', err);
         }else{
-			console.log("Identificador Vehiculo:" + idestacion);
+			//console.log("Identificador Vehiculo:" + idestacion);
             var idvehiculo = parseInt(idestacion,10);
-            console.log("Identificador modificado:" + idvehiculo);
+            //console.log("Identificador modificado:" + idvehiculo);
             if(isNaN(idvehiculo)){
                 idvehiculo = 0;
             }
-            console.log("Serial AUTO:" + serial);
+            //console.log("Serial AUTO:" + serial);
 			if(idvehiculo == 0){
 				client.query(sprintf("select v.estado_bloqueo,v.id_cliente, c.estado_cuenta, c.id_cliente from vehiculo v inner join cuenta c on v.id_cliente = c.id_cliente where serial = '%1$s'",serial), function(err,result){        //consulto maximo id de venta
                 done();
@@ -596,9 +596,9 @@ function consulta_dato(){
                     }else{
                         estado = result.rows[0].estado_bloqueo;
                         estado_cliente = result.rows[0].estado_cuenta;
-                        console.log("Estado bloqueo: " +estado_cliente);
+                        //console.log("Estado bloqueo: " +estado_cliente);
                     }
-                    console.log("Estado bloqueo: " +estado);
+                    //console.log("Estado bloqueo: " +estado);
                     if (estado == false || estado == null || estado_cliente == false || estado_cliente == null){
                         muxport.write('BBB');           //En caso de venta incompleta
                         muxport.write('E');             // No permite autorizar
@@ -630,9 +630,9 @@ function consulta_dato(){
                     }else{
                         estado = result.rows[0].estado_bloqueo;
                         estado_cliente = result.rows[0].estado_cuenta;
-                        console.log("Estado bloqueo: " +estado_cliente);
+                        //console.log("Estado bloqueo: " +estado_cliente);
                     }
-                    console.log("Estado bloqueo: " +estado);
+                    //console.log("Estado bloqueo: " +estado);
                     if (estado == false || estado == null || estado_cliente == false || estado_cliente == null){
                         muxport.write('BBB');           //En caso de venta incompleta
                         muxport.write('E');             // No permite autorizar
@@ -1244,7 +1244,7 @@ function corte_aux(){
 				client.query("SELECT MAX(ultima_venta) FROM corte WHERE cara ='1';", function(err,result){
 					done();
 					if(err){
-						return console.error('error de conexion', err);
+						return console.error('error tomando ultima venta', err);
 					}else{
 						var last_id = result.rows[0].max;
 						console.log('Resultado: '+result.rows[0].max);
@@ -1256,7 +1256,7 @@ function corte_aux(){
 						client.query(sprintf("SELECT MAX(t_electronico) FROM corte where cara ='1';"),function(err,result){
 							done();
 							if(err){
-								return console.error('error de conexion 2',err);
+								return console.error('error tomando total',err);
 							}else{
 								total_vol_p1 = parseFloat(producto1)/100 - (result.rows[0].max)/100; /*global producto1*/
 								console.log(total_vol_p1);
@@ -1265,7 +1265,7 @@ function corte_aux(){
 						client.query(sprintf("SELECT MAX(t_electronico2) FROM corte where cara ='1';"),function(err,result){
 							done();
 							if(err){
-								return console.error('error de conexion 2',err);
+								return console.error('error tomando total',err);
 							}else{
 								total_vol_p2 = parseFloat(producto2)/100 - (result.rows[0].max)/100; /*global producto2*/
 								console.log(total_vol_p2);
@@ -1274,7 +1274,7 @@ function corte_aux(){
 						client.query(sprintf("SELECT MAX(t_electronico3) FROM corte where cara ='1';"),function(err,result){
 							done();
 							if(err){
-								return console.error('error de conexion 2',err);
+								return console.error('error tomando total',err);
 							}else{
 								total_vol_p3 = parseFloat(producto3)/100 - result.rows[0].max/100; /*global producto3*/
 								console.log(total_vol_p3);
